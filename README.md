@@ -9,7 +9,9 @@ Fernando Díaz H., PhD. — Departamento de Ingeniería Comercial, Universidad T
 
 ## Descripción del Curso
 
-Este curso introduce las técnicas fundamentales del PLN aplicadas al análisis de textos en ciencias sociales, economía y finanzas, combinando dos paradigmas complementarios: métodos estadísticos clásicos en **R / Quanteda** y modelos transformer / LLM en **Python / HuggingFace**. Ver el detalle completo de contenidos en [docs/index.md](docs/index.md).
+Este curso introduce las técnicas fundamentales del PLN aplicadas al análisis de textos en ciencias sociales, economía y finanzas, combinando dos paradigmas complementarios: métodos estadísticos clásicos en **R / Quanteda** y modelos transformer / LLM en **Python / HuggingFace**. Ver el detalle completo en [docs/programa.md](docs/programa.md).
+
+La estructura del sitio sigue el mismo esquema usado en [usm-course](https://github.com/hizocar/usm-course): Home (perfil), Program, Classes, Exercises, Datasets, Assessments y Notas.
 
 ## Descripción del Repositorio
 
@@ -23,16 +25,36 @@ Este curso introduce las técnicas fundamentales del PLN aplicadas al análisis 
 │   ├───images
 │   │       logo_utfsm.png
 │   │       logo_upacifico.jpg
+│   │       perfil_fernando.png
+│   │
+│   ├───clases
+│   │       clases.md
+│   │       Unidad_1_Limpieza_Transformacion.ipynb
+│   │       Unidad_2_DFM.ipynb
+│   │       Unidad_3_Estadistica_Descriptiva.ipynb
+│   │       Unidad_4_Keyness_Dispersion.ipynb
+│   │       Unidad_5_Topic_Modeling.ipynb
+│   │       Unidad_6_Analisis_Sentimiento.ipynb
+│   │       Unidad_7_Similitud_Semantica.ipynb
+│   │
+│   ├───exercises
+│   │       exercises.md
+│   │
+│   ├───datasets
+│   │       datasets.md
+│   │
+│   ├───assessments
+│   │       proyecto_integrador.md
+│   │
+│   ├───notas
+│   │       notas.md
 │   │
 │   │   __init__.py
 │   │   index.md
-│   │   unit1_limpieza_transformacion.ipynb
-│   │   unit2_dfm.ipynb
-│   │   unit3_estadistica_descriptiva.ipynb
-│   │   unit4_keyness_dispersion.ipynb
-│   │   unit5_topic_modeling.ipynb
-│   │   unit6_analisis_sentimiento.ipynb
-│   │   unit7_similitud_semantica.ipynb
+│   │   programa.md
+│
+├────notebooks
+│       1_Limpieza_procesamiento.ipynb
 │
 │   .gitignore
 │   LICENSE
@@ -45,10 +67,13 @@ Este curso introduce las técnicas fundamentales del PLN aplicadas al análisis 
 donde:
 
 * `documentation.yml`: archivo para generar el CI del proyecto y publicar la documentación en GitHub Pages.
-* `docs`: carpeta donde se almacenan los jupyter notebooks de cada unidad.
-  * `images`: carpeta con los logos UTFSM / Universidad del Pacífico.
-  * `index.md`: página de inicio con la descripción del curso, objetivos y tabla de contenidos.
-  * `unitN_*.ipynb`: notebook de cada una de las 7 unidades del curso.
+* `docs`: carpeta que orquesta mkdocs (sitio publicado).
+  * `images`: logos UTFSM / Universidad del Pacífico y foto de perfil.
+  * `index.md`: Home — perfil del profesor.
+  * `programa.md`: Program — descripción del curso, objetivos, contenidos y evaluación.
+  * `clases/`: Classes — un notebook por unidad, más `clases.md` como índice con enlaces a Colab.
+  * `exercises/`, `datasets/`, `assessments/`, `notas/`: secciones Exercises, Datasets, Assessments y Notas.
+* `notebooks`: notebooks originales de cada unidad tal como los redacta el autor, antes de integrarse a `docs/clases/`.
 * `.gitignore`: lugar donde se define los archivos a ignorar.
 * `LICENSE`: licencia asociada al proyecto.
 * `mkdocs.yml`: archivo que orquesta la documentación del proyecto.

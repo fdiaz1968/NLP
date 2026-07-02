@@ -80,10 +80,15 @@ plugins:
 # TOC
 nav:
     - Home: index.md
-    - Unidad 1 - Limpieza y Transformación: unit1_limpieza_transformacion.ipynb
-    - Unidad 2 - Document Feature Matrix: unit2_dfm.ipynb
-    - Unidad 3 - Estadística Descriptiva: unit3_estadistica_descriptiva.ipynb
-    - Unidad 4 - Keyness y Dispersión: unit4_keyness_dispersion.ipynb
-    - Unidad 5 - Topic Modeling: unit5_topic_modeling.ipynb
-    - Unidad 6 - Análisis de Sentimiento: unit6_analisis_sentimiento.ipynb
-    - Unidad 7 - Similitud Semántica: unit7_similitud_semantica.ipynb
+    - Program:
+        - programa.md
+    - Classes:
+        - clases/clases.md
+    - Exercises:
+        - exercises/exercises.md
+    - Datasets:
+        - datasets/datasets.md
+    - Assessments:
+        - "📊 Proyecto Integrador": assessments/proyecto_integrador.md
+    - Notas:
+        - notas/notas.md
