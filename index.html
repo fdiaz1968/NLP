@@ -6,18 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Análisis Textual con R y Python — UTFSM / Universidad del Pacífico">
       
-        <meta name="author" content="Francisco Alfaro">
+      
+        <meta name="author" content="Fernando Díaz H., PhD.">
       
       
-        <link rel="canonical" href="https://github.com/fralfaro/DS-Python-Course/">
+        <link rel="canonical" href="https://fdiaz1968.github.io/NLP/">
       
-      <link rel="icon" href="images/logo_python.svg">
+      <link rel="icon" href="images/logo_utfsm.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Home</title>
+        <title>Procesamiento de Lenguaje Natural</title>
       
     
     
@@ -55,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="brown">
   
     
     
@@ -67,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-basica-a-python" class="md-skip">
+        <a href="#procesamiento-de-lenguaje-natural" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -81,9 +83,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Home" class="md-header__button md-logo" aria-label="Home" data-md-component="logo">
+    <a href="." title="Procesamiento de Lenguaje Natural" class="md-header__button md-logo" aria-label="Procesamiento de Lenguaje Natural" data-md-component="logo">
       
-  <img src="images/logo.bmp" alt="logo">
+  <img src="images/logo_utfsm.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -93,7 +95,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Home
+            Procesamiento de Lenguaje Natural
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -110,7 +112,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="brown"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -119,7 +121,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="brown"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -167,13 +169,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/fralfaro/DS-Python-Course" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/fdiaz1968/NLP" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    fralfaro/DS-Python-Course
+    fdiaz1968/NLP
   </div>
 </a>
       </div>
@@ -202,22 +204,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Home" class="md-nav__button md-logo" aria-label="Home" data-md-component="logo">
+    <a href="." title="Procesamiento de Lenguaje Natural" class="md-nav__button md-logo" aria-label="Procesamiento de Lenguaje Natural" data-md-component="logo">
       
-  <img src="images/logo.bmp" alt="logo">
+  <img src="images/logo_utfsm.png" alt="logo">
 
     </a>
-    Home
+    Procesamiento de Lenguaje Natural
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/fralfaro/DS-Python-Course" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/fdiaz1968/NLP" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    fralfaro/DS-Python-Course
+    fdiaz1968/NLP
   </div>
 </a>
     </div>
@@ -266,6 +268,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#analisis-textual-con-r-y-python" class="md-nav__link">
+    Análisis Textual con R y Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-general" class="md-nav__link">
+    Información General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#material" class="md-nav__link">
     Material
   </a>
@@ -273,8 +289,105 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contenidos-tematicos" class="md-nav__link">
-    Contenidos temáticos
+  <a href="#descripcion-del-curso" class="md-nav__link">
+    Descripción del Curso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-generales" class="md-nav__link">
+    Objetivos Generales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-tecnologico-del-curso" class="md-nav__link">
+    Stack Tecnológico del Curso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenidos-herramientas-y-justificacion" class="md-nav__link">
+    Contenidos, Herramientas y Justificación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalle-de-unidades" class="md-nav__link">
+    Detalle de Unidades
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalle de Unidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidad-1-limpieza-y-transformacion-de-textos" class="md-nav__link">
+    Unidad 1 — Limpieza y Transformación de Textos 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-2-document-feature-matrix" class="md-nav__link">
+    Unidad 2 — Document Feature Matrix 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-3-estadistica-descriptiva" class="md-nav__link">
+    Unidad 3 — Estadística Descriptiva 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-4-keyness-y-dispersion-textual" class="md-nav__link">
+    Unidad 4 — Keyness y Dispersión Textual 🟠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-5-modelamiento-de-topicos" class="md-nav__link">
+    Unidad 5 — Modelamiento de Tópicos 🟠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-6-analisis-de-sentimiento-financiero" class="md-nav__link">
+    Unidad 6 — Análisis de Sentimiento Financiero 🔵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-7-similitud-y-distancias-semanticas" class="md-nav__link">
+    Unidad 7 — Similitud y Distancias Semánticas 🟠
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-y-evaluacion" class="md-nav__link">
+    Metodología y Evaluación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-rapida-cuando-usar-cada-enfoque" class="md-nav__link">
+    Guía Rápida: ¿Cuándo usar cada enfoque?
   </a>
   
 </li>
@@ -294,57 +407,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Conceptos Básicos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Conceptos Básicos" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Conceptos Básicos
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="intro/" class="md-nav__link">
-        Introducción
+      <a href="unit1_limpieza_transformacion/" class="md-nav__link">
+        Unidad 1 — Limpieza y Transformación de Textos🟢 R / Quanteda
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="basic/" class="md-nav__link">
-        Nomenclatura
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -356,57 +422,85 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="unit2_dfm/" class="md-nav__link">
+        Unidad 2 — Document Feature Matrix🟢 R / Quanteda
+      </a>
+    </li>
+  
+
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
-          Manipulación Datos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Manipulación Datos" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Manipulación Datos
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
+
   
   
   
     <li class="md-nav__item">
-      <a href="pandas/" class="md-nav__link">
-        Pandas
+      <a href="unit3_estadistica_descriptiva/" class="md-nav__link">
+        Unidad 3 — Estadística Descriptiva🟢 R / Quanteda
       </a>
     </li>
   
 
-            
-          
-            
-              
+    
+      
+      
+      
+
   
   
   
     <li class="md-nav__item">
-      <a href="seaborn/" class="md-nav__link">
-        Seaborn
+      <a href="unit4_keyness_dispersion/" class="md-nav__link">
+        Unidad 4 — Keyness y Dispersión Textual🟠 Híbrido
       </a>
     </li>
   
 
-            
-          
-        </ul>
-      </nav>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit5_topic_modeling/" class="md-nav__link">
+        Unidad 5 — Modelamiento de Tópicos🟠 Híbrido
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit6_analisis_sentimiento/" class="md-nav__link">
+        Unidad 6 — Análisis de Sentimiento Financiero🔵 Python / LLM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit7_similitud_semantica/" class="md-nav__link">
+        Unidad 7 — Similitud y Distancias Semánticas🟠 Híbrido
+      </a>
     </li>
   
 
@@ -438,6 +532,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#analisis-textual-con-r-y-python" class="md-nav__link">
+    Análisis Textual con R y Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-general" class="md-nav__link">
+    Información General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#material" class="md-nav__link">
     Material
   </a>
@@ -445,8 +553,105 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contenidos-tematicos" class="md-nav__link">
-    Contenidos temáticos
+  <a href="#descripcion-del-curso" class="md-nav__link">
+    Descripción del Curso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-generales" class="md-nav__link">
+    Objetivos Generales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-tecnologico-del-curso" class="md-nav__link">
+    Stack Tecnológico del Curso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenidos-herramientas-y-justificacion" class="md-nav__link">
+    Contenidos, Herramientas y Justificación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalle-de-unidades" class="md-nav__link">
+    Detalle de Unidades
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalle de Unidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidad-1-limpieza-y-transformacion-de-textos" class="md-nav__link">
+    Unidad 1 — Limpieza y Transformación de Textos 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-2-document-feature-matrix" class="md-nav__link">
+    Unidad 2 — Document Feature Matrix 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-3-estadistica-descriptiva" class="md-nav__link">
+    Unidad 3 — Estadística Descriptiva 🟢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-4-keyness-y-dispersion-textual" class="md-nav__link">
+    Unidad 4 — Keyness y Dispersión Textual 🟠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-5-modelamiento-de-topicos" class="md-nav__link">
+    Unidad 5 — Modelamiento de Tópicos 🟠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-6-analisis-de-sentimiento-financiero" class="md-nav__link">
+    Unidad 6 — Análisis de Sentimiento Financiero 🔵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidad-7-similitud-y-distancias-semanticas" class="md-nav__link">
+    Unidad 7 — Similitud y Distancias Semánticas 🟠
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-y-evaluacion" class="md-nav__link">
+    Metodología y Evaluación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-rapida-cuando-usar-cada-enfoque" class="md-nav__link">
+    Guía Rápida: ¿Cuándo usar cada enfoque?
   </a>
   
 </li>
@@ -465,19 +670,298 @@
                 
 
 
-<h1 id="introduccion-basica-a-python">Introducción básica a Python</h1>
+<h1 id="procesamiento-de-lenguaje-natural">Procesamiento de Lenguaje Natural</h1>
+<h3 id="analisis-textual-con-r-y-python">Análisis Textual con R y Python</h3>
+<p><strong>Fernando Díaz H., PhD.</strong>
+Departamento de Ingeniería Comercial — Universidad Técnica Federico Santa María (UTFSM) / Universidad del Pacífico</p>
+<p>Versión 2026 &nbsp;|&nbsp; Contacto: <a href="mailto:fernando.diaz@usm.cl">fernando.diaz@usm.cl</a> &nbsp;|&nbsp; <a href="https://twitter.com/fernando.diazh">@fernando.diazh</a></p>
+<hr />
+<h2 id="informacion-general">Información General</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modalidad</strong></td>
+<td>Intensivo (Semana Internacional)</td>
+<td><strong>Idioma</strong></td>
+<td>Español</td>
+</tr>
+<tr>
+<td><strong>Nivel</strong></td>
+<td>Pregrado</td>
+<td><strong>Jornadas</strong></td>
+<td>5 días</td>
+</tr>
+<tr>
+<td><strong>Herramientas</strong></td>
+<td>R + Python</td>
+<td><strong>Entorno</strong></td>
+<td>Colab / Local</td>
+</tr>
+</tbody>
+</table>
 <h2 id="material">Material</h2>
-<p>El material está disponible en el siguiente <a href="https://github.com/fralfaro/DS-Python-Course">repositorio</a>, para obtener el código de fuente basta con que ejecutes el siguiente comando:</p>
-<blockquote>
-<p><code>https://github.com/fralfaro/DS-Python-Course</code></p>
-</blockquote>
-<h2 id="contenidos-tematicos">Contenidos temáticos</h2>
+<p>El material está disponible en el siguiente <a href="https://github.com/fdiaz1968/NLP">repositorio</a>; para obtener el código de fuente basta con que ejecutes el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/fdiaz1968/NLP
+</code></pre></div>
+<h2 id="descripcion-del-curso">Descripción del Curso</h2>
+<p>Este curso introduce las técnicas fundamentales del <strong>Procesamiento de Lenguaje Natural (PLN)</strong> aplicadas al análisis de textos en ciencias sociales, economía y finanzas. El programa combina dos paradigmas complementarios:</p>
 <ul>
-<li>Introducción a Python</li>
-<li>Nomenclatura</li>
-<li>Introducción Pandas</li>
-<li>Introducción Seaborn</li>
+<li>🟢 <strong>R / Quanteda</strong> para tareas donde los métodos estadísticos clásicos son más interpretables, rápidos y reproducibles.</li>
+<li>🔵 <strong>Python / LLM</strong> para tareas donde la comprensión contextual profunda de los LLM supera claramente al enfoque tradicional.</li>
 </ul>
+<p>Se hace énfasis en que <em>no existe un enfoque universalmente superior</em>: la elección de la herramienta depende del corpus, la tarea, los recursos computacionales y el nivel de interpretabilidad requerido. Esta perspectiva crítica es uno de los objetivos centrales del curso.</p>
+<p>Aprendemos Quanteda no porque sea el estado final del NLP, sino porque proporciona los fundamentos conceptuales necesarios para comprender por qué los embeddings y los Transformers representan un avance sobre las representaciones tradicionales del texto.</p>
+<h2 id="objetivos-generales">Objetivos Generales</h2>
+<p>Al finalizar el curso, el estudiante será capaz de:</p>
+<ol>
+<li>Preprocesar y estructurar corpus textuales para análisis cuantitativo.</li>
+<li>Aplicar métodos estadísticos clásicos de PLN (frecuencias, keyness, LDA) usando R/Quanteda.</li>
+<li>Utilizar modelos transformer especializados (FinBERT, DeBERTa, sentence-transformers) en Python para tareas de clasificación y similitud.</li>
+<li>Evaluar y comparar el rendimiento de enfoques tradicionales y LLM sobre un mismo corpus.</li>
+<li>Fundamentar críticamente la elección metodológica según el contexto de investigación.</li>
+</ol>
+<h2 id="stack-tecnologico-del-curso">Stack Tecnológico del Curso</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>🟢 R / Quanteda</th>
+<th>🔵 Python / HuggingFace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paquetes clave</strong></td>
+<td><code>quanteda</code>, <code>topicmodels</code>, <code>stringr</code>, <code>ggplot2</code></td>
+<td><code>transformers</code>, <code>sentence-transformers</code>, <code>bertopic</code>, <code>scikit-learn</code>, <code>pandas</code></td>
+</tr>
+<tr>
+<td><strong>Cuándo usarlo</strong></td>
+<td>Corpus grandes, reproducibilidad, métricas lingüísticas, DFM</td>
+<td>Comprensión contextual, tareas sin anotaciones, similitud semántica</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contenidos-herramientas-y-justificacion">Contenidos, Herramientas y Justificación</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Unidad</th>
+<th>Contenidos</th>
+<th>Herramienta</th>
+<th>Justificación metodológica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Limpieza y Transformación</td>
+<td>Corpus, tokens, metadatos. Stopwords, stemming, lematización.</td>
+<td>🟢 R</td>
+<td>Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Document Feature Matrix</td>
+<td>Construcción de la DFM. Frecuencias, trimming, agrupación por <code>docvars</code>.</td>
+<td>🟢 R</td>
+<td>La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Estadística Descriptiva</td>
+<td>Tokens, types, TTR. Wordclouds, gráficos de frecuencia.</td>
+<td>🟢 R</td>
+<td>Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Keyness y Dispersión</td>
+<td>Chi-cuadrado, log-likelihood. <code>textplot_keyness()</code>, <code>textplot_xray()</code>.</td>
+<td>🟠 Híbrido</td>
+<td>Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Topic Modeling</td>
+<td>LDA (Gibbs/VEM), selección de k. Introducción a BERTopic.</td>
+<td>🟠 Híbrido</td>
+<td>LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Análisis de Sentimiento</td>
+<td>FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro.</td>
+<td>🔵 Python</td>
+<td>Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Similitud Semántica</td>
+<td>Cosine/Jaccard/Euclídea sobre DFM. Embeddings con <code>sentence-transformers</code>. Clustering, MDS.</td>
+<td>🟠 Híbrido</td>
+<td>Unidad puente del curso: primero similitud sobre TF-IDF (R), luego sobre embeddings densos (Python). El contraste hace tangible la diferencia entre similitud léxica y semántica.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detalle-de-unidades">Detalle de Unidades</h2>
+<h3 id="unidad-1-limpieza-y-transformacion-de-textos">Unidad 1 — Limpieza y Transformación de Textos 🟢</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Construir un corpus estructurado con metadatos usando <code>quanteda</code>.</li>
+<li>Aplicar operaciones de normalización: eliminación de stopwords, puntuación, stemming y lematización.</li>
+<li>Comprender el impacto de cada decisión de preprocesamiento sobre los análisis posteriores.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Benoit, K. et al. (2018). <em>quanteda: An R package for the quantitative analysis of textual data</em>. JOSS, 3(30), 774.</li>
+<li>Silge, J. &amp; Robinson, D. (2017). <em>Text Mining with R</em>. O'Reilly. <a href="https://www.tidytextmining.com">tidytextmining.com</a></li>
+</ul>
+<p>📓 Notebook: <a href="unit1_limpieza_transformacion/">unit1_limpieza_transformacion.ipynb</a></p>
+<h3 id="unidad-2-document-feature-matrix">Unidad 2 — Document Feature Matrix 🟢</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Construir y manipular una DFM con ponderación TF-IDF.</li>
+<li>Realizar trimming por frecuencia y agrupar documentos por variables de metadatos.</li>
+<li>Exportar la DFM para uso en modelos externos.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Grimmer, J., Roberts, M. E. &amp; Stewart, B. M. (2022). <em>Text as Data</em>. Princeton University Press. Cap. 4-5.</li>
+<li>Documentación oficial: <a href="https://quanteda.io">quanteda.io</a></li>
+</ul>
+<p>📓 Notebook: <a href="unit2_dfm/">unit2_dfm.ipynb</a></p>
+<h3 id="unidad-3-estadistica-descriptiva">Unidad 3 — Estadística Descriptiva 🟢</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Calcular métricas de diversidad léxica: tokens, types, TTR y moving-average TTR.</li>
+<li>Visualizar distribuciones de frecuencia e interpretar la ley de Zipf en corpus reales.</li>
+<li>Producir wordclouds comparativos entre grupos de documentos.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Manning, C. D. &amp; Schütze, H. (1999). <em>Foundations of Statistical NLP</em>. MIT Press. Cap. 1-2.</li>
+<li>Zipf, G. K. (1949). <em>Human Behavior and the Principle of Least Effort</em>. Addison-Wesley.</li>
+</ul>
+<p>📓 Notebook: <a href="unit3_estadistica_descriptiva/">unit3_estadistica_descriptiva.ipynb</a></p>
+<h3 id="unidad-4-keyness-y-dispersion-textual">Unidad 4 — Keyness y Dispersión Textual 🟠</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Calcular e interpretar keyness con chi-cuadrado y log-likelihood entre grupos de texto.</li>
+<li>Visualizar la dispersión léxica a lo largo de un corpus con <code>textplot_xray()</code>.</li>
+<li>Usar un LLM para generar narrativas interpretativas de los términos clave detectados.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Gabrielatos, C. (2018). Keyness analysis: nature, metrics and techniques. En: <em>Corpus Approaches to Discourse</em>. Routledge.</li>
+<li>Scott, M. (1997). PC analysis of key words. <em>Liverpool Papers in Language and Discourse</em>, 1.</li>
+</ul>
+<p>📓 Notebook: <a href="unit4_keyness_dispersion/">unit4_keyness_dispersion.ipynb</a></p>
+<h3 id="unidad-5-modelamiento-de-topicos">Unidad 5 — Modelamiento de Tópicos 🟠</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Estimar un modelo LDA con el paquete <code>topicmodels</code> y seleccionar k óptimo.</li>
+<li>Comparar LDA con BERTopic en términos de coherencia y legibilidad de tópicos.</li>
+<li>Aplicar un LLM para asignar etiquetas interpretables a los tópicos descubiertos.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Blei, D. M., Ng, A. Y. &amp; Jordan, M. I. (2003). Latent Dirichlet Allocation. JMLR, 3, 993-1022.</li>
+<li>Grootendorst, M. (2022). BERTopic: Neural topic modeling with a class-based TF-IDF procedure. arXiv:2203.05794.</li>
+</ul>
+<p>📓 Notebook: <a href="unit5_topic_modeling/">unit5_topic_modeling.ipynb</a></p>
+<h3 id="unidad-6-analisis-de-sentimiento-financiero">Unidad 6 — Análisis de Sentimiento Financiero 🔵</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.</li>
+<li>Evaluar modelos con métricas de clasificación: F1 macro, precisión, recall y matriz de confusión.</li>
+<li>Comparar el rendimiento entre modelos de distinto tamaño, arquitectura e idioma.</li>
+<li>Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.</li>
+<li>Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. <em>(Dataset: Financial PhraseBank)</em></li>
+<li>Loughran, T. &amp; McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.</li>
+</ul>
+<p>📓 Notebook: <a href="unit6_analisis_sentimiento/">unit6_analisis_sentimiento.ipynb</a></p>
+<h3 id="unidad-7-similitud-y-distancias-semanticas">Unidad 7 — Similitud y Distancias Semánticas 🟠</h3>
+<p><strong>Objetivos de aprendizaje:</strong></p>
+<ul>
+<li>Calcular similitud coseno, Jaccard y euclidiana sobre una DFM TF-IDF (R).</li>
+<li>Generar embeddings de oraciones con <code>sentence-transformers</code> y calcular similitud semántica (Python).</li>
+<li>Contrastar ambos enfoques sobre el mismo corpus y articular sus diferencias conceptuales.</li>
+<li>Visualizar agrupamientos de documentos con clustering jerárquico y MDS.</li>
+</ul>
+<p><strong>Lecturas sugeridas:</strong></p>
+<ul>
+<li>Reimers, N. &amp; Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019. <a href="https://www.sbert.net">sbert.net</a></li>
+<li>Salton, G. &amp; McGill, M. J. (1983). <em>Introduction to Modern Information Retrieval</em>. McGraw-Hill.</li>
+</ul>
+<p>📓 Notebook: <a href="unit7_similitud_semantica/">unit7_similitud_semantica.ipynb</a></p>
+<h2 id="metodologia-y-evaluacion">Metodología y Evaluación</h2>
+<p>El curso es eminentemente práctico. Cada unidad incluye un Jupyter Notebook (o script R Markdown) ejecutable en Google Colab o entorno local, con ejercicios guiados y un ejercicio de aplicación al final.</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Ponderación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Participación y ejercicios en clase</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>Proyecto integrador final</td>
+<td>60%</td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>proyecto integrador</strong> consiste en aplicar al menos tres de las técnicas del curso a un corpus de libre elección, documentando las decisiones metodológicas (incluyendo la justificación de herramienta) y comparando al menos un enfoque clásico con uno basado en LLM.</p>
+<h2 id="guia-rapida-cuando-usar-cada-enfoque">Guía Rápida: ¿Cuándo usar cada enfoque?</h2>
+<table>
+<thead>
+<tr>
+<th>🟢 Usar R / NLP Tradicional cuando...</th>
+<th>🔵 Usar Python / LLM cuando...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El corpus es grande (&gt;50.000 docs) y la velocidad importa.</td>
+<td>El texto contiene ironía, jerga, ambigüedad contextual.</td>
+</tr>
+<tr>
+<td>Se requiere reproducibilidad y transparencia total.</td>
+<td>No se dispone de datos etiquetados (zero-shot o few-shot).</td>
+</tr>
+<tr>
+<td>La tarea está bien definida (frecuencias, keyness, readability).</td>
+<td>La tarea requiere comprensión semántica profunda (similitud, QA).</td>
+</tr>
+<tr>
+<td>Se dispone de datos anotados para entrenar un clasificador propio.</td>
+<td>El dominio es especializado (finanzas, legal, salud).</td>
+</tr>
+<tr>
+<td>El presupuesto computacional es limitado.</td>
+<td>Se busca automatizar codificación cualitativa.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Universidad Técnica Federico Santa María — <a href="https://twitter.com/fernando.diazh">@fernando.diazh</a></em></p>
 
               
             </article>
@@ -497,13 +981,13 @@
       
       
         
-        <a href="intro/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Introducción" rel="next">
+        <a href="unit1_limpieza_transformacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Unidad 1 — Limpieza y Transformación de Textos🟢 R / Quanteda" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Introducción
+              Unidad 1 — Limpieza y Transformación de Textos🟢 R / Quanteda
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -532,26 +1016,14 @@
       
       
     
-    <a href="https://github.com/fralfaro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+    <a href="https://github.com/fdiaz1968" target="_blank" rel="noopener" title="github.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
     
-      
-      
-    
-    <a href="https://www.linkedin.com/in/faam/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-    </a>
-  
-    
-    
-      
-      
-    
-    <a href="https://fralfaro.github.io/portfolio/" target="_blank" rel="noopener" title="fralfaro.github.io" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.1-20.4-4.2-41.8-4.2-64 0-22.2 2.1-43.6 4.2-64h185.4c2.1 20.4 3.3 41.8 3.3 64zm151.9-64c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42.9 3.2-64 0-22-1.1-43.4-3.2-64h123.1zm-10.5-32H376.7c-10-63.86-29.8-117.38-55.3-151.558C399.8 29.09 463.4 85.94 493.4 160zm-149.1 0H167.7c6.1-36.4 15.5-68.62 27-94.65 10.5-23.61 22.2-40.74 33.5-51.54C239.4 3.178 248.7 0 256 0c7.3 0 16.6 3.178 27.8 13.81 11.3 10.8 23 27.93 33.5 51.54 11.5 26.03 20.9 58.25 27 94.65zm-325.69 0C48.59 85.94 112.2 29.09 190.6 8.442 165.1 42.62 145.3 96.14 135.3 160H18.61zm112.59 32c-2.1 20.6-4.1 42-4.1 64 0 21.1 2 43.4 4.1 64H8.065C2.8 299.5 0 278.1 0 256s2.8-43.5 8.065-64H131.2zm63.5 254.6c-11.5-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.7-22.2 40.8-33.5 51.6-11.2 10.6-20.5 13.8-28.7 13.8-6.4 0-15.7-3.2-26.9-13.8-11.3-10.8-23-27.9-33.5-51.6zm-4.1 57C112.2 482.9 48.59 426.1 18.61 352H135.3c10 63.9 29.8 117.4 55.3 151.6zm130.8 0c25.5-34.2 45.3-87.7 55.3-151.6h116.7c-30 74.1-93.6 130.9-172 151.6z"/></svg>
+    <a href="mailto:fernando.diaz@usm.cl" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M464 64c26.5 0 48 21.49 48 48 0 15.1-7.1 29.3-19.2 38.4L275.2 313.6a32.1 32.1 0 0 1-38.4 0L19.2 150.4C7.113 141.3 0 127.1 0 112c0-26.51 21.49-48 48-48h416zM217.6 339.2a63.9 63.9 0 0 0 76.8 0L512 176v208c0 35.3-28.7 64-64 64H64c-35.35 0-64-28.7-64-64V176l217.6 163.2z"/></svg>
     </a>
   
 </div>

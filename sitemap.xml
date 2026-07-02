@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/__init__/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/__init__/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/basic/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/unit1_limpieza_transformacion/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/intro/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/unit2_dfm/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/pandas/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/unit3_estadistica_descriptiva/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/DS-Python-Course/seaborn/</loc>
+         <loc>https://fdiaz1968.github.io/NLP/unit4_keyness_dispersion/</loc>
+         <lastmod>2026-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/unit5_topic_modeling/</loc>
+         <lastmod>2026-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/unit6_analisis_sentimiento/</loc>
+         <lastmod>2026-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/unit7_similitud_semantica/</loc>
          <lastmod>2026-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
