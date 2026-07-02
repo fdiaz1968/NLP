@@ -19,7 +19,7 @@
     
     
       
-        <title>Unidad 6 — Análisis de Sentimiento Financiero🔵 Python / LLM - Procesamiento de Lenguaje Natural</title>
+        <title>Unidad 6 — Análisis de Sentimiento Financiero - Procesamiento de Lenguaje Natural</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unidad-6-analisis-de-sentimiento-financiero-python-llm" class="md-skip">
+        <a href="#unidad-6-analisis-de-sentimiento-financiero" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unidad 6 — Análisis de Sentimiento Financiero🔵 Python / LLM
+              Unidad 6 — Análisis de Sentimiento Financiero
             
           </span>
         </div>
@@ -250,7 +250,7 @@
   
     <li class="md-nav__item">
       <a href="../unit1_limpieza_transformacion/" class="md-nav__link">
-        Unidad 1 — Limpieza y Transformación de Textos🟢 R / Quanteda
+        Fundamentos de Procesamiento Textual
       </a>
     </li>
   
@@ -265,7 +265,7 @@
   
     <li class="md-nav__item">
       <a href="../unit2_dfm/" class="md-nav__link">
-        Unidad 2 — Document Feature Matrix🟢 R / Quanteda
+        Unidad 2 — Document Feature Matrix
       </a>
     </li>
   
@@ -280,7 +280,7 @@
   
     <li class="md-nav__item">
       <a href="../unit3_estadistica_descriptiva/" class="md-nav__link">
-        Unidad 3 — Estadística Descriptiva🟢 R / Quanteda
+        Unidad 3 — Estadística Descriptiva
       </a>
     </li>
   
@@ -295,7 +295,7 @@
   
     <li class="md-nav__item">
       <a href="../unit4_keyness_dispersion/" class="md-nav__link">
-        Unidad 4 — Keyness y Dispersión Textual🟠 Híbrido
+        Unidad 4 — Keyness y Dispersión Textual
       </a>
     </li>
   
@@ -310,7 +310,7 @@
   
     <li class="md-nav__item">
       <a href="../unit5_topic_modeling/" class="md-nav__link">
-        Unidad 5 — Modelamiento de Tópicos🟠 Híbrido
+        Unidad 5 — Modelamiento de Tópicos
       </a>
     </li>
   
@@ -334,12 +334,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Unidad 6 — Análisis de Sentimiento Financiero🔵 Python / LLM
+          Unidad 6 — Análisis de Sentimiento Financiero
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Unidad 6 — Análisis de Sentimiento Financiero🔵 Python / LLM
+        Unidad 6 — Análisis de Sentimiento Financiero
       </a>
       
         
@@ -358,15 +358,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos-de-aprendizaje-cargar-y-aplicar-modelos-transformer-especializados-finbert-roberta-deberta-desde-huggingface-evaluar-modelos-con-metricas-de-clasificacion-f1-macro-precision-recall-y-matriz-de-confusion-comparar-el-rendimiento-entre-modelos-de-distinto-tamano-arquitectura-e-idioma-reflexionar-sobre-las-limitaciones-del-enfoque-basado-en-diccionarios-lexicos-financieros" class="md-nav__link">
-    Objetivos de aprendizaje- Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.- Evaluar modelos con métricas de clasificación: F1 macro, precisión, recall y matriz de confusión.- Comparar el rendimiento entre modelos de distinto tamaño, arquitectura e idioma.- Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros.
+  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
+    Objetivos de aprendizaje
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lecturas-sugeridas-araci-d-2019-finbert-financial-sentiment-analysis-with-pre-trained-language-models-arxiv190810063-malo-p-et-al-2014-good-debt-or-bad-debt-detecting-semantic-orientations-in-economic-texts-jasist-654-782-796-dataset-financial-phrasebank-loughran-t-mcdonald-b-2011-when-is-a-liability-not-a-liability-journal-of-finance-661-35-65" class="md-nav__link">
-    Lecturas sugeridas- Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.- Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. (Dataset: Financial PhraseBank)- Loughran, T. &amp; McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.
+  <a href="#lecturas-sugeridas" class="md-nav__link">
+    Lecturas sugeridas
   </a>
   
 </li>
@@ -375,6 +375,26 @@
   <a href="#desarrollo" class="md-nav__link">
     Desarrollo
   </a>
+  
+    <nav class="md-nav" aria-label="Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-con-finbert" class="md-nav__link">
+    Clasificación con FinBERT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-con-metricas-de-clasificacion" class="md-nav__link">
+    Evaluación con métricas de clasificación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -395,7 +415,7 @@
   
     <li class="md-nav__item">
       <a href="../unit7_similitud_semantica/" class="md-nav__link">
-        Unidad 7 — Similitud y Distancias Semánticas🟠 Híbrido
+        Unidad 7 — Similitud y Distancias Semánticas
       </a>
     </li>
   
@@ -428,15 +448,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos-de-aprendizaje-cargar-y-aplicar-modelos-transformer-especializados-finbert-roberta-deberta-desde-huggingface-evaluar-modelos-con-metricas-de-clasificacion-f1-macro-precision-recall-y-matriz-de-confusion-comparar-el-rendimiento-entre-modelos-de-distinto-tamano-arquitectura-e-idioma-reflexionar-sobre-las-limitaciones-del-enfoque-basado-en-diccionarios-lexicos-financieros" class="md-nav__link">
-    Objetivos de aprendizaje- Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.- Evaluar modelos con métricas de clasificación: F1 macro, precisión, recall y matriz de confusión.- Comparar el rendimiento entre modelos de distinto tamaño, arquitectura e idioma.- Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros.
+  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
+    Objetivos de aprendizaje
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lecturas-sugeridas-araci-d-2019-finbert-financial-sentiment-analysis-with-pre-trained-language-models-arxiv190810063-malo-p-et-al-2014-good-debt-or-bad-debt-detecting-semantic-orientations-in-economic-texts-jasist-654-782-796-dataset-financial-phrasebank-loughran-t-mcdonald-b-2011-when-is-a-liability-not-a-liability-journal-of-finance-661-35-65" class="md-nav__link">
-    Lecturas sugeridas- Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.- Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. (Dataset: Financial PhraseBank)- Loughran, T. &amp; McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.
+  <a href="#lecturas-sugeridas" class="md-nav__link">
+    Lecturas sugeridas
   </a>
   
 </li>
@@ -445,6 +465,26 @@
   <a href="#desarrollo" class="md-nav__link">
     Desarrollo
   </a>
+  
+    <nav class="md-nav" aria-label="Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-con-finbert" class="md-nav__link">
+    Clasificación con FinBERT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-con-metricas-de-clasificacion" class="md-nav__link">
+    Evaluación con métricas de clasificación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1498,7 +1538,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="unidad-6-analisis-de-sentimiento-financiero-python-llm">Unidad 6 &#8212; An&#225;lisis de Sentimiento Financiero&#128309; Python / LLM<a class="anchor-link" href="#unidad-6-analisis-de-sentimiento-financiero-python-llm">&#182;</a></h1>
+<h1 id="unidad-6-analisis-de-sentimiento-financiero">Unidad 6 &#8212; An&#225;lisis de Sentimiento Financiero<a class="anchor-link" href="#unidad-6-analisis-de-sentimiento-financiero">&#182;</a></h1><p>🔵 Python / LLM</p>
+
 </div>
 </div>
 </div>
@@ -1509,7 +1550,13 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="objetivos-de-aprendizaje-cargar-y-aplicar-modelos-transformer-especializados-finbert-roberta-deberta-desde-huggingface-evaluar-modelos-con-metricas-de-clasificacion-f1-macro-precision-recall-y-matriz-de-confusion-comparar-el-rendimiento-entre-modelos-de-distinto-tamano-arquitectura-e-idioma-reflexionar-sobre-las-limitaciones-del-enfoque-basado-en-diccionarios-lexicos-financieros">Objetivos de aprendizaje- Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.- Evaluar modelos con m&#233;tricas de clasificaci&#243;n: F1 macro, precisi&#243;n, recall y matriz de confusi&#243;n.- Comparar el rendimiento entre modelos de distinto tama&#241;o, arquitectura e idioma.- Reflexionar sobre las limitaciones del enfoque basado en diccionarios l&#233;xicos financieros.<a class="anchor-link" href="#objetivos-de-aprendizaje-cargar-y-aplicar-modelos-transformer-especializados-finbert-roberta-deberta-desde-huggingface-evaluar-modelos-con-metricas-de-clasificacion-f1-macro-precision-recall-y-matriz-de-confusion-comparar-el-rendimiento-entre-modelos-de-distinto-tamano-arquitectura-e-idioma-reflexionar-sobre-las-limitaciones-del-enfoque-basado-en-diccionarios-lexicos-financieros">&#182;</a></h2>
+<h2 id="objetivos-de-aprendizaje">Objetivos de aprendizaje<a class="anchor-link" href="#objetivos-de-aprendizaje">&#182;</a></h2><ul>
+<li>Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.</li>
+<li>Evaluar modelos con métricas de clasificación: F1 macro, precisión, recall y matriz de confusión.</li>
+<li>Comparar el rendimiento entre modelos de distinto tamaño, arquitectura e idioma.</li>
+<li>Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -1520,7 +1567,12 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="lecturas-sugeridas-araci-d-2019-finbert-financial-sentiment-analysis-with-pre-trained-language-models-arxiv190810063-malo-p-et-al-2014-good-debt-or-bad-debt-detecting-semantic-orientations-in-economic-texts-jasist-654-782-796-dataset-financial-phrasebank-loughran-t-mcdonald-b-2011-when-is-a-liability-not-a-liability-journal-of-finance-661-35-65">Lecturas sugeridas- Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.- Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. <em>(Dataset: Financial PhraseBank)</em>- Loughran, T. &amp; McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.<a class="anchor-link" href="#lecturas-sugeridas-araci-d-2019-finbert-financial-sentiment-analysis-with-pre-trained-language-models-arxiv190810063-malo-p-et-al-2014-good-debt-or-bad-debt-detecting-semantic-orientations-in-economic-texts-jasist-654-782-796-dataset-financial-phrasebank-loughran-t-mcdonald-b-2011-when-is-a-liability-not-a-liability-journal-of-finance-661-35-65">&#182;</a></h2>
+<h2 id="lecturas-sugeridas">Lecturas sugeridas<a class="anchor-link" href="#lecturas-sugeridas">&#182;</a></h2><ul>
+<li>Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.</li>
+<li>Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. <em>(Dataset: Financial PhraseBank)</em></li>
+<li>Loughran, T. &amp; McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -1531,7 +1583,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="desarrollo">Desarrollo<a class="anchor-link" href="#desarrollo">&#182;</a></h2>
+<h2 id="desarrollo">Desarrollo<a class="anchor-link" href="#desarrollo">&#182;</a></h2><h3 id="clasificacion-con-finbert">Clasificaci&#243;n con FinBERT<a class="anchor-link" href="#clasificacion-con-finbert">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1556,9 +1608,88 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span><span class="c1"># TODO: cargar FinBERT / RoBERTa / DeBERTa vía pipeline(&quot;sentiment-analysis&quot;, model=...)# TODO: evaluar con sklearn.metrics (f1_score, classification_report, confusion_matrix)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+
+<span class="n">clasificador</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s2">&quot;sentiment-analysis&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;ProsusAI/finbert&quot;</span><span class="p">)</span>
+
+<span class="n">noticias</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Company profits soared after the earnings report.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;The firm faces a significant liquidity crisis.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Markets remained flat amid mixed economic signals.&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">resultados</span> <span class="o">=</span> <span class="n">clasificador</span><span class="p">(</span><span class="n">noticias</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">noticia</span><span class="p">,</span> <span class="n">resultado</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">noticias</span><span class="p">,</span> <span class="n">resultados</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">resultado</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)  </span><span class="si">{</span><span class="n">noticia</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">from transformers import pipeline# TODO: cargar FinBERT / RoBERTa / DeBERTa vía pipeline("sentiment-analysis", model=...)# TODO: evaluar con sklearn.metrics (f1_score, classification_report, confusion_matrix)</div>
+<div id="cell-1" class="clipboard-copy-txt">from transformers import pipeline
+
+clasificador = pipeline("sentiment-analysis", model="ProsusAI/finbert")
+
+noticias = [
+    "Company profits soared after the earnings report.",
+    "The firm faces a significant liquidity crisis.",
+    "Markets remained flat amid mixed economic signals.",
+]
+
+resultados = clasificador(noticias)
+for noticia, resultado in zip(noticias, resultados):
+    print(f"{resultado['label']:>10} ({resultado['score']:.2f})  {noticia}")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="evaluacion-con-metricas-de-clasificacion">Evaluaci&#243;n con m&#233;tricas de clasificaci&#243;n<a class="anchor-link" href="#evaluacion-con-metricas-de-clasificacion">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+
+<span class="n">etiquetas_reales</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;positive&quot;</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">]</span>
+<span class="n">predicciones</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">resultados</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">etiquetas_reales</span><span class="p">,</span> <span class="n">predicciones</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">etiquetas_reales</span><span class="p">,</span> <span class="n">predicciones</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;positive&quot;</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">]))</span>
+</pre></div>
+<div id="cell-2" class="clipboard-copy-txt">from sklearn.metrics import classification_report, confusion_matrix
+
+etiquetas_reales = ["positive", "negative", "neutral"]
+predicciones = [r["label"].lower() for r in resultados]
+
+print(classification_report(etiquetas_reales, predicciones))
+print(confusion_matrix(etiquetas_reales, predicciones, labels=["positive", "negative", "neutral"]))</div>
     
         </div>
     </div>
@@ -1589,7 +1720,7 @@ Licensed under the Apache License, Version 2.0.
     <nav class="md-footer__inner md-grid" aria-label="Pie">
       
         
-        <a href="../unit5_topic_modeling/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Unidad 5 — Modelamiento de Tópicos🟠 Híbrido" rel="prev">
+        <a href="../unit5_topic_modeling/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Unidad 5 — Modelamiento de Tópicos" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1598,20 +1729,20 @@ Licensed under the Apache License, Version 2.0.
               <span class="md-footer__direction">
                 Anterior
               </span>
-              Unidad 5 — Modelamiento de Tópicos🟠 Híbrido
+              Unidad 5 — Modelamiento de Tópicos
             </div>
           </div>
         </a>
       
       
         
-        <a href="../unit7_similitud_semantica/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Unidad 7 — Similitud y Distancias Semánticas🟠 Híbrido" rel="next">
+        <a href="../unit7_similitud_semantica/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Unidad 7 — Similitud y Distancias Semánticas" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Unidad 7 — Similitud y Distancias Semánticas🟠 Híbrido
+              Unidad 7 — Similitud y Distancias Semánticas
             </div>
           </div>
           <div class="md-footer__button md-icon">
