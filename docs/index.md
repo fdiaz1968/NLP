@@ -29,8 +29,8 @@ git clone https://github.com/fdiaz1968/NLP
 
 Este curso introduce las técnicas fundamentales del **Procesamiento de Lenguaje Natural (PLN)** aplicadas al análisis de textos en ciencias sociales, economía y finanzas. El programa combina dos paradigmas complementarios:
 
-- 🟢 **R / Quanteda** para tareas donde los métodos estadísticos clásicos son más interpretables, rápidos y reproducibles.
-- 🔵 **Python / LLM** para tareas donde la comprensión contextual profunda de los LLM supera claramente al enfoque tradicional.
+- <span style="background-color:#0850411a;color:#085041;padding:2px 8px;border-radius:4px;font-weight:700;">R / Quanteda</span> para tareas donde los métodos estadísticos clásicos son más interpretables, rápidos y reproducibles.
+- <span style="background-color:#1758951a;color:#175895;padding:2px 8px;border-radius:4px;font-weight:700;">Python / LLM</span> para tareas donde la comprensión contextual profunda de los LLM supera claramente al enfoque tradicional.
 
 Se hace énfasis en que *no existe un enfoque universalmente superior*: la elección de la herramienta depende del corpus, la tarea, los recursos computacionales y el nivel de interpretabilidad requerido. Esta perspectiva crítica es uno de los objetivos centrales del curso.
 
@@ -48,7 +48,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 ## Stack Tecnológico del Curso
 
-| | 🟢 R / Quanteda | 🔵 Python / HuggingFace |
+| | <span style="background-color:#0850411a;color:#085041;padding:2px 8px;border-radius:4px;font-weight:700;">R / Quanteda</span> | <span style="background-color:#1758951a;color:#175895;padding:2px 8px;border-radius:4px;font-weight:700;">Python / HuggingFace</span> |
 |---|---|---|
 | **Paquetes clave** | `quanteda`, `topicmodels`, `stringr`, `ggplot2` | `transformers`, `sentence-transformers`, `bertopic`, `scikit-learn`, `pandas` |
 | **Cuándo usarlo** | Corpus grandes, reproducibilidad, métricas lingüísticas, DFM | Comprensión contextual, tareas sin anotaciones, similitud semántica |
@@ -57,17 +57,17 @@ Al finalizar el curso, el estudiante será capaz de:
 
 | # | Unidad | Contenidos | Herramienta | Justificación metodológica |
 |---|---|---|---|---|
-| 1 | Limpieza y Transformación | Corpus, tokens, metadatos. Stopwords, stemming, lematización. | 🟢 R | Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante. |
-| 2 | Document Feature Matrix | Construcción de la DFM. Frecuencias, trimming, agrupación por `docvars`. | 🟢 R | La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora. |
-| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia. | 🟢 R | Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
-| 4 | Keyness y Dispersión | Chi-cuadrado, log-likelihood. `textplot_keyness()`, `textplot_xray()`. | 🟠 Híbrido | Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados. |
-| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de k. Introducción a BERTopic. | 🟠 Híbrido | LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente. |
-| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro. | 🔵 Python | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
-| 7 | Similitud Semántica | Cosine/Jaccard/Euclídea sobre DFM. Embeddings con `sentence-transformers`. Clustering, MDS. | 🟠 Híbrido | Unidad puente del curso: primero similitud sobre TF-IDF (R), luego sobre embeddings densos (Python). El contraste hace tangible la diferencia entre similitud léxica y semántica. |
+| 1 | Limpieza y Transformación | Corpus, tokens, metadatos. Stopwords, stemming, lematización. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante. |
+| 2 | Document Feature Matrix | Construcción de la DFM. Frecuencias, trimming, agrupación por `docvars`. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora. |
+| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
+| 4 | Keyness y Dispersión | Chi-cuadrado, log-likelihood. `textplot_keyness()`, `textplot_xray()`. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados. |
+| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de k. Introducción a BERTopic. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente. |
+| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro. | <span style="background-color:#1758951a;color:#175895;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Python</span> | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
+| 7 | Similitud Semántica | Cosine/Jaccard/Euclídea sobre DFM. Embeddings con `sentence-transformers`. Clustering, MDS. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | Unidad puente del curso: primero similitud sobre TF-IDF (R), luego sobre embeddings densos (Python). El contraste hace tangible la diferencia entre similitud léxica y semántica. |
 
 ## Detalle de Unidades
 
-### Unidad 1 — Limpieza y Transformación de Textos 🟢
+### Unidad 1 — Limpieza y Transformación de Textos <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span>
 
 **Objetivos de aprendizaje:**
 
@@ -82,7 +82,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit1_limpieza_transformacion.ipynb](unit1_limpieza_transformacion.ipynb)
 
-### Unidad 2 — Document Feature Matrix 🟢
+### Unidad 2 — Document Feature Matrix <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span>
 
 **Objetivos de aprendizaje:**
 
@@ -97,7 +97,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit2_dfm.ipynb](unit2_dfm.ipynb)
 
-### Unidad 3 — Estadística Descriptiva 🟢
+### Unidad 3 — Estadística Descriptiva <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span>
 
 **Objetivos de aprendizaje:**
 
@@ -112,7 +112,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit3_estadistica_descriptiva.ipynb](unit3_estadistica_descriptiva.ipynb)
 
-### Unidad 4 — Keyness y Dispersión Textual 🟠
+### Unidad 4 — Keyness y Dispersión Textual <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span>
 
 **Objetivos de aprendizaje:**
 
@@ -127,7 +127,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit4_keyness_dispersion.ipynb](unit4_keyness_dispersion.ipynb)
 
-### Unidad 5 — Modelamiento de Tópicos 🟠
+### Unidad 5 — Modelamiento de Tópicos <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span>
 
 **Objetivos de aprendizaje:**
 
@@ -142,7 +142,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit5_topic_modeling.ipynb](unit5_topic_modeling.ipynb)
 
-### Unidad 6 — Análisis de Sentimiento Financiero 🔵
+### Unidad 6 — Análisis de Sentimiento Financiero <span style="background-color:#1758951a;color:#175895;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Python</span>
 
 **Objetivos de aprendizaje:**
 
@@ -159,7 +159,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 📓 Notebook: [unit6_analisis_sentimiento.ipynb](unit6_analisis_sentimiento.ipynb)
 
-### Unidad 7 — Similitud y Distancias Semánticas 🟠
+### Unidad 7 — Similitud y Distancias Semánticas <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span>
 
 **Objetivos de aprendizaje:**
 
@@ -188,7 +188,7 @@ El **proyecto integrador** consiste en aplicar al menos tres de las técnicas de
 
 ## Guía Rápida: ¿Cuándo usar cada enfoque?
 
-| 🟢 Usar R / NLP Tradicional cuando... | 🔵 Usar Python / LLM cuando... |
+| <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> Usar R / NLP Tradicional cuando... | <span style="background-color:#1758951a;color:#175895;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Python</span> Usar Python / LLM cuando... |
 |---|---|
 | El corpus es grande (>50.000 docs) y la velocidad importa. | El texto contiene ironía, jerga, ambigüedad contextual. |
 | Se requiere reproducibilidad y transparencia total. | No se dispone de datos etiquetados (zero-shot o few-shot). |
