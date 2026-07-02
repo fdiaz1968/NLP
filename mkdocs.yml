@@ -1,14 +1,14 @@
 # Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 
 # Project information
-site_name: Home
-site_url: https://github.com/fralfaro/DS-Python-Course
-site_author: Francisco Alfaro
-site_description:
+site_name: Procesamiento de Lenguaje Natural
+site_url: https://fdiaz1968.github.io/NLP/
+site_author: Fernando Díaz H., PhD.
+site_description: Análisis Textual con R y Python — UTFSM / Universidad del Pacífico
 
 # Repository
-repo_name: fralfaro/DS-Python-Course
-repo_url: https://github.com/fralfaro/DS-Python-Course
+repo_name: fdiaz1968/NLP
+repo_url: https://github.com/fdiaz1968/NLP
 edit_uri: ''
 
 # Markdown extensions
@@ -36,8 +36,8 @@ extra_javascript:
 theme:
   name: material
   language: es
-  logo: images/logo.bmp
-  favicon: images/logo_python.svg
+  logo: images/logo_utfsm.png
+  favicon: images/logo_utfsm.png
   features:
     - navigation.instant
     - navigation.top
@@ -48,8 +48,8 @@ theme:
     # Light mode
     - media: '(prefers-color-scheme: light)'
       scheme: default
-      primary: blue grey
-      accent: light blue
+      primary: red
+      accent: brown
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -57,8 +57,8 @@ theme:
     # Dark mode
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
-      primary: blue grey
-      accent: light blue
+      primary: red
+      accent: brown
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -67,11 +67,9 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/fralfaro
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/faam/
-    - icon: fontawesome/solid/globe
-      link: https://fralfaro.github.io/portfolio/
+      link: https://github.com/fdiaz1968
+    - icon: fontawesome/solid/envelope
+      link: mailto:fernando.diaz@usm.cl
 
 # Plugins
 plugins:
@@ -82,10 +80,10 @@ plugins:
 # TOC
 nav:
     - Home: index.md
-    - Conceptos Básicos:
-        - intro.ipynb
-        - basic.ipynb
-    - Manipulación Datos:
-        - pandas.ipynb
-        - seaborn.ipynb
-
+    - Unidad 1 - Limpieza y Transformación: unit1_limpieza_transformacion.ipynb
+    - Unidad 2 - Document Feature Matrix: unit2_dfm.ipynb
+    - Unidad 3 - Estadística Descriptiva: unit3_estadistica_descriptiva.ipynb
+    - Unidad 4 - Keyness y Dispersión: unit4_keyness_dispersion.ipynb
+    - Unidad 5 - Topic Modeling: unit5_topic_modeling.ipynb
+    - Unidad 6 - Análisis de Sentimiento: unit6_analisis_sentimiento.ipynb
+    - Unidad 7 - Similitud Semántica: unit7_similitud_semantica.ipynb
