@@ -1,5 +1,5 @@
 ---
-title: "Exercises"
+title: "Ejercicios"
 ---
 
 # Ejercicios

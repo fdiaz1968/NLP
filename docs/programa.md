@@ -167,7 +167,7 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 | Participación y ejercicios en clase | **40%** |
 | Proyecto integrador final | **60%** |
 
-Ver el detalle del proyecto integrador en la sección [Assessments](assessments/proyecto_integrador.md).
+Ver el detalle del proyecto integrador en la sección [Evaluaciones](assessments/proyecto_integrador.md).
 
 ## Guía Rápida: ¿Cuándo usar cada enfoque?
 
