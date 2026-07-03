@@ -1,14 +1,26 @@
-/* Segundo logo (Universidad del Pacífico) junto al título del header */
+/* Segundo logo (Universidad del Pacífico) junto al título del header.
+   Se usa position:absolute porque .md-header__ellipsis (hijo de
+   .md-header__title) ocupa 100% del ancho y es block-level, así que un
+   ::after en flujo normal quedaría empujado fuera de la barra en vez de
+   aparecer junto al texto. */
+.md-header__title {
+  position: relative;
+  padding-right: 92px;
+}
+
 .md-header__title::after {
   content: "";
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  margin-left: 10px;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 84px;
+  height: 32px;
+  background-color: #fff;
   background-image: url("../images/logo_upacifico.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border-radius: 3px;
+  pointer-events: none;
 }
