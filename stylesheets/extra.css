@@ -1,0 +1,14 @@
+/* Segundo logo (Universidad del Pacífico) junto al título del header */
+.md-header__title::after {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-image: url("../images/logo_upacifico.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 3px;
+}
