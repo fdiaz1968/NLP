@@ -2,72 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://fdiaz1968.github.io/NLP/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/__init__/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/programa/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/assessments/proyecto_integrador/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_1_Limpieza_Transformacion/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_2_DFM/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_3_Estadistica_Descriptiva/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_4_Keyness_Dispersion/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_4a_Keyness_Dispersion_Quanteda/</loc>
+         <lastmod>2026-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_4b_Keyness_Interpretacion_LLM/</loc>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_5_Topic_Modeling/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_6_Analisis_Sentimiento/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/Unidad_7_Similitud_Semantica/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/clases/clases/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/datasets/datasets/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fdiaz1968.github.io/NLP/exercises/exercises/</loc>
-         <lastmod>2026-07-05</lastmod>
+         <lastmod>2026-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
