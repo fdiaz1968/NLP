@@ -19,7 +19,7 @@
     
     
       
-        <title>🤖 Interpretación de Keyness con un LLM (Python + Hugging Face) - Procesamiento de Lenguaje Natural</title>
+        <title>🤖 Interpretación de Keyness con un LLM - Procesamiento de Lenguaje Natural</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interpretacion-de-keyness-con-un-llm-python-hugging-face" class="md-skip">
+        <a href="#interpretacion-de-keyness-con-un-llm" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🤖 Interpretación de Keyness con un LLM (Python + Hugging Face)
+              🤖 Interpretación de Keyness con un LLM
             
           </span>
         </div>
@@ -510,9 +510,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#python-hugging-face" class="md-nav__link">
+    Python + Hugging Face
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo" class="md-nav__link">
+    🔄 Flujo de trabajo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-papel-cumple-el-llm" class="md-nav__link">
+    🧠 ¿Qué papel cumple el LLM?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-y-costo" class="md-nav__link">
+    💻 Ejecución y costo
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Ejecución y costo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#explorando-la-tabla" class="md-nav__link">
     🔍 Explorando la tabla
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1587,17 +1621,55 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="interpretacion-de-keyness-con-un-llm-python-hugging-face">&#129302; Interpretaci&#243;n de Keyness con un LLM (Python + Hugging Face)<a class="anchor-link" href="#interpretacion-de-keyness-con-un-llm-python-hugging-face">&#182;</a></h1><hr>
-<p>Este notebook carga la tabla de <em>keyness</em> exportada desde R (<code>tstat_key_movies.csv</code>, generada en <code>4_Keyness _ Dispersión Textual.ipynb</code>) y usa un modelo de lenguaje <strong>gratuito y de código abierto</strong> (vía Hugging Face <code>transformers</code>) para ayudar a interpretar los resultados.</p>
-<p>Flujo:</p>
+<h1 id="interpretacion-de-keyness-con-un-llm">&#129302; Interpretaci&#243;n de <em>Keyness</em> con un LLM<a class="anchor-link" href="#interpretacion-de-keyness-con-un-llm">&#182;</a></h1><h2 id="python-hugging-face">Python + Hugging Face<a class="anchor-link" href="#python-hugging-face">&#182;</a></h2><hr>
+<p>En este notebook utilizaremos Python y la librería <code>transformers</code> de <strong>Hugging Face</strong> para interpretar los resultados del análisis de <em>keyness</em> realizado previamente en R.</p>
+<p>El punto de partida será el archivo:</p>
+<div class="highlight"><pre><span></span>tstat_key_movies.csv
+</pre></div>
+<p>Este archivo fue generado en el notebook <code>4_Keyness _ Dispersión Textual.ipynb</code> y contiene las palabras que distinguen estadísticamente las reseñas positivas de las negativas.</p>
+<hr>
+<h2 id="flujo-de-trabajo">&#128260; Flujo de trabajo<a class="anchor-link" href="#flujo-de-trabajo">&#182;</a></h2><p>Seguiremos los siguientes pasos:</p>
 <ol>
-<li>Cargar el CSV con <code>pandas</code>.</li>
-<li>Separar las palabras más asociadas a reseñas <strong>positivas</strong> vs. <strong>negativas</strong> según el signo de <code>chi2</code>.</li>
-<li>Construir un prompt compacto con las palabras clave.</li>
-<li>Enviarlo a un modelo instruccional open-source para obtener una interpretación cualitativa.</li>
+<li>Cargar la tabla de <em>keyness</em> con <code>pandas</code>.</li>
+<li>Identificar las palabras asociadas al grupo objetivo y al grupo de referencia a partir del signo del estadístico <code>chi2</code>.</li>
+<li>Seleccionar los términos más relevantes de cada grupo.</li>
+<li>Construir un <em>prompt</em> con los resultados estadísticos.</li>
+<li>Enviar el <em>prompt</em> a un modelo instruccional disponible en Hugging Face.</li>
+<li>Obtener una interpretación cualitativa de las diferencias entre las reseñas positivas y negativas.</li>
 </ol>
-<blockquote><p>📌 <strong>Sobre el costo:</strong> este notebook no requiere API key ni tarjeta de crédito. El modelo se descarga una vez desde Hugging Face y corre localmente (o en la GPU gratuita de Colab). Es más lento y menos sofisticado que un modelo comercial como Claude u GPT-4, pero suficiente para explorar el flujo de trabajo sin costo alguno.</p>
-<p>Si estás en <strong>Google Colab</strong>, activa GPU en <code>Entorno de ejecución &gt; Cambiar tipo de entorno de ejecución &gt; GPU (T4)</code> antes de correr las celdas — en CPU funciona, pero es notablemente más lento.</p>
+<div class="highlight"><pre><span></span>Keyness calculado en R
+          ↓
+Archivo CSV
+          ↓
+Python + pandas
+          ↓
+Construcción del prompt
+          ↓
+LLM disponible en Hugging Face
+          ↓
+Interpretación de los resultados
+</pre></div>
+<hr>
+<h2 id="que-papel-cumple-el-llm">&#129504; &#191;Qu&#233; papel cumple el LLM?<a class="anchor-link" href="#que-papel-cumple-el-llm">&#182;</a></h2><p>El LLM <strong>no calcula nuevamente el análisis de keyness</strong>.</p>
+<p>La evidencia estadística ya fue obtenida en R mediante <code>textstat_keyness()</code>. El modelo recibe una selección de esos resultados y ayuda a:</p>
+<ul>
+<li>sintetizar los principales patrones;</li>
+<li>distinguir términos valorativos de nombres propios o títulos;</li>
+<li>proponer interpretaciones temáticas;</li>
+<li>redactar una explicación conjunta de las diferencias observadas.</li>
+</ul>
+<blockquote><p>📌 <strong>Idea clave:</strong> <code>quanteda</code> produce la evidencia estadística reproducible; el LLM ayuda a interpretarla y comunicarla.</p>
+</blockquote>
+<hr>
+<h2 id="ejecucion-y-costo">&#128187; Ejecuci&#243;n y costo<a class="anchor-link" href="#ejecucion-y-costo">&#182;</a></h2><p>Este notebook no requiere una API comercial, una tarjeta de crédito ni una API key.</p>
+<p>El modelo se descarga desde Hugging Face y se ejecuta:</p>
+<ul>
+<li>localmente, utilizando los recursos del computador; o</li>
+<li>en Google Colab, utilizando CPU o una GPU cuando esté disponible.</li>
+</ul>
+<p>La primera ejecución puede tardar más porque es necesario descargar el modelo. Las ejecuciones posteriores pueden utilizar la copia almacenada en caché.</p>
+<p>Los modelos abiertos o de pesos abiertos suelen ser menos potentes que algunos servicios comerciales, pero resultan suficientes para aprender y reproducir este flujo de trabajo sin costo de API.</p>
+<blockquote><p>⚠️ &gt;Si estás en <strong>Google Colab</strong>, activa GPU en <code>Entorno de ejecución &gt; Cambiar tipo de entorno de ejecución &gt; GPU (T4)</code> antes de correr las celdas — en CPU funciona, pero es notablemente más lento.</p>
 </blockquote>
 
 </div>
