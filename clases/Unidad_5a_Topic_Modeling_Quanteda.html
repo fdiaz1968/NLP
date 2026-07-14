@@ -582,15 +582,15 @@
     🎬 Continuaremos trabajando con las críticas de cine
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="🎬 Continuaremos trabajando con las críticas de cine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tokens_compound" class="md-nav__link">
     🔗 tokens_compound()
   </a>
   
-    <nav class="md-nav" aria-label="🔗 tokens_compound()">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#por-que-es-util" class="md-nav__link">
@@ -756,32 +756,25 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#principales-palabras-de-cada-topico" class="md-nav__link">
+    🏷️ Principales palabras de cada tópico
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#escogiendo-el-valor-de-k" class="md-nav__link">
-    Escogiendo el Valor de $k$
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#eleccion-del-numero-de-topicos-k-en-lda" class="md-nav__link">
-    🎯 Elección del Número de Tópicos ($k$) en LDA
+    🎯 Elección del número de tópicos ($k$) en LDA
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Elección del Número de Tópicos ($k$) en LDA">
+    <nav class="md-nav" aria-label="🎯 Elección del número de tópicos ($k$) en LDA">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cuando-k-es-demasiado-alto" class="md-nav__link">
-    🔺 Cuando $k$ es demasiado alto
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#cuando-k-es-demasiado-bajo" class="md-nav__link">
@@ -791,8 +784,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#que-hacer" class="md-nav__link">
-    ✅ ¿Qué hacer?
+  <a href="#cuando-k-es-demasiado-alto" class="md-nav__link">
+    🔺 Cuando $k$ es demasiado alto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-valor-adecuado-de-k" class="md-nav__link">
+    ✅ Un valor adecuado de $k$
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-escoger-k" class="md-nav__link">
+    🧭 ¿Cómo escoger $k$?
   </a>
   
 </li>
@@ -2355,7 +2362,7 @@ cv005_29357.txt :
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="tokens_compound">&#128279; <code>tokens_compound()</code><a class="anchor-link" href="#tokens_compound">&#182;</a></h2><p>La función <strong><code>tokens_compound()</code></strong> permite combinar <strong>tokens consecutivos</strong> en una única unidad léxica. De esta forma, expresiones compuestas pueden analizarse como un solo término en lugar de varias palabras independientes.</p>
+<h3 id="tokens_compound">&#128279; <code>tokens_compound()</code><a class="anchor-link" href="#tokens_compound">&#182;</a></h3><p>La función <strong><code>tokens_compound()</code></strong> permite combinar <strong>tokens consecutivos</strong> en una única unidad léxica. De esta forma, expresiones compuestas pueden analizarse como un solo término en lugar de varias palabras independientes.</p>
 <hr>
 <h3 id="por-que-es-util">&#129504; &#191;Por qu&#233; es &#250;til?<a class="anchor-link" href="#por-que-es-util">&#182;</a></h3><p>Muchas expresiones adquieren su significado únicamente cuando se consideran como una unidad.</p>
 <p>Por ejemplo:</p>
@@ -3228,6 +3235,36 @@ tmod_20 <- LDA(dfmat_tm,
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="principales-palabras-de-cada-topico">&#127991;&#65039; Principales palabras de cada t&#243;pico<a class="anchor-link" href="#principales-palabras-de-cada-topico">&#182;</a></h3><p>Una vez ajustado el modelo LDA, podemos inspeccionar los <strong>tópicos descubiertos</strong> mediante la función <code>terms()</code>.</p>
+<p>La instrucción</p>
+<div class="highlight"><pre><span></span><span class="nf">terms</span><span class="p">(</span><span class="n">tmod_20</span><span class="p">,</span> <span class="m">15</span><span class="p">)</span>
+</pre></div>
+<p>devuelve, para cada uno de los <strong>20 tópicos</strong> estimados por el modelo (<code>k = 20</code>), las <strong>15 palabras con mayor probabilidad</strong> dentro de ese tópico.</p>
+<p>Es importante destacar que:</p>
+<ul>
+<li>estas palabras <strong>no son simplemente las más frecuentes del corpus</strong>;</li>
+<li>corresponden a las palabras con mayor probabilidad en la distribución <strong>φ</strong> (<em>topic-word distribution</em>) estimada para cada tópico;</li>
+<li>el conjunto de palabras permite interpretar el significado semántico de cada tópico.</li>
+</ul>
+<p>Por ejemplo, un tópico cuyas palabras principales sean</p>
+
+<pre><code>government   president   law   congress   state</code></pre>
+<p>podría interpretarse como un tópico relacionado con <strong>política</strong>.</p>
+<hr>
+<blockquote><p>📌 <strong>Idea clave:</strong> LDA no asigna nombres a los tópicos. El investigador interpreta cada tópico a partir de las palabras con mayor probabilidad en su distribución <strong>φ</strong>.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -3377,78 +3414,42 @@ tmod_20 <- LDA(dfmat_tm,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="escogiendo-el-valor-de-k">Escogiendo el Valor de $k$<a class="anchor-link" href="#escogiendo-el-valor-de-k">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El valor que se escoja para $k$ afecta el desempeño del modelo.</p>
-<p><strong>Valor de $k$ alto</strong>: Si el valor de $k$ es muy alto, las listas de tópicos se pueden superponer. Si se disminuye el valor de $k$, se logra que palabras de tópicos similares se agrupen para formar una menor cantidad de tópicos más coherentes.</p>
-<ul>
-<li><p>Con valores de $k$ muy altos, se produce <strong>overfitting</strong>.  El modelo puede empezar a sobreajustar los datos, lo que significa que aprenderá características demasiado específicas y ruidosas de los documentos de entrenamiento.</p>
-</li>
-<li><p>A medida que aumenta el número de tópicos, es posible que algunos de ellos sean muy similares entre sí o incluso representen pequeñas diferencias semánticas. Esto puede dificultar la interpretación y utilidad de los tópicos identificados, ya que pueden volverse demasiado específicos o superpuestos.</p>
-</li>
-<li><p>Un valor alto de $k$ implica que hay más parámetros que el modelo necesita aprender, lo que puede aumentar significativamente la complejidad computacional y el tiempo de entrenamiento del algoritmo LDA.</p>
-</li>
-</ul>
-<p>Si se disminuye el valor de $k$, se logra que palabras de tópicos similares se agrupen para formar una menor cantidad de tópicos más coherentes.</p>
-<p><strong>Valor de $k$ es bajo</strong>: Si el valor de $k$ es demasiado bajo,puede suceder que palabras no relacionadas se agrupen en unos pocos tópicos.</p>
-<ul>
-<li><p>Si el valor de $k$ es muy bajo, el modelo puede no ser capaz de capturar la diversidad y complejidad de los temas presentes en los datos. Se produce <strong>underfitting</strong>. Como resultado, algunos temas importantes pueden quedar subrepresentados o incluso omitirse por completo.</p>
-</li>
-<li><p>Un número muy bajo de temas puede llevar a una simplificación excesiva de los datos, lo que significa que se pierden detalles y matices importantes presentes en los documentos originales.</p>
-</li>
-<li><p>Con un valor bajo de $k$, algunos tópicos pueden ser muy amplios y vagos, lo que lleva a la identificación de temas que engloban múltiples conceptos distintos. Esto puede dificultar la interpretación precisa y la asignación adecuada de documentos a tópicos específicos.</p>
-</li>
-<li><p>Un número muy bajo de tópicos puede hacer que el modelo sea menos discriminativo, lo que significa que los tópicos identificados pueden compartir muchas palabras clave y no tener características distintivas claras.</p>
-</li>
-<li><p>Al incrementar $k$, se logra que las palabras se separen en tópicos más distintivos.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="eleccion-del-numero-de-topicos-k-en-lda">&#127919; Elecci&#243;n del N&#250;mero de T&#243;picos ($k$) en LDA<a class="anchor-link" href="#eleccion-del-numero-de-topicos-k-en-lda">&#182;</a></h2><p>El valor que se elige para $k$, es decir, el número de tópicos que el modelo LDA debe identificar, afecta significativamente tanto el rendimiento del modelo como la interpretabilidad de los resultados.</p>
 <hr>
-<h3 id="cuando-k-es-demasiado-alto">&#128314; Cuando $k$ es demasiado <strong>alto</strong><a class="anchor-link" href="#cuando-k-es-demasiado-alto">&#182;</a></h3><ul>
-<li>El modelo puede generar tópicos <strong>redundantes</strong> o <strong>superpuestos</strong>, con palabras muy similares que pertenecen a varios temas.</li>
-<li>Aumenta el riesgo de <strong>overfitting</strong>, capturando ruido o particularidades irrelevantes del corpus.</li>
-<li>Se incrementa la <strong>complejidad computacional</strong>, ya que el modelo debe aprender más parámetros.</li>
-<li>Los tópicos tienden a ser <strong>más específicos</strong>, lo que puede dificultar su interpretación.</li>
-</ul>
-<p>📌 Resultado: Tópicos más fragmentados, menos generalizables y potencialmente redundantes.</p>
+<h2 id="eleccion-del-numero-de-topicos-k-en-lda">&#127919; Elecci&#243;n del n&#250;mero de t&#243;picos ($k$) en LDA<a class="anchor-link" href="#eleccion-del-numero-de-topicos-k-en-lda">&#182;</a></h2><p>El parámetro $k$ determina el número de tópicos que el modelo <strong>Latent Dirichlet Allocation (LDA)</strong> intentará descubrir en el corpus. Su elección influye directamente en la calidad del modelo, la interpretabilidad de los tópicos y el costo computacional.</p>
 <hr>
-<h3 id="cuando-k-es-demasiado-bajo">&#128315; Cuando $k$ es demasiado <strong>bajo</strong><a class="anchor-link" href="#cuando-k-es-demasiado-bajo">&#182;</a></h3><ul>
-<li>El modelo agrupa en un mismo tópico <strong>palabras no relacionadas</strong>, lo que disminuye la coherencia temática.</li>
-<li>Se produce <strong>underfitting</strong>, omitiendo detalles importantes y simplificando excesivamente el contenido.</li>
-<li>Los tópicos se vuelven <strong>amplios, vagos y poco discriminativos</strong>, compartiendo muchas palabras clave.</li>
-<li>Disminuye la <strong>capacidad explicativa</strong> del modelo sobre la estructura latente del corpus.</li>
-</ul>
-<p>📌 Resultado: Tópicos demasiado genéricos, difíciles de interpretar y poco útiles para análisis específicos.</p>
-<hr>
-<h3 id="que-hacer">&#9989; &#191;Qu&#233; hacer?<a class="anchor-link" href="#que-hacer">&#182;</a></h3><p>La elección óptima de $k$ depende del corpus y los objetivos del análisis. Existen métodos como:</p>
+<h3 id="cuando-k-es-demasiado-bajo">&#128315; Cuando $k$ es demasiado bajo<a class="anchor-link" href="#cuando-k-es-demasiado-bajo">&#182;</a></h3><p>Un número insuficiente de tópicos puede producir <strong>underfitting</strong>:</p>
 <ul>
-<li>Evaluación de <strong>coherencia temática</strong>.</li>
-<li>Uso de medidas de <strong>log-verosimilitud</strong>.</li>
-<li>Comparación de resultados con distintas configuraciones.</li>
-<li>Validación cruzada o interpretación cualitativa de los tópicos.</li>
+<li>conceptos diferentes quedan agrupados dentro de un mismo tópico;</li>
+<li>los tópicos son demasiado amplios y poco específicos;</li>
+<li>se pierden detalles importantes de la estructura temática del corpus;</li>
+<li>disminuye la capacidad del modelo para distinguir entre documentos.</li>
 </ul>
-<blockquote><p>🎯 En general, se busca un equilibrio entre <strong>precisión</strong>, <strong>coherencia semántica</strong> y <strong>utilidad interpretativa</strong> de los temas extraídos.</p>
+<hr>
+<h3 id="cuando-k-es-demasiado-alto">&#128314; Cuando $k$ es demasiado alto<a class="anchor-link" href="#cuando-k-es-demasiado-alto">&#182;</a></h3><p>Un número excesivo de tópicos puede producir <strong>overfitting</strong>:</p>
+<ul>
+<li>aparecen tópicos muy similares o redundantes;</li>
+<li>temas generales se fragmentan en numerosos subtemas poco diferenciados;</li>
+<li>el modelo puede capturar ruido o particularidades poco relevantes del corpus;</li>
+<li>aumenta el tiempo de entrenamiento y la complejidad computacional.</li>
+</ul>
+<hr>
+<h3 id="un-valor-adecuado-de-k">&#9989; Un valor adecuado de $k$<a class="anchor-link" href="#un-valor-adecuado-de-k">&#182;</a></h3><p>El objetivo es encontrar un valor de $k$ que produzca tópicos:</p>
+<ul>
+<li>coherentes semánticamente;</li>
+<li>claramente diferenciados entre sí;</li>
+<li>suficientemente específicos para describir el corpus sin fragmentarlo excesivamente;</li>
+<li>útiles para la interpretación posterior.</li>
+</ul>
+<p><img src="../images/LDA_k_selection.png" alt="Efecto del número de tópicos ($k$) en un modelo LDA. Un valor de $k$ demasiado bajo produce tópicos muy generales (underfitting), un valor adecuado genera tópicos coherentes y diferenciados, mientras que un valor demasiado alto produce tópicos fragmentados o redundantes (overfitting)."></p>
+<hr>
+<h3 id="como-escoger-k">&#129517; &#191;C&#243;mo escoger $k$?<a class="anchor-link" href="#como-escoger-k">&#182;</a></h3><p>No existe un valor universalmente óptimo de $k$. En la práctica, suele combinarse información proveniente de distintos criterios, entre ellos:</p>
+<ul>
+<li>medidas de <strong>coherencia temática</strong>;</li>
+<li><strong>log-verosimilitud</strong> u otras métricas de ajuste;</li>
+<li>comparación de modelos con diferentes valores de $k$;</li>
+<li>interpretación cualitativa de los tópicos obtenidos.</li>
+</ul>
+<blockquote><p>📌 <strong>Idea clave:</strong> La elección de $k$ consiste en encontrar un equilibrio entre una representación demasiado general (<strong>underfitting</strong>) y una excesivamente fragmentada (<strong>overfitting</strong>). El mejor valor depende tanto del corpus como de los objetivos del análisis.</p>
 </blockquote>
 
 </div>
