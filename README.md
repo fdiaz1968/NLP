@@ -37,6 +37,7 @@ La estructura del sitio sigue el mismo esquema usado en [usm-course](https://git
 │   │       Unidad_5a_Topic_Modeling_Quanteda.ipynb
 │   │       Unidad_6_Analisis_Sentimiento.ipynb
 │   │       Unidad_7_Similitud_Semantica.ipynb
+│   │       tstat_key_movies.csv
 │   │
 │   ├───exercises
 │   │       exercises.md
@@ -51,9 +52,6 @@ La estructura del sitio sigue el mismo esquema usado en [usm-course](https://git
 │   │   index.md
 │   │   programa.md
 │
-├────notebooks
-│       1_Limpieza_procesamiento.ipynb
-│
 │   .gitignore
 │   LICENSE
 │   mkdocs.yml
@@ -65,13 +63,12 @@ La estructura del sitio sigue el mismo esquema usado en [usm-course](https://git
 donde:
 
 * `documentation.yml`: archivo para generar el CI del proyecto y publicar la documentación en GitHub Pages.
-* `docs`: carpeta que orquesta mkdocs (sitio publicado).
+* `docs`: carpeta que orquesta mkdocs (sitio publicado) — también donde se edita cada notebook directamente.
   * `images`: logos UTFSM / Universidad del Pacífico y foto de perfil.
   * `index.md`: Home — perfil del profesor.
   * `programa.md`: Programa — descripción del curso, objetivos, contenidos y evaluación.
-  * `clases/`: Clases — un notebook por unidad, más `clases.md` como índice con enlaces a Colab.
+  * `clases/`: Clases — un notebook por unidad (edítalos aquí directamente), más `clases.md` como índice con enlaces a Colab.
   * `exercises/`, `datasets/`, `assessments/`: secciones Ejercicios, Datasets y Evaluaciones.
-* `notebooks`: notebooks originales de cada unidad tal como los redacta el autor, antes de integrarse a `docs/clases/`.
 * `.gitignore`: lugar donde se define los archivos a ignorar.
 * `LICENSE`: licencia asociada al proyecto.
 * `mkdocs.yml`: archivo que orquesta la documentación del proyecto.
