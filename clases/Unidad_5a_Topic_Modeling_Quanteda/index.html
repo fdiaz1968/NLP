@@ -3326,13 +3326,69 @@ $$<hr>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="estimacion-de-un-modelo-lda-con-gibbs-sampling">&#129514; Estimaci&#243;n de un modelo LDA con Gibbs Sampling<a class="anchor-link" href="#estimacion-de-un-modelo-lda-con-gibbs-sampling">&#182;</a></h2><p>En este paso, se entrena un modelo de <strong>Latent Dirichlet Allocation (LDA)</strong> utilizando el método de inferencia <strong>Gibbs Sampling</strong>. El modelo se ajusta sobre la matriz documento-término previamente convertida y especifica que se desea identificar <strong>20 tópicos</strong> latentes en el corpus.</p>
+<hr>
+<h3 id="parametros-clave">&#9881;&#65039; Par&#225;metros clave<a class="anchor-link" href="#parametros-clave">&#182;</a></h3><ul>
+<li><strong><code>k = 20</code></strong>: Se define que el modelo debe extraer 20 tópicos.</li>
+<li><strong><code>method = "Gibbs"</code></strong>: Se emplea el muestreador de Gibbs, un algoritmo MCMC que realiza inferencia estocástica.</li>
+<li><strong><code>alpha = 0.02</code></strong>: Controla la dispersión de tópicos por documento. Un valor bajo tiende a generar documentos con pocos temas dominantes.</li>
+<li><strong><code>delta = 0.02</code></strong> (a veces llamado <code>beta</code> en la literatura): Controla la dispersión de palabras por tópico. Un valor bajo produce tópicos más especializados (menos palabras comunes compartidas entre tópicos).</li>
+<li><strong><code>set.seed(2)</code></strong>: Se establece una semilla para asegurar la reproducibilidad de los resultados.</li>
+</ul>
+<hr>
+<h3 id="que-produce-este-modelo">&#129504; &#191;Qu&#233; produce este modelo?<a class="anchor-link" href="#que-produce-este-modelo">&#182;</a></h3><p>Al finalizar la estimación, el modelo entrega:</p>
+<ul>
+<li>Una <strong>distribución de tópicos por documento</strong> (¿qué temas predominan en cada texto?).</li>
+<li>Una <strong>distribución de palabras por tópico</strong> (¿qué palabras caracterizan cada tema?).</li>
+</ul>
+<p>Estas salidas permiten interpretar el contenido latente del corpus y explorar la estructura temática de los documentos.</p>
+<blockquote><p>✅ Gibbs Sampling es especialmente útil cuando se busca capturar estructuras semánticas más precisas, aunque requiere mayor poder de cómputo que métodos deterministas como VEM.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<blockquote><p><strong>📝 Nota sobre la notación</strong></p>
+<p>En la formulación original de <strong>Latent Dirichlet Allocation (LDA)</strong> propuesta por <strong>Blei, Ng y Jordan (2003)</strong>, el hiperparámetro asociado a la distribución de palabras por tópico se denota por <strong>β</strong>, mientras que el hiperparámetro asociado a la distribución de tópicos por documento se denota por <strong>α</strong>.</p>
+<p>En este notebook seguimos esa notación al presentar el modelo:</p>
+<ul>
+<li><strong>θ</strong>: distribución de tópicos de un documento.</li>
+<li><strong>φ</strong>: distribución de palabras de un tópico.</li>
+<li><strong>α</strong>: hiperparámetro de la distribución de Dirichlet sobre <strong>θ</strong>.</li>
+<li><strong>β</strong>: hiperparámetro de la distribución de Dirichlet sobre <strong>φ</strong>.</li>
+</ul>
+<p>Sin embargo, la implementación del paquete <strong><code>topicmodels</code></strong> utiliza el nombre <strong><code>delta</code></strong> en lugar de <strong><code>beta</code></strong> para este último hiperparámetro. Es decir,</p>
+$$
+\boxed{\texttt{delta} \equiv \beta}
+$$<p>Ambos representan exactamente el mismo concepto: el hiperparámetro que controla la distribución previa (<em>prior</em>) de las palabras dentro de cada tópico.</p>
+<p><strong>Referencia:</strong> Blei, D. M., Ng, A. Y., &amp; Jordan, M. I. (2003). <em>Latent Dirichlet Allocation</em>. Journal of Machine Learning Research, <strong>3</strong>, 993–1022.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3365,35 +3421,6 @@ tmod_20 <- LDA(dfmat_tm,
 </div>
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="estimacion-de-un-modelo-lda-con-gibbs-sampling">&#129514; Estimaci&#243;n de un modelo LDA con Gibbs Sampling<a class="anchor-link" href="#estimacion-de-un-modelo-lda-con-gibbs-sampling">&#182;</a></h2><p>En este paso, se entrena un modelo de <strong>Latent Dirichlet Allocation (LDA)</strong> utilizando el método de inferencia <strong>Gibbs Sampling</strong>. El modelo se ajusta sobre la matriz documento-término previamente convertida y especifica que se desea identificar <strong>20 tópicos</strong> latentes en el corpus.</p>
-<hr>
-<h3 id="parametros-clave">&#9881;&#65039; Par&#225;metros clave<a class="anchor-link" href="#parametros-clave">&#182;</a></h3><ul>
-<li><strong><code>k = 20</code></strong>: Se define que el modelo debe extraer 20 tópicos.</li>
-<li><strong><code>method = "Gibbs"</code></strong>: Se emplea el muestreador de Gibbs, un algoritmo MCMC que realiza inferencia estocástica.</li>
-<li><strong><code>alpha = 0.02</code></strong>: Controla la dispersión de tópicos por documento. Un valor bajo tiende a generar documentos con pocos temas dominantes.</li>
-<li><strong><code>delta = 0.02</code></strong> (a veces llamado <code>beta</code> en la literatura): Controla la dispersión de palabras por tópico. Un valor bajo produce tópicos más especializados (menos palabras comunes compartidas entre tópicos).</li>
-<li><strong><code>set.seed(2)</code></strong>: Se establece una semilla para asegurar la reproducibilidad de los resultados.</li>
-</ul>
-<hr>
-<h3 id="que-produce-este-modelo">&#129504; &#191;Qu&#233; produce este modelo?<a class="anchor-link" href="#que-produce-este-modelo">&#182;</a></h3><p>Al finalizar la estimación, el modelo entrega:</p>
-<ul>
-<li>Una <strong>distribución de tópicos por documento</strong> (¿qué temas predominan en cada texto?).</li>
-<li>Una <strong>distribución de palabras por tópico</strong> (¿qué palabras caracterizan cada tema?).</li>
-</ul>
-<p>Estas salidas permiten interpretar el contenido latente del corpus y explorar la estructura temática de los documentos.</p>
-<blockquote><p>✅ Gibbs Sampling es especialmente útil cuando se busca capturar estructuras semánticas más precisas, aunque requiere mayor poder de cómputo que métodos deterministas como VEM.</p>
-</blockquote>
-
-</div>
-</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
