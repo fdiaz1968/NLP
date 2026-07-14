@@ -811,29 +811,29 @@
       
         <li class="md-nav__item">
   <a href="#discusion-efecto-del-numero-de-topicos-k-en-lda" class="md-nav__link">
-    🎯 Discusión: Efecto del Número de Tópicos ((k)) en LDA
+    🎯 Discusión: Efecto del Número de Tópicos ($k$) en LDA
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Discusión: Efecto del Número de Tópicos ((k)) en LDA">
+    <nav class="md-nav" aria-label="🎯 Discusión: Efecto del Número de Tópicos ($k$) en LDA">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#coherencia-tematica" class="md-nav__link">
-    🔍 Coherencia Temática
+    🔍 Coherencia temática
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#balance-general" class="md-nav__link">
-    ⚖️ Balance General
+  <a href="#comparacion-general" class="md-nav__link">
+    ⚖️ Comparación general
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recomendacion" class="md-nav__link">
-    ✅ Recomendación
+  <a href="#conclusion" class="md-nav__link">
+    ✅ Conclusión
   </a>
   
 </li>
@@ -845,10 +845,10 @@
       
         <li class="md-nav__item">
   <a href="#iii-visualizacion-de-los-topicos" class="md-nav__link">
-    📊 III. Visualización de los Tópicos
+    III. Visualización de los Tópicos
   </a>
   
-    <nav class="md-nav" aria-label="📊 III. Visualización de los Tópicos">
+    <nav class="md-nav" aria-label="III. Visualización de los Tópicos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3712,81 +3712,89 @@ tmod_25 <- LDA(dfmat_tm,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="discusion-efecto-del-numero-de-topicos-k-en-lda">&#127919; Discusi&#243;n: Efecto del N&#250;mero de T&#243;picos ((k)) en LDA<a class="anchor-link" href="#discusion-efecto-del-numero-de-topicos-k-en-lda">&#182;</a></h2><p>El número de tópicos ((k)) es un hiperparámetro fundamental en el modelamiento de temas con LDA. Afecta directamente la calidad, la coherencia y la utilidad interpretativa de los resultados. A continuación, se discute el efecto de elegir valores distintos de (k), usando los resultados para (k = 12), (k = 20) y (k = 25).</p>
 <hr>
-<h3 id="coherencia-tematica">&#128269; Coherencia Tem&#225;tica<a class="anchor-link" href="#coherencia-tematica">&#182;</a></h3><ul>
-<li><p><strong>(k = 12):</strong></p>
+<h2 id="discusion-efecto-del-numero-de-topicos-k-en-lda">&#127919; Discusi&#243;n: Efecto del N&#250;mero de T&#243;picos ($k$) en LDA<a class="anchor-link" href="#discusion-efecto-del-numero-de-topicos-k-en-lda">&#182;</a></h2><p>El número de tópicos, denotado por $k$, es uno de los hiperparámetros más importantes del modelo LDA. Su elección afecta directamente la calidad, la coherencia y la utilidad interpretativa de los tópicos descubiertos. En esta sección se comparan los resultados obtenidos para tres modelos con:</p>
 <ul>
-<li>Los temas son más <strong>amplios y genéricos</strong>.</li>
-<li>Algunos tópicos agrupan palabras poco relacionadas, reflejando menor coherencia semántica.</li>
-<li>Ejemplo: el <em>Topic 4</em> contiene “relationship”, “romantic”, “comedy”, “man”, lo que sugiere una mezcla amplia pero vaga.</li>
+<li>$k=12$</li>
+<li>$k=20$</li>
+<li>$k=25$</li>
+</ul>
+<p>con el fin de analizar cómo cambia la estructura temática del corpus a medida que aumenta el número de tópicos.</p>
+<hr>
+<h3 id="coherencia-tematica">&#128269; Coherencia tem&#225;tica<a class="anchor-link" href="#coherencia-tematica">&#182;</a></h3><ul>
+<li><p><strong>$k=12$</strong></p>
+<ul>
+<li>Los tópicos son más <strong>amplios y genéricos</strong>.</li>
+<li>Algunos agrupan palabras poco relacionadas, reflejando una menor coherencia semántica.</li>
+<li>Por ejemplo, el <em>Topic 4</em> contiene términos como <em>relationship</em>, <em>romantic</em>, <em>comedy</em> y <em>man</em>, lo que sugiere un tema relativamente amplio y poco específico.</li>
 </ul>
 </li>
-<li><p><strong>(k = 20):</strong></p>
+<li><p><strong>$k=20$</strong></p>
 <ul>
-<li>Aumenta la <strong>coherencia temática</strong> y la <strong>diferenciación entre tópicos</strong>.</li>
-<li>Se observan temas mejor definidos, como ciencia ficción, relaciones familiares, animación infantil, etc.</li>
-<li>Ejemplo: aparecen tópicos centrados en “Star Trek / X-Files”, “love/life/family”, o “disney/animated”.</li>
+<li>Aumentan la <strong>coherencia temática</strong> y la <strong>diferenciación entre tópicos</strong>.</li>
+<li>Se observan temas mejor definidos, como ciencia ficción, relaciones familiares o animación infantil.</li>
+<li>Por ejemplo, aparecen tópicos centrados en <em>Star Trek / X-Files</em>, <em>love/life/family</em> y <em>Disney/animated</em>.</li>
 </ul>
 </li>
-<li><p><strong>(k = 25):</strong></p>
+<li><p><strong>$k=25$</strong></p>
 <ul>
-<li>Surgen tópicos <strong>muy específicos</strong> o <strong>redundantes</strong>.</li>
-<li>Algunos temas se solapan y contienen términos muy similares.</li>
-<li>Aunque se capta más detalle, también crece el riesgo de <strong>overfitting</strong> y pérdida de claridad temática.</li>
+<li>Surgen tópicos más <strong>específicos</strong>, pero también más <strong>redundantes</strong>.</li>
+<li>Algunos temas comienzan a solaparse y comparten muchas palabras.</li>
+<li>Aunque el modelo captura un mayor nivel de detalle, también aumenta el riesgo de <strong>overfitting</strong> y disminuye la claridad de algunos tópicos.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="balance-general">&#9878;&#65039; Balance General<a class="anchor-link" href="#balance-general">&#182;</a></h3><table>
+<h3 id="comparacion-general">&#9878;&#65039; Comparaci&#243;n general<a class="anchor-link" href="#comparacion-general">&#182;</a></h3><table>
 <thead><tr>
-<th>Aspecto</th>
-<th>(k = 12)</th>
-<th>(k = 20)</th>
-<th>(k = 25)</th>
+<th style="text-align:left">Aspecto</th>
+<th style="text-align:center">$k=12$</th>
+<th style="text-align:center">$k=20$</th>
+<th style="text-align:center">$k=25$</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Coherencia Temática</td>
-<td>Baja</td>
-<td>Alta (buena separación)</td>
-<td>Irregular (algunos solapamientos)</td>
+<td style="text-align:left">Coherencia temática</td>
+<td style="text-align:center">Baja</td>
+<td style="text-align:center">Alta</td>
+<td style="text-align:center">Media</td>
 </tr>
 <tr>
-<td>Interpretabilidad</td>
-<td>Difusa</td>
-<td>Alta</td>
-<td>Media a baja</td>
+<td style="text-align:left">Interpretabilidad</td>
+<td style="text-align:center">Baja</td>
+<td style="text-align:center">Alta</td>
+<td style="text-align:center">Media</td>
 </tr>
 <tr>
-<td>Granularidad</td>
-<td>Muy general</td>
-<td>Equilibrada</td>
-<td>Muy específica</td>
+<td style="text-align:left">Granularidad</td>
+<td style="text-align:center">Muy general</td>
+<td style="text-align:center">Equilibrada</td>
+<td style="text-align:center">Muy específica</td>
 </tr>
 <tr>
-<td>Riesgo de Overfitting</td>
-<td>Bajo</td>
-<td>Medio</td>
-<td>Alto</td>
+<td style="text-align:left">Riesgo de <em>Underfitting</em></td>
+<td style="text-align:center">Alto</td>
+<td style="text-align:center">Bajo</td>
+<td style="text-align:center">Muy bajo</td>
 </tr>
 <tr>
-<td>Riesgo de Underfitting</td>
-<td>Alto</td>
-<td>Bajo</td>
-<td>Muy bajo</td>
+<td style="text-align:left">Riesgo de <em>Overfitting</em></td>
+<td style="text-align:center">Bajo</td>
+<td style="text-align:center">Medio</td>
+<td style="text-align:center">Alto</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="recomendacion">&#9989; Recomendaci&#243;n<a class="anchor-link" href="#recomendacion">&#182;</a></h3><p>En este corpus específico, un valor de (k = 20) ofrece un <strong>equilibrio óptimo</strong> entre especificidad, coherencia y capacidad interpretativa.</p>
+<h3 id="conclusion">&#9989; Conclusi&#243;n<a class="anchor-link" href="#conclusion">&#182;</a></h3><p>En este corpus, el modelo con <strong>$k=20$</strong> parece ofrecer el mejor equilibrio entre especificidad, coherencia e interpretabilidad <strong>entre los tres valores comparados</strong>.</p>
+<p>En particular,</p>
 <ul>
-<li>Evita los riesgos de generalización excesiva observados con (k = 12).</li>
-<li>Limita la fragmentación y redundancia presente con (k = 25).</li>
-<li>Permite analizar tópicos que son conceptualmente significativos y útiles para interpretación cualitativa.</li>
+<li>evita la generalización excesiva observada con $k=12$;</li>
+<li>reduce la fragmentación y redundancia que comienza a apreciarse con $k=25$;</li>
+<li>produce tópicos conceptualmente claros y útiles para su interpretación.</li>
 </ul>
-<blockquote><p>💡 La selección óptima de (k) puede apoyarse con métricas como <em>coherencia temática</em>, <em>log-verosimilitud</em>, o validación cruzada, complementadas por juicio experto.</p>
+<blockquote><p>💡 <strong>Importante:</strong> La elección del valor de $k$ depende del corpus analizado y de los objetivos de la investigación. Un valor que produce tópicos bien definidos en un conjunto de documentos puede no ser el más apropiado para otro corpus con una estructura temática diferente. En la práctica, la selección de $k$ suele apoyarse en métricas como la <strong>coherencia temática</strong>, la <strong>log-verosimilitud</strong> y la <strong>validación cruzada</strong>, complementadas con el juicio del investigador.</p>
 </blockquote>
 
 </div>
@@ -3799,7 +3807,7 @@ tmod_25 <- LDA(dfmat_tm,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="iii-visualizacion-de-los-topicos">&#128202; III. Visualizaci&#243;n de los T&#243;picos<a class="anchor-link" href="#iii-visualizacion-de-los-topicos">&#182;</a></h2><p>Una vez estimado el modelo LDA y determinado un valor apropiado para (k), es fundamental <strong>visualizar los resultados</strong> para interpretar los tópicos, sus palabras clave y su distribución en los documentos.</p>
+<h2 id="iii-visualizacion-de-los-topicos">III. Visualizaci&#243;n de los T&#243;picos<a class="anchor-link" href="#iii-visualizacion-de-los-topicos">&#182;</a></h2><p>Una vez estimado el modelo LDA y determinado un valor apropiado para (k), es fundamental <strong>visualizar los resultados</strong> para interpretar los tópicos, sus palabras clave y su distribución en los documentos.</p>
 <h3 id="que-se-puede-visualizar">&#128269; &#191;Qu&#233; se puede visualizar?<a class="anchor-link" href="#que-se-puede-visualizar">&#182;</a></h3><ul>
 <li><strong>Principales palabras por tópico:</strong> permite identificar el contenido semántico de cada tema.</li>
 <li><strong>Distribución de tópicos por documento:</strong> muestra cómo se mezclan los temas en cada texto.</li>
@@ -6228,6 +6236,47 @@ class="
 
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="utilizando-un-llm-para-evaluar-la-interpretabilidad-de-distintos-valores-de-k">&#129302; Utilizando un LLM para evaluar la interpretabilidad de distintos valores de $k$<a class="anchor-link" href="#utilizando-un-llm-para-evaluar-la-interpretabilidad-de-distintos-valores-de-k">&#182;</a></h2><p>Hasta ahora hemos comparado los modelos LDA mediante una inspección visual de sus tópicos. Sin embargo, los <strong>Modelos de Lenguaje de Gran Escala (LLMs)</strong> también pueden utilizarse como una herramienta complementaria para evaluar la <strong>calidad semántica</strong> de los tópicos obtenidos.</p>
+<p>En particular, un LLM puede analizar las palabras más representativas de cada tópico y ayudar a responder preguntas como:</p>
+<ul>
+<li>¿Los tópicos son internamente coherentes?</li>
+<li>¿Existen tópicos redundantes o muy similares?</li>
+<li>¿Algunos tópicos son demasiado generales o demasiado específicos?</li>
+<li>¿Qué modelo produce tópicos más fáciles de interpretar?</li>
+</ul>
+<hr>
+<h3 id="que-puede-evaluar-un-llm">&#129504; &#191;Qu&#233; puede evaluar un LLM?<a class="anchor-link" href="#que-puede-evaluar-un-llm">&#182;</a></h3><p>A partir de las palabras con mayor probabilidad de cada tópico, un LLM puede proporcionar una evaluación cualitativa de aspectos como:</p>
+<ul>
+<li><strong>Coherencia semántica</strong> de cada tópico.</li>
+<li><strong>Redundancia</strong> entre tópicos.</li>
+<li><strong>Nivel de especificidad</strong> de los temas identificados.</li>
+<li><strong>Interpretabilidad</strong> general del modelo.</li>
+</ul>
+<p>Estas observaciones pueden complementar el análisis realizado por el investigador y facilitar la comparación entre modelos estimados con distintos valores de $k$.</p>
+<hr>
+<h3 id="importante">&#9888;&#65039; Importante<a class="anchor-link" href="#importante">&#182;</a></h3><p>Un LLM <strong>no determina el valor óptimo de $k$</strong>, ni reemplaza las métricas estadísticas utilizadas en Topic Modelling.</p>
+<p>Su papel consiste en <strong>asistir la interpretación cualitativa</strong> de los tópicos obtenidos, complementando medidas como:</p>
+<ul>
+<li>coherencia temática;</li>
+<li>log-verosimilitud;</li>
+<li>perplexity;</li>
+<li>validación cruzada.</li>
+</ul>
+<hr>
+<blockquote><p>💡 En las siguientes secciones exportaremos los tópicos generados por los modelos con $k=12$, $k=20$ y $k=25$, y utilizaremos un LLM de código abierto para comparar su coherencia e interpretabilidad.</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 </div>
 </div>
