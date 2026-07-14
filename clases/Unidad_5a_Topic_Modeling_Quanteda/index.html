@@ -510,29 +510,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cual-es-su-proposito" class="md-nav__link">
-    🧪 ¿Cuál es su propósito?
+  <a href="#que-es-un-tema" class="md-nav__link">
+    🧠 ¿Qué es un tema?
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="🧠 ¿Qué es un tema?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#como-funciona" class="md-nav__link">
     📌 ¿Cómo funciona?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#aplicaciones-comunes" class="md-nav__link">
-    📊 Aplicaciones comunes
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    📊 Aplicaciones
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#algoritmo-que-utilizaremos-latent-dirichlet-allocation-lda" class="md-nav__link">
-    🔍 Algoritmo que utilizaremos: Latent Dirichlet Allocation (LDA)
+  <a href="#el-modelo-que-estudiaremos-latent-dirichlet-allocation-lda" class="md-nav__link">
+    🔍 El modelo que estudiaremos: Latent Dirichlet Allocation (LDA)
   </a>
   
 </li>
@@ -1962,27 +1968,45 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="topic-modelling"><strong>Topic Modelling</strong><a class="anchor-link" href="#topic-modelling">&#182;</a></h1><hr>
-<p>🧠 <strong>Topic Modelling</strong> es una técnica de procesamiento de lenguaje natural utilizada para identificar y extraer <strong>temas latentes</strong> a partir de un conjunto de documentos. Se basa en la idea de que cada documento está compuesto por una combinación de temas, y que cada tema está asociado con un conjunto característico de palabras clave.</p>
+<h1 id="topic-modelling">Topic Modelling<a class="anchor-link" href="#topic-modelling">&#182;</a></h1><hr>
+<p>El <strong>Topic Modelling</strong> es un conjunto de técnicas de Procesamiento de Lenguaje Natural (PLN) cuyo objetivo es descubrir automáticamente los <strong>temas latentes</strong> presentes en un conjunto de documentos.</p>
+<p>A diferencia del análisis de <strong>keyness</strong>, que identifica las palabras que distinguen grupos previamente definidos, el Topic Modelling busca responder una pregunta diferente:</p>
+<blockquote><p><strong>¿Qué temas emergen naturalmente del corpus cuando no conocemos sus categorías de antemano?</strong></p>
+</blockquote>
+<p>Por esta razón, el Topic Modelling se considera una técnica de <strong>Aprendizaje No Supervisado</strong> (<em>Unsupervised Machine Learning</em>).</p>
 <hr>
-<h3 id="cual-es-su-proposito">&#129514; &#191;Cu&#225;l es su prop&#243;sito?<a class="anchor-link" href="#cual-es-su-proposito">&#182;</a></h3><p>El objetivo del Topic Modelling es descubrir automáticamente los <strong>temas ocultos</strong> en un corpus sin necesidad de etiquetas previas. Por lo tanto, se considera un <strong>método de aprendizaje no supervisado</strong> (<em>Unsupervised Machine Learning</em>).</p>
+<h2 id="que-es-un-tema">&#129504; &#191;Qu&#233; es un tema?<a class="anchor-link" href="#que-es-un-tema">&#182;</a></h2><p>En Topic Modelling, un <strong>tema</strong> (<em>topic</em>) no corresponde a una etiqueta predefinida, sino a una <strong>distribución de probabilidad sobre las palabras</strong> del vocabulario.</p>
+<p>De manera intuitiva, un tema puede interpretarse como un conjunto de palabras que tienden a aparecer juntas en los documentos y que representan una idea o asunto común.</p>
+<p>A su vez, cada documento puede estar compuesto por una mezcla de varios temas en distintas proporciones.</p>
 <hr>
-<h3 id="como-funciona">&#128204; &#191;C&#243;mo funciona?<a class="anchor-link" href="#como-funciona">&#182;</a></h3><p>Los algoritmos de Topic Modelling analizan la <strong>frecuencia</strong> y la <strong>co-ocurrencia</strong> de palabras para agrupar términos relacionados en temas. A partir de esos temas, se pueden detectar:</p>
+<h3 id="como-funciona">&#128204; &#191;C&#243;mo funciona?<a class="anchor-link" href="#como-funciona">&#182;</a></h3><p>Los algoritmos de Topic Modelling analizan los patrones de <strong>frecuencia</strong> y <strong>co-ocurrencia</strong> de las palabras para descubrir la estructura temática subyacente del corpus.</p>
+<p>El resultado es una representación probabilística que permite:</p>
 <ul>
-<li>Patrones semánticos</li>
-<li>Estructuras latentes</li>
-<li>Relaciones conceptuales entre documentos</li>
+<li>descubrir temas presentes en un conjunto de documentos;</li>
+<li>identificar qué documentos están más asociados a cada tema;</li>
+<li>resumir grandes corpus de manera automática;</li>
+<li>explorar colecciones de texto sin necesidad de etiquetas previas.</li>
 </ul>
 <hr>
-<h3 id="aplicaciones-comunes">&#128202; Aplicaciones comunes<a class="anchor-link" href="#aplicaciones-comunes">&#182;</a></h3><ul>
-<li>Organización automática de grandes volúmenes de texto</li>
-<li>Exploración de corpus para investigación cualitativa</li>
-<li>Recuperación de información temática</li>
-<li>Recomendación de contenido</li>
+<h3 id="aplicaciones">&#128202; Aplicaciones<a class="anchor-link" href="#aplicaciones">&#182;</a></h3><p>El Topic Modelling tiene numerosas aplicaciones, entre ellas:</p>
+<ul>
+<li>Exploración de grandes corpus documentales.</li>
+<li>Organización automática de documentos por temática.</li>
+<li>Descubrimiento de tendencias en redes sociales, noticias o publicaciones científicas.</li>
+<li>Apoyo al análisis cualitativo en ciencias sociales, economía y finanzas.</li>
 </ul>
 <hr>
-<h3 id="algoritmo-que-utilizaremos-latent-dirichlet-allocation-lda">&#128269; Algoritmo que utilizaremos: <strong>Latent Dirichlet Allocation (LDA)</strong><a class="anchor-link" href="#algoritmo-que-utilizaremos-latent-dirichlet-allocation-lda">&#182;</a></h3><p>En este curso, exploraremos el modelo <strong>LDA</strong>, uno de los métodos más populares de Topic Modelling, basado en una distribución probabilística que permite representar documentos como mezclas de temas, y temas como mezclas de palabras.</p>
-<blockquote><p>✅ Ideal para tareas donde no se cuenta con etiquetas y se busca comprender la estructura temática del texto.</p>
+<h2 id="el-modelo-que-estudiaremos-latent-dirichlet-allocation-lda">&#128269; El modelo que estudiaremos: <strong>Latent Dirichlet Allocation (LDA)</strong><a class="anchor-link" href="#el-modelo-que-estudiaremos-latent-dirichlet-allocation-lda">&#182;</a></h2><p>En este notebook trabajaremos con <strong>Latent Dirichlet Allocation (LDA)</strong>, uno de los modelos probabilísticos más influyentes en el desarrollo del Topic Modelling.</p>
+<p>LDA representa:</p>
+<ul>
+<li>cada <strong>documento</strong> como una mezcla de temas;</li>
+<li>cada <strong>tema</strong> como una distribución de probabilidad sobre las palabras.</li>
+</ul>
+<p><img src="../images/topic_modeling_plot.png" alt="Topic Modelling: corpus, mezcla de tópicos y distribución de palabras"></p>
+<blockquote><p>🧠 <strong>Nota</strong></p>
+<p>Aunque en la actualidad existen métodos más modernos basados en <strong>embeddings</strong> y <strong>transformers</strong>, comprender <strong>Latent Dirichlet Allocation (LDA)</strong> sigue siendo fundamental, ya que constituye la base conceptual del modelamiento probabilístico de tópicos.</p>
+<p>En el siguiente notebook exploraremos <strong>BERTopic</strong>, un enfoque moderno que combina <strong>embeddings</strong>, técnicas de agrupamiento (<em>clustering</em>) y modelos de lenguaje para obtener tópicos generalmente más coherentes e interpretables.</p>
+<p>📌 <strong>Idea clave:</strong> Mientras que el análisis de <strong>keyness</strong> compara grupos de documentos conocidos, el <strong>Topic Modelling</strong> descubre automáticamente la estructura temática de un corpus sin utilizar etiquetas previas.</p>
 </blockquote>
 
 </div>
