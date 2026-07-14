@@ -559,21 +559,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-se-hace-en-este-preprocesamiento" class="md-nav__link">
-    🧪 ¿Qué se hace en este preprocesamiento?
+  <a href="#que-haremos-en-este-notebook" class="md-nav__link">
+    🧪 ¿Qué haremos en este notebook?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#por-que-es-importante-para-topic-modelling" class="md-nav__link">
-    🎯 ¿Por qué es importante para Topic Modelling?
+  <a href="#por-que-es-importante" class="md-nav__link">
+    🎯 ¿Por qué es importante?
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuaremos-trabajando-con-las-criticas-de-cine" class="md-nav__link">
+    🎬 Continuaremos trabajando con las críticas de cine
+  </a>
   
 </li>
       
@@ -586,8 +593,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#para-que-sirve" class="md-nav__link">
-    🧠 ¿Para qué sirve?
+  <a href="#por-que-es-util" class="md-nav__link">
+    🧠 ¿Por qué es útil?
   </a>
   
 </li>
@@ -599,14 +606,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#por-que-es-importante-para-lda" class="md-nav__link">
+    🎯 ¿Por qué es importante para LDA?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtrado-de-terminos-con-dfm_trim" class="md-nav__link">
-    ✂️ Filtrado de términos con dfm_trim()
+  <a href="#reduccion-del-vocabulario" class="md-nav__link">
+    ✂️ Reducción del vocabulario
   </a>
   
 </li>
@@ -619,42 +633,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conversion-a-formato-para-topic-modelling" class="md-nav__link">
-    🔄 Conversión a formato para Topic Modelling
+  <a href="#conversion-a-una-documenttermmatrix" class="md-nav__link">
+    🔄 Conversión a una DocumentTermMatrix
   </a>
-  
-    <nav class="md-nav" aria-label="🔄 Conversión a formato para Topic Modelling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#por-que-es-necesaria-esta-conversion" class="md-nav__link">
-    🧠 ¿Por qué es necesaria esta conversión?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-la-matriz-documento-termino-document-term-matrix" class="md-nav__link">
-    🧾 Creación de la Matriz Documento-Término (Document-Term Matrix)
-  </a>
-  
-    <nav class="md-nav" aria-label="🧾 Creación de la Matriz Documento-Término (Document-Term Matrix)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conversion-desde-dfm-a-documenttermmatrix" class="md-nav__link">
-    🔄 Conversión desde dfm a DocumentTermMatrix
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -667,42 +648,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#supuestos-clave-del-modelo" class="md-nav__link">
-    🧠 Supuestos clave del modelo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-conceptual" class="md-nav__link">
-    🧪 Ejemplo conceptual
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#funcionamiento-del-algoritmo" class="md-nav__link">
-    ⚙️ Funcionamiento del algoritmo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resultado-final" class="md-nav__link">
-    🔍 Resultado final
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-clave-del-modelo-lda-topicmodelslda-en-r" class="md-nav__link">
-    📌 Parámetros clave del modelo LDA (topicmodels::LDA() en R)
+  <a href="#que-obtiene-lda" class="md-nav__link">
+    🎯 ¿Qué obtiene LDA?
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-lda" class="md-nav__link">
+    ⚙️ ¿Cómo funciona LDA?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-principales-de-topicmodelslda" class="md-nav__link">
+    ⚙️ Parámetros principales de topicmodels::LDA()
+  </a>
   
 </li>
       
@@ -2002,7 +1969,6 @@ Licensed under the Apache License, Version 2.0.
 <li>cada <strong>documento</strong> como una mezcla de temas;</li>
 <li>cada <strong>tema</strong> como una distribución de probabilidad sobre las palabras.</li>
 </ul>
-<p><img src="../images/topic_modeling_plot.png" alt="Topic Modelling: corpus, mezcla de tópicos y distribución de palabras"></p>
 <blockquote><p>🧠 <strong>Nota</strong></p>
 <p>Aunque en la actualidad existen métodos más modernos basados en <strong>embeddings</strong> y <strong>transformers</strong>, comprender <strong>Latent Dirichlet Allocation (LDA)</strong> sigue siendo fundamental, ya que constituye la base conceptual del modelamiento probabilístico de tópicos.</p>
 <p>En el siguiente notebook exploraremos <strong>BERTopic</strong>, un enfoque moderno que combina <strong>embeddings</strong>, técnicas de agrupamiento (<em>clustering</em>) y modelos de lenguaje para obtener tópicos generalmente más coherentes e interpretables.</p>
@@ -2055,7 +2021,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2099,7 +2065,9 @@ library(topicmodels)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Package version: 4.3.1
+<pre>Warning message:
+“package ‘quanteda’ was built under R version 4.5.2”
+Package version: 4.4
 Unicode version: 14.0
 ICU version: 71.1
 
@@ -2122,7 +2090,7 @@ See https://quanteda.io for tutorials and examples.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2165,6 +2133,19 @@ getDTthreads()          # Verifica cuántos núcleos están activos
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+“package ‘data.table’ was built under R version 4.5.2”
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 16
@@ -2184,6 +2165,7 @@ getDTthreads()          # Verifica cuántos núcleos están activos
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <h2 id="i-preparando-los-datos">I. Preparando los Datos<a class="anchor-link" href="#i-preparando-los-datos">&#182;</a></h2>
 </div>
 </div>
@@ -2195,25 +2177,46 @@ getDTthreads()          # Verifica cuántos núcleos están activos
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="preprocesamiento-de-texto-para-topic-modelling">&#129529; Preprocesamiento de texto para Topic Modelling<a class="anchor-link" href="#preprocesamiento-de-texto-para-topic-modelling">&#182;</a></h2><p>Antes de aplicar un modelo de temas (<em>Topic Modelling</em>), es esencial limpiar y transformar el texto para mejorar la calidad del análisis. El objetivo es reducir el ruido léxico y enfocarse en las palabras que realmente aportan información temática.</p>
 <hr>
-<h3 id="que-se-hace-en-este-preprocesamiento">&#129514; &#191;Qu&#233; se hace en este preprocesamiento?<a class="anchor-link" href="#que-se-hace-en-este-preprocesamiento">&#182;</a></h3><ol>
+<h2 id="preprocesamiento-de-texto-para-topic-modelling">&#129529; Preprocesamiento de texto para Topic Modelling<a class="anchor-link" href="#preprocesamiento-de-texto-para-topic-modelling">&#182;</a></h2><p>Tal como vimos en notebooks anteriores, el preprocesamiento del texto es una etapa fundamental en cualquier proyecto de Procesamiento de Lenguaje Natural (PLN). En el caso del <strong>Topic Modelling</strong>, su objetivo es reducir el ruido léxico y conservar aquellas palabras que aportan información sobre los temas presentes en el corpus.</p>
+<hr>
+<h3 id="que-haremos-en-este-notebook">&#129514; &#191;Qu&#233; haremos en este notebook?<a class="anchor-link" href="#que-haremos-en-este-notebook">&#182;</a></h3><p>Antes de aplicar <strong>Latent Dirichlet Allocation (LDA)</strong> realizaremos las siguientes etapas de limpieza:</p>
+<ol>
 <li><p><strong>Eliminar signos de puntuación, símbolos y números</strong><br>
-Estos elementos no contribuyen al contenido temático y pueden interferir con la detección de patrones léxicos.</p>
+Estos elementos generalmente no aportan información temática y pueden dificultar la identificación de patrones léxicos.</p>
 </li>
-<li><p><strong>Eliminar palabras vacías (stopwords)</strong><br>
-Palabras como “the”, “is”, “and”, etc., son muy frecuentes pero carecen de contenido semántico relevante. Eliminarlas ayuda a resaltar las palabras clave que definen los temas.</p>
+<li><p><strong>Eliminar palabras vacías (<em>stopwords</em>)</strong><br>
+Palabras muy frecuentes como <em>the</em>, <em>is</em>, <em>and</em>, <em>of</em>, entre otras, poseen escaso contenido temático. Eliminarlas permite que el modelo se concentre en los términos más representativos del corpus.</p>
 </li>
 </ol>
 <hr>
-<h3 id="por-que-es-importante-para-topic-modelling">&#127919; &#191;Por qu&#233; es importante para Topic Modelling?<a class="anchor-link" href="#por-que-es-importante-para-topic-modelling">&#182;</a></h3><ul>
-<li>Mejora la <strong>coherencia semántica</strong> de los temas generados.</li>
-<li>Reduce la <strong>dimensión del vocabulario</strong>, acelerando los cálculos.</li>
-<li>Enfoca el modelo en las palabras que <strong>distinguen mejor los tópicos</strong> subyacentes.</li>
-<li>Aumenta la <strong>interpretabilidad</strong> de los resultados del modelo.</li>
+<h3 id="por-que-es-importante">&#127919; &#191;Por qu&#233; es importante?<a class="anchor-link" href="#por-que-es-importante">&#182;</a></h3><p>Un buen preprocesamiento permite:</p>
+<ul>
+<li>mejorar la <strong>coherencia</strong> de los tópicos descubiertos;</li>
+<li>reducir el tamaño del vocabulario y el costo computacional;</li>
+<li>eliminar términos poco informativos;</li>
+<li>facilitar la interpretación de los resultados.</li>
 </ul>
+<p>En modelos como <strong>LDA</strong>, que se basan en las frecuencias y coocurrencias de las palabras, la calidad del preprocesamiento tiene un impacto directo sobre la calidad de los tópicos obtenidos.</p>
 <hr>
-<blockquote><p>✅ Un preprocesamiento adecuado es crucial para obtener temas significativos y consistentes cuando se utiliza un algoritmo como <strong>Latent Dirichlet Allocation (LDA)</strong>.</p>
+<blockquote><p>📌 <strong>Nota:</strong> Más adelante, cuando estudiemos métodos basados en <strong>embeddings</strong>, veremos que algunos pasos de preprocesamiento dejan de ser tan críticos como en los modelos clásicos basados en Bag-of-Words, como LDA.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="continuaremos-trabajando-con-las-criticas-de-cine">&#127916; Continuaremos trabajando con las cr&#237;ticas de cine<a class="anchor-link" href="#continuaremos-trabajando-con-las-criticas-de-cine">&#182;</a></h2><p>En este notebook seguiremos utilizando el corpus de <strong>críticas de películas de Pang &amp; Lee (2004)</strong> que introdujimos en el notebook anterior.</p>
+<p>Hasta ahora empleamos este corpus para realizar análisis de frecuencia, <em>keyness</em> y concordancias (<em>KWIC</em>). Ahora lo utilizaremos para un objetivo distinto: <strong>descubrir automáticamente los temas presentes en las reseñas</strong> mediante <strong>Topic Modelling</strong>.</p>
+<p>Al trabajar con el mismo corpus podremos comparar cómo distintas técnicas de Procesamiento de Lenguaje Natural permiten responder preguntas diferentes sobre un mismo conjunto de documentos.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> El corpus no cambia; lo que cambia es la pregunta de investigación. Mientras que el análisis de <em>keyness</em> buscaba identificar palabras que distinguían reseñas positivas y negativas, el <strong>Topic Modelling</strong> busca descubrir automáticamente los temas latentes presentes en las reseñas.</p>
 </blockquote>
 
 </div>
@@ -2225,7 +2228,7 @@ Palabras como “the”, “is”, “and”, etc., son muy frecuentes pero care
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2264,19 +2267,6 @@ toks
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Warning message in (function (n) :
-&#34;strings not representable in native encoding will be translated to UTF-8&#34;
-</pre>
-</div>
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -2337,25 +2327,43 @@ cv005_29357.txt :
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="tokens_compound">&#128279; <code>tokens_compound()</code><a class="anchor-link" href="#tokens_compound">&#182;</a></h2><p>La función <strong><code>tokens_compound()</code></strong> se utiliza para combinar <strong>tokens consecutivos</strong> en unidades compuestas, permitiendo representar expresiones como una sola entidad léxica.</p>
 <hr>
-<h3 id="para-que-sirve">&#129504; &#191;Para qu&#233; sirve?<a class="anchor-link" href="#para-que-sirve">&#182;</a></h3><p>Agrupar tokens en secuencias fijas mejora la interpretación de términos que tienen un significado específico <strong>como conjunto</strong> y no como palabras aisladas.</p>
-<p>Por ejemplo, expresiones como:</p>
+<h2 id="tokens_compound">&#128279; <code>tokens_compound()</code><a class="anchor-link" href="#tokens_compound">&#182;</a></h2><p>La función <strong><code>tokens_compound()</code></strong> permite combinar <strong>tokens consecutivos</strong> en una única unidad léxica. De esta forma, expresiones compuestas pueden analizarse como un solo término en lugar de varias palabras independientes.</p>
+<hr>
+<h3 id="por-que-es-util">&#129504; &#191;Por qu&#233; es &#250;til?<a class="anchor-link" href="#por-que-es-util">&#182;</a></h3><p>Muchas expresiones adquieren su significado únicamente cuando se consideran como una unidad.</p>
+<p>Por ejemplo:</p>
 <ul>
 <li><code>"New York"</code></li>
 <li><code>"human rights"</code></li>
+<li><code>"machine learning"</code></li>
 <li><code>"Star Wars"</code></li>
 </ul>
-<p>pueden perder contexto si se analizan como palabras individuales. Usar <code>tokens_compound()</code> permite tratarlas como <strong>un solo token compuesto</strong>, por ejemplo: <code>"Star_Wars"</code>.</p>
-<hr>
-<h3 id="aplicacion-al-corpus-de-criticas-de-peliculas">&#127916; Aplicaci&#243;n al corpus de cr&#237;ticas de pel&#237;culas<a class="anchor-link" href="#aplicacion-al-corpus-de-criticas-de-peliculas">&#182;</a></h3><p>En este contexto, puede ser útil para:</p>
+<p>Si estas expresiones se dividen en palabras individuales, parte de su significado puede perderse durante el análisis.</p>
+<p>Con <code>tokens_compound()</code>, estas secuencias pueden transformarse en un único token, por ejemplo:</p>
 <ul>
-<li>Distinguir correctamente franquicias como <code>"Star Wars"</code> vs <code>"Star Trek"</code>.</li>
-<li>Preservar nombres propios o títulos de películas como entidades semánticas completas.</li>
+<li><code>New_York</code></li>
+<li><code>human_rights</code></li>
+<li><code>machine_learning</code></li>
+<li><code>Star_Wars</code></li>
 </ul>
 <hr>
-<blockquote><p>✅ Esta función es especialmente útil cuando se dispone de una lista de expresiones clave (n-gramas) que se desean preservar como unidades durante el análisis de texto. Veamos un ejemplo:</p>
+<h3 id="aplicacion-al-corpus-de-criticas-de-peliculas">&#127916; Aplicaci&#243;n al corpus de cr&#237;ticas de pel&#237;culas<a class="anchor-link" href="#aplicacion-al-corpus-de-criticas-de-peliculas">&#182;</a></h3><p>En nuestro corpus de reseñas de cine, esta función resulta especialmente útil para preservar entidades como:</p>
+<ul>
+<li>títulos de películas;</li>
+<li>nombres de franquicias;</li>
+<li>nombres propios de personajes o actores;</li>
+<li>expresiones frecuentes con significado específico.</li>
+</ul>
+<p>Por ejemplo, distinguir correctamente <strong>"Star Wars"</strong> de <strong>"Star Trek"</strong> puede mejorar la interpretación de los tópicos descubiertos por el modelo.</p>
+<hr>
+<h3 id="por-que-es-importante-para-lda">&#127919; &#191;Por qu&#233; es importante para LDA?<a class="anchor-link" href="#por-que-es-importante-para-lda">&#182;</a></h3><p>LDA trabaja con un modelo <strong>Bag-of-Words</strong>, donde cada término del vocabulario constituye una unidad independiente.</p>
+<p>Si una expresión compuesta se divide en varias palabras, el modelo puede distribuirlas entre distintos tópicos y perder parte de su significado.</p>
+<p>Al preservar estas expresiones como un único token, aumentamos la probabilidad de que el modelo identifique temas más coherentes e interpretables.</p>
+<hr>
+<blockquote><p>📌 <strong>Nota:</strong> El uso de <code>tokens_compound()</code> es especialmente beneficioso en modelos clásicos basados en Bag-of-Words, como <strong>LDA</strong>. Más adelante veremos que los métodos modernos basados en <strong>embeddings</strong> capturan parte de estas relaciones semánticas de manera más natural.</p>
 </blockquote>
+<hr>
+<p>Veamos un ejemplo:</p>
 
 </div>
 </div>
@@ -2366,7 +2374,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2398,7 +2406,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2451,13 +2459,25 @@ text1 :
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El clásico "foo":</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2519,6 +2539,7 @@ text1 :
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <p>Volvamos al corpus de las críticas de cine:</p>
 
 </div>
@@ -2530,7 +2551,7 @@ text1 :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2616,13 +2637,37 @@ cv005_29357.txt :
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="reduccion-del-vocabulario">&#9986;&#65039; Reducci&#243;n del vocabulario<a class="anchor-link" href="#reduccion-del-vocabulario">&#182;</a></h2><p>Antes de ajustar el modelo <strong>LDA</strong>, eliminaremos las palabras muy poco frecuentes utilizando <code>dfm_trim()</code>.</p>
+<p>En este ejemplo conservaremos únicamente aquellas palabras que aparecen <strong>al menos cinco veces</strong> en todo el corpus (<code>min_termfreq = 5</code>).</p>
+<p>Este filtrado permite:</p>
+<ul>
+<li>reducir el tamaño del vocabulario;</li>
+<li>eliminar términos extremadamente raros, que suelen aportar poca información temática;</li>
+<li>disminuir el costo computacional;</li>
+<li>mejorar la estabilidad e interpretabilidad de los tópicos obtenidos.</li>
+</ul>
+<p>El valor <code>min_termfreq = 5</code> se utiliza únicamente con fines ilustrativos. En aplicaciones reales, este umbral depende del tamaño y las características del corpus.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> LDA identifica patrones de coocurrencia entre palabras. Eliminar términos extremadamente infrecuentes ayuda a que esos patrones sean más estables y fáciles de interpretar.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2668,7 +2713,7 @@ dfmat
 
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>Document-feature matrix of: 2,000 documents, 14,872 features (98.37% sparse) and 3 docvars.
+<pre>Document-feature matrix of: 2,000 documents, 14,873 features (98.37% sparse) and 3 docvars.
                  features
 docs              plot two teen couples go church party drink drive get
   cv000_29416.txt    1   2    4       1  2      1     1     1     1   3
@@ -2677,7 +2722,7 @@ docs              plot two teen couples go church party drink drive get
   cv003_12683.txt    0   0    0       0  0      0     0     0     0   0
   cv004_12641.txt    1   1    0       0  0      0     0     0     0   0
   cv005_29357.txt    1   0    0       0  0      0     0     0     0   0
-[ reached max_ndoc ... 1,994 more documents, reached max_nfeat ... 14,862 more features ]</pre>
+[ reached max_ndoc ... 1,994 more documents, reached max_nfeat ... 14,863 more features ]</pre>
 </div>
 
 </div>
@@ -2686,20 +2731,6 @@ docs              plot two teen couples go church party drink drive get
 
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="filtrado-de-terminos-con-dfm_trim">&#9986;&#65039; Filtrado de t&#233;rminos con <code>dfm_trim()</code><a class="anchor-link" href="#filtrado-de-terminos-con-dfm_trim">&#182;</a></h2><p>Una vez creada la matriz documento-término (dfm), es habitual aplicar un proceso de filtrado para eliminar aquellas palabras que aparecen muy pocas veces. Esto permite reducir el ruido, mejorar la eficiencia computacional y concentrar el análisis en términos más representativos del corpus.</p>
-<p>En este caso, se ha utilizado <code>dfm_trim()</code> para conservar únicamente los términos cuya frecuencia total en el corpus es igual o superior a 5. De este modo, se eliminan palabras extremadamente raras o poco informativas que podrían distorsionar el análisis posterior.</p>
-<p>Este tipo de limpieza léxica es fundamental antes de aplicar modelos como análisis de tópicos, clustering, clasificación supervisada o visualización de frecuencias, ya que contribuye a una representación más significativa del texto.</p>
-
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2719,16 +2750,13 @@ docs              plot two teen couples go church party drink drive get
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="conversion-a-formato-para-topic-modelling">&#128260; Conversi&#243;n a formato para Topic Modelling<a class="anchor-link" href="#conversion-a-formato-para-topic-modelling">&#182;</a></h2><p>Para aplicar algoritmos de <em>Topic Modelling</em> como <strong>LDA</strong> desde paquetes especializados en R (por ejemplo, <code>topicmodels</code>), es necesario convertir la matriz de documento-término (<code>dfm</code>) a un formato compatible.</p>
-<p>La función <code>convert()</code> permite transformar un objeto <code>dfm</code> de <code>quanteda</code> al formato requerido por otros paquetes. En este caso, se convierte al tipo <strong><code>DocumentTermMatrix</code></strong> utilizado por el paquete <code>topicmodels</code>.</p>
 <hr>
-<h3 id="por-que-es-necesaria-esta-conversion">&#129504; &#191;Por qu&#233; es necesaria esta conversi&#243;n?<a class="anchor-link" href="#por-que-es-necesaria-esta-conversion">&#182;</a></h3><ul>
-<li><code>quanteda</code> y <code>topicmodels</code> utilizan estructuras internas diferentes.</li>
-<li>El modelo LDA de <code>topicmodels</code> requiere específicamente un objeto de tipo <code>DocumentTermMatrix</code> del paquete <code>tm</code>.</li>
-<li>La conversión asegura compatibilidad y permite aprovechar modelos probabilísticos avanzados sin reconstruir manualmente la matriz.</li>
-</ul>
+<h2 id="conversion-a-una-documenttermmatrix">&#128260; Conversi&#243;n a una <code>DocumentTermMatrix</code><a class="anchor-link" href="#conversion-a-una-documenttermmatrix">&#182;</a></h2><p>Hasta ahora hemos representado el corpus mediante una <strong>Document-Feature Matrix (<code>dfm</code>)</strong> de <code>quanteda</code>, donde las filas corresponden a documentos, las columnas a términos y las celdas contienen sus frecuencias.</p>
+<p>Sin embargo, el paquete <strong><code>topicmodels</code></strong>, que implementa <strong>Latent Dirichlet Allocation (LDA)</strong>, utiliza una estructura de datos diferente: la <strong><code>DocumentTermMatrix</code></strong> del paquete <code>tm</code>.</p>
+<p>La función <code>convert()</code> permite transformar automáticamente un objeto <code>dfm</code> al formato requerido por <code>topicmodels</code>, sin modificar el contenido de la matriz.</p>
 <hr>
-<blockquote><p>✅ Este paso es clave para integrar la potencia de preprocesamiento de <code>quanteda</code> con los algoritmos de modelado temático de <code>topicmodels</code>, como <strong>Latent Dirichlet Allocation (LDA)</strong>.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> Es frecuente que distintos paquetes de R utilicen estructuras de datos propias. La función <code>convert()</code> permite combinar el preprocesamiento realizado con <code>quanteda</code> con los algoritmos implementados en <code>topicmodels</code>.</p>
+<p>🔍 <strong>Observación:</strong> Si inspeccionamos ambos objetos, veremos que contienen esencialmente la misma información (documentos, términos y frecuencias). La diferencia es principalmente <strong>interna</strong>: cambia la clase y la forma en que los datos se almacenan en memoria, no su contenido.</p>
 </blockquote>
 
 </div>
@@ -2740,7 +2768,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2772,7 +2800,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2787,9 +2815,130 @@ docs              plot two teen couples go church party drink drive get
                 </div>
             </clipboard-copy>
         </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">class</span><span class="p">(</span><span class="n">dfmat</span><span class="p">)</span>
+<span class="nf">class</span><span class="p">(</span><span class="n">dfmat_tm</span><span class="p">)</span>
+
+<span class="nf">dim</span><span class="p">(</span><span class="n">dfmat</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">dfmat_tm</span><span class="p">)</span>
+</pre></div>
+<div id="cell-11" class="clipboard-copy-txt">class(dfmat)
+class(dfmat_tm)
+
+dim(dfmat)
+dim(dfmat_tm)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'dfm'
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'DocumentTermMatrix'</li><li>'simple_triplet_matrix'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2000</li><li>14873</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2000</li><li>14873</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-12">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="o">?</span><span class="n">convert</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">?convert</div>
+<div id="cell-12" class="clipboard-copy-txt">?convert</div>
     
         </div>
     </div>
@@ -2818,10 +2967,10 @@ _C_o_n_v_e_r_t _q_u_a_n_t_e_d_a _o_b_j_e_c_t_s _t_o _n_
 _D_e_s_c_r_i_p_t_i_o_n:
 
      Convert a quanteda dfm or corpus object to a format useable by
-     other packages. The general function &#39;convert&#39; provides easy
+     other packages. The general function ‘convert’ provides easy
      conversion from a dfm to the document-term representations used in
      all other text analysis packages for which conversions are
-     defined.  For corpus objects, &#39;convert&#39; provides an easy way to
+     defined.  For corpus objects, ‘convert’ provides an easy way to
      make a corpus and its document variables into a data.frame.
 
 _U_s_a_g_e:
@@ -2848,56 +2997,56 @@ _A_r_g_u_m_e_n_t_s:
 
       to: target conversion format, one of:
 
-          &#39;&#34;lda&#34;&#39; a list with components &#34;documents&#34; and &#34;vocab&#34; as
+          ‘&#34;lda&#34;’ a list with components &#34;documents&#34; and &#34;vocab&#34; as
               needed by the function lda.collapsed.gibbs.sampler from
-              the &#39;lda&#39; package
+              the ‘lda’ package
 
-          &#39;&#34;tm&#34;&#39; a DocumentTermMatrix from the &#39;tm&#39; package.  Note: The
-              &#39;tm&#39; package version of &#39;as.TermDocumentMatrix()&#39; allows
-              a &#39;weighting&#39; argument, which supplies a weighting
-              function for &#39;TermDocumentMatrix()&#39;.  Here the default is
+          ‘&#34;tm&#34;’ a DocumentTermMatrix from the ‘tm’ package.  Note: The
+              ‘tm’ package version of ‘as.TermDocumentMatrix()’ allows
+              a ‘weighting’ argument, which supplies a weighting
+              function for ‘TermDocumentMatrix()’.  Here the default is
               for term frequency weighting. If you want a different
               weighting, apply the weights after converting using one
-              of the &#39;tm&#39; functions. For other available weighting
-              functions from the &#39;tm&#39; package, see TermDocumentMatrix.
+              of the ‘tm’ functions. For other available weighting
+              functions from the ‘tm’ package, see TermDocumentMatrix.
 
-          &#39;&#34;stm&#34;&#39; the format for the &#39;stm&#39; package
+          ‘&#34;stm&#34;’ the format for the ‘stm’ package
 
-          &#39;&#34;austin&#34;&#39; the &#39;wfm&#39; format from the *austin* package
+          ‘&#34;austin&#34;’ the ‘wfm’ format from the *austin* package
 
-          &#39;&#34;topicmodels&#34;&#39; the &#34;dtm&#34; format as used by the &#39;topicmodels&#39;
+          ‘&#34;topicmodels&#34;’ the &#34;dtm&#34; format as used by the ‘topicmodels’
               package
 
-          &#39;&#34;lsa&#34;&#39; the &#34;textmatrix&#34; format as used by the &#39;lsa&#39; package
+          ‘&#34;lsa&#34;’ the &#34;textmatrix&#34; format as used by the ‘lsa’ package
 
-          &#39;&#34;data.frame&#34;&#39; a data.frame of without row.names, in which
+          ‘&#34;data.frame&#34;’ a data.frame of without row.names, in which
               documents are rows, and each feature is a variable (for a
               dfm), or each text and its document variables form a row
               (for a corpus)
 
-          &#39;&#34;json&#34;&#39; (corpus only) convert a corpus and its document
+          ‘&#34;json&#34;’ (corpus only) convert a corpus and its document
               variables into JSON format, using the format described in
               jsonlite::toJSON()
 
-          &#39;&#34;tripletlist&#34;&#39; a named &#34;triplet&#34; format list consisting of
-              &#39;document&#39;, &#39;feature&#39;, and &#39;frequency&#39;
+          ‘&#34;tripletlist&#34;’ a named &#34;triplet&#34; format list consisting of
+              ‘document’, ‘feature’, and ‘frequency’
 
      ...: unused directly
 
- docvars: optional data.frame of document variables used as the &#39;meta&#39;
-          information in conversion to the &#39;stm&#39; package format. This
+ docvars: optional data.frame of document variables used as the ‘meta’
+          information in conversion to the ‘stm’ package format. This
           aids in selecting the document variables only corresponding
           to the documents with non-zero counts.  Only affects the
           &#34;stm&#34; format.
 
-omit_empty: logical; if &#39;TRUE&#39;, omit empty documents and features from
+omit_empty: logical; if ‘TRUE’, omit empty documents and features from
           the converted dfm. This is required for some formats (such as
-          STM) that do not accept empty documents.  Only used when &#39;to
-          = &#34;lda&#34;&#39; or &#39;to = &#34;topicmodels&#34;&#39;.  For &#39;to = &#34;stm&#34;&#39; format,
-          &#39;omit_empty&#39; is always &#39;TRUE&#39;.
+          STM) that do not accept empty documents.  Only used when ‘to
+          = &#34;lda&#34;’ or ‘to = &#34;topicmodels&#34;’.  For ‘to = &#34;stm&#34;’ format,
+          ‘omit_empty’ is always ‘TRUE’.
 
 docid_field: character; the name of the column containing document
-          names used when &#39;to = &#34;data.frame&#34;&#39;.  Unused for other
+          names used when ‘to = &#34;data.frame&#34;’.  Unused for other
           conversions.
 
   pretty: adds indentation whitespace to JSON output. Can be TRUE/FALSE
@@ -2907,7 +3056,7 @@ docid_field: character; the name of the column containing document
 
 _V_a_l_u_e:
 
-     A converted object determined by the value of &#39;to&#39; (see above).
+     A converted object determined by the value of ‘to’ (see above).
      See conversion target package documentation for more detailed
      descriptions of the return formats.
 
@@ -2967,84 +3116,26 @@ _E_x_a_m_p_l_e_s:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="creacion-de-la-matriz-documento-termino-document-term-matrix">&#129534; Creaci&#243;n de la Matriz Documento-T&#233;rmino (Document-Term Matrix)<a class="anchor-link" href="#creacion-de-la-matriz-documento-termino-document-term-matrix">&#182;</a></h2><p>La <strong>matriz documento-término</strong> representa la frecuencia con la que aparece cada término en cada documento del corpus. En esta matriz:</p>
+<hr>
+<h2 id="latent-dirichlet-allocation-lda">&#128218; Latent Dirichlet Allocation (LDA)<a class="anchor-link" href="#latent-dirichlet-allocation-lda">&#182;</a></h2><p><strong>Latent Dirichlet Allocation (LDA)</strong> es uno de los algoritmos de <em>Topic Modelling</em> más utilizados para descubrir automáticamente los <strong>tópicos latentes</strong> presentes en un corpus.</p>
+<p>LDA parte de dos ideas fundamentales:</p>
 <ul>
-<li>Las <strong>filas</strong> corresponden a documentos individuales.</li>
-<li>Las <strong>columnas</strong> representan términos únicos del vocabulario.</li>
-<li>Las <strong>celdas</strong> contienen el número de veces que un término aparece en un documento dado.</li>
+<li>cada <strong>documento</strong> es una mezcla de distintos <strong>tópicos</strong>;</li>
+<li>cada <strong>tópico</strong> es una distribución de probabilidad sobre las palabras del vocabulario.</li>
 </ul>
-<p>Esta estructura es esencial para una amplia gama de análisis de texto, incluyendo clasificación, clustering y modelado de temas.</p>
+<p>A diferencia del análisis de <em>keyness</em>, LDA no necesita conocer previamente las categorías de los documentos. En cambio, infiere automáticamente los tópicos a partir de los patrones de coocurrencia de las palabras.</p>
 <hr>
-<h3 id="conversion-desde-dfm-a-documenttermmatrix">&#128260; Conversi&#243;n desde <code>dfm</code> a <code>DocumentTermMatrix</code><a class="anchor-link" href="#conversion-desde-dfm-a-documenttermmatrix">&#182;</a></h3><p>Aunque en <code>quanteda</code> trabajamos con matrices del tipo <code>dfm</code> (document-feature matrix), muchos otros paquetes de R —como <code>topicmodels</code> o <code>stm</code>— utilizan la clase <code>DocumentTermMatrix</code> del paquete <code>tm</code>.</p>
-<p>La función <strong><code>convert()</code></strong> facilita esta interoperabilidad al transformar directamente un <code>dfm</code> en una <code>DocumentTermMatrix</code>, permitiendo así aplicar modelos como <strong>Latent Dirichlet Allocation (LDA)</strong> sin necesidad de reconstruir manualmente la estructura de datos.</p>
-<hr>
-<blockquote><p>✅ Este paso es clave para combinar el preprocesamiento potente de <code>quanteda</code> con las capacidades analíticas de otros paquetes especializados.</p>
+<h3 id="que-obtiene-lda">&#127919; &#191;Qu&#233; obtiene LDA?<a class="anchor-link" href="#que-obtiene-lda">&#182;</a></h3><p>Una vez ajustado el modelo, LDA estima:</p>
+<ul>
+<li>la distribución de tópicos para cada documento;</li>
+<li>la distribución de palabras para cada tópico.</li>
+</ul>
+<p>Estas dos distribuciones permiten identificar los principales temas presentes en el corpus y determinar qué documentos están más asociados a cada uno de ellos.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> LDA es un método de <strong>aprendizaje no supervisado</strong>, ya que descubre automáticamente la estructura temática del corpus sin utilizar etiquetas previas.</p>
 </blockquote>
 
 </div>
 </div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">class</span><span class="p">(</span><span class="n">dfmat_tm</span><span class="p">)</span>
-</pre></div>
-<div id="cell-12" class="clipboard-copy-txt">class(dfmat_tm)</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'DocumentTermMatrix'</li><li>'simple_triplet_matrix'</li></ol>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -3053,55 +3144,41 @@ _E_x_a_m_p_l_e_s:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="latent-dirichlet-allocation-lda">&#128218; Latent Dirichlet Allocation (LDA)<a class="anchor-link" href="#latent-dirichlet-allocation-lda">&#182;</a></h2><p><strong>Latent Dirichlet Allocation (LDA)</strong> es un algoritmo de <em>Topic Modelling</em> que permite descubrir temas latentes dentro de un conjunto de documentos. Parte de la premisa de que:</p>
-<ul>
-<li>Cada <strong>documento</strong> es una mezcla de distintos <strong>tópicos</strong>.</li>
-<li>Cada <strong>tópico</strong> es una distribución de probabilidad sobre un conjunto de <strong>palabras</strong>.</li>
-</ul>
 <hr>
-<h3 id="supuestos-clave-del-modelo">&#129504; Supuestos clave del modelo<a class="anchor-link" href="#supuestos-clave-del-modelo">&#182;</a></h3><ol>
-<li><p><strong>Hipótesis de Mezcla</strong>:<br>
-Cada documento contiene una mezcla de tópicos. La distribución de estos temas sigue una distribución de Dirichlet.</p>
-</li>
-<li><p><strong>Hipótesis de Generación</strong>:<br>
-Cada palabra en un documento se genera en dos pasos:</p>
-<ul>
-<li>Se selecciona un tópico a partir de la distribución de tópicos del documento.</li>
-<li>Se elige una palabra de la distribución de palabras correspondiente a ese tópico.</li>
-</ul>
-</li>
+<h2 id="como-funciona-lda">&#9881;&#65039; &#191;C&#243;mo funciona LDA?<a class="anchor-link" href="#como-funciona-lda">&#182;</a></h2><p>LDA es un <strong>modelo probabilístico generativo</strong>. De forma simplificada, supone que cada palabra de un documento se genera mediante el siguiente proceso:</p>
+<ol>
+<li>Se selecciona un <strong>tópico</strong> según la distribución de tópicos del documento.</li>
+<li>A partir de ese tópico, se selecciona una <strong>palabra</strong> según la distribución de palabras asociada al tópico.</li>
 </ol>
-<hr>
-<h3 id="ejemplo-conceptual">&#129514; Ejemplo conceptual<a class="anchor-link" href="#ejemplo-conceptual">&#182;</a></h3><p>Un artículo sobre el uso de redes sociales por parte del gobierno podría estar compuesto por una mezcla de los tópicos “tecnología” y “política”.</p>
-<ul>
-<li>El tópico <em>tecnología</em> puede incluir palabras como <em>“software”, “computadora”, “innovación”</em>.  </li>
-<li>El tópico <em>política</em> puede tener alta probabilidad para palabras como <em>“gobierno”, “ley”, “ministerio”</em>.</li>
-</ul>
-<hr>
-<h3 id="funcionamiento-del-algoritmo">&#9881;&#65039; Funcionamiento del algoritmo<a class="anchor-link" href="#funcionamiento-del-algoritmo">&#182;</a></h3><ol>
-<li><strong>Inicialización</strong>: Se fija el número de tópicos <code>k</code> y se inicializan las distribuciones aleatoriamente.</li>
-<li><strong>Asignación de tópicos</strong>: Cada palabra se asigna provisionalmente a un tópico, según las distribuciones actuales.</li>
-<li><strong>Actualización</strong>: Se ajustan las distribuciones de palabras por tópico y de tópicos por documento.</li>
-<li><strong>Iteración</strong>: Se repiten los pasos hasta alcanzar la convergencia.</li>
-</ol>
-<hr>
-<h3 id="resultado-final">&#128269; Resultado final<a class="anchor-link" href="#resultado-final">&#182;</a></h3><p>El modelo entrega:</p>
-<ul>
-<li>Una <strong>distribución de tópicos para cada documento</strong>.</li>
-<li>Una <strong>distribución de palabras para cada tópico</strong>.</li>
-</ul>
-<p>Estas salidas permiten interpretar de forma automatizada qué temas predominan en cada documento y qué palabras los caracterizan.</p>
-<hr>
-<h3 id="parametros-clave-del-modelo-lda-topicmodelslda-en-r">&#128204; Par&#225;metros clave del modelo LDA (<code>topicmodels::LDA()</code> en R)<a class="anchor-link" href="#parametros-clave-del-modelo-lda-topicmodelslda-en-r">&#182;</a></h3><ul>
-<li><code>k</code>: número de tópicos a extraer.</li>
-<li><code>method</code>: método de estimación (e.g., <code>"VEM"</code> o <code>"Gibbs"</code>).</li>
-<li><code>control</code>: lista de hiperparámetros para controlar el algoritmo (e.g., número de iteraciones, semilla, etc.).</li>
-</ul>
-<hr>
-<blockquote><p>✅ LDA es un método de <em>aprendizaje no supervisado</em>, lo que significa que no requiere etiquetas previas y descubre la estructura temática directamente desde los datos observados.</p>
+<p>Este proceso se repite para todas las palabras del documento.</p>
+<p>Durante el entrenamiento, el algoritmo observa únicamente las palabras presentes en el corpus e intenta inferir cuáles fueron las distribuciones de tópicos y palabras que podrían haber generado esos documentos.</p>
+<p>Aunque el proceso real es probabilístico y se basa en distribuciones de Dirichlet, conceptualmente puede entenderse como un procedimiento iterativo que ajusta ambas distribuciones hasta encontrar una representación consistente del corpus.</p>
+<blockquote><p>📌 <strong>En otras palabras:</strong> LDA no observa directamente los tópicos; los estima a partir de los patrones de aparición conjunta de las palabras.</p>
 </blockquote>
-<p>🔗 Recurso recomendado:<br>
-<a href="https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/">Beginner’s Guide to Topic Modelling – Analytics Vidhya</a></p>
+<p><img src="../images/topic_modeling_plot.png" alt="Topic Modelling: corpus, mezcla de tópicos y distribución de palabras"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="parametros-principales-de-topicmodelslda">&#9881;&#65039; Par&#225;metros principales de <code>topicmodels::LDA()</code><a class="anchor-link" href="#parametros-principales-de-topicmodelslda">&#182;</a></h2><p>La función <code>LDA()</code> del paquete <code>topicmodels</code> permite ajustar un modelo de <strong>Latent Dirichlet Allocation</strong>.</p>
+<p>Los parámetros más importantes son:</p>
+<ul>
+<li><strong><code>k</code></strong>: número de tópicos que se desea descubrir.</li>
+<li><strong><code>method</code></strong>: algoritmo utilizado para estimar el modelo (por ejemplo, <code>"VEM"</code> o <code>"Gibbs"</code>).</li>
+<li><strong><code>control</code></strong>: lista de opciones que permite controlar aspectos como el número de iteraciones, la semilla aleatoria y otros hiperparámetros.</li>
+</ul>
+<p>En las siguientes secciones analizaremos con mayor detalle estos parámetros y cómo afectan los resultados obtenidos por el modelo.</p>
+<hr>
+<blockquote><p>📌 <strong>Observación:</strong> La elección del número de tópicos (<code>k</code>) suele ser una de las decisiones más importantes en un análisis de Topic Modelling.</p>
+</blockquote>
 
 </div>
 </div>
