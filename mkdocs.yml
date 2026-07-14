@@ -11,6 +11,11 @@ repo_name: fdiaz1968/NLP
 repo_url: https://github.com/fdiaz1968/NLP
 edit_uri: ''
 
+# Build pages at the same directory depth as their source files, so a
+# relative asset path (e.g. ../images/foo.png from docs/clases/*.ipynb)
+# resolves identically whether previewed locally or on the published site.
+use_directory_urls: false
+
 # Markdown extensions
 markdown_extensions:
   - attr_list
