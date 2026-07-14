@@ -14,7 +14,7 @@ title: "Clases"
 
 [Unidad 4b: Interpretación de Keyness con un LLM (Python)](Unidad_4b_Keyness_Interpretacion_LLM.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_4b_Keyness_Interpretacion_LLM.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-[Unidad 5: Modelamiento de Tópicos](Unidad_5_Topic_Modeling.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_5_Topic_Modeling.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+[Unidad 5a: Modelamiento de Tópicos (Quanteda)](Unidad_5a_Topic_Modeling_Quanteda.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_5a_Topic_Modeling_Quanteda.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 [Unidad 6: Análisis de Sentimiento Financiero](Unidad_6_Analisis_Sentimiento.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_6_Analisis_Sentimiento.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
