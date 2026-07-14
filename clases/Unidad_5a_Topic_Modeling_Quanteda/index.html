@@ -667,6 +667,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-distribucion-de-dirichlet" class="md-nav__link">
+    📐 La distribución de Dirichlet
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 La distribución de Dirichlet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcion-de-densidad-de-la-distribucion-de-dirichlet" class="md-nav__link">
+    📊 Función de densidad de la distribución de Dirichlet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-son-y" class="md-nav__link">
+    ⚙️ ¿Qué son α y β?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parametros-principales-de-topicmodelslda" class="md-nav__link">
     ⚙️ Parámetros principales de topicmodels::LDA()
   </a>
@@ -3157,6 +3184,85 @@ _E_x_a_m_p_l_e_s:
 <blockquote><p>📌 <strong>En otras palabras:</strong> LDA no observa directamente los tópicos; los estima a partir de los patrones de aparición conjunta de las palabras.</p>
 </blockquote>
 <p><img src="../../images/topic_modeling_plot.png" alt="Topic Modelling: corpus, mezcla de tópicos y distribución de palabras"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="la-distribucion-de-dirichlet">&#128208; La distribuci&#243;n de Dirichlet<a class="anchor-link" href="#la-distribucion-de-dirichlet">&#182;</a></h2><p>El nombre <strong>Latent Dirichlet Allocation (LDA)</strong> proviene del hecho de que las dos distribuciones de probabilidad del modelo se suponen generadas a partir de una <strong>distribución de Dirichlet</strong>.</p>
+<p>En LDA se asume que:</p>
+$$
+\theta \sim \mathrm{Dir}(\boldsymbol{\alpha})
+$$<p>y</p>
+$$
+\phi \sim \mathrm{Dir}(\boldsymbol{\beta}).
+$$<p>Aquí,</p>
+<ul>
+<li><strong>θ</strong> representa la <strong>distribución de tópicos de un documento</strong>;</li>
+<li><strong>φ</strong> representa la <strong>distribución de palabras de un tópico</strong>.</li>
+</ul>
+<p>La notación</p>
+$$
+\mathrm{Dir}(\boldsymbol{\alpha})
+$$<p>significa que <strong>θ sigue una distribución de Dirichlet</strong> cuyos parámetros son el vector</p>
+$$
+\boldsymbol{\alpha}
+=
+(\alpha_1,\alpha_2,\ldots,\alpha_K),
+$$<p>donde (K) es el número de tópicos.</p>
+<p>De manera análoga,</p>
+$$
+\mathrm{Dir}(\boldsymbol{\beta})
+$$<p>indica que <strong>φ sigue una distribución de Dirichlet</strong> parametrizada por el vector</p>
+$$
+\boldsymbol{\beta}
+=
+(\beta_1,\beta_2,\ldots,\beta_V),
+$$<p>donde (V) corresponde al tamaño del vocabulario.</p>
+<hr>
+<h3 id="funcion-de-densidad-de-la-distribucion-de-dirichlet">&#128202; Funci&#243;n de densidad de la distribuci&#243;n de Dirichlet<a class="anchor-link" href="#funcion-de-densidad-de-la-distribucion-de-dirichlet">&#182;</a></h3><p>Para un vector de probabilidades</p>
+$$
+\theta=(\theta_1,\ldots,\theta_K),
+$$<p>tal que</p>
+$$
+\sum_{k=1}^{K}\theta_k=1,
+\qquad
+\theta_k\ge0,
+$$<p>la función de densidad viene dada por</p>
+$$
+f(\theta;\boldsymbol{\alpha})
+=
+\frac{\Gamma\!\left(\sum_{k=1}^{K}\alpha_k\right)}
+{\displaystyle\prod_{k=1}^{K}\Gamma(\alpha_k)}
+\prod_{k=1}^{K}\theta_k^{\,\alpha_k-1}.
+$$<hr>
+<h3 id="que-son-y">&#9881;&#65039; &#191;Qu&#233; son &#945; y &#946;?<a class="anchor-link" href="#que-son-y">&#182;</a></h3><p>Los vectores <strong>α</strong> y <strong>β</strong> son <strong>hiperparámetros</strong> del modelo.</p>
+<p>A diferencia de <strong>θ</strong> y <strong>φ</strong>, que son distribuciones de probabilidad estimadas por LDA, los hiperparámetros <strong>α</strong> y <strong>β</strong> controlan la forma que pueden adoptar esas distribuciones antes de observar los datos.</p>
+<p>En particular,</p>
+<ul>
+<li><p><strong>α</strong> controla cómo se distribuyen los <strong>tópicos dentro de los documentos</strong>.</p>
+<ul>
+<li>Un <strong>α pequeño</strong> favorece documentos dominados por pocos tópicos.</li>
+<li>Un <strong>α grande</strong> favorece documentos que mezclan muchos tópicos.</li>
+</ul>
+</li>
+<li><p><strong>β</strong> controla cómo se distribuyen las <strong>palabras dentro de cada tópico</strong>.</p>
+<ul>
+<li>Un <strong>β pequeño</strong> favorece tópicos definidos por pocas palabras muy representativas.</li>
+<li>Un <strong>β grande</strong> produce tópicos con distribuciones de palabras más uniformes.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote><p>📌 <strong>Idea clave:</strong> La distribución de Dirichlet garantiza que tanto <strong>θ</strong> como <strong>φ</strong> sean <strong>vectores de probabilidades</strong>: todos sus elementos son no negativos y sus componentes suman exactamente uno.</p>
+</blockquote>
 
 </div>
 </div>
