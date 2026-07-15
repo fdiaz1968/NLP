@@ -538,6 +538,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#instalacion-de-las-librerias-necesarias" class="md-nav__link">
+    📦 Instalación de las librerías necesarias
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Instalación de las librerías necesarias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-sirve-cada-biblioteca" class="md-nav__link">
+    📚 ¿Para qué sirve cada biblioteca?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cargar-el-modelo" class="md-nav__link">
     🧠 Cargar el modelo
   </a>
@@ -1658,7 +1678,7 @@ Licensed under the Apache License, Version 2.0.
 <li><strong>Etiquetar</strong> cada tópico con un nombre corto y descriptivo, a partir de sus palabras clave.</li>
 <li><strong>Evaluar la consistencia semántica</strong> (<em>topic coherence</em>) de cada tópico: ¿forman estas palabras un tema reconocible, o son una mezcla poco relacionada?</li>
 </ol>
-<p>Esto nos da una segunda fuente de evidencia — cualitativa y semántica — para comparar los tres valores de $k$, complementando las métricas estadísticas ya vistas (perplexity, el método del codo).</p>
+<p>Esto nos da una segunda fuente de evidencia — cualitativa y semántica — para comparar los tres valores de $k$, complementando las métricas estadísticas ya vistas (perplexity, elbow method).</p>
 
 </div>
 </div>
@@ -1676,6 +1696,8 @@ Licensed under the Apache License, Version 2.0.
 <li>Aplicar el LLM sistemáticamente a los tópicos de los tres modelos ($k=12,20,25$).</li>
 <li>Comparar la coherencia semántica promedio entre valores de $k$ como evidencia adicional para elegir el número de tópicos.</li>
 </ul>
+<blockquote><p>📝 <strong>Nota:</strong> El término <strong>parseable</strong> (o <em>parsable</em>) se refiere a cualquier texto, dato o código que posee una <strong>estructura clara y predecible</strong>, permitiendo que otro programa pueda analizarlo automáticamente, descomponerlo y extraer información sin intervención humana.</p>
+</blockquote>
 
 </div>
 </div>
@@ -1687,13 +1709,13 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="que-modelo-usamos">&#129302; &#191;Qu&#233; modelo usamos?<a class="anchor-link" href="#que-modelo-usamos">&#182;</a></h2><p>Usaremos <strong><code>Qwen/Qwen2.5-7B-Instruct</code></strong>.</p>
-<p>Es una alternativa a modelos como <code>meta-llama/Meta-Llama-3-8B-Instruct</code> con dos ventajas prácticas para este notebook:</p>
+<h2 id="que-modelo-usamos">&#129302; &#191;Qu&#233; modelo usamos?<a class="anchor-link" href="#que-modelo-usamos">&#182;</a></h2><p>Usaremos <strong><code>Qwen/Qwen2.5-3B-Instruct</code></strong>.</p>
+<p>Es una alternativa a modelos como <code>meta-llama/Meta-Llama-3-8B-Instruct</code> con ventajas prácticas para este notebook:</p>
 <ul>
 <li><strong>No requiere acceso restringido ("gated")</strong>: los pesos de Llama-3 en Hugging Face exigen aceptar una licencia y solicitar acceso (con aprobación no inmediata) antes de poder descargarlos, lo que agrega fricción a un ejercicio de curso. Qwen2.5 se descarga directamente.</li>
-<li><strong>Calidad comparable o superior</strong> en tareas estructuradas como esta (leer una lista de palabras, producir una etiqueta y un puntaje), para un tamaño similar (~7-8B parámetros).</li>
+<li><strong>Tamaño acotado (3B)</strong>: para una tarea estructurada y acotada como esta (leer 15 palabras, producir una etiqueta y un puntaje), no se necesita un modelo de 7-8B parámetros. Un modelo más pequeño se descarga y carga notablemente más rápido, lo cual importa especialmente en Colab, donde la caché no persiste entre sesiones (ver nota en la siguiente celda).</li>
 </ul>
-<blockquote><p>📌 El nombre del modelo está aislado en una sola variable (<code>MODEL_NAME</code>). Si prefieres usar Llama-3 (por ejemplo, porque ya tienes acceso aprobado y un token de Hugging Face configurado), basta con cambiar esa línea por <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> — el resto del notebook funciona igual.</p>
+<blockquote><p>📌 El nombre del modelo está aislado en una sola variable (<code>MODEL_NAME</code>). Si prefieres más calidad a cambio de una carga más lenta, puedes cambiarla por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o, si ya tienes acceso aprobado y un token de Hugging Face configurado, <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> — el resto del notebook funciona igual.</p>
 <p>⚠️ <strong>GPU necesaria:</strong> si estás en Google Colab, activa GPU en <code>Entorno de ejecución &gt; Cambiar tipo de entorno de ejecución &gt; GPU (T4)</code> antes de continuar. Cargamos el modelo en 4 bits (<code>bitsandbytes</code>) para que quepa cómodamente en la GPU gratuita de Colab.</p>
 </blockquote>
 
@@ -1711,13 +1733,50 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h2><p>Antes de trabajar con un <strong>Large Language Model (LLM)</strong>, es necesario instalar algunas bibliotecas de Python que proporcionan las herramientas para descargar, ejecutar y analizar modelos de lenguaje.</p>
+<p>La siguiente instrucción instala automáticamente los paquetes que utilizaremos en este notebook:</p>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">transformers</span> <span class="n">accelerate</span> <span class="n">torch</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
+</pre></div>
+<hr>
+<h3 id="para-que-sirve-cada-biblioteca">&#128218; &#191;Para qu&#233; sirve cada biblioteca?<a class="anchor-link" href="#para-que-sirve-cada-biblioteca">&#182;</a></h3><ul>
+<li><p><strong><code>transformers</code></strong><br>
+Proporciona acceso a miles de modelos de lenguaje preentrenados disponibles en <strong>Hugging Face</strong>, incluyendo modelos generativos, clasificadores y modelos de <em>embeddings</em>.</p>
+</li>
+<li><p><strong><code>accelerate</code></strong><br>
+Optimiza la ejecución de modelos en CPU o GPU, gestionando automáticamente el hardware disponible y facilitando el uso eficiente de los recursos computacionales.</p>
+</li>
+<li><p><strong><code>torch</code></strong><br>
+Es la biblioteca de <em>Deep Learning</em> sobre la cual están implementados la mayoría de los modelos de Hugging Face. Se encarga de las operaciones matemáticas y del entrenamiento e inferencia de redes neuronales.</p>
+</li>
+<li><p><strong><code>pandas</code></strong><br>
+Permite cargar, manipular y analizar tablas de datos. En este notebook se utilizará para leer el archivo CSV que contiene los tópicos generados por LDA.</p>
+</li>
+<li><p><strong><code>matplotlib</code></strong><br>
+Biblioteca para crear gráficos y visualizar los resultados obtenidos durante el análisis.</p>
+</li>
+</ul>
+<hr>
+<blockquote><p>📌 <strong>Nota:</strong> La opción <code>-q</code> (<em>quiet</em>) reduce la cantidad de mensajes mostrados durante la instalación, haciendo que la salida del notebook sea más limpia y fácil de leer.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1792,7 +1851,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-el-modelo">&#129504; Cargar el modelo<a class="anchor-link" href="#cargar-el-modelo">&#182;</a></h2><p>Cargamos el modelo cuantizado en 4 bits (<code>nf4</code>), lo que reduce significativamente el uso de memoria de GPU manteniendo una calidad de generación muy cercana a la versión completa.</p>
+<h2 id="cargar-el-modelo">&#129504; Cargar el modelo<a class="anchor-link" href="#cargar-el-modelo">&#182;</a></h2><p>Cargamos el modelo cuantizado en 4 bits (<code>nf4</code>), lo que reduce el uso de memoria de GPU manteniendo una calidad de generación muy cercana a la versión completa.</p>
+<blockquote><p>⏳ <strong>¿Por qué esta celda demora tanto?</strong> <code>BitsAndBytesConfig(load_in_4bit=True)</code> no descarga una versión ya cuantizada del modelo: Hugging Face descarga los pesos originales en precisión completa (~15 GB para un modelo de 7B parámetros) y recién los cuantiza al momento de cargarlos en la GPU. En Colab esto ocurre <strong>en cada sesión nueva</strong>, porque la caché no persiste entre reinicios del entorno de ejecución.</p>
+<p>Usamos <code>Qwen/Qwen2.5-3B-Instruct</code> (en vez de una variante de 7-8B) precisamente para acortar esta espera: son menos parámetros que descargar y cuantizar, y para una tarea acotada como leer 15 palabras y devolver una etiqueta y un puntaje, un modelo de 3B es más que suficiente. Si prefieres más calidad a cambio de una carga más lenta, cambia <code>MODEL_NAME</code> por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> (esta última requiere solicitar acceso en Hugging Face, ver nota más arriba).</p>
+</blockquote>
 
 </div>
 </div>
@@ -1818,7 +1880,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">MODEL_NAME</span> <span class="o">=</span> <span class="s2">&quot;Qwen/Qwen2.5-7B-Instruct&quot;</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">MODEL_NAME</span> <span class="o">=</span> <span class="s2">&quot;Qwen/Qwen2.5-3B-Instruct&quot;</span>
 
 <span class="n">bnb_config</span> <span class="o">=</span> <span class="n">BitsAndBytesConfig</span><span class="p">(</span>
     <span class="n">load_in_4bit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1833,7 +1895,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
     <span class="n">device_map</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
+<div id="cell-3" class="clipboard-copy-txt">MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
