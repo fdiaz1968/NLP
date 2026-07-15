@@ -6279,6 +6279,88 @@ class="
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="exportar-los-topicos-k12-20-25-para-evaluarlos-con-un-llm-en-python">&#128190; Exportar los t&#243;picos ($k=12, 20, 25$) para evaluarlos con un LLM en Python<a class="anchor-link" href="#exportar-los-topicos-k12-20-25-para-evaluarlos-con-un-llm-en-python">&#182;</a></h2><p>Para poder comparar la <strong>coherencia semántica</strong> de los tres modelos con un LLM (por ejemplo, <code>meta-llama/Meta-Llama-3-8B-Instruct</code>), exportamos las palabras más representativas de cada tópico a un archivo CSV por modelo.</p>
+<p>Para cada modelo, usamos el mismo flujo ya utilizado en la sección de la matriz beta: convertimos el modelo a formato <em>tidy</em> con <code>tidytext::tidy(modelo, matrix = "beta")</code> y conservamos, para cada tópico, las 15 palabras con mayor probabilidad ($\beta$).</p>
+<blockquote><p>📌 Al igual que en la Unidad 4b, el archivo se guarda en el directorio de trabajo actual de R (<code>getwd()</code>) y se referencia luego en Python solo por su nombre.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-48">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">export_topterms</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="m">15</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">tidytext</span><span class="o">::</span><span class="nf">tidy</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">=</span> <span class="s">&quot;beta&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">top_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span>
+    <span class="nf">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">topterms_12</span> <span class="o">&lt;-</span> <span class="nf">export_topterms</span><span class="p">(</span><span class="n">tmod_12</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span>
+<span class="n">topterms_20</span> <span class="o">&lt;-</span> <span class="nf">export_topterms</span><span class="p">(</span><span class="n">tmod_20</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">20</span><span class="p">)</span>
+<span class="n">topterms_25</span> <span class="o">&lt;-</span> <span class="nf">export_topterms</span><span class="p">(</span><span class="n">tmod_25</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">25</span><span class="p">)</span>
+
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">topterms_12</span><span class="p">,</span> <span class="s">&quot;lda_topterms_k12.csv&quot;</span><span class="p">)</span>
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="s">&quot;lda_topterms_k20.csv&quot;</span><span class="p">)</span>
+<span class="nf">write_csv</span><span class="p">(</span><span class="n">topterms_25</span><span class="p">,</span> <span class="s">&quot;lda_topterms_k25.csv&quot;</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">topterms_12</span><span class="p">)</span>
+</pre></div>
+<div id="cell-48" class="clipboard-copy-txt">export_topterms <- function(modelo, k, n = 15) {
+  tidytext::tidy(modelo, matrix = "beta") %>%
+    group_by(topic) %>%
+    top_n(n, beta) %>%
+    ungroup() %>%
+    arrange(topic, -beta) %>%
+    mutate(k = k)
+}
+
+topterms_12 <- export_topterms(tmod_12, k = 12)
+topterms_20 <- export_topterms(tmod_20, k = 20)
+topterms_25 <- export_topterms(tmod_25, k = 25)
+
+write_csv(topterms_12, "lda_topterms_k12.csv")
+write_csv(topterms_20, "lda_topterms_k20.csv")
+write_csv(topterms_25, "lda_topterms_k25.csv")
+
+head(topterms_12)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
 </div>
 
 
