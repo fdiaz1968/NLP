@@ -531,13 +531,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-carga-de-librerias" class="md-nav__link">
-    📦 Instalación y carga de librerías
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#instalacion-de-las-librerias-necesarias" class="md-nav__link">
     📦 Instalación de las librerías necesarias
   </a>
@@ -548,6 +541,13 @@
           <li class="md-nav__item">
   <a href="#para-que-sirve-cada-biblioteca" class="md-nav__link">
     📚 ¿Para qué sirve cada biblioteca?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expresiones-regulares-re" class="md-nav__link">
+    🔤 Expresiones Regulares (re)
   </a>
   
 </li>
@@ -1729,17 +1729,6 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="instalacion-y-carga-de-librerias">&#128230; Instalaci&#243;n y carga de librer&#237;as<a class="anchor-link" href="#instalacion-y-carga-de-librerias">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <h2 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h2><p>Antes de trabajar con un <strong>Large Language Model (LLM)</strong>, es necesario instalar algunas bibliotecas de Python que proporcionan las herramientas para descargar, ejecutar y analizar modelos de lenguaje.</p>
 <p>La siguiente instrucción instala automáticamente los paquetes que utilizaremos en este notebook:</p>
@@ -1843,6 +1832,27 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="expresiones-regulares-re">&#128292; Expresiones Regulares (<code>re</code>)<a class="anchor-link" href="#expresiones-regulares-re">&#182;</a></h3><p>El módulo <strong><code>re</code></strong> (<em>regular expressions</em>) proporciona herramientas para reconocer patrones de texto dentro de cadenas de caracteres (<em>strings</em>). Se utiliza comúnmente para:</p>
+<ul>
+<li>Buscar palabras o patrones específicos.</li>
+<li>Extraer fragmentos de texto.</li>
+<li>Reemplazar texto automáticamente.</li>
+<li>Validar si una cadena sigue un formato determinado.</li>
+</ul>
+<blockquote><p>📌 <strong>En este notebook</strong>, utilizaremos <code>re</code> para extraer automáticamente información de las respuestas generadas por el LLM y convertirlas en un formato que Python pueda procesar.</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
