@@ -2519,9 +2519,15 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">parse_response</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-    <span class="n">etiqueta</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Etiqueta:\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-    <span class="n">coherencia</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Coherencia \(1-5\):\s*(\d)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-    <span class="n">justificacion</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Justificaci[oó]n:\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+    <span class="c1"># Requerimos un &quot;:&quot; antes del dígito, no solo &quot;cualquier no-dígito&quot;, porque</span>
+    <span class="c1"># el propio texto del prompt (&quot;Coherencia (1-5): ...&quot;) contiene un dígito</span>
+    <span class="c1"># dentro del paréntesis — [^:]* deja pasar ese &quot;(1-5)&quot; completo sin</span>
+    <span class="c1"># detenerse ahí, ya que no contiene &quot;:&quot;, y solo captura el dígito real que</span>
+    <span class="c1"># viene después del &quot;:&quot;. También toleramos mayúsculas/minúsculas y posible</span>
+    <span class="c1"># **negrita** de markdown alrededor de la etiqueta o el número.</span>
+    <span class="n">etiqueta</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Ee]tiqueta:\s*\**\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+    <span class="n">coherencia</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Cc]oherencia[^:]*:\s*\**\s*(\d)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+    <span class="n">justificacion</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Jj]ustificaci[oó]n:\s*\**\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="p">{</span>
         <span class="s2">&quot;etiqueta&quot;</span><span class="p">:</span> <span class="n">etiqueta</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="n">etiqueta</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
@@ -2530,9 +2536,15 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
     <span class="p">}</span>
 </pre></div>
 <div id="cell-9" class="clipboard-copy-txt">def parse_response(response):
-    etiqueta = re.search(r"Etiqueta:\s*(.+)", response)
-    coherencia = re.search(r"Coherencia \(1-5\):\s*(\d)", response)
-    justificacion = re.search(r"Justificaci[oó]n:\s*(.+)", response)
+    # Requerimos un ":" antes del dígito, no solo "cualquier no-dígito", porque
+    # el propio texto del prompt ("Coherencia (1-5): ...") contiene un dígito
+    # dentro del paréntesis — [^:]* deja pasar ese "(1-5)" completo sin
+    # detenerse ahí, ya que no contiene ":", y solo captura el dígito real que
+    # viene después del ":". También toleramos mayúsculas/minúsculas y posible
+    # **negrita** de markdown alrededor de la etiqueta o el número.
+    etiqueta = re.search(r"[Ee]tiqueta:\s*\**\s*(.+)", response)
+    coherencia = re.search(r"[Cc]oherencia[^:]*:\s*\**\s*(\d)", response)
+    justificacion = re.search(r"[Jj]ustificaci[oó]n:\s*\**\s*(.+)", response)
 
     return {
         "etiqueta": etiqueta.group(1).strip() if etiqueta else None,
