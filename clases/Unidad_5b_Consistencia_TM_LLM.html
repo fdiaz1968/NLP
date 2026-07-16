@@ -1764,8 +1764,10 @@ Licensed under the Apache License, Version 2.0.
 <hr>
 <h2 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h2><p>Antes de trabajar con un <strong>Large Language Model (LLM)</strong>, es necesario instalar algunas bibliotecas de Python que proporcionan las herramientas para descargar, ejecutar y analizar modelos de lenguaje.</p>
 <p>La siguiente instrucción instala automáticamente los paquetes que utilizaremos en este notebook:</p>
-<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">transformers</span> <span class="n">accelerate</span> <span class="n">torch</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">transformers</span> <span class="n">accelerate</span> <span class="n">bitsandbytes</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
 </pre></div>
+<blockquote><p>⚠️ <strong>A propósito, no instalamos <code>torch</code> aquí.</strong> Tanto Google Colab como la mayoría de las instalaciones locales de Python para ciencia de datos ya traen una versión de <code>torch</code> correctamente configurada para tu hardware (GPU CUDA en Colab, o Apple Silicon en Mac). Reinstalarlo con <code>pip</code> puede reemplazarlo por una versión que <strong>no calce con tu GPU</strong>, forzando una ejecución en CPU sin ningún mensaje de error que lo explique — exactamente el problema silencioso que ya vimos con <code>bitsandbytes</code> más abajo. Si en algún momento ves un error de que <code>torch</code> no está instalado, agrégalo tú mismo con <code>!pip install -q torch</code>, pero evita hacerlo por defecto.</p>
+</blockquote>
 <hr>
 <h3 id="para-que-sirve-cada-biblioteca">&#128218; &#191;Para qu&#233; sirve cada biblioteca?<a class="anchor-link" href="#para-que-sirve-cada-biblioteca">&#182;</a></h3><ul>
 <li><p><strong><code>transformers</code></strong><br>
@@ -1774,8 +1776,8 @@ Proporciona acceso a miles de modelos de lenguaje preentrenados disponibles en <
 <li><p><strong><code>accelerate</code></strong><br>
 Optimiza la ejecución de modelos en CPU o GPU, gestionando automáticamente el hardware disponible y facilitando el uso eficiente de los recursos computacionales.</p>
 </li>
-<li><p><strong><code>torch</code></strong><br>
-Es la biblioteca de <em>Deep Learning</em> sobre la cual están implementados la mayoría de los modelos de Hugging Face. Se encarga de las operaciones matemáticas y del entrenamiento e inferencia de redes neuronales.</p>
+<li><p><strong><code>bitsandbytes</code></strong><br>
+Permite cuantizar modelos (por ejemplo, a 4 bits) para reducir su uso de memoria en GPUs NVIDIA (CUDA). Solo se usa efectivamente si detectamos una GPU CUDA disponible — ver la sección "Cargar el modelo".</p>
 </li>
 <li><p><strong><code>pandas</code></strong><br>
 Permite cargar, manipular y analizar tablas de datos. En este notebook se utilizará para leer el archivo CSV que contiene los tópicos generados por LDA.</p>
@@ -1812,9 +1814,9 @@ Biblioteca para crear gráficos y visualizar los resultados obtenidos durante el
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">transformers</span> <span class="n">accelerate</span> <span class="n">bitsandbytes</span> <span class="n">torch</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">transformers</span> <span class="n">accelerate</span> <span class="n">bitsandbytes</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">!pip install -q transformers accelerate bitsandbytes torch pandas matplotlib</div>
+<div id="cell-1" class="clipboard-copy-txt">!pip install -q transformers accelerate bitsandbytes pandas matplotlib</div>
     
         </div>
     </div>
@@ -2157,7 +2159,15 @@ if im_end_id is not None and im_end_id != tokenizer.unk_token_id:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-los-topicos-exportados-desde-r-unidad-5a">&#128194; Cargar los t&#243;picos exportados desde R (Unidad 5a)<a class="anchor-link" href="#cargar-los-topicos-exportados-desde-r-unidad-5a">&#182;</a></h2><p>Los tres archivos deben estar en el mismo directorio de trabajo que este notebook (o sube los archivos a Colab antes de ejecutar esta celda).</p>
+<h2 id="cargar-los-topicos-exportados-desde-r-unidad-5a">&#128194; Cargar los t&#243;picos exportados desde R (Unidad 5a)<a class="anchor-link" href="#cargar-los-topicos-exportados-desde-r-unidad-5a">&#182;</a></h2><p>Los tres archivos deben estar en el mismo directorio de trabajo que este notebook.</p>
+<blockquote><p>📌 <strong>Si estás en Google Colab:</strong> el entorno de ejecución no tiene acceso directo a tus archivos locales — debes subirlos a la sesión antes de ejecutar la siguiente celda:</p>
+<ol>
+<li>Abre el panel de archivos (ícono de 📁 carpeta en la barra lateral izquierda).</li>
+<li>Arrastra los tres archivos (<code>lda_topterms_k12.csv</code>, <code>lda_topterms_k20.csv</code>, <code>lda_topterms_k25.csv</code>) directamente a ese panel.</li>
+<li>Espera a que la subida termine (aparecerán en la lista de archivos) antes de ejecutar la celda de abajo.</li>
+</ol>
+<p>⚠️ Ten en cuenta que estos archivos se pierden si el entorno de ejecución se reinicia o desconecta — deberás volver a subirlos si eso ocurre.</p>
+</blockquote>
 
 </div>
 </div>
