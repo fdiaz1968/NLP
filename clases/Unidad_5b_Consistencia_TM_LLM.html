@@ -604,6 +604,19 @@
     📊 Comparar la coherencia semántica promedio por valor de $k$
   </a>
   
+    <nav class="md-nav" aria-label="📊 Comparar la coherencia semántica promedio por valor de $k$">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-limitacion-real-los-puntajes-se-concentran-en-5" class="md-nav__link">
+    ⚠️ Una limitación real: los puntajes se concentran en 5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3040,6 +3053,22 @@ plt.show()</div>
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="una-limitacion-real-los-puntajes-se-concentran-en-5">&#9888;&#65039; Una limitaci&#243;n real: los puntajes se concentran en 5<a class="anchor-link" href="#una-limitacion-real-los-puntajes-se-concentran-en-5">&#182;</a></h3><p>Si observas la distribución completa de <code>coherencia</code> (no solo el promedio), vas a notar algo importante: la gran mayoría de los tópicos reciben un puntaje de <strong>5</strong>, y muy pocos reciben 4, 3 o menos — independientemente del valor de $k$.</p>
+<p>Esto <strong>no es un error de parseo</strong> (ya verificamos que el formato se extrae correctamente); es una limitación real de usar un modelo de 3B para autoevaluarse con una escala numérica: tiende a ser <strong>poco discriminante</strong> y a concentrar sus respuestas cerca del extremo superior de la escala, en lugar de repartirlas según la calidad real de cada tópico.</p>
+<p>¿Por qué importa esto? Porque si casi todos los tópicos obtienen 5, el <strong>promedio por valor de $k$</strong> pierde buena parte de su capacidad para diferenciar entre modelos — la comparación entre $k=12$, $k=20$ y $k=25$ termina siendo mucho menos informativa de lo que sería con puntajes mejor distribuidos.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> esta es una limitación genuina del enfoque LLM, no un defecto del ejercicio — y es exactamente el tipo de comparación crítica entre métodos tradicionales y LLM que buscamos hacer en este curso. Las métricas estadísticas de la Unidad 5a (perplexity, el método del codo) no tienen este problema de "techo": producen valores continuos que sí distinguen claramente entre distintos $k$. Un modelo más grande (7B o superior), o un <em>prompt</em> que pida una justificación <em>antes</em> del puntaje (para forzar un razonamiento más cuidadoso), probablemente reduciría este efecto — quedan como posibles extensiones de este ejercicio.</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
