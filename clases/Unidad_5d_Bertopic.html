@@ -1775,6 +1775,7 @@ Licensed under the Apache License, Version 2.0.
 <span class="kn">from</span> <span class="nn">bertopic</span> <span class="kn">import</span> <span class="n">BERTopic</span>
 <span class="kn">from</span> <span class="nn">sentence_transformers</span> <span class="kn">import</span> <span class="n">SentenceTransformer</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">import numpy as np
 import pandas as pd
@@ -1783,7 +1784,8 @@ import torch
 import nltk
 from bertopic import BERTopic
 from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity</div>
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer</div>
     
         </div>
     </div>
@@ -1858,6 +1860,8 @@ print(documentos[0][:300])</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="ajustar-bertopic">&#129504; Ajustar BERTopic<a class="anchor-link" href="#ajustar-bertopic">&#182;</a></h2><p>BERTopic usa por defecto <code>all-MiniLM-L6-v2</code>, un modelo de embeddings liviano y rápido, recomendado por la propia librería para esta etapa de <em>clustering</em> de documentos (distinto del modelo <code>all-mpnet-base-v2</code> que usamos en 5c para <em>medir</em> coherencia — aquí usamos el modelo estándar de BERTopic para descubrir los tópicos, y en la sección de evaluación reutilizaremos el de 5c para mantener la comparación de coherencia consistente con las unidades anteriores).</p>
+<blockquote><p>⚠️ <strong>Importante — eliminar <em>stop words</em>:</strong> a diferencia de LDA en 5a, donde aplicamos <code>tokens_remove(stopwords("en"))</code> explícitamente antes de ajustar el modelo, BERTopic <strong>no elimina <em>stop words</em> por defecto</strong> en la representación de sus tópicos (el paso de <em>c-TF-IDF</em> que decide qué palabras describen cada tópico). Sin este paso, los tópicos terminan dominados por palabras genéricas como "the", "and", "is" — sin valor temático, y muy distintas entre sí en frecuencia con respecto a las palabras de contenido real. Para que la comparación con LDA sea justa (misma limpieza de texto de ambos lados), le pasamos un <code>CountVectorizer</code> con <code>stop_words="english"</code> a través del parámetro <code>vectorizer_model</code>. Esto solo afecta a <strong>qué palabras se muestran como representativas de cada tópico</strong> — los embeddings usados para el <em>clustering</em> siguen calculándose sobre el texto completo de cada documento, sin este filtro.</p>
+</blockquote>
 <p>Detectamos el hardware disponible igual que en notebooks anteriores.</p>
 
 </div>
@@ -1894,7 +1898,14 @@ print(documentos[0][:300])</div>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usando dispositivo: </span><span class="si">{</span><span class="n">device</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">SentenceTransformer</span><span class="p">(</span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
-<span class="n">topic_model</span> <span class="o">=</span> <span class="n">BERTopic</span><span class="p">(</span><span class="n">embedding_model</span><span class="o">=</span><span class="n">embedding_model</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">,</span> <span class="n">calculate_probabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">vectorizer_model</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">)</span>
+<span class="n">topic_model</span> <span class="o">=</span> <span class="n">BERTopic</span><span class="p">(</span>
+    <span class="n">embedding_model</span><span class="o">=</span><span class="n">embedding_model</span><span class="p">,</span>
+    <span class="n">vectorizer_model</span><span class="o">=</span><span class="n">vectorizer_model</span><span class="p">,</span>
+    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">,</span>
+    <span class="n">calculate_probabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="n">topics</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">topic_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">documentos</span><span class="p">)</span>
 </pre></div>
@@ -1908,7 +1919,14 @@ else:
 print(f"Usando dispositivo: {device}")
 
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2", device=device)
-topic_model = BERTopic(embedding_model=embedding_model, language="english", calculate_probabilities=False, verbose=True)
+vectorizer_model = CountVectorizer(stop_words="english")
+topic_model = BERTopic(
+    embedding_model=embedding_model,
+    vectorizer_model=vectorizer_model,
+    language="english",
+    calculate_probabilities=False,
+    verbose=True,
+)
 
 topics, _ = topic_model.fit_transform(documentos)</div>
     
