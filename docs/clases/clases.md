@@ -20,6 +20,8 @@ title: "Clases"
 
 [Unidad 5c: Consistencia Semántica de Tópicos con Embeddings (Python)](Unidad_5c_Embeddings.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_5c_Embeddings.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+[Unidad 5d: Topic Modelling con BERTopic (Python)](Unidad_5d_Bertopic.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_5d_Bertopic.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 [Unidad 6: Análisis de Sentimiento Financiero](Unidad_6_Analisis_Sentimiento.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_6_Analisis_Sentimiento.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 [Unidad 7: Similitud y Distancias Semánticas](Unidad_7_Similitud_Semantica.ipynb) | <a href="https://colab.research.google.com/github/fdiaz1968/NLP/blob/main/docs/clases/Unidad_7_Similitud_Semantica.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
