@@ -556,6 +556,19 @@
     🔍 Explorar los tópicos descubiertos
   </a>
   
+    <nav class="md-nav" aria-label="🔍 Explorar los tópicos descubiertos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-topico-1" class="md-nav__link">
+    ⚠️ ¿Qué es el tópico -1?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1998,6 +2011,23 @@ info_topicos.head(15)</div>
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="que-es-el-topico-1">&#9888;&#65039; &#191;Qu&#233; es el t&#243;pico <code>-1</code>?<a class="anchor-link" href="#que-es-el-topico-1">&#182;</a></h3><p>Fíjate en la primera fila de la tabla anterior: el tópico <code>-1</code> no es un tema temático real — es el <em>bucket</em> de <strong>ruido</strong> de HDBSCAN, el algoritmo de <em>clustering</em> que usa BERTopic internamente.</p>
+<p>A diferencia de un algoritmo como k-means (que fuerza a <strong>cada</strong> documento a pertenecer al clúster más cercano, sin importar qué tan mal encaje), HDBSCAN puede decidir que un documento <strong>no pertenece claramente a ningún grupo denso</strong>, y lo etiqueta como <code>-1</code> en vez de forzarlo a un tópico que no le corresponde bien.</p>
+<p>En una ejecución real sobre este corpus, BERTopic descubrió <strong>37 tópicos naturalmente</strong> (antes de reducirlos a 20 para comparar con LDA) — y el tópico <code>-1</code> concentró <strong>910 de las 2000 críticas (45.5% del corpus)</strong>. Es un número alto: casi la mitad de las reseñas no encajaron claramente en ningún tema específico.</p>
+<p>¿Por qué podría pasar esto con reseñas de películas? Las palabras representativas del tópico <code>-1</code> (<code>film, movie, like, just, time, good, character...</code>) son precisamente el vocabulario genérico que <strong>cualquier</strong> crítica de cine usa, sin importar de qué película se trate — lenguaje sobre el <em>acto de reseñar</em>, no sobre el contenido específico de una película. Muchas reseñas están escritas en un estilo lo bastante genérico como para no acercarse lo suficiente, en el espacio de embeddings, a ningún grupo temático específico.</p>
+<blockquote><p>📌 <strong>Esto es una limitación real que vale la pena reconocer, no ocultar.</strong> A diferencia de LDA — que asigna <em>alguna</em> mezcla de tópicos a cada documento, sin excepción — BERTopic con su configuración por defecto puede terminar sin clasificar casi la mitad del corpus. Ajustar el hiperparámetro <code>min_topic_size</code> de HDBSCAN (más pequeño → menos ruido, pero tópicos menos "limpios"; más grande → lo opuesto) es una forma de explorar este <em>trade-off</em>, aunque queda fuera del alcance de este notebook.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -2019,10 +2049,48 @@ info_topicos.head(15)</div>
                 </div>
             </clipboard-copy>
         </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n_ruido</span> <span class="o">=</span> <span class="n">info_topicos</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">info_topicos</span><span class="p">[</span><span class="s2">&quot;Topic&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">n_total</span> <span class="o">=</span> <span class="n">info_topicos</span><span class="p">[</span><span class="s2">&quot;Count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Documentos sin tópico asignado (ruido): </span><span class="si">{</span><span class="n">n_ruido</span><span class="si">}</span><span class="s2"> de </span><span class="si">{</span><span class="n">n_total</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">n_ruido</span> <span class="o">/</span> <span class="n">n_total</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-6" class="clipboard-copy-txt">n_ruido = info_topicos.loc[info_topicos["Topic"] == -1, "Count"].values[0]
+n_total = info_topicos["Count"].sum()
+
+print(f"Documentos sin tópico asignado (ruido): {n_ruido} de {n_total} ({n_ruido / n_total:.1%})")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-7">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># palabras más representativas de un par de tópicos, a modo de ejemplo</span>
 <span class="n">topic_model</span><span class="o">.</span><span class="n">get_topic</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt"># palabras más representativas de un par de tópicos, a modo de ejemplo
+<div id="cell-7" class="clipboard-copy-txt"># palabras más representativas de un par de tópicos, a modo de ejemplo
 topic_model.get_topic(0)</div>
     
         </div>
@@ -2055,7 +2123,7 @@ topic_model.get_topic(0)</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-7">
+            <clipboard-copy for="cell-8">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2067,7 +2135,7 @@ topic_model.get_topic(0)</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">topic_model</span><span class="o">.</span><span class="n">visualize_barchart</span><span class="p">(</span><span class="n">top_n_topics</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">topic_model.visualize_barchart(top_n_topics=12)</div>
+<div id="cell-8" class="clipboard-copy-txt">topic_model.visualize_barchart(top_n_topics=12)</div>
     
         </div>
     </div>
@@ -2099,7 +2167,7 @@ topic_model.get_topic(0)</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-8">
+            <clipboard-copy for="cell-9">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2115,7 +2183,7 @@ topic_model.get_topic(0)</div>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tópicos después de reducir: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">info_reducida</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">info_reducida</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">topic_model.reduce_topics(documentos, nr_topics=20)
+<div id="cell-9" class="clipboard-copy-txt">topic_model.reduce_topics(documentos, nr_topics=20)
 
 info_reducida = topic_model.get_topic_info()
 print(f"Tópicos después de reducir: {len(info_reducida) - 1}")
@@ -2152,7 +2220,7 @@ info_reducida.head(21)</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-9">
+            <clipboard-copy for="cell-10">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2173,7 +2241,7 @@ info_reducida.head(21)</div>
     <span class="n">similitudes</span> <span class="o">=</span> <span class="n">matriz_similitud</span><span class="p">[</span><span class="n">mascara</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">similitudes</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt">modelo_embeddings = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device=device)
+<div id="cell-10" class="clipboard-copy-txt">modelo_embeddings = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device=device)
 
 
 def coherencia_por_embeddings(palabras):
@@ -2202,7 +2270,7 @@ def coherencia_por_embeddings(palabras):
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-10">
+            <clipboard-copy for="cell-11">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2227,7 +2295,7 @@ def coherencia_por_embeddings(palabras):
 <span class="n">resultados_bertopic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resultados_bertopic</span><span class="p">)</span>
 <span class="n">resultados_bertopic</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">resultados_bertopic = []
+<div id="cell-11" class="clipboard-copy-txt">resultados_bertopic = []
 for topic_id in info_reducida["Topic"]:
     if topic_id == -1:
         continue  # excluimos el tópico de ruido
@@ -2272,7 +2340,7 @@ resultados_bertopic</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-11">
+            <clipboard-copy for="cell-12">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2295,7 +2363,7 @@ resultados_bertopic</div>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">coherencia_promedio_bertopic = resultados_bertopic["coherencia_embeddings"].mean()
+<div id="cell-12" class="clipboard-copy-txt">coherencia_promedio_bertopic = resultados_bertopic["coherencia_embeddings"].mean()
 coherencia_promedio_lda_k20 = 0.258  # de 5c
 
 print(f"Coherencia promedio — BERTopic (20 tópicos): {coherencia_promedio_bertopic:.4f}")
