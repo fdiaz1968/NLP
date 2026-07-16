@@ -584,6 +584,19 @@
     ⚖️ Comparación con el enfoque LLM (5b)
   </a>
   
+    <nav class="md-nav" aria-label="⚖️ Comparación con el enfoque LLM (5b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-muestran-los-resultados" class="md-nav__link">
+    🔍 Lo que muestran los resultados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2298,6 +2311,47 @@ plt.show()</div>
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="lo-que-muestran-los-resultados">&#128269; Lo que muestran los resultados<a class="anchor-link" href="#lo-que-muestran-los-resultados">&#182;</a></h3><p>En una ejecución real, el promedio de <code>coherencia_embeddings</code> por valor de $k$ fue:</p>
+<table>
+<thead><tr>
+<th>$k$</th>
+<th>Coherencia promedio (embeddings)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>≈ 0.265</td>
+</tr>
+<tr>
+<td>20</td>
+<td>≈ 0.258</td>
+</tr>
+<tr>
+<td>25</td>
+<td>≈ 0.264</td>
+</tr>
+</tbody>
+</table>
+<p>La respuesta a las dos preguntas de arriba es, sorprendentemente, <strong>mixta</strong>:</p>
+<ul>
+<li><strong>Sí, hay más variación entre tópicos individuales.</strong> Los tópicos van de ~0.207 a ~0.338 — un rango real, muy distinto a los puntajes del LLM en 5b, que se concentraban casi todos en 5.</li>
+<li><strong>Pero no, la tendencia entre valores de $k$ no es más clara — es casi plana.</strong> Las tres medias están a menos de 0.007 entre sí, sin una dirección evidente. En 5b, en cambio, el LLM mostraba una <strong>leve tendencia decreciente</strong> (5.0 → 4.9 → 4.68) a medida que aumentaba $k$, a pesar de tener puntajes mucho más comprimidos dentro de cada modelo.</li>
+</ul>
+<p>Esto es un hallazgo interesante en sí mismo: <strong>más granularidad dentro de un modelo no implica necesariamente una señal más clara entre modelos</strong>. El promedio simple de similitud coseno entre las 15 palabras principales parece capturar qué tan "compacto" es un tópico en general, pero no necesariamente cómo cambia esa compacidad a medida que se agregan más tópicos en este rango ($k=12$ a $25$). Una métrica más específica — por ejemplo, ponderada por $\beta$, o comparada contra la similitud promedio de palabras aleatorias del corpus como referencia — probablemente sería necesaria para detectar diferencias reales entre valores de $k$.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> ningún método es automáticamente "mejor" por ser más granular o más matemático. Los embeddings resolvieron el problema de discriminación <em>dentro</em> de un modelo, pero no el de comparación <em>entre</em> modelos — mientras que el LLM, pese a su escala comprimida, sí ofrecía una tendencia (débil) entre valores de $k$. Elegir el método correcto depende de qué pregunta te estás haciendo.</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
