@@ -1690,6 +1690,25 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p>🖥️ <strong>Antes de ejecutar: revisa tu hardware</strong></p>
+<p>Este notebook detecta automáticamente el hardware disponible y usa la configuración más rápida para cada caso — no necesitas cambiar nada en el código.</p>
+<ul>
+<li><strong>Google Colab con GPU activada</strong>, o <strong>Mac con Apple Silicon (M1/M2/M3/M4)</strong>: debería tardar solo un par de minutos en total.</li>
+<li><strong>Sin GPU</strong> (por ejemplo, Mac con chip Intel, o un PC sin GPU NVIDIA): el notebook lo detecta e imprime una advertencia (<code>⚠️ No se detectó GPU...</code>) antes de cargar el modelo, y luego corre en CPU — esto puede tomar <strong>decenas de minutos</strong>. Si ves esa advertencia y la celda de evaluación es muy lenta, cambia a Google Colab y activa GPU en <code>Entorno de ejecución &gt; Cambiar tipo de entorno de ejecución &gt; GPU (T4)</code>.</li>
+<li>Si el notebook corre lento <strong>sin</strong> mostrar esa advertencia, algo no está funcionando como se espera — avísale a tu profesor antes de esperar a que termine.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="objetivos-de-aprendizaje">&#127919; Objetivos de aprendizaje<a class="anchor-link" href="#objetivos-de-aprendizaje">&#182;</a></h2><ul>
 <li>Cargar un modelo instruccional open-source desde Hugging Face y ejecutarlo localmente o en Colab.</li>
 <li>Diseñar un <em>prompt</em> que le pida al LLM una salida en un formato específico y parseable.</li>
@@ -1716,7 +1735,7 @@ Licensed under the Apache License, Version 2.0.
 <li><strong>Tamaño acotado (3B)</strong>: para una tarea estructurada y acotada como esta (leer 15 palabras, producir una etiqueta y un puntaje), no se necesita un modelo de 7-8B parámetros. Un modelo más pequeño se descarga y carga notablemente más rápido, lo cual importa especialmente en Colab, donde la caché no persiste entre sesiones (ver nota en la siguiente celda).</li>
 </ul>
 <blockquote><p>📌 El nombre del modelo está aislado en una sola variable (<code>MODEL_NAME</code>). Si prefieres más calidad a cambio de una carga más lenta, puedes cambiarla por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o, si ya tienes acceso aprobado y un token de Hugging Face configurado, <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> — el resto del notebook funciona igual.</p>
-<p>⚠️ <strong>GPU necesaria:</strong> si estás en Google Colab, activa GPU en <code>Entorno de ejecución &gt; Cambiar tipo de entorno de ejecución &gt; GPU (T4)</code> antes de continuar. Cargamos el modelo en 4 bits (<code>bitsandbytes</code>) para que quepa cómodamente en la GPU gratuita de Colab.</p>
+<p>⚠️ <strong>Sobre el hardware:</strong> ver la nota al inicio del notebook y la explicación en la sección "Cargar el modelo" — el código detecta automáticamente si usar CUDA, Apple Silicon (MPS) o CPU.</p>
 </blockquote>
 
 </div>
