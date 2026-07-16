@@ -528,6 +528,19 @@
     ⚖️ LDA vs. BERTopic: una diferencia clave
   </a>
   
+    <nav class="md-nav" aria-label="⚖️ LDA vs. BERTopic: una diferencia clave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-decide-hdbscan-cuantos-topicos-hay" class="md-nav__link">
+    🧭 ¿Cómo decide HDBSCAN cuántos tópicos hay?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1751,6 +1764,18 @@ Licensed under the Apache License, Version 2.0.
 <h2 id="lda-vs-bertopic-una-diferencia-clave">&#9878;&#65039; LDA vs. BERTopic: una diferencia clave<a class="anchor-link" href="#lda-vs-bertopic-una-diferencia-clave">&#182;</a></h2><p>Algo que ya notamos en 5a, 5b y 5c, pero vale la pena hacer explícito: con LDA, <strong>tú decides cuántos tópicos ($k$) quieres antes de ajustar el modelo</strong> — de hecho, gran parte de 5a estuvo dedicada a intentar <em>adivinar</em> un buen valor de $k$ usando perplexity y el método del codo.</p>
 <p>BERTopic invierte esta lógica: <strong>descubre el número de tópicos automáticamente</strong>, a partir de cuántos grupos naturales encuentra HDBSCAN en el espacio de embeddings. Esto tiene ventajas (no hay que adivinar $k$) y desventajas (menos control directo, y el número de tópicos puede variar entre ejecuciones o corpus).</p>
 <blockquote><p>📌 Más adelante en este notebook forzaremos a BERTopic a reducirse a un número específico de tópicos, para poder comparar su coherencia directamente con los modelos de $k$ fijo de 5a-5c.</p>
+</blockquote>
+<h3 id="como-decide-hdbscan-cuantos-topicos-hay">&#129517; &#191;C&#243;mo decide HDBSCAN cu&#225;ntos t&#243;picos hay?<a class="anchor-link" href="#como-decide-hdbscan-cuantos-topicos-hay">&#182;</a></h3><p>Una intuición razonable sería pensar que HDBSCAN busca los tópicos que <strong>maximizan la similitud dentro de cada grupo y la separación entre grupos</strong> — algo parecido al <em>silhouette score</em>, que sí se usa a veces para elegir un número de clústeres comparando explícitamente esas dos cantidades. <strong>Pero no es así.</strong> HDBSCAN no optimiza ninguna métrica de similitud directamente, y tampoco prueba distintos números de clústeres para quedarse con el mejor.</p>
+<p>En cambio, funciona de manera <strong>basada en densidad</strong>:</p>
+<ol>
+<li>Estima qué tan "densa" es la vecindad de cada punto (documento) en el espacio de embeddings — cuántos otros documentos hay cerca.</li>
+<li>Construye una <strong>jerarquía de clústeres</strong>: imagina ir bajando un umbral de densidad poco a poco. Con un umbral muy alto, casi nada forma un grupo; a medida que el umbral baja, aparecen grupos pequeños y densos, que luego se van fusionando en grupos más grandes conforme la densidad exigida disminuye.</li>
+<li>Para cada posible grupo en esa jerarquía, calcula su <strong>estabilidad</strong>: durante cuánto rango de umbrales de densidad ese grupo se mantiene como una unidad reconocible, antes de fusionarse con otro o disolverse en ruido. Un grupo muy estable es uno que "sobrevive" como grupo distinguible en un rango amplio de umbrales — no algo frágil que solo aparece con un umbral exacto.</li>
+<li>Finalmente, selecciona el conjunto de grupos de la jerarquía que <strong>maximiza la estabilidad total combinada</strong> (el algoritmo <em>Excess of Mass</em>), decidiendo en cada punto de la jerarquía si conviene quedarse con un grupo grande o dividirlo en sus subgrupos.</li>
+</ol>
+<p>El número de tópicos es, entonces, <strong>cuántos grupos estables resultan de este proceso</strong> — no el resultado de comparar explícitamente distancias dentro y entre grupos como en el <em>silhouette score</em>, ni de minimizar una varianza como en k-means (que además, a diferencia de HDBSCAN, sí exige indicarle de antemano cuántos clústeres quieres).</p>
+<p>El parámetro que más controla el resultado es <code>min_topic_size</code> (el <code>min_cluster_size</code> de HDBSCAN): el tamaño mínimo de documentos que un grupo necesita para contar como tópico real en vez de disolverse en el ruido (<code>-1</code>). Bajarlo produce más tópicos, más pequeños y específicos; subirlo produce menos tópicos, más grandes y generales — el equivalente, en espíritu, a elegir $k$ en LDA, aunque expresado de forma indirecta.</p>
+<blockquote><p>📌 Sí existe una conexión intuitiva con tu pregunta: los grupos que HDBSCAN encuentra tienden a ser densos por dentro (documentos cercanos entre sí) y separados por regiones de baja densidad de otros grupos — lo cual <em>se parece</em> a "alta similitud dentro, separación entre". Pero eso es una <strong>consecuencia</strong> de cómo se ve el espacio de densidad, no un objetivo numérico que el algoritmo esté optimizando explícitamente como sí hacen k-means o los métodos basados en <em>silhouette score</em>.</p>
 </blockquote>
 
 </div>
