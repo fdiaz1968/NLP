@@ -1861,9 +1861,15 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-el-modelo">&#129504; Cargar el modelo<a class="anchor-link" href="#cargar-el-modelo">&#182;</a></h2><p>Cargamos el modelo cuantizado en 4 bits (<code>nf4</code>), lo que reduce el uso de memoria de GPU manteniendo una calidad de generación muy cercana a la versión completa.</p>
-<blockquote><p>⏳ <strong>¿Por qué esta celda demora tanto?</strong> <code>BitsAndBytesConfig(load_in_4bit=True)</code> no descarga una versión ya cuantizada del modelo: Hugging Face descarga los pesos originales en precisión completa (~15 GB para un modelo de 7B parámetros) y recién los cuantiza al momento de cargarlos en la GPU. En Colab esto ocurre <strong>en cada sesión nueva</strong>, porque la caché no persiste entre reinicios del entorno de ejecución.</p>
-<p>Usamos <code>Qwen/Qwen2.5-3B-Instruct</code> (en vez de una variante de 7-8B) precisamente para acortar esta espera: son menos parámetros que descargar y cuantizar, y para una tarea acotada como leer 15 palabras y devolver una etiqueta y un puntaje, un modelo de 3B es más que suficiente. Si prefieres más calidad a cambio de una carga más lenta, cambia <code>MODEL_NAME</code> por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> (esta última requiere solicitar acceso en Hugging Face, ver nota más arriba).</p>
+<h2 id="cargar-el-modelo">&#129504; Cargar el modelo<a class="anchor-link" href="#cargar-el-modelo">&#182;</a></h2><p>Detectamos automáticamente el tipo de GPU disponible y cargamos el modelo de la forma más adecuada para cada caso: CUDA (con cuantización en 4 bits), Apple Silicon (MPS, sin cuantizar) o CPU como último recurso.</p>
+<blockquote><p>⚠️ <strong><code>bitsandbytes</code> (cuantización en 4 bits) solo funciona con GPUs NVIDIA (CUDA)</strong> — por ejemplo, la GPU T4 gratuita de Google Colab. <strong>No funciona en Mac (Apple Silicon ni Intel)</strong>, y si el código intenta usarlo de todas formas, <code>device_map="auto"</code> puede terminar ejecutando el modelo silenciosamente en <strong>CPU</strong>, lo cual es extremadamente lento para un modelo de 3B (decenas de minutos para las 57 llamadas de las secciones siguientes) — sin ningún error o advertencia visible que lo indique.</p>
+<p>Por eso esta celda revisa explícitamente qué hardware hay disponible:</p>
+<ul>
+<li><strong>CUDA disponible</strong> (Colab, PC con GPU NVIDIA): cuantizamos en 4 bits con <code>bitsandbytes</code>.</li>
+<li><strong>MPS disponible</strong> (Mac con chip Apple Silicon: M1, M2, M3, M4): cargamos el modelo en <code>float16</code> directamente sobre la GPU integrada de Apple, sin <code>bitsandbytes</code>. Un modelo de 3B en <code>float16</code> ocupa ~6 GB, lo que cabe cómodamente en la memoria unificada de un Mac moderno.</li>
+<li><strong>Ninguna de las anteriores</strong>: el modelo corre en CPU. Si ves este mensaje y la celda de evaluación demora demasiado, considera ejecutar el notebook en Google Colab.</li>
+</ul>
+<p>⏳ <strong>¿Por qué la carga del modelo puede demorar?</strong> La primera vez (o en cada sesión nueva de Colab, donde la caché no persiste), Hugging Face debe descargar los pesos del modelo — con <code>Qwen/Qwen2.5-3B-Instruct</code> esto son unos ~6 GB, notablemente menos que los ~15 GB de una variante de 7B. Si prefieres más calidad a cambio de una descarga más pesada, cambia <code>MODEL_NAME</code> por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> (esta última requiere solicitar acceso en Hugging Face, ver nota más arriba).</p>
 </blockquote>
 
 </div>
@@ -1892,37 +1898,73 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">MODEL_NAME</span> <span class="o">=</span> <span class="s2">&quot;Qwen/Qwen2.5-3B-Instruct&quot;</span>
 
-<span class="n">bnb_config</span> <span class="o">=</span> <span class="n">BitsAndBytesConfig</span><span class="p">(</span>
-    <span class="n">load_in_4bit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">bnb_4bit_compute_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span>
-    <span class="n">bnb_4bit_quant_type</span><span class="o">=</span><span class="s2">&quot;nf4&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-
 <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">MODEL_NAME</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
-    <span class="n">MODEL_NAME</span><span class="p">,</span>
-    <span class="n">quantization_config</span><span class="o">=</span><span class="n">bnb_config</span><span class="p">,</span>
-    <span class="n">device_map</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
-<span class="p">)</span>
+
+<span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+    <span class="c1"># GPU con CUDA (por ejemplo, en Google Colab): bitsandbytes permite</span>
+    <span class="c1"># cuantizar el modelo a 4 bits para reducir el uso de memoria.</span>
+    <span class="n">bnb_config</span> <span class="o">=</span> <span class="n">BitsAndBytesConfig</span><span class="p">(</span>
+        <span class="n">load_in_4bit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">bnb_4bit_compute_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span>
+        <span class="n">bnb_4bit_quant_type</span><span class="o">=</span><span class="s2">&quot;nf4&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+        <span class="n">MODEL_NAME</span><span class="p">,</span>
+        <span class="n">quantization_config</span><span class="o">=</span><span class="n">bnb_config</span><span class="p">,</span>
+        <span class="n">device_map</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="k">elif</span> <span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">mps</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+    <span class="c1"># Mac con chip Apple Silicon: bitsandbytes NO soporta el backend MPS de</span>
+    <span class="c1"># Apple, así que cargamos el modelo sin cuantizar (en float16) directamente</span>
+    <span class="c1"># en la GPU integrada. Un modelo de 3B en float16 ocupa ~6 GB, lo que cabe</span>
+    <span class="c1"># cómodamente en la memoria unificada de un Mac moderno.</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+        <span class="n">MODEL_NAME</span><span class="p">,</span>
+        <span class="n">torch_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;mps&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Sin GPU disponible (ni CUDA ni MPS): el modelo corre en CPU, lo cual es</span>
+    <span class="c1"># considerablemente más lento para un modelo de 3B. Si esta celda demora</span>
+    <span class="c1"># demasiado, considera ejecutar el notebook en Google Colab (GPU T4 gratuita).</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u26a0\ufe0f</span><span class="s2"> No se detectó GPU (ni CUDA ni MPS). El modelo correrá en CPU y será mucho más lento.&quot;</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">MODEL_NAME</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
-
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_compute_dtype=torch.float16,
-    bnb_4bit_quant_type="nf4",
-)
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token = tokenizer.eos_token
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
-    quantization_config=bnb_config,
-    device_map="auto",
-)</div>
+
+if torch.cuda.is_available():
+    # GPU con CUDA (por ejemplo, en Google Colab): bitsandbytes permite
+    # cuantizar el modelo a 4 bits para reducir el uso de memoria.
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_quant_type="nf4",
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        quantization_config=bnb_config,
+        device_map="auto",
+    )
+elif torch.backends.mps.is_available():
+    # Mac con chip Apple Silicon: bitsandbytes NO soporta el backend MPS de
+    # Apple, así que cargamos el modelo sin cuantizar (en float16) directamente
+    # en la GPU integrada. Un modelo de 3B en float16 ocupa ~6 GB, lo que cabe
+    # cómodamente en la memoria unificada de un Mac moderno.
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        torch_dtype=torch.float16,
+    ).to("mps")
+else:
+    # Sin GPU disponible (ni CUDA ni MPS): el modelo corre en CPU, lo cual es
+    # considerablemente más lento para un modelo de 3B. Si esta celda demora
+    # demasiado, considera ejecutar el notebook en Google Colab (GPU T4 gratuita).
+    print("\u26a0\ufe0f No se detectó GPU (ni CUDA ni MPS). El modelo correrá en CPU y será mucho más lento.")
+    model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)</div>
     
         </div>
     </div>
