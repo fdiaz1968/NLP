@@ -584,6 +584,19 @@
     🆚 Comparar: BERTopic vs. LDA ($k=20$)
   </a>
   
+    <nav class="md-nav" aria-label="🆚 Comparar: BERTopic vs. LDA ($k=20$)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-muestran-los-resultados" class="md-nav__link">
+    🔍 Lo que muestran los resultados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2310,6 +2323,39 @@ plt.show()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <blockquote><p>📌 <strong>Antes de sacar conclusiones:</strong> ejecuta la celda anterior y observa el resultado real. El punto de este notebook no es asumir de antemano que BERTopic "gana" — es comparar ambos números con el mismo método de medición y discutir <strong>por qué</strong> podrían diferir (o no). Si BERTopic obtiene un puntaje más alto, es evidencia a favor de la idea (mencionada en el programa del curso) de que los embeddings mejoran la coherencia temática frente al enfoque bag-of-words de LDA. Si no, también es un resultado válido y interesante para discutir — quizás con este corpus y este número de tópicos, ambos métodos capturan una estructura temática similar.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="lo-que-muestran-los-resultados">&#128269; Lo que muestran los resultados<a class="anchor-link" href="#lo-que-muestran-los-resultados">&#182;</a></h3><p>En una ejecución real (después de corregir el filtrado de <em>stop words</em>), BERTopic obtuvo:</p>
+<table>
+<thead><tr>
+<th>Enfoque</th>
+<th>Coherencia promedio (embeddings)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LDA, $k=20$ (desde 5c)</td>
+<td>≈ 0.258</td>
+</tr>
+<tr>
+<td>BERTopic (19 tópicos tras reducir)</td>
+<td>≈ 0.266</td>
+</tr>
+</tbody>
+</table>
+<p>La diferencia en el promedio es real pero <strong>modesta</strong> (~3% más alto) — no una mejora dramática. Sin embargo, hay algo más interesante que el promedio: revisando las palabras de cada tópico, BERTopic produjo agrupaciones notablemente <strong>más específicas</strong> que LDA. Mientras los tópicos de LDA en 5a tendían a describir géneros amplios ("Sci-Fi Action", "Disney Animation", "Horror Teen Movies"), varios tópicos de BERTopic corresponden a <strong>películas o franquicias individuales</strong>: <em>Star Wars</em> (<code>wars, star, jedi, phantom, lucas</code>), <em>Tarzan</em> (<code>tarzan, apes, ape, planet, jane, gorilla</code>), <em>Titanic</em> (<code>titanic, ship, rose, cameron, winslet</code>), <em>Batman</em> (<code>batman, robin, supergirl, ivy, freeze</code>), <em>El Show de Truman</em> (<code>truman, carrey, burbank, weir, christof</code>).</p>
+<p>Esto sugiere que los embeddings de documentos completos capturan una noción de similitud más <strong>fina</strong> que la coocurrencia de palabras que usa LDA — suficiente para separar películas específicas dentro de un mismo género, no solo géneros entre sí. Es una evidencia parcial a favor de la idea del programa del curso ("los embeddings mejoran la coherencia temática"), aunque el efecto se ve más claramente en la <strong>especificidad temática</strong> de los tópicos que en el puntaje numérico promedio.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> un promedio de coherencia similar no significa que ambos métodos produzcan el mismo tipo de agrupación. Vale la pena mirar más allá del número y leer las palabras — la métrica agregada y la inspección cualitativa cuentan historias distintas, y ambas son necesarias.</p>
 </blockquote>
 
 </div>
