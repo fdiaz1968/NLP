@@ -583,6 +583,33 @@
     🔧 Reducir a un número comparable de tópicos
   </a>
   
+    <nav class="md-nav" aria-label="🔧 Reducir a un número comparable de tópicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-tf-idf" class="md-nav__link">
+    📐 ¿Qué es TF-IDF?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-tf-idf-la-variante-que-usa-bertopic" class="md-nav__link">
+    🧩 c-TF-IDF: la variante que usa BERTopic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-decide-reduce_topics-que-topicos-fusionar" class="md-nav__link">
+    🔀 ¿Cómo decide reduce_topics() qué tópicos fusionar?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2152,6 +2179,35 @@ topic_model.get_topic(0)</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="reducir-a-un-numero-comparable-de-topicos">&#128295; Reducir a un n&#250;mero comparable de t&#243;picos<a class="anchor-link" href="#reducir-a-un-numero-comparable-de-topicos">&#182;</a></h2><p>Para comparar la coherencia de BERTopic con los modelos de $k=20$ de 5a-5c en igualdad de condiciones, reducimos BERTopic a 20 tópicos con <code>reduce_topics()</code>.</p>
+<h3 id="que-es-tf-idf">&#128208; &#191;Qu&#233; es TF-IDF?<a class="anchor-link" href="#que-es-tf-idf">&#182;</a></h3><p><strong>TF-IDF</strong> (<em>Term Frequency – Inverse Document Frequency</em>) es una forma clásica de medir qué tan <strong>distintiva</strong> es una palabra para un documento específico, dentro de una colección de documentos.</p>
+<p>La idea combina dos partes:</p>
+$$
+\text{tf}(t, d) = \frac{f_{t,d}}{\sum_{t' \in d} f_{t',d}}
+$$<p><strong>Frecuencia del término (tf):</strong> qué tan seguido aparece la palabra $t$ en el documento $d$, respecto al total de palabras de ese documento.</p>
+$$
+\text{idf}(t, D) = \log\left(\frac{N}{|\{d \in D : t \in d\}|}\right)
+$$<p><strong>Frecuencia inversa de documento (idf):</strong> el logaritmo del número total de documentos $N$ dividido por el número de documentos que contienen la palabra $t$. Palabras que aparecen en <strong>casi todos</strong> los documentos (como "the", "movie", "film" en nuestro corpus) tienen un <code>idf</code> cercano a cero — no distinguen nada. Palabras raras, presentes solo en unos pocos documentos, tienen un <code>idf</code> alto.</p>
+$$
+\text{tfidf}(t, d, D) = \text{tf}(t, d) \times \text{idf}(t, D)
+$$<p>El puntaje final es el producto de ambas: una palabra tiene un TF-IDF alto si aparece <strong>frecuentemente en un documento</strong> pero <strong>raramente en el resto de la colección</strong> — exactamente el tipo de palabra que ya vimos que le faltaba al tópico <code>-1</code> (dominado por vocabulario genérico de crítica de cine, con TF-IDF bajo porque aparece en casi todas partes).</p>
+<blockquote><p>📚 <strong>Referencia:</strong> <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">Wikipedia — tf–idf</a></p>
+</blockquote>
+<h3 id="c-tf-idf-la-variante-que-usa-bertopic">&#129513; c-TF-IDF: la variante que usa BERTopic<a class="anchor-link" href="#c-tf-idf-la-variante-que-usa-bertopic">&#182;</a></h3><p>BERTopic no calcula TF-IDF por documento individual, sino una variante llamada <strong>c-TF-IDF</strong> (<em>class-based TF-IDF</em>, propuesta en el paper original de BERTopic): trata a <strong>todos los documentos de un mismo tópico como si fueran un solo documento combinado</strong>, y calcula qué palabras distinguen a ese tópico frente a los demás tópicos (en vez de qué palabras distinguen a un documento frente a los demás documentos).</p>
+$$
+W_{t,c} = \text{tf}(t, c) \times \log\left(1 + \frac{A}{f_t}\right)
+$$<p>donde $\text{tf}(t, c)$ es la frecuencia del término $t$ dentro de la clase (tópico) $c$, $A$ es el número promedio de palabras por clase, y $f_t$ es la frecuencia del término $t$ sumada sobre <strong>todas</strong> las clases. La lógica es la misma que en TF-IDF clásico, solo que "documento" pasa a ser "tópico completo".</p>
+<p>Esta es la representación que ya usamos indirectamente: son las palabras de c-TF-IDF las que aparecen en <code>get_topic()</code> y en la tabla de <code>get_topic_info()</code>.</p>
+<blockquote><p>📚 <strong>Referencia:</strong> Grootendorst, M. (2022). <em>BERTopic: Neural topic modeling with a class-based TF-IDF procedure</em>. <a href="https://arxiv.org/abs/2203.05794">arXiv:2203.05794</a></p>
+</blockquote>
+<h3 id="como-decide-reduce_topics-que-topicos-fusionar">&#128256; &#191;C&#243;mo decide <code>reduce_topics()</code> qu&#233; t&#243;picos fusionar?<a class="anchor-link" href="#como-decide-reduce_topics-que-topicos-fusionar">&#182;</a></h3><p><code>reduce_topics()</code> no vuelve a ejecutar el <em>clustering</em> (HDBSCAN) con otros parámetros para llegar "naturalmente" a 20 tópicos. En cambio, fusiona los tópicos existentes de forma iterativa:</p>
+<ol>
+<li>Calcula la <strong>similitud coseno entre los vectores c-TF-IDF</strong> de cada par de tópicos — es decir, qué tan parecido es el "perfil de palabras distintivas" de un tópico con el de otro.</li>
+<li>Encuentra el par de tópicos <strong>más similares</strong> entre sí y los fusiona en uno solo (los documentos de ambos quedan bajo el tópico fusionado, y se recalcula su representación c-TF-IDF).</li>
+<li>Repite este proceso — encontrar el par más similar, fusionar — hasta llegar al número de tópicos solicitado (<code>nr_topics=20</code>).</li>
+</ol>
+<p>El criterio es entonces <strong>redundancia</strong>: los tópicos que se fusionan primero son los que ya se parecían más entre sí en su vocabulario distintivo, no los más pequeños, ni los que un humano consideraría menos interesantes. El tópico <code>-1</code> (ruido) queda <strong>excluido</strong> de este proceso — nunca se fusiona con nada, y conserva exactamente sus mismos documentos.</p>
+<blockquote><p>📌 Existe también la opción <code>nr_topics="auto"</code>, que usa este mismo mecanismo de fusión pero se detiene sola (según un umbral de similitud) en vez de forzar un número exacto — una alternativa más "orgánica" a la que usamos aquí, donde elegimos 20 deliberadamente para poder comparar con LDA.</p>
+</blockquote>
 
 </div>
 </div>
