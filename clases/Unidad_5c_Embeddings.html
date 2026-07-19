@@ -523,89 +523,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#que-modelo-de-embeddings-usamos" class="md-nav__link">
-    🧮 ¿Qué modelo de embeddings usamos?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-las-librerias-necesarias" class="md-nav__link">
-    📦 Instalación de las librerías necesarias
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cargar-el-modelo-de-embeddings" class="md-nav__link">
-    🧠 Cargar el modelo de embeddings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cargar-los-topicos-exportados-desde-r-unidad-5a" class="md-nav__link">
-    📂 Cargar los tópicos exportados desde R (Unidad 5a)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#palabras-clave-por-topico" class="md-nav__link">
-    ✂️ Palabras clave por tópico
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-palabras-a-un-puntaje-de-coherencia" class="md-nav__link">
-    📐 De palabras a un puntaje de coherencia
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aplicar-a-todos-los-topicos-de-un-modelo" class="md-nav__link">
-    🔁 Aplicar a todos los tópicos de un modelo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparar-la-coherencia-promedio-por-valor-de-k" class="md-nav__link">
-    📊 Comparar la coherencia promedio por valor de $k$
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparacion-con-el-enfoque-llm-5b" class="md-nav__link">
-    ⚖️ Comparación con el enfoque LLM (5b)
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Comparación con el enfoque LLM (5b)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lo-que-muestran-los-resultados" class="md-nav__link">
-    🔍 Lo que muestran los resultados
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cierre" class="md-nav__link">
-    ✅ Cierre
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1705,6 +1622,171 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="que-son-los-embeddings">&#191;Qu&#233; son los Embeddings?<a class="anchor-link" href="#que-son-los-embeddings">&#182;</a></h1><p>Hasta este punto del curso hemos representado los documentos mediante una <strong>Document-Feature Matrix (DFM)</strong>, en la que cada documento se describe por las palabras que contiene y su frecuencia de aparición. Sobre esta representación hemos construido modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
+<p>Aunque este enfoque ha demostrado ser muy útil, presenta una limitación importante: <strong>no captura el significado de las palabras</strong>. Para estos modelos, dos palabras distintas son simplemente dos términos diferentes, incluso si tienen un significado muy similar.</p>
+<p>Los <strong>embeddings</strong> surgieron para resolver este problema. En lugar de representar una palabra mediante una columna de la DFM o una frecuencia de aparición, la representan mediante un <strong>vector numérico denso</strong> que captura información sobre su significado. Como consecuencia, palabras que aparecen en contextos similares tienden a tener representaciones numéricas similares.</p>
+<p>Este cambio permitió pasar de una representación basada en frecuencias de palabras a una representación basada en <strong>relaciones semánticas</strong>, constituyendo uno de los avances más importantes en el desarrollo del Procesamiento de Lenguaje Natural moderno.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="de-la-dfm-a-los-embeddings">&#128260; De la DFM a los Embeddings<a class="anchor-link" href="#de-la-dfm-a-los-embeddings">&#182;</a></h2><p>📊 <strong>Representación clásica:</strong><br>
+La <strong>Document-Feature Matrix (DFM)</strong> representa cada documento mediante las palabras que contiene y la frecuencia con la que aparecen. Esta representación constituye la base de modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
+<p>🧠 <strong>Representación semántica:</strong><br>
+Los <strong>embeddings</strong> adoptan un enfoque diferente. En lugar de representar el texto mediante frecuencias de palabras, representan palabras, oraciones o documentos mediante <strong>vectores densos</strong> que capturan información sobre su significado.</p>
+<p>📌 <strong>Cambio de paradigma:</strong><br>
+La siguiente figura resume esta diferencia fundamental entre ambas formas de representar el texto.</p>
+<p><img src="../images/DFM_to_Embeddings.png" alt="DFM_to_Embeddings"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="representaciones-sparse-y-dense">&#128208; Representaciones <em>Sparse</em> y <em>Dense</em><a class="anchor-link" href="#representaciones-sparse-y-dense">&#182;</a></h2><p>La principal diferencia entre la <strong>Document-Feature Matrix (DFM)</strong> y los <strong>embeddings</strong> radica en la forma en que representan la información.</p>
+<p>📊 <strong>Representación <em>Sparse</em> (dispersa):</strong><br>
+En una DFM, cada palabra del vocabulario corresponde a una columna distinta. Como cada documento contiene solo una pequeña fracción de todas las palabras posibles, la mayoría de los valores de la matriz son <strong>0</strong>. Por esta razón, este tipo de representación se denomina <em>sparse</em> (dispersa).</p>
+<p>🧠 <strong>Representación <em>Dense</em> (densa):</strong><br>
+Los embeddings representan palabras, oraciones o documentos mediante un número mucho menor de valores numéricos. En este caso, prácticamente todos los elementos del vector contienen información útil, por lo que la representación se considera <em>dense</em> (densa).</p>
+<p>📌 <strong>Idea clave:</strong><br>
+Mientras que una representación <em>sparse</em> describe <strong>qué palabras aparecen</strong> en un documento, una representación <em>dense</em> busca capturar <strong>el significado del texto</strong> mediante un conjunto compacto de características numéricas.</p>
+<p><img src="../images/Sparse_Dense.png" alt="Sparse_Dense"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="el-espacio-semantico">&#127757; El Espacio Sem&#225;ntico<a class="anchor-link" href="#el-espacio-semantico">&#182;</a></h2><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores densos</strong>. Sin embargo, la verdadera utilidad de estos vectores radica en que pueden compararse entre sí.</p>
+<p>📍 <strong>Proximidad semántica:</strong><br>
+En el espacio de embeddings, elementos con significados similares tienden a ubicarse cerca unos de otros. Por ejemplo, palabras como <em>perro</em> y <em>cachorro</em> tendrán representaciones muy próximas, mientras que palabras sin relación, como <em>automóvil</em> y <em>plátano</em>, aparecerán mucho más alejadas.</p>
+<p>📏 <strong>Medida de similitud:</strong><br>
+La distancia o el ángulo entre dos vectores permite cuantificar cuán similares son sus significados. Esta propiedad constituye la base de numerosas aplicaciones modernas, como la búsqueda semántica, los sistemas de recomendación, la clasificación automática de textos y el modelamiento de temas.</p>
+<p>📌 <strong>Idea clave:</strong><br>
+Los embeddings transforman el lenguaje en un espacio matemático donde la cercanía entre vectores refleja la similitud semántica entre palabras, oraciones o documentos.</p>
+<p><img src="../images/Semantic_Space.png" alt="Semantic_Space"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="el-vector-de-embeddings">&#129518; El Vector de Embeddings<a class="anchor-link" href="#el-vector-de-embeddings">&#182;</a></h2><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores numéricos</strong>. Pero, ¿qué representan realmente esos números?</p>
+<p>📐 <strong>Cada embedding es un vector:</strong><br>
+Cada palabra, oración o documento se representa mediante un único vector compuesto por un conjunto de valores numéricos denominados <strong>dimensiones</strong>. Cada dimensión captura una pequeña parte de la información aprendida por el modelo durante el entrenamiento. Aunque, por sí sola, una dimensión no suele tener una interpretación directa, el conjunto de todas ellas permite representar el significado del texto.</p>
+<p>📊 <strong>Número de dimensiones:</strong><br>
+No todos los modelos utilizan vectores del mismo tamaño. Por ejemplo, algunos modelos generan embeddings de <strong>384 dimensiones</strong>, mientras que otros utilizan <strong>768</strong> o incluso <strong>1024 dimensiones</strong>. En general, un mayor número de dimensiones permite representar relaciones semánticas más complejas, aunque también aumenta el costo computacional.</p>
+<p>📌 <strong>Idea clave:</strong><br>
+El significado de una palabra no está contenido en un único número, sino en la combinación de <strong>todas las dimensiones</strong> de su vector de embedding.</p>
+<p><img src="../images/Embedding_Vector.png" alt="Embedding Vector"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="como-aprenden-los-modelos-estos-vectores">&#129504; &#191;C&#243;mo aprenden los modelos estos vectores?<a class="anchor-link" href="#como-aprenden-los-modelos-estos-vectores">&#182;</a></h2><p>Hasta ahora hemos visto que cada palabra, oración o documento puede representarse mediante un vector numérico. Pero surge una pregunta fundamental:</p>
+<blockquote><p><strong>¿Cómo adquieren significado esos números?</strong></p>
+</blockquote>
+<p>🎲 <strong>Inicialización aleatoria:</strong><br>
+Al comienzo del entrenamiento, los vectores de embedding se inicializan con valores prácticamente aleatorios. En esta etapa, palabras como <em>perro</em>, <em>gato</em> y <em>automóvil</em> no presentan ninguna relación semántica; sus vectores son simplemente conjuntos de números sin significado.</p>
+<p>🧠 <strong>Aprendizaje mediante redes neuronales:</strong><br>
+Durante el entrenamiento, una red neuronal procesa millones de ejemplos de texto e intenta realizar una tarea, como predecir la siguiente palabra o determinar si dos oraciones tienen un significado similar. Después de cada predicción, el modelo calcula el error cometido mediante una <strong>función de pérdida (Loss Function)</strong>.</p>
+<p>📉 <strong>Gradient Descent:</strong><br>
+A partir de este error, el algoritmo <strong>Gradient Descent</strong> ajusta ligeramente los valores de los embeddings y del resto de los parámetros de la red para reducir la pérdida. Este proceso se repite millones de veces, haciendo que palabras utilizadas en contextos similares terminen con representaciones también similares.</p>
+<p>⏹️ <strong>¿Cuándo termina el entrenamiento?</strong><br>
+El proceso continúa hasta que la función de pérdida deja de mejorar significativamente, se alcanza un número máximo de iteraciones (<em>epochs</em>) o el rendimiento sobre un conjunto de validación deja de aumentar.</p>
+<p>📌 <strong>Idea clave:</strong><br>
+Los embeddings no contienen significado desde el inicio. Su capacidad para representar relaciones semánticas surge gradualmente mediante un proceso iterativo de aprendizaje.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El objetivo del entrenamiento consiste en minimizar una función de pérdida,</p>
+$$
+L(\theta),
+$$<p>que mide el error cometido por el modelo.</p>
+<p>En cada iteración, los parámetros del modelo (incluyendo los embeddings) se actualizan mediante la regla</p>
+$$
+\theta_{t+1}
+=
+\theta_t
+-
+\eta
+\nabla_{\theta}L(\theta_t),
+$$<p>donde:</p>
+<ul>
+<li>$L(\theta)$ es la función de pérdida.</li>
+<li>$\nabla_{\theta}L(\theta)$ es el gradiente de la pérdida.</li>
+<li>$\eta$ es la <strong>tasa de aprendizaje (<em>learning rate</em>)</strong>, que controla el tamaño de cada actualización.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="como-se-generan-los-embeddings">&#129302; &#191;C&#243;mo se generan los embeddings?<a class="anchor-link" href="#como-se-generan-los-embeddings">&#182;</a></h2><p>Hasta ahora hemos tratado los embeddings como si simplemente existieran. Sin embargo, surge una pregunta natural:</p>
+<blockquote><p><strong>¿Quién calcula estos vectores?</strong></p>
+</blockquote>
+<p>En la actualidad, la mayoría de los embeddings utilizados en Procesamiento de Lenguaje Natural son generados por <strong>modelos Transformer</strong> entrenados sobre enormes colecciones de texto. Durante el entrenamiento, estos modelos aprenden a representar palabras, oraciones e incluso documentos mediante vectores que preservan relaciones semánticas.</p>
+<p>📚 <strong>Modelos preentrenados:</strong><br>
+En lugar de entrenar un modelo desde cero, normalmente utilizamos modelos ya entrenados (<em>pre-trained models</em>), capaces de generar embeddings de alta calidad para nuevos textos.</p>
+<p>🚀 <strong>Sentence Transformers:</strong><br>
+Los <strong>Sentence Transformers</strong> constituyen una familia de modelos diseñada específicamente para producir embeddings de oraciones y documentos completos. Estos modelos generan representaciones que pueden compararse directamente mediante medidas de similitud, facilitando tareas como búsqueda semántica, clasificación de textos y modelamiento de temas.</p>
+<p>📌 <strong>En este notebook:</strong><br>
+Utilizaremos un modelo <strong>Sentence Transformer</strong> denominado <strong>MPNet</strong>, uno de los modelos más utilizados por su excelente equilibrio entre precisión y velocidad.</p>
+<p><img src="../images/Sentence_Transformers.png" alt="Sentence_Transformers"></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="que-modelo-de-embeddings-usamos">&#129518; &#191;Qu&#233; modelo de embeddings usamos?<a class="anchor-link" href="#que-modelo-de-embeddings-usamos">&#182;</a></h2><p>Usaremos <strong><code>sentence-transformers/all-mpnet-base-v2</code></strong> (MPNet).</p>
 <p>Es una alternativa a modelos más grandes como <code>BAAI/bge-large-en-v1.5</code> (BGE), con ventajas prácticas para este notebook:</p>
 <ul>
@@ -1726,17 +1808,35 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="por-que-utilizaremos-mpnet">&#129513; &#191;Por qu&#233; utilizaremos MPNet?<a class="anchor-link" href="#por-que-utilizaremos-mpnet">&#182;</a></h2><p>Existen numerosos modelos capaces de generar embeddings, como <strong>BERT</strong>, <strong>RoBERTa</strong>, <strong>MiniLM</strong>, <strong>DistilBERT</strong>, <strong>E5</strong> y <strong>MPNet</strong>. Todos ellos pertenecen a la familia de los <strong>Transformers</strong>, pero difieren en su arquitectura, tamaño, velocidad y calidad de las representaciones que producen.</p>
+<p>⚖️ <strong>Equilibrio entre precisión y eficiencia:</strong><br>
+Entre estos modelos, <strong>MPNet</strong> destaca por ofrecer un excelente equilibrio entre calidad de los embeddings y velocidad de procesamiento. Esto lo convierte en una de las opciones más utilizadas para tareas como búsqueda semántica, clasificación de textos y modelamiento de temas.</p>
+<p>📊 <strong>¿Por qué es importante?</strong><br>
+Modelos como <strong>BERTopic</strong> requieren comparar miles de documentos entre sí. Por ello, es fundamental utilizar embeddings que representen adecuadamente el significado del texto sin sacrificar demasiado rendimiento computacional.</p>
+<p>📌 <strong>En este notebook:</strong><br>
+Utilizaremos el modelo <strong>all-mpnet-base-v2</strong>, uno de los modelos más populares de la biblioteca <strong>Sentence Transformers</strong>, ampliamente empleado en investigación y aplicaciones de Procesamiento de Lenguaje Natural.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h2>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1761,6 +1861,32 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -1768,7 +1894,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1816,13 +1942,13 @@ from sklearn.metrics.pairwise import cosine_similarity</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1867,6 +1993,29 @@ modelo_embeddings = SentenceTransformer(MODEL_NAME, device=device)</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Usando dispositivo: mps
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1882,13 +2031,13 @@ modelo_embeddings = SentenceTransformer(MODEL_NAME, device=device)</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1921,6 +2070,92 @@ topterms_12.head()</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>topic</th>
+      <th>term</th>
+      <th>beta</th>
+      <th>k</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>action</td>
+      <td>0.022739</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>jackie</td>
+      <td>0.011834</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>plot</td>
+      <td>0.006915</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>crime</td>
+      <td>0.006590</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>cop</td>
+      <td>0.006266</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1934,13 +2169,13 @@ topterms_12.head()</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1983,6 +2218,45 @@ get_topic_words(topterms_20, topic_id=1)</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;action&#39;,
+ &#39;jackie&#39;,
+ &#39;chan&#39;,
+ &#39;van&#39;,
+ &#39;fight&#39;,
+ &#39;plot&#39;,
+ &#39;hong&#39;,
+ &#39;kong&#39;,
+ &#39;bond&#39;,
+ &#39;chinese&#39;,
+ &#39;martial&#39;,
+ &#39;arts&#39;,
+ &#39;films&#39;,
+ &#39;damme&#39;,
+ &#39;blade&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2004,13 +2278,13 @@ get_topic_words(topterms_20, topic_id=1)</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2063,6 +2337,31 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>np.float32(0.25181532)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2082,7 +2381,7 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2130,13 +2429,13 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 </div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2171,6 +2470,456 @@ resultados_todos</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>k</th>
+      <th>topic</th>
+      <th>coherencia_embeddings</th>
+      <th>palabras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12</td>
+      <td>1</td>
+      <td>0.270907</td>
+      <td>action, jackie, plot, crime, cop, chan, s, mov...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>2</td>
+      <td>0.262084</td>
+      <td>wild, sex, girls, party, scene, harry, drug, h...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12</td>
+      <td>3</td>
+      <td>0.306414</td>
+      <td>love, life, family, romantic, comedy, woman, t...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12</td>
+      <td>4</td>
+      <td>0.297964</td>
+      <td>alien, ship, aliens, effects, planet, action, ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12</td>
+      <td>5</td>
+      <td>0.285985</td>
+      <td>batman, vampire, wife, robin, book, arnold, va...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>12</td>
+      <td>6</td>
+      <td>0.233045</td>
+      <td>scream, horror, school, killer, high, summer, ...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>12</td>
+      <td>7</td>
+      <td>0.243538</td>
+      <td>effects, star_wars, special, movie, space, sci...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>12</td>
+      <td>8</td>
+      <td>0.255596</td>
+      <td>disney, story, animated, voice, animation, tar...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>12</td>
+      <td>9</td>
+      <td>0.271456</td>
+      <td>war, movie, political, men, american, black, w...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>12</td>
+      <td>10</td>
+      <td>0.229760</td>
+      <td>film, one, story, like, character, characters,...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>12</td>
+      <td>11</td>
+      <td>0.250088</td>
+      <td>movie, film, one, just, like, good, even, get,...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>12</td>
+      <td>0.270495</td>
+      <td>funny, comedy, jokes, movie, big, humor, laugh...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>20</td>
+      <td>1</td>
+      <td>0.251815</td>
+      <td>action, jackie, chan, van, fight, plot, hong, ...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>20</td>
+      <td>2</td>
+      <td>0.290659</td>
+      <td>sex, characters, woman, mr, scene, sexual, wom...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>20</td>
+      <td>3</td>
+      <td>0.245105</td>
+      <td>harry, character, sam, williams, simon, max, g...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>20</td>
+      <td>4</td>
+      <td>0.222936</td>
+      <td>new, joe, godzilla, tom, wild, york, west, isl...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>20</td>
+      <td>5</td>
+      <td>0.314308</td>
+      <td>love, family, story, romantic, life, father, m...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>20</td>
+      <td>6</td>
+      <td>0.295400</td>
+      <td>alien, aliens, ship, effects, planet, space, s...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>20</td>
+      <td>7</td>
+      <td>0.243784</td>
+      <td>crime, police, cop, plot, jackie, action, tara...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>8</td>
+      <td>0.282720</td>
+      <td>disney, animated, animation, story, tarzan, vo...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20</td>
+      <td>9</td>
+      <td>0.247934</td>
+      <td>school, high, truman, life, town, show, jim, t...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>20</td>
+      <td>10</td>
+      <td>0.278027</td>
+      <td>horror, scream, killer, vampire, scary, origin...</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>20</td>
+      <td>11</td>
+      <td>0.231041</td>
+      <td>star_wars, effects, lucas, phantom, menace, sp...</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>20</td>
+      <td>12</td>
+      <td>0.210342</td>
+      <td>comedy, john, funny, brothers, jeff, big, crys...</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>20</td>
+      <td>13</td>
+      <td>0.240477</td>
+      <td>batman, robin, arnold, action, kevin, mr, comi...</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>20</td>
+      <td>14</td>
+      <td>0.249536</td>
+      <td>white, political, black, american, flynt, god,...</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>20</td>
+      <td>15</td>
+      <td>0.244352</td>
+      <td>world, city, dark, game, computer, reality, re...</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>20</td>
+      <td>16</td>
+      <td>0.248845</td>
+      <td>war, men, action, army, battle, ryan, soldiers...</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>20</td>
+      <td>17</td>
+      <td>0.238089</td>
+      <td>film, one, like, story, movie, also, can, even...</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>20</td>
+      <td>18</td>
+      <td>0.259897</td>
+      <td>movie, one, just, like, film, good, get, bad, ...</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>20</td>
+      <td>19</td>
+      <td>0.300064</td>
+      <td>comedy, funny, jokes, humor, murphy, laughs, e...</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>20</td>
+      <td>20</td>
+      <td>0.272880</td>
+      <td>film, music, original, girls, musical, spice, ...</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>25</td>
+      <td>1</td>
+      <td>0.261963</td>
+      <td>action, jackie, chan, van, fight, hong, bond, ...</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>25</td>
+      <td>2</td>
+      <td>0.261529</td>
+      <td>cop, crime, jackie, vampire, police, action, d...</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>25</td>
+      <td>3</td>
+      <td>0.338389</td>
+      <td>life, family, love, father, man, mother, town,...</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>25</td>
+      <td>4</td>
+      <td>0.262270</td>
+      <td>war, men, battle, army, action, west, private,...</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>25</td>
+      <td>5</td>
+      <td>0.207301</td>
+      <td>godzilla, new, max, york, species, crystal, br...</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>25</td>
+      <td>6</td>
+      <td>0.264054</td>
+      <td>joe, simon, dog, douglas, ghost, novel, book, ...</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>25</td>
+      <td>7</td>
+      <td>0.228301</td>
+      <td>film, ship, titanic, girls, spice, video, dvd,...</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>25</td>
+      <td>8</td>
+      <td>0.294510</td>
+      <td>planet, effects, alien, space, earth, special,...</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>25</td>
+      <td>9</td>
+      <td>0.259444</td>
+      <td>school, things, high, harry, wild, sam, bill, ...</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>25</td>
+      <td>10</td>
+      <td>0.285676</td>
+      <td>comedy, funny, jokes, humor, laughs, movie, bo...</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>25</td>
+      <td>11</td>
+      <td>0.316805</td>
+      <td>political, world, truman, american, show, blac...</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>25</td>
+      <td>12</td>
+      <td>0.254757</td>
+      <td>romantic, comedy, wedding, julia, love, school...</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>25</td>
+      <td>13</td>
+      <td>0.260149</td>
+      <td>horror, scream, star_wars, movie, original, lu...</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>25</td>
+      <td>14</td>
+      <td>0.229680</td>
+      <td>series, movie, star_trek, television, x-files,...</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>25</td>
+      <td>15</td>
+      <td>0.281127</td>
+      <td>disney, animated, story, animation, voice, fam...</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>25</td>
+      <td>16</td>
+      <td>0.295735</td>
+      <td>sex, women, characters, drug, writer, porn, pa...</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>25</td>
+      <td>17</td>
+      <td>0.256124</td>
+      <td>case, murder, lawyer, flynt, performance, cour...</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>25</td>
+      <td>18</td>
+      <td>0.222004</td>
+      <td>good, jones, nick, movie, big, hunting, prison...</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>25</td>
+      <td>19</td>
+      <td>0.238089</td>
+      <td>film, one, like, movie, just, can, time, even,...</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>25</td>
+      <td>20</td>
+      <td>0.292121</td>
+      <td>music, love, musical, mr, nights, king, song, ...</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>25</td>
+      <td>21</td>
+      <td>0.267962</td>
+      <td>alien, science, world, dark, aliens, computer,...</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>25</td>
+      <td>22</td>
+      <td>0.259376</td>
+      <td>movie, film, just, good, like, one, really, ge...</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>25</td>
+      <td>23</td>
+      <td>0.216734</td>
+      <td>batman, robin, mr, arnold, evil, dr, comic, se...</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>25</td>
+      <td>24</td>
+      <td>0.255277</td>
+      <td>movie, bad, like, one, even, get, around, kill...</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>25</td>
+      <td>25</td>
+      <td>0.285976</td>
+      <td>house, spawn, football, wrestling, team, speci...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2183,13 +2932,13 @@ resultados_todos</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2216,14 +2965,43 @@ coherencia_promedio</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>k
+12    0.264777
+20    0.258411
+25    0.263814
+Name: coherencia_embeddings, dtype: float32</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2262,6 +3040,34 @@ plt.show()</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk4AAAGGCAYAAACNCg6xAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjEsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvc2/+5QAAAAlwSFlzAAAPYQAAD2EBqD+naQAAUYNJREFUeJzt3QncTPX///8XspMlIi2IImUpShQSISXSIvpEEm1SKUTZSpGyJKKUqE8iJZUKkbVIlj6WyJJI2bKG7PO/Pd/f/5nfzFxzXWZcc7nMXI/77Xa45syZc97nzPuc85r3djL5fD6fAQAA4KQyn3wRAAAACIETAABAhAicAAAAIkTgBAAAECECJwAAgAgROAEAAESIwAkAACBCBE4AAAARInACAACIEIETkErr1q2zXr162Zo1a9I7KQCANEbglA5KlChht956qyWy+++/3+1nojt8+LDdddddtn79erv00ktjvv5Zs2ZZpkyZ3P84fXlVx1zBMM7cfKnvR2mI9fr+/vvvU15H//79rWzZsnbixAlLj3ycJ0+e07KtEiVKuO2dzOjRo90x/f333/3zbrjhBjeltxEjRthFF13kruHRInCKgG6KDz30kF188cWWI0cOO/vss+26666z119/3f7999/0Th7SUceOHa1AgQL27rvvpmo9b775prvIAIhP+/bts1deecW6dOlimTNzaz3TKfA7cuSIvfXWW1F/9qw0SVEC+eqrr1yJQvbs2a1ly5Z2xRVXuIM9b94869Spk61cudLefvvt9E7mGWfkyJHp8qvrdNq1a5cVLVrUXn75ZcuWLVuqA6dChQol+RVXs2ZNF5yndv2Ijo75WWdxeUTkRo0aZceOHbPmzZund1LOaNOmTbMzgQpBWrVqZQMHDrTHH388qtJLrgwp2LBhg91zzz1WvHhx++677+y8887zv/fYY4+5ti0KrM5EOoEVuKTXDTdr1qyW6AoWLGjdu3dP023ol6tO8Hhy8OBBy5Url8WzeDvmcuDAAcudO7fFo3hOu+e9996z2267LS7zzumU7Qz6EXj33Xe76tWZM2fajTfeGPHnKE9MgQ7o/v37XTVMYNDkKV26tD3xxBNBwcqLL75opUqVciVUqgfu1q1bsnWoKrW65ppr3ImmasD3338/yTJ79uyxJ5980i688EK3Tm1TxcGBpTmqP1a0/Nprr9ngwYP92//ll1/c+6tXr7Y777zT3ei1rSpVqtgXX3wRti76+++/d9VPhQsXdhey22+/3Xbs2JEkXd98843VqlXL8ubN66our776ahs7dmyK7UaUvurVq9s555xjOXPmtMqVK9snn3xikVi7dq3dcccdroRH+3DBBRe4oHbv3r1By/33v/9169X6tb9a5o8//ghaRvXrKjlctmyZ2wfd5HVcvbTMnj3bqlat6tZRpkwZmz59etDnN27caI8++qh7T8tof1QqGViPH80x1XFSyaW2q+U1eW0AkmtL8uOPP1rDhg1dNaHWWaFCBVd17NG+6Tvwqpd13B544AHbuXPnSY+1t83x48e7/KvPahu6KSR3LBcvXuxKx3Qs9RnZvn27tWnTxooUKeLSULFiRRszZkzQ5wPz7rBhw1x6tY569eq5bfl8PndO6fvWsW7cuLEr6QuXH2vUqOHSqTx5yy23uGMaatKkSS69So/+/+yzz8Ieg3BtnJYuXWo333yzy+9qS1KnTh1bsGDBSY9n4D4OGjTI/RDTvijvrVixIsny+pHm7Uv+/PndPq9atSpsexyd4y1atHD54Prrrw+7/UWLFrllQ4+9TJ061b03efLkqPJ2ciZMmOA//1SC+p///Mf+/PPPsG1x1ARCeVjf17333pvienWt1DVG35uubylVr0RyDYiUjoeuDcor27ZtS/FHts65unXrJnlP12pdly+//HKXfp0Pavqxe/fusG1fdf7pGq30ly9f3n/uT5w40b3WOrR/yo/h/Pbbb1a/fn2Xf4oVK2YvvPCCO49OJU36XJ8+fdz5p/Oydu3aYc8r0XwFH0q3ltfnwtU6hLZx8q43H3/8sb300kvus0qTzi8VToTyrhPaju6fc+fODdtu6o033nD7p3Tr/NAxDbxHiY6j8sjnn39uUfEhWeeff77v4osvjnj5Vq1aKXf67rzzTt+wYcN8LVu2dK+bNGkStFzx4sV9ZcqU8RUpUsTXrVs339ChQ31XXXWVL1OmTL4VK1b4lztw4ICvQoUKvnPOOcctN2LECLdOLffEE0/4l9uwYYPbTrly5Vx6+/Xr5xs0aJBv48aNbn358uVz773yyituWzVr1nTrmDhxon8d7733nlvHlVde6bvxxht9b7zxhu/pp5/2ZcmSxXf33XcHpV/L6vNXXHGF76WXXnL7+uCDD/ruu+++oGOh/Qx0wQUX+B599FGXhoEDB/quueYat83JkyeneFwPHz7sK1mypK9YsWK+Pn36+N555x1f7969fVdffbXv999/9y+n95SuZs2a+d588023TKFChXwlSpTw7d69279crVq13LouvPBCX6dOndy+6vhoX8eNG+crWrSor1evXr7Bgwe7PKDjt2/fPv/nJ0yY4L6XHj16+N5++21f165d3TLaX31n0R7Tzz77zB2bsmXL+j744AM3TZs2zb03c+ZMtw7979F72bJlc9vr2bOnb/jw4b4OHTr46tat61/mtdde89WoUcP3wgsvuDQqv+TMmdMd8xMnTqR4vL1tli9f3u2nvqtnn33WlyNHDt+ll17qO3jwYNCx1PEqXLiw7/HHH/e99dZbvkmTJrllLrvsMl/WrFl9Tz31lG/IkCEuPVqvjmto3q1UqZL7DrSt559/3u3ftdde6/J99erV3ee1j/p+W7duHZTe999/381v0KCBO8bK5/rO8+fP79bvmTp1qi9z5swu32o7zz33nPveLr/88iR5VWnSsfXoPMqdO7fvvPPO87344ovuHFOezJ49u2/BggUpHk9vH3U8lS6lT3mzYMGC7rht3brVv+y3337rO+uss9xx7t+/vz8PFyhQIGhflDbvnG/cuLHL7zoPk6PrQsOGDZPM17HUuo8cOeLP2xUrVvTnbR1/vR+at8PlSy+/67zU9Ud5Rnku9PzTtUHHrVSpUu5vXdf0HSZn2bJlbj0XXXSRr2/fvu7469qpvBl6C4v0GhCOd0x37NjhXq9bt85tU3nTm5ec//73v+6zSmsoXRv1nbZt29bta5cuXVxe0nHyjnvgfUF5TNcfHUNdf/LkyePWr7Qo32lSvi1durTv+PHjQcdV5+gll1zirsW6zt56660uXd27dz+lNOlc1OeVd7S+Bx54wF07dUy1Pc+WLVtcXlZeUdpfffVVlw7vOwrMu7pmaArNS7pOVq5c2e231pErVy53vQqk71TL6lqia0LHjh3deaS8FLhO5V3vXqxr0uuvv+5r06aNu4aE0nVT240GgVMy9u7d6w68LkqR+Pnnn93yypCBnnnmGTf/u+++CzpBNG/OnDn+edu3b3cXE91YPbpAKDOvWbMmaJ26IOnmu2nTpqAL89lnn+3WE6hOnTrugn3o0CH/PN04dTNSxg696CkTBd5YddPTtvbs2eNe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SSUAAEA8ljg99dRTdtttt9nIkSPtrLP+7+PHjh2zBx980J588kmbM2dOWqQTAAAg/gInlTgFBk1uJWedZZ07d3aPYwEAAEhUUVfVnX322bZp06Yk8//44w/LmzdvrNIFAAAQ/4FTs2bNrE2bNjZ+/HgXLGkaN26cq6rTc+wAAAASVdRVda+99pob6LJly5aubZNkzZrVHnnkETeqOAAAQKKKKnDSqOALFiywXr16Wd++fW39+vVuvnrU5cqVK63SCAAAEH+BU5YsWaxevXpu/KaSJUta+fLl0y5lAAAA8d7G6YorrrDffvstbVIDAACQSIFTnz597JlnnrHJkyfbli1bbN++fUETAABAooq6cXjDhg3d/xoEU43EPT6fz71WOygAAIBEFHXgNHPmzLRJCQAAQKIFTrVq1UqblAAAACRa4CS7d++2d9991/Wuk3Llylnr1q2tYMGCsU4fAABA/DYO10N8S5QoYUOGDHEBlCb9reEJeMAvAABIZFGXOD322GPusSvDhw934zqJGoQ/+uij7r3ly5enRToBAADir8Rp3bp19vTTT/uDJtHfHTt2dO8BAAAkqqgDp6uuusrftimQ5lWsWDFW6QIAAIj/qroOHTrYE0884UqXrr32WjdPz68bNmyYe8jvsmXL/MtWqFAhtqkFAACIp8CpefPm7v/OnTuHfU+DYDIYJgAASERRB04bNmxIm5QAAAAkWuBUvHjxtEkJAABAojUOBwAAyKgInAAAACJE4AQAABAhAicAAIC0fMivLF68OOghvxoYEwAAIJFFHTht377d7rnnHps1a5blz5/fzduzZ4/Vrl3bxo0bZ4ULF06LdAIAAMRfVd3jjz9u//zzj61cudJ27drlphUrVti+ffvcqOIAAACJKuoSpylTptj06dPtsssu889TVZ0euVKvXr1Ypw8AACB+S5xOnDhhWbNmTTJf8/QeAABAooo6cLrxxhvdQ37/+usv/7w///zTnnrqKatTp06s0wcAABC/gdPQoUNde6YSJUpYqVKl3FSyZEk374033kibVAIAAMRjG6cLL7zQlixZ4to5rV692s1Te6e6deumRfoAAADOGKc0jlOmTJnspptuchMAAEBGcUojh8+YMcO6detmDz74oD3wwANBU7TUG0/Vfjly5LCqVavawoULk11WQyDccccdbnkFb4MHD071OgEAANIscOrdu7cbdkDB099//227d+8OmqIxfvx469ixo/Xs2dNV/1WsWNHq16/vBtkM5+DBg3bxxRdbv379rGjRojFZJwAAQJpV1Y0YMcJGjx5t9913n6XWwIEDrW3btta6dWv/ur/66isbNWqUPfvss0mWv/rqq90k4d4/lXUCAACkWYnTkSNHrHr16tF+LOx69Ly7wEblmTNndq/nz59/Wtd5+PBh1yswcAIAAEh14KR2TWPHjrXUUjXf8ePHrUiRIkHz9Xrr1q2ndZ19+/a1fPny+Sf1HAQAAEh1Vd2hQ4fs7bffdsMRVKhQIcko4qoqizddu3Z17aI8KnEieAIAAKkOnJYtW2aVKlVyf+vhvoHU0y1ShQoVsixZsti2bduC5ut1cg2/02qd2bNndxMAAEBMA6eZM2daLGTLls0qV67seuc1adLEzdOz7vS6ffv2Z8w6AQAAUjUApqxbt87Wr19vNWvWtJw5c5rP54uqxElUPdaqVSurUqWKXXPNNW5cpgMHDvh7xLVs2dLOP/981wbJa/z9yy+/+P/WM/J+/vlny5Mnj5UuXTqidQIAAJy2wGnnzp129913u5InBUpr1651Yyu1adPGChQoYAMGDIh4Xc2aNbMdO3ZYjx49XONtVQFOmTLF37h706ZNrlecRw8WvvLKK/2vX3vtNTfVqlXLZs2aFdE6AQAATlvg9NRTT7kG4Qpq9Iw6jwIWlfZEEziJqtCSq0bzgiGPRgNXyVZq1gkAAHDaAqdp06bZ1KlT7YILLgiaf8kll9jGjRtPOSEAAAAJN46T2gvlypUryfxdu3bRMw0AACS0qAOnGjVq2Pvvv+9/rXZO6rnWv39/q127dqzTBwAAEL9VdQqQ6tSpY4sWLXI92zp37mwrV650JU7ff/992qQSAAAgHkucrrjiCluzZo1df/311rhxY1d117RpU1u6dKmVKlUqbVIJAAAQr+M46Xluzz33XOxTAwAAkEglThoTad68ef7Xw4YNc2MltWjRwnbv3h3r9AEAAMRv4NSpUyf3EFxZvny5G7upYcOGtmHDhqAH5QIAAFhGr6pTgFSuXDn396effmqNGjWyl19+2ZYsWeICKAAAgESV+VQepHvw4EH39/Tp061evXru74IFC/pLogAAABJR1CVO6k2nKrnrrrvOFi5caOPHj3fz1dMudDRxAACADF3iNHToUDvrrLPsk08+seHDh9v555/v5n/zzTfWoEGDtEgjAABAfJY4XXTRRTZ58uQk8wcNGhSrNAEAACTOOE7Hjx+3SZMm2apVq9zryy+/3G677TbLkiVLrNMHAAAQv4HTunXrXO+5P//808qUKePm9e3b1y688EL76quvGD0cAAAkrKjbOHXo0MEFR3/88YcbgkDTpk2brGTJku49AACARBV1idPs2bNtwYIFbvgBzznnnGP9+vVzPe0AAAASVdQlTtmzZ7d//vknyfz9+/e7MZ4AAAASVdSB06233mrt2rWzH3/80Xw+n5tUAvXwww+7BuIAAACJKurAaciQIa6NU7Vq1SxHjhxuUhVd6dKl7fXXX0+bVAIAAMRjG6f8+fPb559/7nrXecMRXHbZZS5wAgAASGSnNI6TKFAiWAIAABlJ1FV1d9xxh73yyitJ5vfv39/uuuuuWKULAAAg/gOnOXPmuAEwQ918883uPQAAgEQVdeCU3LADWbNmtX379sUqXQAAAPEfOJUvX97Gjx+fZP64ceOsXLlysUoXAABA/DcO7969uzVt2tTWr19vN954o5s3Y8YM++ijj2zChAlpkUYAAID4DJwaNWpkkyZNspdfftk++eQTy5kzp1WoUMGmT59utWrVSptUAgAAxOtwBLfccoubAAAAMpKo2zgBAABkVAROAAAAESJwAgAAiBCBEwAAQIQInAAAAGLZq65jx46Rrs8GDhwY8bIAAAAJFzgtXbo06PWSJUvs2LFjVqZMGfd6zZo1liVLFqtcuXLapBIAACBeAqeZM2cGlSjlzZvXxowZYwUKFHDzdu/eba1bt7YaNWqkXUoBAADirY3TgAEDrG/fvv6gSfR3nz593HsAAACJKurAad++fbZjx44k8zXvn3/+iVW6AAAA4j9wuv3221213MSJE23z5s1u+vTTT61Nmzbu4b8AAACJKupn1Y0YMcKeeeYZa9GihR09evT/VnLWWS5wevXVV9MijQAAAPEZOOXKlcvefPNNFyStX7/ezStVqpTlzp07LdIHAAAQv4GTR4FShQoVYpsaAACARGrjVLt2bbvxxhuTnU7FsGHDrESJEpYjRw6rWrWqLVy4MMXlJ0yYYGXLlnXLly9f3r7++uug9++//37LlClT0NSgQYNTShsAAMApB06VKlWyihUr+qdy5crZkSNH3KCYCmKiNX78eDcyec+ePd06tM769evb9u3bwy7/ww8/WPPmzV2bKg3M2aRJEzetWLEiaDkFSlu2bPFPH330UdRpAwAASFVV3aBBg8LO79Wrl+3fvz/a1bkBNdu2bet66nmNz7/66isbNWqUPfvss0mWf/31111Q1KlTJ/f6xRdftG+//daGDh3qPuvJnj27FS1aNOr0AAAApPlDfv/zn/+4YCcaKqlavHix1a1b9/8lKHNm93r+/PlhP6P5gcuLSqhCl581a5ade+657rEwjzzyiO3cuTOqtAEAAMSscXgoBS5qcxSNv//+244fP25FihQJmq/Xq1evDvuZrVu3hl1e8z0qkdKYUiVLlnQ9/7p162Y333yzS6OeqRfq8OHDbgoc5BMAACDVgVPoIJc+n8+1IVq0aJF1797dzgT33HOP/2+1u1LvPw2ZoFKoOnXqJFlej5Dp3bv3aU4lAABI+Kq6s88+2/Lly+efChYsaDfccIPr2aYG3tEoVKiQKwHatm1b0Hy9Tq59kuZHs7xcfPHFblvr1q0L+37Xrl1t7969/umPP/6Iaj8AAEDGEHWJ0+jRo2O28WzZslnlypVtxowZrmecnDhxwr1u37592M9Uq1bNvf/kk0/656lxuOYnR4+FURun8847L+z7akiuCQAAIKYlTiq9CdfQes+ePe69aGkogpEjR9qYMWNs1apVriH3gQMH/L3sWrZs6UqEPE888YRNmTLFBgwY4NpBqTefqgm9QEs9+9TjbsGCBfb777+7IKtx48ZWunRp14gcAADgtJU4KRhRg+5Qalz9559/Rp2AZs2a2Y4dO6xHjx6ugbfGiVJg5DUA37Rpk+tp56levbqNHTvWnn/+edfo+5JLLrFJkybZFVdc4d5X1d+yZctcIKZgrlixYlavXj03bAGlSgAA4LQETl988YX/76lTp7r2TR4FUirZ0ejfp0KlRclVzalBd6i77rrLTeHkzJnTpQ8AACDdAievDZIeX9KqVaug97JmzeqCJlWfAQAAWEYPnNRoWzQ20k8//eR6qQEAAGQkUbdx2rBhQ9qkBAAAIBECpyFDhli7du3cyOD6OyUdOnSIVdoAAADiL3DSg33vvfdeFzgl95Bfr/0TgRMAAMjQgVNg9RxVdQAAIKOKegBMAACAjOqsSEf3jtTAgQNTkx4AAID4DpyWLl0a0crUxgkAACBDB04zZ85M+5QAAACc4WjjBAAAEMsSp6ZNm9ro0aPt7LPPdn+nZOLEiZFuGwAAIPECJz3Q12u/FPhwXwAAgIwkosDpvffeC/s3AABARkIbJwAAgLR6yO/OnTutR48erqfd9u3b7cSJE0Hv79q1K9pVAgAAJGbgdN9999m6deusTZs2VqRIEcZuAgAAGUbUgdPcuXNt3rx5VrFixbRJEQAAQKK0cSpbtqz9+++/aZMaAACARAqc3nzzTXvuueds9uzZrr3Tvn37giYAAIBEFXVVXf78+V2AdOONNwbN9/l8rr3T8ePHY5k+AACA+A2c7r33XsuaNauNHTuWxuEAACBDiTpwWrFihS1dutTKlCmTNikCAABIlDZOVapUsT/++CNtUgMAAJBIJU6PP/64PfHEE9apUycrX768q7YLVKFChVimDwAAIH4Dp2bNmrn/H3jgAf88tXOicTgAAEh0UQdOGzZsSJuUAAAAJFrgVLx48bRJCQAAQCIETl988YXdfPPNrj2T/k7JbbfdFqu0AQAAxF/g1KRJE9u6daude+657u/k0MYJAABYRg+cTpw4EfZvAACAjCTqcZwAAAAyqogDp/nz59vkyZOD5r3//vtWsmRJV4XXrl07O3z4cFqkEQAAIL4CpxdeeMFWrlzpf718+XJr06aN1a1b15599ln78ssvrW/fvmmVTgAAgPgJnH7++WerU6eO//W4ceOsatWqNnLkSOvYsaMNGTLEPv7447RKJwAAQPwETrt377YiRYr4X8+ePdsNUeC5+uqreYYdAABIaBEHTgqavFHDjxw5YkuWLLFrr73W//4///yT5Ll1AAAAGTJwatiwoWvLNHfuXOvatavlypXLatSo4X9/2bJlVqpUqbRKJwAAQPw8cuXFF1+0pk2bWq1atSxPnjw2ZswYy5Ytm//9UaNGWb169dIqnQAAAPETOBUqVMjmzJlje/fudYFTlixZgt6fMGGCmw8AAJCoon7Ib758+cLOL1iwYCzSAwAAcMZi5HAAAIAIETgBAABEiMAJAAAgngKnYcOGWYkSJSxHjhxuNPKFCxemuLwaopctW9YtX758efv666+D3vf5fNajRw8777zzLGfOnO6xMGvXrk3jvQAAAIku3QOn8ePHu0e29OzZ0w2qWbFiRatfv75t37497PI//PCDNW/e3D0nb+nSpdakSRM3rVixwr9M//79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+us2evRoSy8K+rp37249e/aM+DMPPPCAe+bk3Llz0zRtwJmIh/wCGUCOHDnslVdesYceesgKFCiQ4rJ6iKgeGJqejhw5ElcPfR45cuQpf1bHOz198skn7kHG1113XcSf0XfTokULGzJkiNWoUSNN0wecaShxAjKAunXrWtGiRa1v375RlaoMHjzYSpQokaQKR215ihQpYvnz57cXXnjBjh07Zp06dbKCBQvaBRdcYO+9917Qev744w+7++673fJapnHjxvb7778nWe9LL73kqrvKlCnj5i9fvtxuvPFGV/2lJ8C3a9fO9u/fn+K+fv3113bppZe6z9SuXTtoO5558+a5G76WufDCC61Dhw524MCBsOtTaVDv3r3tf//7nyuh0+SVEG3atMntS548eVzwoX3ctm1bkmP61ltvue3kypXLLaNSvdB995w4ccL69+9vpUuXtuzZs7tSPx0Xz8mOiaomr7nmGsudO7c73gqINm7cmOzxGjdu3Emr3X766ScrXLiwC749+swXX3xBmy5kOAROQAaQJUsWF+y88cYbtnnz5lSt67vvvrO//vrL5syZYwMHDnRVPLfeeqsryfrxxx/t4YcfdiVb3naOHj1q9evXt7x587qqne+//94FGg0aNHAlS54ZM2bYr7/+at9++61NnjzZBTL6nNarG/eECRNs+vTp1r59+2TTpgCtadOm7qb+888/uyrHZ599NmiZ9evXu23fcccdrmRt/PjxLpBKbr3NmjWzp59+2i6//HLbsmWLmzRPAY6Cpl27dtns2bNdun/77Tf3XmijcTWy//LLL23KlCm2dOlSe/TRR5Pdh65du7pqVVWf/fLLLzZ27FgXpMrJjokCWAVhtWrVcvs2f/58F1iFq5L1aN+rVKmS4vd90003ueCtS5cu/vn6jLan7xzIUHwAElqrVq18jRs3dn9fe+21vgceeMD9/dlnn/kCLwE9e/b0VaxYMeizgwYN8hUvXjxoXXp9/Phx/7wyZcr4atSo4X997NgxX+7cuX0fffSRe/3BBx+4ZU6cOOFf5vDhw76cOXP6pk6d6l9vkSJF3HzP22+/7StQoIBv//79/nlfffWVL3PmzL6tW7eG3deuXbv6ypUrFzSvS5cubj93797tXrdp08bXrl27oGXmzp3r1vvvv/+GXW+4YzNt2jRflixZfJs2bfLPW7lypdvWwoUL/Z/TMps3b/Yv880337htbdmyJcn3s2/fPl/27Nl9I0eODJuOkx2TnTt3uu3PmjXLFwkdEy0/Z86coPlemiZOnOjLkyePb9y4cWE/r7SMHj06om0BiYISJyADUVXLmDFjbNWqVae8DpW8ZM78/y4dKg0pX758UOmWqpC2b9/uXquKS6UuKnFSSZMmVdepUbJKfzxaR2C7JqWxYsWKrsrJo2onlfSoZCocfaZq1apB86pVqxb0WulRVZuXFk0qxdF6N2zYEPFx0LZU/abJU65cOVc9Fnh8VdV2/vnnB6UnuX3Q5w4fPmx16tRJdpspHRMdV1X9aX9U6qaG5yohS45XzaY2cKFUknTXXXfZBx98kKQUzaPqwoMHDya7fiARETgBGUjNmjXdTVXVQaEUDPl8KoD4f1TNFipr1qxBr1UNFG6ebuai9jeVK1d2VWeB05o1a1wDY09gMJCWlB5VJQamRcHU2rVrrVSpUpaeoh3KIBy1L1MVXfXq1V01pNp7LViwIOyyCnD1Xe3evTvJezoWZcuWtVGjRoXNB6JqSrV9AjISAicgg1H7GbW30c01kG6AW7duDQqeFFSk1lVXXeWCknPPPdc1eA6cUupRdtlll7mAJrDRttpHKcDzGo+H+4zGoAoUGjQoPWo7FJoWTcn15NP848ePJ9mW2lRp8mi9Gi9KJU8eNSBXm7DA9CS3D5dccokLntTeKzXH5Morr3TB8Q8//GBXXHGFayeV3H4prUp3qEKFCrn2TSotVIP20OBJpYUqNdS2gIyEwAnIYFQldu+997qu5IFuuOEG27Fjh+vRpZvisGHD7Jtvvkn19rQt3YTVkFqNw1Udpp5f6smWUkN1fU5VSK1atbIVK1bYzJkz3XhJ9913n7+xdCg1TFeQph5+qrpSwBA6RpIaOCugUINqBYZa/vPPP0+x0bl6FirdWv7vv/921WnqqegdS41ppICtZcuWrmF2YGNrbx8U8Gj/td8KRNTLMZSWVfo6d+5s77//vvseFGhpgMpIjonSqIBJQbF60k2bNs3tnwKu5KgEUg3Ew1Gwq+Bp9erV1rx5c9cY3KN9ufjii9O9lA443QicgAxIQwh4VWke3VzffPNNFzCpHY0CgWeeeSbV21IXfPXAU1sf9XjTdtq0aeNKK9SFP6XPTZ061VUHXX311W5kbrX9GTp0aLKf0TY+/fRTN7in9kEjXKs3YaAKFSq4XnCqKtSQBCox6dGjhxsGITnqgaeeeBreQCVzH330kaviUsClHm6qAlUgpUBC1WOBVJKl/W7YsKEbnVvb13FOjnrTqRef0qRjpfZFXnuxkx0Tva8gR+lVFZ161D322GOuajI5+i40hEPgEAmBFOApeNIwCArcvJI3HYO2bdsmu14gUWVSC/H0TgQAJCKN46QgLhZVnmlJjcBVhRmu7Vs4K1eudGNJKfhM7wE8gdONEicAyOBeffVV17swUuqpp6pEgiZkRDxyBQAyOLXhUlupSKlaEsioqKoDAACIEFV1AAAAESJwAgAAiBCBEwAAQIQInAAAACJE4AQAABAhAicAAIAIETgBAABEiMAJAAAgQgROAAAAFpn/D1Kow5ilihB5AAAAAElFTkSuQmCC"
+class="
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2280,13 +3086,13 @@ plt.show()</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2309,6 +3115,105 @@ plt.show()</div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>k</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>12.0</td>
+      <td>0.264777</td>
+      <td>0.024104</td>
+      <td>0.229760</td>
+      <td>0.248450</td>
+      <td>0.266289</td>
+      <td>0.275088</td>
+      <td>0.306414</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20.0</td>
+      <td>0.258411</td>
+      <td>0.027549</td>
+      <td>0.210342</td>
+      <td>0.242958</td>
+      <td>0.249190</td>
+      <td>0.279201</td>
+      <td>0.314308</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>25.0</td>
+      <td>0.263814</td>
+      <td>0.030918</td>
+      <td>0.207301</td>
+      <td>0.254757</td>
+      <td>0.261529</td>
+      <td>0.285676</td>
+      <td>0.338389</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
