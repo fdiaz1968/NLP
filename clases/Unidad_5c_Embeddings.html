@@ -391,6 +391,145 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#que-son-los-embeddings" class="md-nav__link">
+    ¿Qué son los Embeddings?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-la-dfm-a-los-embeddings" class="md-nav__link">
+    🔄 De la DFM a los Embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representaciones-sparse-y-dense" class="md-nav__link">
+    📐 Representaciones Sparse y Dense
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-espacio-semantico" class="md-nav__link">
+    🌍 El Espacio Semántico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-vector-de-embeddings" class="md-nav__link">
+    🧮 El Vector de Embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-aprenden-los-modelos-estos-vectores" class="md-nav__link">
+    🧠 ¿Cómo aprenden los modelos estos vectores?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-generan-los-embeddings" class="md-nav__link">
+    🤖 ¿Cómo se generan los embeddings?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-modelo-de-embeddings-usamos" class="md-nav__link">
+    🧮 ¿Qué modelo de embeddings usamos?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-utilizaremos-mpnet" class="md-nav__link">
+    🧩 ¿Por qué utilizaremos MPNet?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-las-librerias-necesarias" class="md-nav__link">
+    📦 Instalación de las librerías necesarias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargar-el-modelo-de-embeddings" class="md-nav__link">
+    🧠 Cargar el modelo de embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargar-los-topicos-exportados-desde-r-unidad-5a" class="md-nav__link">
+    📂 Cargar los tópicos exportados desde R (Unidad 5a)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palabras-clave-por-topico" class="md-nav__link">
+    ✂️ Palabras clave por tópico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-palabras-a-un-puntaje-de-coherencia" class="md-nav__link">
+    📐 De palabras a un puntaje de coherencia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicar-a-todos-los-topicos-de-un-modelo" class="md-nav__link">
+    🔁 Aplicar a todos los tópicos de un modelo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparar-la-coherencia-promedio-por-valor-de-k" class="md-nav__link">
+    📊 Comparar la coherencia promedio por valor de $k$
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-el-enfoque-llm-5b" class="md-nav__link">
+    ⚖️ Comparación con el enfoque LLM (5b)
+  </a>
+  
+    <nav class="md-nav" aria-label="⚖️ Comparación con el enfoque LLM (5b)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-muestran-los-resultados" class="md-nav__link">
+    🔍 Lo que muestran los resultados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cierre" class="md-nav__link">
+    ✅ Cierre
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1490,7 +1629,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="que-son-los-embeddings">&#191;Qu&#233; son los Embeddings?<a class="anchor-link" href="#que-son-los-embeddings">&#182;</a></h1><p>Hasta este punto del curso hemos representado los documentos mediante una <strong>Document-Feature Matrix (DFM)</strong>, en la que cada documento se describe por las palabras que contiene y su frecuencia de aparición. Sobre esta representación hemos construido modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
+<h2 id="que-son-los-embeddings">&#191;Qu&#233; son los Embeddings?<a class="anchor-link" href="#que-son-los-embeddings">&#182;</a></h2><p>Hasta este punto del curso hemos representado los documentos mediante una <strong>Document-Feature Matrix (DFM)</strong>, en la que cada documento se describe por las palabras que contiene y su frecuencia de aparición. Sobre esta representación hemos construido modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
 <p>Aunque este enfoque ha demostrado ser muy útil, presenta una limitación importante: <strong>no captura el significado de las palabras</strong>. Para estos modelos, dos palabras distintas son simplemente dos términos diferentes, incluso si tienen un significado muy similar.</p>
 <p>Los <strong>embeddings</strong> surgieron para resolver este problema. En lugar de representar una palabra mediante una columna de la DFM o una frecuencia de aparición, la representan mediante un <strong>vector numérico denso</strong> que captura información sobre su significado. Como consecuencia, palabras que aparecen en contextos similares tienden a tener representaciones numéricas similares.</p>
 <p>Este cambio permitió pasar de una representación basada en frecuencias de palabras a una representación basada en <strong>relaciones semánticas</strong>, constituyendo uno de los avances más importantes en el desarrollo del Procesamiento de Lenguaje Natural moderno.</p>
