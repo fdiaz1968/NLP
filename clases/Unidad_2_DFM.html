@@ -396,9 +396,10 @@
     I. 🧮 Document Feature Matrix (dfm)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="I. 🧮 Document Feature Matrix (dfm)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#que-es-una-dfm-en-nlp" class="md-nav__link">
     🧠 ¿Qué es una DFM en NLP?
   </a>
@@ -445,22 +446,22 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#tokenizacion-el-paso-previo-a-la-dfm" class="md-nav__link">
     ✂️ Tokenización: el paso previo a la DFM
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#crear-una-dfm" class="md-nav__link">
     🏗️ Crear una DFM
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#que-es-un-feature-en-una-document-feature-matrix-dfm" class="md-nav__link">
     🧩 ¿Qué es un Feature en una Document-Feature Matrix (DFM)?
   </a>
@@ -493,8 +494,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#que-ocurre-con-el-numero-de-features-si-aplicamos-stemming" class="md-nav__link">
     🧠 ¿Qué ocurre con el número de features si aplicamos stemming?
   </a>
@@ -561,8 +562,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sparsity" class="md-nav__link">
     🧮 Sparsity
   </a>
@@ -581,6 +582,11 @@
   <a href="#por-que-ocurre" class="md-nav__link">
     📌 ¿Por qué ocurre?
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -659,12 +665,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#topfeatures" class="md-nav__link">
     topfeatures()
   </a>
@@ -683,8 +684,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#esquemas-scheme-count-vs-scheme-docfreq" class="md-nav__link">
     Esquemas: scheme = "count" vs scheme = "docfreq"
   </a>
@@ -710,8 +711,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dfm_select-dfm_remove-dfm_trim" class="md-nav__link">
     dfm_select(), dfm_remove(), dfm_trim()
   </a>
@@ -737,6 +738,11 @@
   <a href="#dfm_select" class="md-nav__link">
     dfm_select()
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1796,7 +1802,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="del-texto-a-matrices">Del Texto a Matrices<a class="anchor-link" href="#del-texto-a-matrices">&#182;</a></h1><h2 id="por-que-la-maquina-puede-interpretar">&#191;Por qu&#233; la m&#225;quina puede interpretar?<a class="anchor-link" href="#por-que-la-maquina-puede-interpretar">&#182;</a></h2>
+<h1 id="del-texto-a-matrices">Del Texto a Matrices<a class="anchor-link" href="#del-texto-a-matrices">&#182;</a></h1><h3 id="por-que-la-maquina-puede-interpretar">&#191;Por qu&#233; la m&#225;quina puede interpretar?<a class="anchor-link" href="#por-que-la-maquina-puede-interpretar">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1820,7 +1826,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="que-es-una-dfm-en-nlp">&#129504; &#191;Qu&#233; es una DFM en NLP?<a class="anchor-link" href="#que-es-una-dfm-en-nlp">&#182;</a></h2><p>Para que una computadora pueda analizar texto, primero es necesario representar los documentos en una forma numérica. Una de las representaciones más utilizadas en el NLP tradicional es la <strong>Document-Feature Matrix (DFM)</strong>.</p>
+<h3 id="que-es-una-dfm-en-nlp">&#129504; &#191;Qu&#233; es una DFM en NLP?<a class="anchor-link" href="#que-es-una-dfm-en-nlp">&#182;</a></h3><p>Para que una computadora pueda analizar texto, primero es necesario representar los documentos en una forma numérica. Una de las representaciones más utilizadas en el NLP tradicional es la <strong>Document-Feature Matrix (DFM)</strong>.</p>
 <p>Una <strong>DFM (Document-Feature Matrix)</strong> es una representación matricial de un corpus textual donde:</p>
 <ul>
 <li><strong>Cada fila</strong> representa un documento.</li>
@@ -1828,7 +1834,7 @@ Licensed under the Apache License, Version 2.0.
 <li><strong>Cada celda</strong> indica la frecuencia con que esa característica aparece en ese documento.</li>
 </ul>
 <hr>
-<h3 id="ejemplo-simple">&#128202; Ejemplo simple<a class="anchor-link" href="#ejemplo-simple">&#182;</a></h3><p>Corpus:</p>
+<h4 id="ejemplo-simple">&#128202; Ejemplo simple<a class="anchor-link" href="#ejemplo-simple">&#182;</a></h4><p>Corpus:</p>
 <ul>
 <li>Doc1: "el gato duerme"</li>
 <li>Doc2: "el perro duerme"</li>
@@ -1861,7 +1867,7 @@ Licensed under the Apache License, Version 2.0.
 </tbody>
 </table>
 <hr>
-<h3 id="por-que-es-importante">&#128204; &#191;Por qu&#233; es importante?<a class="anchor-link" href="#por-que-es-importante">&#182;</a></h3><p>La DFM convierte un conjunto de documentos en una estructura numérica sobre la cual pueden aplicarse numerosos métodos estadísticos y de aprendizaje automático, entre ellos:</p>
+<h4 id="por-que-es-importante">&#128204; &#191;Por qu&#233; es importante?<a class="anchor-link" href="#por-que-es-importante">&#182;</a></h4><p>La DFM convierte un conjunto de documentos en una estructura numérica sobre la cual pueden aplicarse numerosos métodos estadísticos y de aprendizaje automático, entre ellos:</p>
 <ul>
 <li>Clasificación de texto.</li>
 <li>Modelamiento de tópicos (LDA, STM).</li>
@@ -1871,7 +1877,7 @@ Licensed under the Apache License, Version 2.0.
 </ul>
 <p>La DFM constituye la representación estándar del <strong>NLP tradicional</strong> y posee una gran ventaja: es altamente interpretable, ya que cada columna corresponde a un término cuyo significado conocemos.</p>
 <hr>
-<h3 id="una-limitacion-de-la-dfm">&#128161; Una limitaci&#243;n de la DFM<a class="anchor-link" href="#una-limitacion-de-la-dfm">&#182;</a></h3><p>La DFM representa un documento únicamente mediante la frecuencia de sus palabras. Esto significa que dos palabras con significados similares, pero escritas de forma diferente, se consideran características completamente distintas.</p>
+<h4 id="una-limitacion-de-la-dfm">&#128161; Una limitaci&#243;n de la DFM<a class="anchor-link" href="#una-limitacion-de-la-dfm">&#182;</a></h4><p>La DFM representa un documento únicamente mediante la frecuencia de sus palabras. Esto significa que dos palabras con significados similares, pero escritas de forma diferente, se consideran características completamente distintas.</p>
 <p>Por ejemplo, las palabras:</p>
 <ul>
 <li>automóvil</li>
@@ -1881,11 +1887,11 @@ Licensed under the Apache License, Version 2.0.
 <p>aparecen como tres columnas independientes en una DFM, aunque semánticamente estén muy relacionadas.</p>
 <p>Esta es una de las principales limitaciones de las representaciones basadas en frecuencias.</p>
 <hr>
-<h3 id="se-utiliza-la-dfm-en-los-llm">&#129302; &#191;Se utiliza la DFM en los LLM?<a class="anchor-link" href="#se-utiliza-la-dfm-en-los-llm">&#182;</a></h3><p><strong>No como representación principal.</strong></p>
+<h4 id="se-utiliza-la-dfm-en-los-llm">&#129302; &#191;Se utiliza la DFM en los LLM?<a class="anchor-link" href="#se-utiliza-la-dfm-en-los-llm">&#182;</a></h4><p><strong>No como representación principal.</strong></p>
 <p>Los modelos modernos basados en <strong>Transformers</strong> (como BERT, GPT, Llama o Mistral) no representan los documentos mediante una DFM. En su lugar utilizan representaciones numéricas que incorporan información sobre el contexto y el significado de las palabras.</p>
 <p>Más adelante estudiaremos estas representaciones y veremos cómo permiten capturar relaciones semánticas que una DFM no puede representar.</p>
 <hr>
-<h3 id="cuando-utilizar-una-dfm">&#128202; &#191;Cu&#225;ndo utilizar una DFM?<a class="anchor-link" href="#cuando-utilizar-una-dfm">&#182;</a></h3><table>
+<h4 id="cuando-utilizar-una-dfm">&#128202; &#191;Cu&#225;ndo utilizar una DFM?<a class="anchor-link" href="#cuando-utilizar-una-dfm">&#182;</a></h4><table>
 <thead><tr>
 <th>Escenario</th>
 <th>¿Usar DFM?</th>
@@ -1921,8 +1927,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1943,48 +1949,16 @@ Licensed under the Apache License, Version 2.0.
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="c1">#install.packages(&quot;quanteda&quot;)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">)</span>
+<span class="nf">suppressPackageStartupMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">))</span>
 </pre></div>
 <div id="cell-1" class="clipboard-copy-txt">#install.packages("quanteda")
-library(quanteda)
+suppressPackageStartupMessages(library(quanteda))
 </div>
     
         </div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Warning message:
-“package ‘quanteda’ was built under R version 4.5.2”
-Package version: 4.4
-Unicode version: 14.0
-ICU version: 71.1
-
-Parallel computing: disabled
-
-See https://quanteda.io for tutorials and examples.
-
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -1995,7 +1969,7 @@ See https://quanteda.io for tutorials and examples.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="tokenizacion-el-paso-previo-a-la-dfm">&#9986;&#65039; Tokenizaci&#243;n: el paso previo a la DFM<a class="anchor-link" href="#tokenizacion-el-paso-previo-a-la-dfm">&#182;</a></h2><p>Antes de construir una <strong>Document-Feature Matrix (DFM)</strong>, es necesario transformar el corpus en una secuencia de <strong>tokens</strong>. Cada token representa una unidad del texto (normalmente una palabra) que posteriormente podrá convertirse en una característica (<em>feature</em>) de la matriz.</p>
+<h3 id="tokenizacion-el-paso-previo-a-la-dfm">&#9986;&#65039; Tokenizaci&#243;n: el paso previo a la DFM<a class="anchor-link" href="#tokenizacion-el-paso-previo-a-la-dfm">&#182;</a></h3><p>Antes de construir una <strong>Document-Feature Matrix (DFM)</strong>, es necesario transformar el corpus en una secuencia de <strong>tokens</strong>. Cada token representa una unidad del texto (normalmente una palabra) que posteriormente podrá convertirse en una característica (<em>feature</em>) de la matriz.</p>
 <p>En esta etapa también es habitual aplicar algunas operaciones de preprocesamiento para reducir la variabilidad del texto, tales como:</p>
 <ul>
 <li><strong>Eliminar signos de puntuación</strong>.</li>
@@ -2121,7 +2095,7 @@ toks_nopunct_stop_low</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="crear-una-dfm">&#127959;&#65039; Crear una DFM<a class="anchor-link" href="#crear-una-dfm">&#182;</a></h2><p>Una vez tokenizado el corpus, podemos construir la <strong>Document-Feature Matrix (DFM)</strong>. En <code>quanteda</code>, esto se realiza con la función <code>dfm()</code>.</p>
+<h3 id="crear-una-dfm">&#127959;&#65039; Crear una DFM<a class="anchor-link" href="#crear-una-dfm">&#182;</a></h3><p>Una vez tokenizado el corpus, podemos construir la <strong>Document-Feature Matrix (DFM)</strong>. En <code>quanteda</code>, esto se realiza con la función <code>dfm()</code>.</p>
 <p>La DFM resume cuántas veces aparece cada <em>feature</em> en cada documento del corpus.</p>
 
 </div>
@@ -2210,11 +2184,11 @@ docs              vicissitudes incident life event filled
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="que-es-un-feature-en-una-document-feature-matrix-dfm">&#129513; &#191;Qu&#233; es un <em>Feature</em> en una Document-Feature Matrix (DFM)?<a class="anchor-link" href="#que-es-un-feature-en-una-document-feature-matrix-dfm">&#182;</a></h2><p>En una <strong>Document-Feature Matrix (DFM)</strong>, cada fila representa un documento del corpus y cada <strong>columna representa una característica (<em>feature</em>)</strong> del texto.</p>
+<h3 id="que-es-un-feature-en-una-document-feature-matrix-dfm">&#129513; &#191;Qu&#233; es un <em>Feature</em> en una Document-Feature Matrix (DFM)?<a class="anchor-link" href="#que-es-un-feature-en-una-document-feature-matrix-dfm">&#182;</a></h3><p>En una <strong>Document-Feature Matrix (DFM)</strong>, cada fila representa un documento del corpus y cada <strong>columna representa una característica (<em>feature</em>)</strong> del texto.</p>
 <p>Desde un punto de vista estadístico, un <strong>feature puede interpretarse como una variable</strong>. Cada documento constituye una observación y cada feature corresponde a una variable cuyo valor indica cuántas veces aparece ese término en el documento.</p>
 <p>En nuestro ejemplo, la DFM contiene <strong>9.438 features</strong>, es decir, <strong>9.438 variables</strong> que describen el contenido textual del corpus.</p>
 <hr>
-<h3 id="que-puede-ser-un-feature">&#128204; &#191;Qu&#233; puede ser un <em>feature</em>?<a class="anchor-link" href="#que-puede-ser-un-feature">&#182;</a></h3><p>Dependiendo de cómo se construya la DFM, un <em>feature</em> puede corresponder a:</p>
+<h4 id="que-puede-ser-un-feature">&#128204; &#191;Qu&#233; puede ser un <em>feature</em>?<a class="anchor-link" href="#que-puede-ser-un-feature">&#182;</a></h4><p>Dependiendo de cómo se construya la DFM, un <em>feature</em> puede corresponder a:</p>
 <ul>
 <li>Una <strong>palabra</strong>, como <code>"freedom"</code>, <code>"government"</code> o <code>"peace"</code>.</li>
 <li>Un <strong>número</strong>, como <code>"1776"</code>.</li>
@@ -2222,7 +2196,7 @@ docs              vicissitudes incident life event filled
 <li>Un símbolo o signo, si éstos no fueron eliminados durante el preprocesamiento.</li>
 </ul>
 <hr>
-<h3 id="que-representan-los-features">&#128202; &#191;Qu&#233; representan los <em>features</em>?<a class="anchor-link" href="#que-representan-los-features">&#182;</a></h3><p>Los <em>features</em> constituyen la información utilizada para representar cuantitativamente cada documento y sirven como variables de entrada para numerosos métodos de análisis de texto, entre ellos:</p>
+<h4 id="que-representan-los-features">&#128202; &#191;Qu&#233; representan los <em>features</em>?<a class="anchor-link" href="#que-representan-los-features">&#182;</a></h4><p>Los <em>features</em> constituyen la información utilizada para representar cuantitativamente cada documento y sirven como variables de entrada para numerosos métodos de análisis de texto, entre ellos:</p>
 <ul>
 <li>Análisis de frecuencias.</li>
 <li>Clasificación de documentos.</li>
@@ -2233,7 +2207,7 @@ docs              vicissitudes incident life event filled
 </ul>
 <p>En otras palabras, la DFM transforma un conjunto de documentos en una <strong>matriz de datos</strong>, donde las observaciones son documentos y las variables son los <em>features</em> extraídos del texto.</p>
 <hr>
-<h3 id="una-observacion-importante">&#128161; Una observaci&#243;n importante<a class="anchor-link" href="#una-observacion-importante">&#182;</a></h3><p>En una DFM tradicional, cada <em>feature</em> se considera una variable independiente. Por ejemplo, las palabras:</p>
+<h4 id="una-observacion-importante">&#128161; Una observaci&#243;n importante<a class="anchor-link" href="#una-observacion-importante">&#182;</a></h4><p>En una DFM tradicional, cada <em>feature</em> se considera una variable independiente. Por ejemplo, las palabras:</p>
 <ul>
 <li>automóvil</li>
 <li>coche</li>
@@ -2253,9 +2227,9 @@ docs              vicissitudes incident life event filled
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="que-ocurre-con-el-numero-de-features-si-aplicamos-stemming">&#129504; &#191;Qu&#233; ocurre con el n&#250;mero de <em>features</em> si aplicamos <em>stemming</em>?<a class="anchor-link" href="#que-ocurre-con-el-numero-de-features-si-aplicamos-stemming">&#182;</a></h2><p>Cuando aplicamos <strong>stemming</strong>, el número de <strong>features</strong> (columnas) de la DFM suele <strong>disminuir</strong>, ya que distintas formas de una misma palabra se agrupan bajo una única raíz (<em>stem</em>).</p>
+<h3 id="que-ocurre-con-el-numero-de-features-si-aplicamos-stemming">&#129504; &#191;Qu&#233; ocurre con el n&#250;mero de <em>features</em> si aplicamos <em>stemming</em>?<a class="anchor-link" href="#que-ocurre-con-el-numero-de-features-si-aplicamos-stemming">&#182;</a></h3><p>Cuando aplicamos <strong>stemming</strong>, el número de <strong>features</strong> (columnas) de la DFM suele <strong>disminuir</strong>, ya que distintas formas de una misma palabra se agrupan bajo una única raíz (<em>stem</em>).</p>
 <hr>
-<h3 id="por-que-se-reduce">&#128201; &#191;Por qu&#233; se reduce?<a class="anchor-link" href="#por-que-se-reduce">&#182;</a></h3><p>El <strong>stemming</strong> reemplaza diferentes variantes morfológicas de una palabra por una representación común. Por ejemplo:</p>
+<h4 id="por-que-se-reduce">&#128201; &#191;Por qu&#233; se reduce?<a class="anchor-link" href="#por-que-se-reduce">&#182;</a></h4><p>El <strong>stemming</strong> reemplaza diferentes variantes morfológicas de una palabra por una representación común. Por ejemplo:</p>
 <table>
 <thead><tr>
 <th>Formas originales</th>
@@ -2279,7 +2253,7 @@ docs              vicissitudes incident life event filled
 </table>
 <p>En lugar de crear una columna para cada forma de la palabra, la DFM almacena una única columna correspondiente al <em>stem</em>.</p>
 <hr>
-<h3 id="que-efecto-tiene-sobre-la-dfm">&#128202; &#191;Qu&#233; efecto tiene sobre la DFM?<a class="anchor-link" href="#que-efecto-tiene-sobre-la-dfm">&#182;</a></h3><p>Como varias palabras pasan a representarse mediante un mismo <em>feature</em>:</p>
+<h4 id="que-efecto-tiene-sobre-la-dfm">&#128202; &#191;Qu&#233; efecto tiene sobre la DFM?<a class="anchor-link" href="#que-efecto-tiene-sobre-la-dfm">&#182;</a></h4><p>Como varias palabras pasan a representarse mediante un mismo <em>feature</em>:</p>
 <ul>
 <li>Disminuye el número de columnas de la matriz.</li>
 <li>Aumenta la frecuencia de los <em>stems</em> resultantes.</li>
@@ -2287,7 +2261,7 @@ docs              vicissitudes incident life event filled
 <li>Los modelos tradicionales pueden generalizar mejor cuando distintas formas de una palabra expresan una misma idea.</li>
 </ul>
 <hr>
-<h3 id="ejemplo">&#129514; Ejemplo<a class="anchor-link" href="#ejemplo">&#182;</a></h3><p><strong>Sin stemming:</strong></p>
+<h4 id="ejemplo">&#129514; Ejemplo<a class="anchor-link" href="#ejemplo">&#182;</a></h4><p><strong>Sin stemming:</strong></p>
 <table>
 <thead><tr>
 <th>Documento</th>
@@ -2320,19 +2294,19 @@ docs              vicissitudes incident life event filled
 </tbody>
 </table>
 <hr>
-<h3 id="ventajas-y-desventajas">&#9878;&#65039; Ventajas y desventajas<a class="anchor-link" href="#ventajas-y-desventajas">&#182;</a></h3><h4 id="ventajas">&#9989; Ventajas<a class="anchor-link" href="#ventajas">&#182;</a></h4><ul>
+<h4 id="ventajas-y-desventajas">&#9878;&#65039; Ventajas y desventajas<a class="anchor-link" href="#ventajas-y-desventajas">&#182;</a></h4><h5 id="ventajas">&#9989; Ventajas<a class="anchor-link" href="#ventajas">&#182;</a></h5><ul>
 <li>Reduce la dimensionalidad de la DFM.</li>
 <li>Disminuye el ruido morfológico.</li>
 <li>Agrupa variantes de una misma palabra.</li>
 <li>Puede mejorar el desempeño de modelos basados en frecuencias.</li>
 </ul>
-<h4 id="desventajas">&#9888;&#65039; Desventajas<a class="anchor-link" href="#desventajas">&#182;</a></h4><ul>
+<h5 id="desventajas">&#9888;&#65039; Desventajas<a class="anchor-link" href="#desventajas">&#182;</a></h5><ul>
 <li>Se pierde información gramatical.</li>
 <li>Algunas palabras distintas pueden compartir el mismo <em>stem</em>.</li>
 <li>El <em>stem</em> obtenido no siempre corresponde a una palabra existente.</li>
 </ul>
 <hr>
-<h3 id="es-necesario-aplicar-stemming-en-los-llm">&#129302; &#191;Es necesario aplicar <em>stemming</em> en los LLM?<a class="anchor-link" href="#es-necesario-aplicar-stemming-en-los-llm">&#182;</a></h3><p>Generalmente <strong>no</strong>.</p>
+<h4 id="es-necesario-aplicar-stemming-en-los-llm">&#129302; &#191;Es necesario aplicar <em>stemming</em> en los LLM?<a class="anchor-link" href="#es-necesario-aplicar-stemming-en-los-llm">&#182;</a></h4><p>Generalmente <strong>no</strong>.</p>
 <p>Los modelos modernos basados en <strong>Transformers</strong> utilizan tokenización mediante subpalabras y representaciones contextuales, por lo que normalmente no necesitan reducir explícitamente las palabras a una raíz común.</p>
 <p>Mientras que el <em>stemming</em> busca disminuir la dimensionalidad de una DFM, los LLM aprenden automáticamente relaciones entre palabras como:</p>
 <ul>
@@ -2366,7 +2340,7 @@ docs              vicissitudes incident life event filled
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2444,21 +2418,21 @@ docs              event fill
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="sparsity">&#129518; Sparsity<a class="anchor-link" href="#sparsity">&#182;</a></h2><p>```text
-0 0 0 1 0
+<h3 id="sparsity">&#129518; Sparsity<a class="anchor-link" href="#sparsity">&#182;</a></h3><div class="highlight"><pre><span></span>0 0 0 1 0
 0 0 0 0 0
 1 0 0 0 0
-0 0 2 0 0</p>
+0 0 2 0 0
+</pre></div>
 <p>Al construir una <strong>Document-Feature Matrix (DFM)</strong> es habitual obtener una salida como:</p>
 <blockquote><p><em>Document-feature matrix of: 60 documents, 5,556 features (89.47% sparse) and 4 docvars.</em></p>
 </blockquote>
 <p>El concepto de <strong>sparsity</strong> (dispersión o escasez) es una de las características fundamentales de las representaciones tradicionales del texto.</p>
 <hr>
-<h3 id="que-significa-sparsity">&#128269; &#191;Qu&#233; significa <em>sparsity</em>?<a class="anchor-link" href="#que-significa-sparsity">&#182;</a></h3><p>La <strong>sparsity</strong> corresponde al <strong>porcentaje de valores iguales a cero</strong> en una matriz.</p>
+<h4 id="que-significa-sparsity">&#128269; &#191;Qu&#233; significa <em>sparsity</em>?<a class="anchor-link" href="#que-significa-sparsity">&#182;</a></h4><p>La <strong>sparsity</strong> corresponde al <strong>porcentaje de valores iguales a cero</strong> en una matriz.</p>
 <p>En una DFM, esto ocurre porque cada documento contiene sólo una pequeña fracción de todas las palabras presentes en el corpus.</p>
 <p>Por ejemplo, una sparsity de <strong>89.47%</strong> significa que aproximadamente <strong>9 de cada 10 celdas de la matriz contienen un cero</strong>, ya que la mayoría de las palabras no aparecen en la mayoría de los documentos.</p>
 <hr>
-<h3 id="por-que-ocurre">&#128204; &#191;Por qu&#233; ocurre?<a class="anchor-link" href="#por-que-ocurre">&#182;</a></h3><p>Supongamos que nuestro vocabulario contiene <strong>5.556 palabras</strong>.</p>
+<h4 id="por-que-ocurre">&#128204; &#191;Por qu&#233; ocurre?<a class="anchor-link" href="#por-que-ocurre">&#182;</a></h4><p>Supongamos que nuestro vocabulario contiene <strong>5.556 palabras</strong>.</p>
 <p>Cada documento, sin embargo, utiliza sólo unas pocas centenas de ellas.</p>
 <p>Como consecuencia, la mayor parte de la matriz queda formada por ceros.</p>
 <p>Esta es una propiedad natural de las representaciones basadas en frecuencias de palabras.</p>
@@ -2505,7 +2479,7 @@ docs              event fill
 <p>Las <em>features</em> corresponden normalmente a <strong>palabras</strong>, aunque también pueden ser <strong>n-gramas</strong>, números u otras unidades lingüísticas, dependiendo de cómo se haya construido la DFM.</p>
 <p>Una buena selección de <em>features</em> permite construir modelos más simples, eficientes e interpretables.</p>
 <hr>
-<h3 id="funciones-utiles-en-quanteda">&#128269; Funciones &#250;tiles en <code>quanteda</code><a class="anchor-link" href="#funciones-utiles-en-quanteda">&#182;</a></h3><ul>
+<h4 id="funciones-utiles-en-quanteda">&#128269; Funciones &#250;tiles en <code>quanteda</code><a class="anchor-link" href="#funciones-utiles-en-quanteda">&#182;</a></h4><ul>
 <li><code>topfeatures(dfm)</code>: muestra las características más frecuentes del corpus.</li>
 <li><code>dfm_trim()</code>: elimina <em>features</em> según su frecuencia o el número de documentos en que aparecen.</li>
 <li><code>dfm_select()</code>: selecciona o elimina términos específicos utilizando patrones.</li>
@@ -2513,7 +2487,7 @@ docs              event fill
 <li><code>docfreq(dfm)</code>: indica en cuántos documentos aparece cada <em>feature</em>.</li>
 </ul>
 <hr>
-<h3 id="por-que-es-importante-seleccionar-adecuadamente-las-features">&#128161; &#191;Por qu&#233; es importante seleccionar adecuadamente las <em>features</em>?<a class="anchor-link" href="#por-que-es-importante-seleccionar-adecuadamente-las-features">&#182;</a></h3><p>Una buena selección de características permite:</p>
+<h4 id="por-que-es-importante-seleccionar-adecuadamente-las-features">&#128161; &#191;Por qu&#233; es importante seleccionar adecuadamente las <em>features</em>?<a class="anchor-link" href="#por-que-es-importante-seleccionar-adecuadamente-las-features">&#182;</a></h4><p>Una buena selección de características permite:</p>
 <ul>
 <li>Reducir el número de <em>features</em> y, por tanto, el costo computacional.</li>
 <li>Eliminar términos poco informativos o muy poco frecuentes.</li>
@@ -2537,7 +2511,7 @@ docs              event fill
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="topfeatures"><strong>topfeatures()</strong><a class="anchor-link" href="#topfeatures">&#182;</a></h2><p>La función <code>topfeatures()</code> permite identificar las características (palabras o términos) más frecuentes dentro de una matriz documento-característica (<em>dfm</em>). Este tipo de inspección es fundamental en etapas tempranas del análisis textual, ya que permite:</p>
+<h3 id="topfeatures"><strong>topfeatures()</strong><a class="anchor-link" href="#topfeatures">&#182;</a></h3><p>La función <code>topfeatures()</code> permite identificar las características (palabras o términos) más frecuentes dentro de una matriz documento-característica (<em>dfm</em>). Este tipo de inspección es fundamental en etapas tempranas del análisis textual, ya que permite:</p>
 <ul>
 <li>Observar qué términos dominan el corpus.</li>
 <li>Detectar posibles <em>stopwords</em> residuales.</li>
@@ -2555,7 +2529,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2613,7 +2587,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2693,7 +2667,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2765,7 +2739,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2846,7 +2820,7 @@ print(head(kw_nation, 10))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2910,24 +2884,24 @@ _A_r_g_u_m_e_n_t_s:
 
        n: how many top features should be returned
 
-decreasing: If &#39;TRUE&#39;, return the &#39;n&#39; most frequent features; otherwise
-          return the &#39;n&#39; least frequent features
+decreasing: If ‘TRUE’, return the ‘n’ most frequent features; otherwise
+          return the ‘n’ least frequent features
 
-  scheme: one of &#39;count&#39; for total feature frequency (within &#39;group&#39; if
-          applicable), or &#39;docfreq&#39; for the document frequencies of
+  scheme: one of ‘count’ for total feature frequency (within ‘group’ if
+          applicable), or ‘docfreq’ for the document frequencies of
           features
 
   groups: grouping variable for sampling, equal in length to the number
           of documents. This will be evaluated in the docvars
           data.frame, so that docvars may be referred to by name
           without quoting. This also changes previous behaviours for
-          &#39;groups&#39;. See &#39;news(Version &gt;= &#34;3.0&#34;, package = &#34;quanteda&#34;)&#39;
+          ‘groups’. See ‘news(Version &gt;= &#34;3.0&#34;, package = &#34;quanteda&#34;)’
           for details.
 
 _V_a_l_u_e:
 
      A named numeric vector of feature counts, where the names are the
-     feature labels, or a list of these if &#39;groups&#39; is given.
+     feature labels, or a list of these if ‘groups’ is given.
 
 _E_x_a_m_p_l_e_s:
 
@@ -2968,7 +2942,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="agrupando-por-alguna-variable-docvar"><strong>Agrupando por alguna variable (docvar)</strong><a class="anchor-link" href="#agrupando-por-alguna-variable-docvar">&#182;</a></h3>
+<h4 id="agrupando-por-alguna-variable-docvar"><strong>Agrupando por alguna variable (docvar)</strong><a class="anchor-link" href="#agrupando-por-alguna-variable-docvar">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -2978,7 +2952,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3019,7 +2993,7 @@ _E_x_a_m_p_l_e_s:
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table class="dataframe">
-<caption>A data.frame: 6 x 4</caption>
+<caption>A data.frame: 6 × 4</caption>
 <thead>
 	<tr><th></th><th scope=col>Year</th><th scope=col>President</th><th scope=col>FirstName</th><th scope=col>Party</th></tr>
 	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
@@ -3049,7 +3023,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3127,7 +3101,7 @@ $Cleveland
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3205,7 +3179,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3327,8 +3301,8 @@ $Whig
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="esquemas-scheme-count-vs-scheme-docfreq">Esquemas: <code>scheme = "count"</code> vs <code>scheme = "docfreq"</code><a class="anchor-link" href="#esquemas-scheme-count-vs-scheme-docfreq">&#182;</a></h2><p>En funciones como <code>topfeatures()</code> o <code>dfm_weight()</code> del paquete <code>quanteda</code>, el argumento <code>scheme</code> permite especificar cómo se calculará la importancia o el peso de las <em>features</em> (palabras o términos) dentro del corpus.</p>
-<h3 id="scheme-count">&#128313; <code>scheme = "count"</code><a class="anchor-link" href="#scheme-count">&#182;</a></h3><ul>
+<h3 id="esquemas-scheme-count-vs-scheme-docfreq">Esquemas: <code>scheme = "count"</code> vs <code>scheme = "docfreq"</code><a class="anchor-link" href="#esquemas-scheme-count-vs-scheme-docfreq">&#182;</a></h3><p>En funciones como <code>topfeatures()</code> o <code>dfm_weight()</code> del paquete <code>quanteda</code>, el argumento <code>scheme</code> permite especificar cómo se calculará la importancia o el peso de las <em>features</em> (palabras o términos) dentro del corpus.</p>
+<h4 id="scheme-count">&#128313; <code>scheme = "count"</code><a class="anchor-link" href="#scheme-count">&#182;</a></h4><ul>
 <li>Calcula la <strong>frecuencia total</strong> de cada término en todo el corpus.</li>
 <li>Es decir, cuenta cuántas veces aparece cada palabra en todos los documentos.</li>
 <li>Este esquema resalta términos que son frecuentes en general, aunque no necesariamente representativos de un documento en particular.</li>
@@ -3339,7 +3313,7 @@ $Whig
 <li>Crear nubes de palabras (<em>wordclouds</em>) generales.</li>
 </ul>
 <hr>
-<h3 id="scheme-docfreq">&#128312; <code>scheme = "docfreq"</code><a class="anchor-link" href="#scheme-docfreq">&#182;</a></h3><ul>
+<h4 id="scheme-docfreq">&#128312; <code>scheme = "docfreq"</code><a class="anchor-link" href="#scheme-docfreq">&#182;</a></h4><ul>
 <li>Calcula la <strong>frecuencia documental</strong>: el número de documentos en los que aparece al menos una vez una palabra.</li>
 <li>No cuenta cuántas veces aparece, sino <strong>en cuántos documentos distintos</strong> aparece.</li>
 </ul>
@@ -3361,7 +3335,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3418,7 +3392,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3488,7 +3462,7 @@ $Whig
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="dfm_select-dfm_remove-dfm_trim"><strong>dfm_select()</strong>, <strong>dfm_remove()</strong>, <strong>dfm_trim()</strong><a class="anchor-link" href="#dfm_select-dfm_remove-dfm_trim">&#182;</a></h2><p>Una vez creada la matriz de características (dfm), <code>quanteda</code> ofrece funciones clave para refinarla seleccionando o eliminando términos según diversos criterios:</p>
+<h3 id="dfm_select-dfm_remove-dfm_trim"><strong>dfm_select()</strong>, <strong>dfm_remove()</strong>, <strong>dfm_trim()</strong><a class="anchor-link" href="#dfm_select-dfm_remove-dfm_trim">&#182;</a></h3><p>Una vez creada la matriz de características (dfm), <code>quanteda</code> ofrece funciones clave para refinarla seleccionando o eliminando términos según diversos criterios:</p>
 <ul>
 <li><p><strong><code>dfm_select()</code></strong>: Permite <strong>seleccionar</strong> características específicas del <code>dfm</code>, utilizando patrones exactos, expresiones regulares o listas. Es útil para centrar el análisis en términos clave.</p>
 </li>
@@ -3508,7 +3482,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3554,7 +3528,7 @@ _S_e_l_e_c_t _f_e_a_t_u_r_e_s _f_r_o_m _a _d_f_m _o_r _
 _D_e_s_c_r_i_p_t_i_o_n:
 
      This function selects or removes features from a dfm or fcm, based
-     on feature name matches with &#39;pattern&#39;.  The most common usages
+     on feature name matches with ‘pattern’.  The most common usages
      are to eliminate features from a dfm already constructed, such as
      stopwords, or to select only terms of interest from a dictionary.
 
@@ -3597,57 +3571,57 @@ _A_r_g_u_m_e_n_t_s:
  pattern: a character vector, list of character vectors, dictionary, or
           collocations object.  See pattern for details.
 
-selection: whether to &#39;keep&#39; or &#39;remove&#39; the features
+selection: whether to ‘keep’ or ‘remove’ the features
 
-valuetype: the type of pattern matching: &#39;&#34;glob&#34;&#39; for &#34;glob&#34;-style
-          wildcard expressions; &#39;&#34;regex&#34;&#39; for regular expressions; or
-          &#39;&#34;fixed&#34;&#39; for exact matching. See valuetype for details.
+valuetype: the type of pattern matching: ‘&#34;glob&#34;’ for &#34;glob&#34;-style
+          wildcard expressions; ‘&#34;regex&#34;’ for regular expressions; or
+          ‘&#34;fixed&#34;’ for exact matching. See valuetype for details.
 
-case_insensitive: logical; if &#39;TRUE&#39;, ignore case when matching a
-          &#39;pattern&#39; or dictionary values
+case_insensitive: logical; if ‘TRUE’, ignore case when matching a
+          ‘pattern’ or dictionary values
 
 min_nchar, max_nchar: optional numerics specifying the minimum and
           maximum length in characters for tokens to be removed or
-          kept; defaults are &#39;NULL&#39; for no limits.  These are applied
+          kept; defaults are ‘NULL’ for no limits.  These are applied
           after (and hence, in addition to) any selection based on
           pattern matches.
 
- padding: if &#39;TRUE&#39;, record the number of removed tokens in the first
+ padding: if ‘TRUE’, record the number of removed tokens in the first
           column.
 
- verbose: if &#39;TRUE&#39;, print message about how many pattern were removed
+ verbose: if ‘TRUE’, print message about how many pattern were removed
 
-     ...: used only for passing arguments from &#39;dfm_remove&#39; or
-          &#39;dfm_keep&#39; to &#39;dfm_select&#39;. Cannot include &#39;selection&#39;.
+     ...: used only for passing arguments from ‘dfm_remove’ or
+          ‘dfm_keep’ to ‘dfm_select’. Cannot include ‘selection’.
 
 _D_e_t_a_i_l_s:
 
-     &#39;dfm_remove&#39; and &#39;fcm_remove&#39; are simply a convenience wrappers to
-     calling &#39;dfm_select&#39; and &#39;fcm_select&#39; with &#39;selection = &#34;remove&#34;&#39;.
+     ‘dfm_remove’ and ‘fcm_remove’ are simply a convenience wrappers to
+     calling ‘dfm_select’ and ‘fcm_select’ with ‘selection = &#34;remove&#34;’.
 
-     &#39;dfm_keep&#39; and &#39;fcm_keep&#39; are simply a convenience wrappers to
-     calling &#39;dfm_select&#39; and &#39;fcm_select&#39; with &#39;selection = &#34;keep&#34;&#39;.
+     ‘dfm_keep’ and ‘fcm_keep’ are simply a convenience wrappers to
+     calling ‘dfm_select’ and ‘fcm_select’ with ‘selection = &#34;keep&#34;’.
 
 _V_a_l_u_e:
 
      A dfm or fcm object, after the feature selection has been applied.
 
-     For compatibility with earlier versions, when &#39;pattern&#39; is a dfm
-     object and &#39;selection = &#34;keep&#34;&#39;, then this will be equivalent to
-     calling &#39;dfm_match()&#39;.  In this case, the following settings are
-     always used: &#39;case_insensitive = FALSE&#39;, and &#39;valuetype =
-     &#34;fixed&#34;&#39;.  This functionality is deprecated, however, and you
-     should use &#39;dfm_match()&#39; instead.
+     For compatibility with earlier versions, when ‘pattern’ is a dfm
+     object and ‘selection = &#34;keep&#34;’, then this will be equivalent to
+     calling ‘dfm_match()’.  In this case, the following settings are
+     always used: ‘case_insensitive = FALSE’, and ‘valuetype =
+     &#34;fixed&#34;’.  This functionality is deprecated, however, and you
+     should use ‘dfm_match()’ instead.
 
 _N_o_t_e:
 
      This function selects features based on their labels.  To select
      features based on the values of the document-feature matrix, use
-     &#39;dfm_trim()&#39;.
+     ‘dfm_trim()’.
 
 _S_e_e _A_l_s_o:
 
-     &#39;dfm_match()&#39;
+     ‘dfm_match()’
 
 _E_x_a_m_p_l_e_s:
 
@@ -3693,7 +3667,7 @@ _E_x_a_m_p_l_e_s:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="dfm_remove"><strong>dfm_remove()</strong><a class="anchor-link" href="#dfm_remove">&#182;</a></h3><p>Supongamos que no eliminamos los stop-words cuando tokenizamos el documento.</p>
+<h4 id="dfm_remove"><strong><code>dfm_remove</code>()</strong><a class="anchor-link" href="#dfm_remove">&#182;</a></h4><p>Supongamos que no eliminamos los stop-words cuando tokenizamos el documento.</p>
 
 </div>
 </div>
@@ -3704,7 +3678,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3737,7 +3711,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3816,7 +3790,7 @@ docs              vicissitudes incident life event
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="dfm_trim"><strong>dfm_trim()</strong><a class="anchor-link" href="#dfm_trim">&#182;</a></h3><p>Los argumentos de esta función <em>min_termfreq</em> y <em>max_termfreq</em> permiten determinar el umbral de frecuencia para el análisis.</p>
+<h4 id="dfm_trim"><strong><code>dfm_trim()</code></strong><a class="anchor-link" href="#dfm_trim">&#182;</a></h4><p>Los argumentos de esta función <em>min_termfreq</em> y <em>max_termfreq</em> permiten determinar el umbral de frecuencia para el análisis.</p>
 
 </div>
 </div>
@@ -3827,7 +3801,7 @@ docs              vicissitudes incident life event
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3895,7 +3869,7 @@ docs              fellow-citizens : among life greater order   , day present  .
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="dfm_select"><strong>dfm_select()</strong><a class="anchor-link" href="#dfm_select">&#182;</a></h3><p>¿Cuántas palabras "largas" hay en los documentos del corpus?</p>
+<h4 id="dfm_select"><strong><code>dfm_select()</code></strong><a class="anchor-link" href="#dfm_select">&#182;</a></h4><p>¿Cuántas palabras "largas" hay en los documentos del corpus?</p>
 
 </div>
 </div>
@@ -3906,7 +3880,7 @@ docs              fellow-citizens : among life greater order   , day present  .
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3947,7 +3921,7 @@ print(dfmat_inaug_long)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Document-feature matrix of: 60 documents, 2,491 features (95.14% sparse) and 4 docvars.
+<pre>Document-feature matrix of: 60 documents, 2,472 features (95.12% sparse) and 4 docvars.
                  features
 docs              fellow-citizens representatives vicissitudes notification
   1789-Washington               1               2            1            1
@@ -3972,7 +3946,7 @@ docs              interruptions
   1801-Jefferson              0
   1805-Jefferson              0
   1809-Madison                0
-[ reached max_ndoc ... 54 more documents, reached max_nfeat ... 2,481 more features ]
+[ reached max_ndoc ... 54 more documents, reached max_nfeat ... 2,462 more features ]
 </pre>
 </div>
 </div>
@@ -4000,7 +3974,7 @@ docs              interruptions
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4080,7 +4054,7 @@ docs              countri can time citizen nation may peopl govern great now
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
