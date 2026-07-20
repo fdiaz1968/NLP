@@ -88,13 +88,9 @@ plugins:
 # TOC
 nav:
     - Home: index.md
-    - Programa:
-        - programa.md
-    - Clases:
-        - clases/clases.md
-    - Ejercicios:
-        - exercises/exercises.md
-    - Datasets:
-        - datasets/datasets.md
+    - Programa: programa.md
+    - Clases: clases/clases.md
+    - Ejercicios: exercises/exercises.md
+    - Datasets: datasets/datasets.md
     - Evaluaciones:
         - "📊 Proyecto Integrador": assessments/proyecto_integrador.md
