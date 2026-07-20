@@ -1013,6 +1013,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    ---
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iv-stemming" class="md-nav__link">
     🌱 IV. Stemming
   </a>
@@ -2430,7 +2437,7 @@ Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpBke1EA/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpBYIj1w/downloaded_packages
 </pre>
 </div>
 </div>
@@ -4963,7 +4970,10 @@ stopwords_sp</div>
   tokens_remove(pattern = stopwords("en"))  |>
   tokens_tolower()
 
-print(toks_nopunct_stop_low)</div>
+print(toks_nopunct_stop_low)
+
+
+</div>
     
         </div>
     </div>
@@ -5037,6 +5047,7 @@ print(toks_nopunct_stop_low)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <hr>
 <h2 id="iv-stemming">&#127793; IV. Stemming<a class="anchor-link" href="#iv-stemming">&#182;</a></h2><p>El <strong>stemming</strong> es el proceso de reducir las palabras a su forma básica o raíz léxica, llamada <em>stem</em>. Esta raíz no siempre es una palabra válida, pero permite agrupar variantes morfológicas como si fueran equivalentes. Por ejemplo:</p>
 <ul>
@@ -5435,7 +5446,7 @@ kw_df</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5564,6 +5575,7 @@ write_xlsx(kw_df, path = "kwic_output.xlsx")</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <hr>
 <h2 id="vi-ejercicio-de-aplicacion">VI. Ejercicio de Aplicaci&#243;n<a class="anchor-link" href="#vi-ejercicio-de-aplicacion">&#182;</a></h2><p>En este ejercicio aplicarás el flujo completo de limpieza y transformación de textos visto en esta unidad, sobre un subconjunto distinto de <code>data_corpus_inaugural</code>.</p>
 <p><strong>Pasos sugeridos:</strong></p>
