@@ -6091,6 +6091,22 @@ suppressWarnings(
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="por-que-los-segmentos-no-se-ven-en-angulo-recto">&#128204; &#191;Por qu&#233; los segmentos no se ven en &#225;ngulo recto?<a class="anchor-link" href="#por-que-los-segmentos-no-se-ven-en-angulo-recto">&#182;</a></h3><p>Los segmentos azules <strong>sí son perpendiculares</strong> a la recta roja — matemáticamente. Se calculan proyectando cada punto sobre la recta $y = mx + n$ (el mismo <code>m</code> y <code>n</code> ya calculados más arriba), y su pendiente resulta exactamente $-1/m$, la pendiente perpendicular (la misma que usa <code>m1</code> más abajo). Su longitud coincide con <code>dist_vector$dist</code>, calculada con la fórmula de distancia punto-recta (<code>dist_PL()</code>) definida al inicio de esta sección.</p>
+<p>Lo que <strong>no coincide</strong> es la apariencia visual. <code>ggplot2</code> escala los ejes X (<code>k</code>, rango ≈ 5–60) e Y (<code>perplexity</code>, rango de cientos o miles) de forma <strong>independiente</strong> para llenar el panel. Un ángulo de 90° en el espacio de los datos deja de verse como 90° en la pantalla salvo que ambos ejes usen la <strong>misma escala física</strong> — algo que solo se logra forzando <code>coord_fixed(ratio = 1)</code>.</p>
+<p>Probamos esa opción, pero el resultado fue un gráfico extremadamente alto y angosto (dado lo distintas que son las escalas de <code>k</code> y <code>perplexity</code>), difícil de leer. Por eso se mantiene el escalado automático: los <strong>valores de distancia</strong> que se muestran junto a cada segmento son correctos, aunque el ángulo no se vea literalmente recto.</p>
+<blockquote><p>💡 <strong>Idea clave:</strong> en gráficos con ejes de escalas muy distintas, "perpendicular" es una propiedad del espacio de los datos, no necesariamente de lo que se observa visualmente en pantalla.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
