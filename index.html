@@ -489,6 +489,45 @@
 .perfil-social-icon:hover {
   background: rgba(0, 0, 0, 0.35);
 }
+
+.edu-list {
+  list-style: none;
+  margin: 1rem auto 0;
+  padding: 0;
+  max-width: 420px;
+  text-align: left;
+}
+
+.edu-list li {
+  padding: 0.3rem 0;
+}
+
+.edu-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.edu-logo {
+  height: 22px !important;
+  width: auto !important;
+  max-width: 96px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.edu-logo-lg {
+  height: 38px !important;
+  max-width: 150px !important;
+}
+
+[data-md-color-scheme="slate"] .edu-logo {
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
 </style>
 
 <div class="perfil-container">
@@ -500,7 +539,11 @@
     <em>Director Programa MBA</em><br>
     <em>Escuela de Negocios</em><br>
     <em>Universidad Técnica Federico Santa María</em><br><br>
-    🎓 Ph.D. in Finance (Purdue), MSc. in Finance and Economics (LSE), MA in Economics (PUC)<br>
+    <ul class="edu-list">
+      <li class="edu-line">🎓 Ph.D. in Finance <img src="images/logos/purdue.svg" alt="Purdue University" class="edu-logo"></li>
+      <li class="edu-line">🎓 M.Sc. in Finance and Economics <img src="images/logos/lse.svg" alt="London School of Economics" class="edu-logo"></li>
+      <li class="edu-line">🎓 M.A. &amp; Licentiate in Economics <img src="images/logos/puc.svg" alt="Pontificia Universidad Católica de Chile" class="edu-logo edu-logo-lg"></li>
+    </ul>
     📈 Focos: Finanzas, Econometría, Machine Learning, NLP<br>
     <div class="perfil-social">
       <a class="perfil-social-icon" href="https://www.linkedin.com/in/frdiazh/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -518,8 +561,12 @@
 </div>
 
 <hr />
+<div style="text-align: center; margin: 1.5rem 0;">
+  <img src="images/logo_upacifico.jpg" alt="Universidad del Pacífico" style="width: 360px; max-width: 90%;">
+</div>
+
 <blockquote>
-<p>👆 Fernando Díaz H. dicta el curso de Procesamiento de Lenguaje Natural en la Universidad Técnica Federico Santa María / Universidad del Pacífico.</p>
+<p>👆 Fernando Díaz H. dicta el curso de Procesamiento de Lenguaje Natural en la Universidad Técnica Federico Santa María y en la Universidad del Pacífico de Lima.</p>
 </blockquote>
 <h2 id="sobre-el-curso">Sobre el Curso</h2>
 <p><strong>Procesamiento de Lenguaje Natural — Análisis Textual con R y Python</strong> es un curso intensivo (Semana Internacional) que combina métodos estadísticos clásicos (R / Quanteda) con modelos transformer y LLM (Python / HuggingFace) para el análisis de textos en ciencias sociales, economía y finanzas.</p>
