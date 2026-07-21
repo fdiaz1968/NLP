@@ -1937,8 +1937,8 @@ The downloaded binary packages are in
 </div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1958,50 +1958,22 @@ The downloaded binary packages are in
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">quanteda.textstats</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">quanteda.textplots</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
+  <span class="nf">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">)</span>
+  <span class="nf">library</span><span class="p">(</span><span class="n">quanteda.textstats</span><span class="p">)</span>
+  <span class="nf">library</span><span class="p">(</span><span class="n">quanteda.textplots</span><span class="p">)</span>
+<span class="p">})</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">library(quanteda)
-library(quanteda.textstats)
-library(quanteda.textplots)</div>
+<div id="cell-2" class="clipboard-copy-txt">suppressPackageStartupMessages({
+  library(quanteda)
+  library(quanteda.textstats)
+  library(quanteda.textplots)
+})</div>
     
         </div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Warning message:
-“package ‘quanteda’ was built under R version 4.5.2”
-Package version: 4.4
-Unicode version: 14.0
-ICU version: 71.1
-
-Parallel computing: disabled
-
-See https://quanteda.io for tutorials and examples.
-
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2719,13 +2691,17 @@ docs         incident life event filled
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">cloud_party</span> <span class="o">&lt;-</span> <span class="nf">textplot_wordcloud</span><span class="p">(</span><span class="n">dfmat_party</span><span class="p">,</span> <span class="n">comparison</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span>
+  <span class="n">cloud_party</span> <span class="o">&lt;-</span> <span class="nf">textplot_wordcloud</span><span class="p">(</span><span class="n">dfmat_party</span><span class="p">,</span> <span class="n">comparison</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
                    <span class="n">max_words</span> <span class="o">=</span> <span class="m">150</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">),</span>
                    <span class="n">labelcolor</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">)</span>
+<span class="p">)</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt">cloud_party <- textplot_wordcloud(dfmat_party, comparison = TRUE,
+<div id="cell-9" class="clipboard-copy-txt">suppressWarnings(
+  cloud_party <- textplot_wordcloud(dfmat_party, comparison = TRUE,
                    max_words = 150, color = c("blue", "red", "green"),
-                   labelcolor = "black")</div>
+                   labelcolor = "black")
+)</div>
     
         </div>
     </div>
@@ -2739,151 +2715,6 @@ docs         incident life event filled
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“however could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“duties could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“institutions could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“foreign could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“fellow-citizens could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“principle could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“object could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“instrument could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“legislative could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“liberty could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“opinion could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“measures could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“texas could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“protection could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“granted could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“system could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“departments could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“become could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“principles could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“governments could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“well could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“citizens could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“reserved could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“might could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“department could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“confederacy could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“exercise could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“although could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“former could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“period could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“preserved could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“grant could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“control could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“roman could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“danger could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“independent could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“body could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“continuance could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“tendency could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“intended could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“authorities could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“respective could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“hands could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“given could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“congress could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“discharge could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“used could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“veto could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“error could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“legislature could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“extended could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“adoption could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“chief could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“proper could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“harmony could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“magistrate could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“management could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“others could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“sovereignty could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“prescribed could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“necessary could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“intercourse could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“difficulty could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“placed could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“produce could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“legislation could not be fit on page. It will not be plotted.”
-Warning message in wordcloud_comparison(x, min_size, max_size, min_count, max_words, :
-“member could not be fit on page. It will not be plotted.”
-</pre>
-</div>
-</div>
 
 <div class="jp-OutputArea-child">
 
