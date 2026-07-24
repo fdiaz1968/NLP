@@ -615,11 +615,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ii-keyness" class="md-nav__link">
-    II. Keyness
+  <a href="#-_1" class="md-nav__link">
+    ---
   </a>
   
-    <nav class="md-nav" aria-label="II. Keyness">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-keyness" class="md-nav__link">
+    🔑 II. Keyness
+  </a>
+  
+    <nav class="md-nav" aria-label="🔑 II. Keyness">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -627,8 +634,7 @@
     🗝️ textstat_keyness()
   </a>
   
-    <nav class="md-nav" aria-label="🗝️ textstat_keyness()">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#que-mide" class="md-nav__link">
@@ -642,7 +648,8 @@
     🧠 ¿Para qué sirve?
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="🧠 ¿Para qué sirve?">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#mas-informacion" class="md-nav__link">
@@ -656,7 +663,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#analisis-de-keyness-en-criticas-de-cine" class="md-nav__link">
     🔑 Análisis de Keyness en críticas de cine
   </a>
@@ -668,11 +680,6 @@
   <a href="#resultados" class="md-nav__link">
     📊 Resultados
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -778,18 +785,52 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    ---
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iii-frecuencia-de-las-features-en-los-comentarios" class="md-nav__link">
-    III. Frecuencia de las Features en los Comentarios
+    📊 III. Frecuencia de las Features en los Comentarios
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 III. Frecuencia de las Features en los Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacion-frecuencia-de-terminos-por-sentimiento" class="md-nav__link">
+    📊 Interpretación: Frecuencia de Términos por Sentimiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-keyness-es-inmune-a-las-palabras-genericas-frecuentes" class="md-nav__link">
+    🛡️ ¿Por qué keyness es inmune a las palabras genéricas frecuentes?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#iv-dispersion-textual" class="md-nav__link">
-    IV. Dispersión Textual
+    📌 IV. Dispersión Textual
   </a>
   
-    <nav class="md-nav" aria-label="IV. Dispersión Textual">
+    <nav class="md-nav" aria-label="📌 IV. Dispersión Textual">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -821,15 +862,15 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#textplot_xray" class="md-nav__link">
     textplot_xray()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4495,7 +4536,7 @@ docs              plot two teen couples go church party drink drive get
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Podríamos también utilizado la función <em>textstat_frequency()</em>:</p>
+<p>Podríamos también utilizado la función <code>textstat_frequency()</code>:</p>
 
 </div>
 </div>
@@ -4816,7 +4857,9 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="ii-keyness">II. Keyness<a class="anchor-link" href="#ii-keyness">&#182;</a></h2>
+<hr>
+<h2 id="ii-keyness">&#128273; II. Keyness<a class="anchor-link" href="#ii-keyness">&#182;</a></h2><hr>
+
 </div>
 </div>
 </div>
@@ -4827,16 +4870,16 @@ docs              plot two teen couples go church party drink drive get
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="textstat_keyness">&#128477;&#65039; <strong>textstat_keyness()</strong><a class="anchor-link" href="#textstat_keyness">&#182;</a></h3><p>La función <code>textstat_keyness()</code> se utiliza para calcular la <strong>importancia relativa</strong> de las palabras en un conjunto de documentos frente a otro conjunto de referencia. Esta importancia se expresa a través de una métrica llamada <strong>keyness</strong>, que permite identificar las palabras <strong>más distintivas</strong> o características de un grupo de textos en comparación con otro.</p>
+<h3 id="textstat_keyness">&#128477;&#65039; <code>textstat_keyness()</code><a class="anchor-link" href="#textstat_keyness">&#182;</a></h3><p>La función <code>textstat_keyness()</code> se utiliza para calcular la <strong>importancia relativa</strong> de las palabras en un conjunto de documentos frente a otro conjunto de referencia. Esta importancia se expresa a través de una métrica llamada <strong>keyness</strong>, que permite identificar las palabras <strong>más distintivas</strong> o características de un grupo de textos en comparación con otro.</p>
 <hr>
-<h4 id="que-mide">&#128204; &#191;Qu&#233; mide?<a class="anchor-link" href="#que-mide">&#182;</a></h4><p>El análisis de <em>keyness</em> no se basa únicamente en la frecuencia absoluta de las palabras, sino en <strong>cómo su distribución difiere entre grupos</strong>. Entre las métricas más comunes para este cálculo se encuentran:</p>
+<h3 id="que-mide">&#128204; &#191;Qu&#233; mide?<a class="anchor-link" href="#que-mide">&#182;</a></h3><p>El análisis de <em>keyness</em> no se basa únicamente en la frecuencia absoluta de las palabras, sino en <strong>cómo su distribución difiere entre grupos</strong>. Entre las métricas más comunes para este cálculo se encuentran:</p>
 <ul>
 <li><strong>Log-likelihood ratio</strong> (por defecto en <code>quanteda</code>)</li>
 <li><strong>Chi-cuadrado</strong></li>
 <li><strong>Frecuencia Relativa Ponderada</strong></li>
 </ul>
 <hr>
-<h4 id="para-que-sirve">&#129504; &#191;Para qu&#233; sirve?<a class="anchor-link" href="#para-que-sirve">&#182;</a></h4><ul>
+<h3 id="para-que-sirve">&#129504; &#191;Para qu&#233; sirve?<a class="anchor-link" href="#para-que-sirve">&#182;</a></h3><ul>
 <li>Detectar vocabulario que distingue dos categorías (por ejemplo, reseñas positivas vs. negativas)</li>
 <li>Comparar el discurso de distintos autores, partidos, medios o períodos históricos</li>
 <li>Identificar términos ideológicamente cargados o representativos</li>
@@ -4957,10 +5000,10 @@ class(tstat_key_movies)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="analisis-de-keyness-en-criticas-de-cine">&#128273; An&#225;lisis de Keyness en cr&#237;ticas de cine<a class="anchor-link" href="#analisis-de-keyness-en-criticas-de-cine">&#182;</a></h3><p>Utilizamos la función <code>textstat_keyness()</code> para identificar las palabras que son estadísticamente más características de las críticas <strong>positivas</strong> en el corpus de Pang &amp; Lee (2004).</p>
+<h2 id="analisis-de-keyness-en-criticas-de-cine">&#128273; An&#225;lisis de Keyness en cr&#237;ticas de cine<a class="anchor-link" href="#analisis-de-keyness-en-criticas-de-cine">&#182;</a></h2><p>Utilizamos la función <code>textstat_keyness()</code> para identificar las palabras que son estadísticamente más características de las críticas <strong>positivas</strong> en el corpus de Pang &amp; Lee (2004).</p>
 <p>Se define como grupo objetivo (<code>target</code>) aquellas reseñas cuyo valor en la variable <code>sentiment</code> es igual a <code>"pos"</code> (positivo). El análisis compara la frecuencia de palabras en este grupo frente al grupo de referencia (críticas negativas).</p>
 <hr>
-<h4 id="resultados">&#128202; Resultados<a class="anchor-link" href="#resultados">&#182;</a></h4><p>El resultado almacenado en <code>tstat_key_movies</code> es un <strong>data.frame</strong> que contiene, para cada término:</p>
+<h3 id="resultados">&#128202; Resultados<a class="anchor-link" href="#resultados">&#182;</a></h3><p>El resultado almacenado en <code>tstat_key_movies</code> es un <strong>data.frame</strong> que contiene, para cada término:</p>
 <ul>
 <li>El valor estadístico de <em>keyness</em> (por defecto, log-likelihood ratio)</li>
 <li>La frecuencia del término en cada grupo</li>
@@ -5610,7 +5653,21 @@ print(head(kwic_toks_pos, 15))</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="iii-frecuencia-de-las-features-en-los-comentarios">III. Frecuencia de las Features en los Comentarios<a class="anchor-link" href="#iii-frecuencia-de-las-features-en-los-comentarios">&#182;</a></h2>
+<hr>
+<h2 id="iii-frecuencia-de-las-features-en-los-comentarios">&#128202; III. Frecuencia de las <em>Features</em> en los Comentarios<a class="anchor-link" href="#iii-frecuencia-de-las-features-en-los-comentarios">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Calculamos las <strong>20 <em>features</em></strong> más frecuentes del corpus, separándolas según el <strong>sentimiento</strong> (<em>positive</em> y <em>negative</em>). Esto permite identificar las palabras más utilizadas dentro de cada grupo de comentarios.</p>
+
 </div>
 </div>
 </div>
@@ -5620,7 +5677,7 @@ print(head(kwic_toks_pos, 15))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5636,10 +5693,11 @@ print(head(kwic_toks_pos, 15))</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">features_dfm_movie</span> <span class="o">&lt;-</span> <span class="nf">textstat_frequency</span><span class="p">(</span><span class="n">movie_dfm</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span> <span class="n">groups</span> <span class="o">=</span> <span class="n">sentiment</span><span class="p">)</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">features_dfm_movie</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">40</span><span class="p">)</span>
+<span class="n">features_dfm_movie</span> <span class="o">|&gt;</span> <span class="nf">show_table</span><span class="p">()</span>
 </pre></div>
 <div id="cell-28" class="clipboard-copy-txt">features_dfm_movie <- textstat_frequency(movie_dfm, n = 20, groups = sentiment)
-head(features_dfm_movie, n=40)</div>
+features_dfm_movie |> show_table()
+</div>
     
         </div>
     </div>
@@ -5662,56 +5720,299 @@ head(features_dfm_movie, n=40)</div>
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table class="dataframe">
-<caption>A frequency: 40 × 5</caption>
-<thead>
-	<tr><th></th><th scope=col>feature</th><th scope=col>frequency</th><th scope=col>rank</th><th scope=col>docfreq</th><th scope=col>group</th></tr>
-	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
+<div style="max-height:500px; overflow:auto; border:1px solid #ddd; padding:4px;"><table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> feature </th>
+   <th style="text-align:right;"> frequency </th>
+   <th style="text-align:right;"> rank </th>
+   <th style="text-align:right;"> docfreq </th>
+   <th style="text-align:left;"> group </th>
+  </tr>
+ </thead>
 <tbody>
-	<tr><th scope=row>1</th><td>film      </td><td>4002</td><td> 1</td><td>843</td><td>neg</td></tr>
-	<tr><th scope=row>2</th><td>movie     </td><td>3053</td><td> 2</td><td>797</td><td>neg</td></tr>
-	<tr><th scope=row>3</th><td>one       </td><td>2618</td><td> 3</td><td>862</td><td>neg</td></tr>
-	<tr><th scope=row>4</th><td>like      </td><td>1836</td><td> 4</td><td>759</td><td>neg</td></tr>
-	<tr><th scope=row>5</th><td>just      </td><td>1562</td><td> 5</td><td>685</td><td>neg</td></tr>
-	<tr><th scope=row>6</th><td>even      </td><td>1381</td><td> 6</td><td>670</td><td>neg</td></tr>
-	<tr><th scope=row>7</th><td>good      </td><td>1130</td><td> 7</td><td>573</td><td>neg</td></tr>
-	<tr><th scope=row>8</th><td>time      </td><td>1112</td><td> 8</td><td>599</td><td>neg</td></tr>
-	<tr><th scope=row>9</th><td>can       </td><td>1084</td><td> 9</td><td>606</td><td>neg</td></tr>
-	<tr><th scope=row>10</th><td>get       </td><td>1038</td><td>10</td><td>559</td><td>neg</td></tr>
-	<tr><th scope=row>11</th><td>bad       </td><td>1021</td><td>11</td><td>509</td><td>neg</td></tr>
-	<tr><th scope=row>12</th><td>much      </td><td> 998</td><td>12</td><td>559</td><td>neg</td></tr>
-	<tr><th scope=row>13</th><td>story     </td><td> 905</td><td>13</td><td>501</td><td>neg</td></tr>
-	<tr><th scope=row>14</th><td>character </td><td> 895</td><td>14</td><td>494</td><td>neg</td></tr>
-	<tr><th scope=row>15</th><td>plot      </td><td> 876</td><td>15</td><td>509</td><td>neg</td></tr>
-	<tr><th scope=row>16</th><td>characters</td><td> 873</td><td>16</td><td>478</td><td>neg</td></tr>
-	<tr><th scope=row>17</th><td>two       </td><td> 867</td><td>17</td><td>509</td><td>neg</td></tr>
-	<tr><th scope=row>18</th><td>make      </td><td> 819</td><td>18</td><td>509</td><td>neg</td></tr>
-	<tr><th scope=row>19</th><td>first     </td><td> 806</td><td>19</td><td>485</td><td>neg</td></tr>
-	<tr><th scope=row>20</th><td>really    </td><td> 781</td><td>20</td><td>436</td><td>neg</td></tr>
-	<tr><th scope=row>21</th><td>film      </td><td>4872</td><td> 1</td><td>884</td><td>pos</td></tr>
-	<tr><th scope=row>22</th><td>one       </td><td>2908</td><td> 2</td><td>882</td><td>pos</td></tr>
-	<tr><th scope=row>23</th><td>movie     </td><td>2393</td><td> 3</td><td>727</td><td>pos</td></tr>
-	<tr><th scope=row>24</th><td>like      </td><td>1719</td><td> 4</td><td>711</td><td>pos</td></tr>
-	<tr><th scope=row>25</th><td>just      </td><td>1339</td><td> 5</td><td>642</td><td>pos</td></tr>
-	<tr><th scope=row>26</th><td>story     </td><td>1214</td><td> 6</td><td>559</td><td>pos</td></tr>
-	<tr><th scope=row>27</th><td>also      </td><td>1200</td><td> 7</td><td>604</td><td>pos</td></tr>
-	<tr><th scope=row>28</th><td>good      </td><td>1193</td><td> 8</td><td>578</td><td>pos</td></tr>
-	<tr><th scope=row>29</th><td>even      </td><td>1175</td><td> 9</td><td>619</td><td>pos</td></tr>
-	<tr><th scope=row>30</th><td>time      </td><td>1171</td><td>10</td><td>625</td><td>pos</td></tr>
-	<tr><th scope=row>31</th><td>can       </td><td>1149</td><td>11</td><td>599</td><td>pos</td></tr>
-	<tr><th scope=row>32</th><td>much      </td><td>1026</td><td>12</td><td>569</td><td>pos</td></tr>
-	<tr><th scope=row>33</th><td>character </td><td>1013</td><td>13</td><td>519</td><td>pos</td></tr>
-	<tr><th scope=row>34</th><td>characters</td><td> 986</td><td>14</td><td>487</td><td>pos</td></tr>
-	<tr><th scope=row>35</th><td>life      </td><td> 983</td><td>15</td><td>470</td><td>pos</td></tr>
-	<tr><th scope=row>36</th><td>first     </td><td> 964</td><td>16</td><td>535</td><td>pos</td></tr>
-	<tr><th scope=row>37</th><td>well      </td><td> 962</td><td>17</td><td>535</td><td>pos</td></tr>
-	<tr><th scope=row>38</th><td>two       </td><td> 960</td><td>18</td><td>515</td><td>pos</td></tr>
-	<tr><th scope=row>39</th><td>see       </td><td> 954</td><td>19</td><td>522</td><td>pos</td></tr>
-	<tr><th scope=row>40</th><td>way       </td><td> 915</td><td>20</td><td>525</td><td>pos</td></tr>
+  <tr>
+   <td style="text-align:left;"> film </td>
+   <td style="text-align:right;"> 4002 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 843 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> movie </td>
+   <td style="text-align:right;"> 3053 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 797 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> one </td>
+   <td style="text-align:right;"> 2618 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 862 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> like </td>
+   <td style="text-align:right;"> 1836 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 759 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> just </td>
+   <td style="text-align:right;"> 1562 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 685 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> even </td>
+   <td style="text-align:right;"> 1381 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 670 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> good </td>
+   <td style="text-align:right;"> 1130 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 573 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> time </td>
+   <td style="text-align:right;"> 1112 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 599 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> can </td>
+   <td style="text-align:right;"> 1084 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 606 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> get </td>
+   <td style="text-align:right;"> 1038 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 559 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> bad </td>
+   <td style="text-align:right;"> 1021 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 509 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> much </td>
+   <td style="text-align:right;"> 998 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 559 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> story </td>
+   <td style="text-align:right;"> 905 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 501 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:right;"> 895 </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 494 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> plot </td>
+   <td style="text-align:right;"> 876 </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 509 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> characters </td>
+   <td style="text-align:right;"> 873 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 478 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> two </td>
+   <td style="text-align:right;"> 867 </td>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 509 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> make </td>
+   <td style="text-align:right;"> 819 </td>
+   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 509 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> first </td>
+   <td style="text-align:right;"> 806 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 485 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> really </td>
+   <td style="text-align:right;"> 781 </td>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:right;"> 436 </td>
+   <td style="text-align:left;"> neg </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> film </td>
+   <td style="text-align:right;"> 4872 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 884 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> one </td>
+   <td style="text-align:right;"> 2908 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 882 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> movie </td>
+   <td style="text-align:right;"> 2393 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 727 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> like </td>
+   <td style="text-align:right;"> 1719 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 711 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> just </td>
+   <td style="text-align:right;"> 1339 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 642 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> story </td>
+   <td style="text-align:right;"> 1214 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 559 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> also </td>
+   <td style="text-align:right;"> 1200 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 604 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> good </td>
+   <td style="text-align:right;"> 1193 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 578 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> even </td>
+   <td style="text-align:right;"> 1175 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 619 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> time </td>
+   <td style="text-align:right;"> 1171 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 625 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> can </td>
+   <td style="text-align:right;"> 1149 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 599 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> much </td>
+   <td style="text-align:right;"> 1026 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 569 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:right;"> 1013 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 519 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> characters </td>
+   <td style="text-align:right;"> 986 </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 487 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> life </td>
+   <td style="text-align:right;"> 983 </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 470 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> first </td>
+   <td style="text-align:right;"> 964 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 535 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> well </td>
+   <td style="text-align:right;"> 962 </td>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 535 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> two </td>
+   <td style="text-align:right;"> 960 </td>
+   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 515 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> see </td>
+   <td style="text-align:right;"> 954 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 522 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> way </td>
+   <td style="text-align:right;"> 915 </td>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:right;"> 525 </td>
+   <td style="text-align:left;"> pos </td>
+  </tr>
 </tbody>
-</table>
-
+</table></div>
 </div>
 
 </div>
@@ -5727,7 +6028,7 @@ head(features_dfm_movie, n=40)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5752,6 +6053,18 @@ head(features_dfm_movie, n=40)</div>
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Este gráfico muestra las <strong>20 <em>features</em></strong> más frecuentes en los comentarios positivos y negativos. Cada punto representa una palabra y su frecuencia dentro del grupo de sentimiento correspondiente.</p>
+
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -5837,7 +6150,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5910,7 +6223,7 @@ head(features_dfm_movie)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5977,8 +6290,50 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="interpretacion-frecuencia-de-terminos-por-sentimiento">&#128202; Interpretaci&#243;n: Frecuencia de T&#233;rminos por Sentimiento<a class="anchor-link" href="#interpretacion-frecuencia-de-terminos-por-sentimiento">&#182;</a></h4><p>Este gráfico compara la frecuencia de los términos más comunes entre reseñas <strong>positivas</strong> y <strong>negativas</strong>.</p>
+<p><strong>Dominado por vocabulario genérico, no por sentimiento.</strong> Los términos más frecuentes — <em>film</em>, <em>one</em>, <em>movie</em> — son 3 a 5 veces más frecuentes que el resto, y son palabras temáticas comunes a cualquier reseña de cine, sin importar su polaridad. Esto es esperable: la frecuencia bruta ordena por qué tan común es una palabra en general, no por cuánto distingue a los dos grupos. Esta es justamente la limitación que aborda el análisis de <em>keyness</em>: una prueba de chi-cuadrado le daría menos peso a estos términos, ya que no diferencian a los grupos aunque sean las barras más altas aquí.</p>
+<p><strong>La asimetría entre "film" y "movie" es el hallazgo más interesante.</strong> Las reseñas positivas usan más <em>film</em> (~4.900 vs. ~4.000), mientras que las negativas usan más <em>movie</em> (~3.050 vs. ~2.400) — el patrón se invierte entre estos casi-sinónimos. Se trata de un efecto de registro conocido: <em>film</em> tiene una connotación ligeramente más formal o apreciativa, mientras que <em>movie</em> es más casual o desdeñosa, por lo que la elección entre ambas palabras refleja la postura del autor aun cuando el tema (ambas se refieren a la misma película) es idéntico.</p>
+<p><strong>Bajo los primeros 3-4 términos, los pares positivo/negativo aparecen muy cercanos entre sí</strong> — <em>like</em>, <em>just</em>, <em>even</em>, <em>also</em>, <em>time</em>, <em>can</em> muestran puntos casi superpuestos entre ambos grupos. Son palabras de uso general utilizadas a tasas similares sin importar el sentimiento, lo que refuerza que una alta frecuencia bruta no es, por sí sola, una buena señal de a qué grupo "pertenece" un término.</p>
+<p><strong>"good" y "bad" son un buen ejemplo pedagógico.</strong> Se esperaría que <em>good</em> se incline hacia lo positivo y <em>bad</em> hacia lo negativo, y existe una leve tendencia en esa dirección, pero ambos aparecen con alta frecuencia en <strong>ambos</strong> grupos — probablemente porque las reseñas negativas usan <em>good</em> en contextos negados o comparativos ("not good", "should've been good"), y las positivas mencionan a los "bad guys" o tramas "so bad it's good". Es un ejemplo concreto de por qué la frecuencia de palabras de sentimiento, sin manejo de negación o contexto, es una señal débil — lo que motiva tanto el análisis de <em>keyness</em> (significancia estadística de la diferencia) como los métodos más sensibles al contexto (el análisis de sentimiento basado en LLM de la Unidad 6).</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="por-que-keyness-es-inmune-a-las-palabras-genericas-frecuentes">&#128737;&#65039; &#191;Por qu&#233; <em>keyness</em> es inmune a las palabras gen&#233;ricas frecuentes?<a class="anchor-link" href="#por-que-keyness-es-inmune-a-las-palabras-genericas-frecuentes">&#182;</a></h3><p>El gráfico anterior mostró que <em>film</em>, <em>one</em> y <em>movie</em> dominan el ranking de frecuencia bruta, simplemente porque son palabras comunes a <strong>cualquier</strong> reseña de cine. La prueba de <em>keyness</em> (chi-cuadrado ) evita este problema porque no mide la frecuencia absoluta de una palabra, sino <strong>qué tan lejos está su uso observado de lo que esperaríamos si esa palabra se usara exactamente en la misma proporción en ambos grupos</strong>.</p>
+<p>Concretamente, para cada término la prueba compara:</p>
+<ul>
+<li><strong>Frecuencia observada (O):</strong> cuántas veces aparece el término en cada grupo (positivo / negativo).</li>
+<li><strong>Frecuencia esperada (E):</strong> cuántas veces <em>debería</em> aparecer en cada grupo si el término se usara exactamente en la misma proporción en ambos — calculada a partir del total de palabras de cada grupo.</li>
+</ul>
+$$
+\chi^2 = \sum \frac{(O - E)^2}{E}
+$$<p>Para una palabra genérica como <em>movie</em>, que se usa a una tasa <strong>similar</strong> en reseñas positivas y negativas, la frecuencia observada en cada grupo será muy parecida a la esperada ($O \approx E$), sin importar qué tan alta sea su frecuencia absoluta — su contribución al estadístico $\chi^2$ será cercana a cero.</p>
+<p>En cambio, una palabra mucho menos frecuente en términos absolutos, pero usada de forma <strong>desproporcionada</strong> entre grupos (por ejemplo, un adjetivo fuertemente asociado a un sentimiento), generará una desviación grande entre $O$ y $E$, y por lo tanto un $\chi^2$ alto — aunque aparezca muchas menos veces que <em>movie</em> en el corpus completo.</p>
+<blockquote><p>📌 <strong>Idea clave:</strong> <em>keyness</em> no pregunta "¿qué tan común es esta palabra?", sino "¿qué tan distinto es su uso entre grupos, en comparación con lo que esperaríamos si no hubiera diferencia alguna?". Por eso logra destacar vocabulario realmente distintivo en vez de simplemente las palabras más frecuentes del corpus.</p>
+</blockquote>
+<p>⚠️ Una advertencia importante: con corpus muy grandes (miles de documentos), incluso diferencias proporcionales pequeñas pueden volverse estadísticamente significativas. Por eso conviene interpretar el valor de $\chi^2$ junto con una medida de <strong>tamaño del efecto</strong> (por ejemplo, la razón de frecuencias o el <em>log-ratio</em> que vimos en la Unidad 3), y no solo con la significancia estadística.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h2 id="iv-dispersion-textual">IV. Dispersi&#243;n Textual<a class="anchor-link" href="#iv-dispersion-textual">&#182;</a></h2>
+<hr>
+<h2 id="iv-dispersion-textual">&#128204; IV. Dispersi&#243;n Textual<a class="anchor-link" href="#iv-dispersion-textual">&#182;</a></h2><hr>
+
 </div>
 </div>
 </div>
@@ -6015,6 +6370,18 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Investiguemos cómo los Presidentes estadounidenses  utilizan "God" o "God bless" en sus discursos inaugurales.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En la siguiente celda, convertimos el corpus en <strong>tokens</strong> y visualizamos algunas de sus <strong>variables asociadas</strong> (<em>docvars</em>). Luego, seleccionamos los discursos pronunciados desde <strong>1981</strong> en adelante y utilizamos <code>kwic()</code> (<em>Keyword in Context</em>) para mostrar cada aparición de la palabra <strong>"god"</strong> junto con las tres palabras anteriores y posteriores.</p>
 
 </div>
 </div>
@@ -6193,7 +6560,7 @@ tail(kw_god_bless) %>%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="textplot_xray"><strong>textplot_xray()</strong><a class="anchor-link" href="#textplot_xray">&#182;</a></h4><p>es una función utilizada para crear visualizaciones de análisis de texto denominadas "rayos X". Estas visualizaciones permiten examinar la distribución de las palabras clave a lo largo de un texto o corpus.</p>
+<h3 id="textplot_xray"><code>textplot_xray()</code><a class="anchor-link" href="#textplot_xray">&#182;</a></h3><p>Esta es una función utilizada para crear visualizaciones de análisis de texto denominadas "rayos X". Estas visualizaciones permiten examinar la distribución de las palabras clave a lo largo de un texto o corpus.</p>
 
 </div>
 </div>
