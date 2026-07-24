@@ -751,6 +751,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    ---
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-pipeline-de-nlp" class="md-nav__link">
+    ⚙️ III. Pipeline de NLP
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4106,6 +4120,36 @@ citizen
 
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<hr>
+<h2 id="iii-pipeline-de-nlp">&#9881;&#65039; III. Pipeline de NLP<a class="anchor-link" href="#iii-pipeline-de-nlp">&#182;</a></h2><hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El siguiente diagrama resume el flujo de trabajo típico de un proyecto de <strong>Natural Language Processing (NLP)</strong>.</p>
+<p><img src="../images/pipeline_NLP.png" alt="Pipeline de NLP"></p>
+<p>Todo comienza con el <strong>texto crudo</strong>, el cual se organiza en un <strong>corpus</strong>, es decir, una colección de documentos acompañados de información adicional (<em>docvars</em>), como el autor, la fecha o la categoría del documento.</p>
+<p>A continuación, el corpus se transforma mediante la <strong>tokenization</strong>, donde cada documento se divide en unidades básicas (<em>tokens</em>), generalmente palabras o signos de puntuación. A partir de estos <em>tokens</em> se construye una <strong>Document-Feature Matrix (DFM)</strong>, una matriz en la que las filas representan documentos, las columnas representan <em>features</em> (normalmente palabras) y cada celda contiene la frecuencia con que una <em>feature</em> aparece en un documento.</p>
+<p>La <strong>DFM</strong> constituye el punto de partida para gran parte de los análisis de NLP. Entre ellos se encuentran el cálculo de <strong>frecuencias</strong> de palabras, el análisis de <strong>keyness</strong> para identificar términos característicos de un grupo de documentos, el estudio de la <strong>dispersión</strong> de palabras a lo largo del corpus y el <strong>topic modelling</strong>, que permite descubrir automáticamente los principales temas presentes en una colección de textos.</p>
+
+</div>
+</div>
 </div>
 </div>
 </div>
