@@ -441,6 +441,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#que-son-los-transformers" class="md-nav__link">
+    🤖 ¿Qué son los Transformers?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-habituales-del-parametro-temperature" class="md-nav__link">
+    🌡️ Valores habituales del parámetro temperature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exportar-la-respuesta-a-pdf" class="md-nav__link">
     📄 Exportar la respuesta a PDF
   </a>
@@ -1566,7 +1580,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1607,7 +1621,7 @@ df.head()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -1715,7 +1729,7 @@ df.head()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1769,7 +1783,7 @@ def show_table(df, height="500px"):
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2390,13 +2404,39 @@ Top palabras asociadas a reseñas NEGATIVAS:
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="que-son-los-transformers">&#129302; &#191;Qu&#233; son los <em>Transformers</em>?<a class="anchor-link" href="#que-son-los-transformers">&#182;</a></h3><p>Los <strong>Transformers</strong> son una arquitectura de redes neuronales introducida por Vaswani et al. (2017) que revolucionó el procesamiento del lenguaje natural. A diferencia de modelos anteriores, pueden analizar simultáneamente todas las palabras de un texto mediante un mecanismo denominado <strong>self-attention</strong>, lo que les permite capturar relaciones entre palabras cercanas y distantes de manera muy eficiente.</p>
+<p>La mayoría de los <strong>Large Language Models (LLMs)</strong> modernos, como GPT, Llama y Mistral, están basados en esta arquitectura. En este notebook utilizaremos un modelo <em>Transformer</em> disponible en Hugging Face para interpretar automáticamente los resultados del análisis de <strong>keyness</strong>.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En la celda cargamos un <strong>Large Language Model (LLM)</strong> mediante la biblioteca <code>transformers</code> de Hugging Face. El modelo <strong>Qwen2.5-3B-Instruct</strong> está especializado en seguir instrucciones y generar respuestas en lenguaje natural.</p>
+<p>La función <code>pipeline()</code> crea un generador de texto listo para usar. Además, el código detecta automáticamente si existe una <strong>GPU</strong> disponible y, en ese caso, aprovecha sus capacidades para acelerar la inferencia; de lo contrario, el modelo se ejecuta en la <strong>CPU</strong>.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2455,9 +2495,7 @@ generator = pipeline(
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/Users/fernandodiaz/dev-env/lib/python3.13/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
-Loading checkpoint shards: 100%|██████████| 2/2 [00:01&lt;00:00,  1.73it/s]
+<pre>Loading checkpoint shards: 100%|██████████| 2/2 [00:07&lt;00:00,  3.98s/it]
 Device set to use mps
 </pre>
 </div>
@@ -2468,13 +2506,32 @@ Device set to use mps
 </div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>En la siguiente celda construimos el <strong>prompt</strong> que será enviado al <strong>LLM</strong>. Primero, convertimos las listas de palabras más distintivas de las reseñas <strong>positivas</strong> y <strong>negativas</strong> en texto. Luego, incorporamos esas listas en una instrucción donde solicitamos al modelo que:</p>
+<ul>
+<li>identifique patrones de vocabulario característicos de cada grupo;</li>
+<li>destaque palabras que resulten inesperadas o difíciles de interpretar;</li>
+<li>proponga una hipótesis sobre por qué esos términos aparecen como los más distintivos según el análisis de <strong>keyness</strong>.</li>
+</ul>
+<p>El <em>prompt</em> se envía al modelo mediante la función <code>generator()</code>. Los parámetros <code>max_new_tokens=500</code> limitan la longitud máxima de la respuesta, <code>temperature=0.7</code> introduce un grado moderado de creatividad en la generación del texto y <code>do_sample=True</code> permite que el modelo genere respuestas de forma probabilística en lugar de seleccionar siempre la opción más probable.</p>
+<p>Finalmente, la respuesta generada se extrae de la salida del modelo y se imprime en pantalla para su análisis.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2559,37 +2616,54 @@ print(respuesta)</div>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Las palabras distintivas en ambas listas ofrecen patrones temáticos y de vocabulario significativos.
-
-Palabras asociadas a reseñas positivas destacan temas como la experiencia humana (&#34;life&#34;, &#34;family&#34;), personajes icónicos (&#34;jackie&#34;, &#34;truman&#34;, &#34;mulan&#34;, &#34;damon&#34;, &#34;cameron&#34;), grandes éxitos (&#34;great&#34;, &#34;excellent&#34;, &#34;wonderful&#34;, &#34;outstanding&#34;, &#34;perfect&#34;, &#34;memorable&#34;, &#34;fictitious&#34;), y películas icónicas (&#34;titanic&#34;, &#34;toy&#34;, &#34;lebowski&#34;, &#34;jedi&#34;). Estas palabras sugieren una reseña que se centra en experiencias humanas, personajes memorables y grandes éxitos cinematográficos.
-
-Por otro lado, las palabras asociadas a reseñas negativas se concentran en aspectos negativos de las películas, incluyendo malos resultados (&#34;bad&#34;, &#34;worst&#34;, &#34;stupid&#34;, &#34;boring&#34;, &#34;mess&#34;), problemas con los guiones (&#34;plot&#34;, &#34;script&#34;), y elementos que se consideran irrelevantes o inútiles (&#34;waste&#34;, &#34;nothing&#34;, &#34;lame&#34;, &#34;terrible&#34;). Esto sugiere una crítica enfocada en la calidad del producto, los defectos del guion y la falta de contenido relevante.
-
-La palabra &#34;political&#34; es sorprendente en la lista de palabras positivas. Aunque podría implicar una crítica política implícita, generalmente este término no es asociado directamente con el análisis de películas. En cambio, &#34;wasted&#34; es sorprendentemente presente en la lista de palabras negativas, ya que sugiere un mal uso de recursos cinematográficos, aunque no está relacionada directamente con la calidad del contenido.
-
-El estadístico de keyness sugiere que las palabras más distintivas no siempre son las más obvias. Palabras como &#34;great&#34; y &#34;excellent&#34; podrían ser consideradas muy positivas, pero su alta frecuencia y valor en la lista de palabras positivas indica que pueden no ser lo suficientemente distintivas para distinguirlas claramente de las reseñas neutras o negativas. Por otro lado, términos más subrepticios como &#34;waste&#34; y &#34;mess&#34; pueden ser más distintivos porque son menos obvios, pero aún así indican problemas importantes en las películas.
-</pre>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="valores-habituales-del-parametro-temperature">&#127777;&#65039; Valores habituales del par&#225;metro <code>temperature</code><a class="anchor-link" href="#valores-habituales-del-parametro-temperature">&#182;</a></h3><p>El parámetro <code>temperature</code> controla el grado de aleatoriedad en la generación de texto. Valores bajos producen respuestas más deterministas y consistentes, mientras que valores altos favorecen respuestas más diversas y creativas.</p>
+<table>
+<thead><tr>
+<th style="text-align:center"><strong>Temperature</strong></th>
+<th><strong>Comportamiento</strong></th>
+<th><strong>Uso típico</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>0.0</strong></td>
+<td>Respuesta prácticamente determinista; el modelo elige siempre la palabra más probable.</td>
+<td>Clasificación, extracción de información, respuestas factuales.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>0.2 – 0.4</strong></td>
+<td>Muy consistente, con poca variabilidad.</td>
+<td>Resúmenes, traducción, generación de código.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>0.5 – 0.8</strong></td>
+<td>Equilibrio entre precisión y creatividad.</td>
+<td>Asistentes conversacionales e interpretación de resultados.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>0.9 – 1.2</strong></td>
+<td>Mayor diversidad y creatividad, aunque con menor consistencia.</td>
+<td>Lluvia de ideas, escritura creativa.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>&gt; 1.2</strong></td>
+<td>Respuestas muy aleatorias; puede disminuir la coherencia.</td>
+<td>Experimentación.</td>
+</tr>
+</tbody>
+</table>
+<p>En este notebook utilizamos <code>temperature = 0.7</code>, ya que proporciona un buen equilibrio entre consistencia y creatividad para interpretar los resultados del análisis de <strong>keyness</strong>.</p>
 
 </div>
-
 </div>
-
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
