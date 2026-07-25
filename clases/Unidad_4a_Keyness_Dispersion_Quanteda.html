@@ -19,7 +19,7 @@
     
     
       
-        <title>✳️ Keyness y Dispersión Textual - Procesamiento de Lenguaje Natural</title>
+        <title>Keyness y Dispersión Textual - Procesamiento de Lenguaje Natural</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ✳️ Keyness y Dispersión Textual
+              Keyness y Dispersión Textual
             
           </span>
         </div>
@@ -434,18 +434,18 @@
       
         <li class="md-nav__item">
   <a href="#i-criticas-de-cine" class="md-nav__link">
-    I. Críticas de Cine
+    🎬 I. Críticas de Cine
   </a>
   
-    <nav class="md-nav" aria-label="I. Críticas de Cine">
+    <nav class="md-nav" aria-label="🎬 I. Críticas de Cine">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#que-es-imdb" class="md-nav__link">
-    🎬  ¿Qué es IMDb?
+    🍿  ¿Qué es IMDb?
   </a>
   
-    <nav class="md-nav" aria-label="🎬  ¿Qué es IMDb?">
+    <nav class="md-nav" aria-label="🍿  ¿Qué es IMDb?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -660,6 +660,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-el-analisis-de-keyness" class="md-nav__link">
+    🖼️ ¿Cómo funciona el análisis de Keyness?
+  </a>
   
 </li>
         
@@ -1930,14 +1937,14 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="keyness-y-dispersion-textual">&#10035;&#65039; Keyness y Dispersi&#243;n Textual<a class="anchor-link" href="#keyness-y-dispersion-textual">&#182;</a></h1><hr>
+<h1 id="keyness-y-dispersion-textual">Keyness y Dispersi&#243;n Textual<a class="anchor-link" href="#keyness-y-dispersion-textual">&#182;</a></h1><hr>
 <p>Los conceptos de <strong>keyness</strong> y <strong>dispersión textual</strong> permiten analizar el lenguaje desde dos perspectivas complementarias:</p>
 <ul>
 <li>Qué términos son característicos de un grupo de textos.</li>
 <li>Cómo se distribuyen esos términos a lo largo del corpus.</li>
 </ul>
 <hr>
-<h4 id="keyness">&#128273; Keyness<a class="anchor-link" href="#keyness">&#182;</a></h4><p>El análisis de <em>keyness</em> identifica las palabras que son <strong>estadísticamente más características o distintivas</strong> de un grupo de documentos en comparación con otro.</p>
+<h3 id="keyness">&#128273; Keyness<a class="anchor-link" href="#keyness">&#182;</a></h3><p>El análisis de <em>keyness</em> identifica las palabras que son <strong>estadísticamente más características o distintivas</strong> de un grupo de documentos en comparación con otro.</p>
 <p>Se basa en diferencias de frecuencia entre grupos y puede utilizar estadísticas como:</p>
 <ul>
 <li><strong>Chi-cuadrado</strong>.</li>
@@ -1952,7 +1959,7 @@ Licensed under the Apache License, Version 2.0.
 <li>Explorar diferencias léxicas entre categorías de documentos.</li>
 </ul>
 <hr>
-<h4 id="dispersion-textual">&#129517; Dispersi&#243;n textual<a class="anchor-link" href="#dispersion-textual">&#182;</a></h4><p>La <strong>dispersión textual</strong> describe cómo se distribuye una palabra o expresión a lo largo de un corpus.</p>
+<h3 id="dispersion-textual">&#129517; Dispersi&#243;n textual<a class="anchor-link" href="#dispersion-textual">&#182;</a></h3><p>La <strong>dispersión textual</strong> describe cómo se distribuye una palabra o expresión a lo largo de un corpus.</p>
 <p>Una palabra puede ser muy frecuente, pero aparecer concentrada en pocos documentos o en una sección específica del corpus. En cambio, otra palabra puede tener una frecuencia menor, pero estar distribuida de manera más uniforme.</p>
 <p>Este análisis permite:</p>
 <ul>
@@ -1962,7 +1969,7 @@ Licensed under the Apache License, Version 2.0.
 <li>Evaluar la consistencia de un término a lo largo del corpus.</li>
 </ul>
 <hr>
-<h4 id="dos-perspectivas-complementarias">&#9878;&#65039; Dos perspectivas complementarias<a class="anchor-link" href="#dos-perspectivas-complementarias">&#182;</a></h4><ul>
+<h3 id="dos-perspectivas-complementarias">&#9878;&#65039; Dos perspectivas complementarias<a class="anchor-link" href="#dos-perspectivas-complementarias">&#182;</a></h3><ul>
 <li><p><strong>Keyness</strong> responde:</p>
 <blockquote><p>¿Qué palabras permiten diferenciar estadísticamente un grupo de otro?</p>
 </blockquote>
@@ -1984,7 +1991,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2031,16 +2038,16 @@ install.packages("quanteda.textplots")</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpSTcR7d/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpC3EKGL/downloaded_packages
 
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpSTcR7d/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpC3EKGL/downloaded_packages
 
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpSTcR7d/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpC3EKGL/downloaded_packages
 
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpSTcR7d/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpC3EKGL/downloaded_packages
 </pre>
 </div>
 </div>
@@ -2056,7 +2063,7 @@ The downloaded binary packages are in
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2071,23 +2078,21 @@ The downloaded binary packages are in
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
 
     <span class="nf">library</span><span class="p">(</span><span class="s">&quot;quanteda.textmodels&quot;</span><span class="p">)</span>
     <span class="nf">library</span><span class="p">(</span><span class="s">&quot;quanteda.textplots&quot;</span><span class="p">)</span>
     <span class="nf">library</span><span class="p">(</span><span class="s">&quot;quanteda.textstats&quot;</span><span class="p">)</span>
     <span class="nf">library</span><span class="p">(</span><span class="s">&quot;quanteda&quot;</span><span class="p">)}</span>
-<span class="p">)</span>
+<span class="p">))</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">suppressPackageStartupMessages({
+<div id="cell-2" class="clipboard-copy-txt">suppressWarnings(suppressPackageStartupMessages({
 
     library("quanteda.textmodels")
     library("quanteda.textplots")
     library("quanteda.textstats")
     library("quanteda")}
-)
-
-</div>
+))</div>
     
         </div>
     </div>
@@ -2124,13 +2129,13 @@ The downloaded binary packages are in
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2145,46 +2150,20 @@ The downloaded binary packages are in
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
-    <span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;data.table&quot;</span><span class="p">)</span>  
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
+    <span class="c1">#install.packages(&quot;data.table&quot;)</span>
     <span class="nf">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)}</span>
-<span class="p">)</span>
+<span class="p">))</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">suppressPackageStartupMessages({
-    install.packages("data.table")  
+<div id="cell-3" class="clipboard-copy-txt">suppressWarnings(suppressPackageStartupMessages({
+    #install.packages("data.table")
     library(data.table)}
-)
-</div>
+))</div>
     
         </div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpSTcR7d/downloaded_packages
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2194,7 +2173,7 @@ The downloaded binary packages are in
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2256,11 +2235,11 @@ getDTthreads()          # Verifica cuántos núcleos están activos
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 <hr>
-<h2 id="i-criticas-de-cine">I. Cr&#237;ticas de Cine<a class="anchor-link" href="#i-criticas-de-cine">&#182;</a></h2><hr>
+<h2 id="i-criticas-de-cine">&#127916; I. Cr&#237;ticas de Cine<a class="anchor-link" href="#i-criticas-de-cine">&#182;</a></h2><hr>
 <p>En esta unidad trabajaremos con el clásico corpus de reseñas de películas de <strong>Pang &amp; Lee (2004)</strong>, una de las colecciones de datos más utilizadas en investigación sobre <strong>Procesamiento de Lenguaje Natural (NLP)</strong>.</p>
 <p>Cada reseña posee una etiqueta que indica si la crítica original publicada en <strong>IMDb</strong> fue <strong>positiva</strong> (<code>pos</code>) o <strong>negativa</strong> (<code>neg</code>), según la calificación otorgada por el autor.</p>
 <hr>
-<h3 id="que-es-imdb">&#127916;  &#191;Qu&#233; es IMDb?<a class="anchor-link" href="#que-es-imdb">&#182;</a></h3><p><strong>IMDb (Internet Movie Database)</strong> es una de las bases de datos cinematográficas más importantes del mundo. Contiene información sobre películas, series, actores, directores y millones de reseñas escritas por usuarios.</p>
+<h3 id="que-es-imdb">&#127871;  &#191;Qu&#233; es IMDb?<a class="anchor-link" href="#que-es-imdb">&#182;</a></h3><p><strong>IMDb (Internet Movie Database)</strong> es una de las bases de datos cinematográficas más importantes del mundo. Contiene información sobre películas, series, actores, directores y millones de reseñas escritas por usuarios.</p>
 <hr>
 <h4 id="caracteristicas-del-corpus">&#129534; Caracter&#237;sticas del corpus<a class="anchor-link" href="#caracteristicas-del-corpus">&#182;</a></h4><ul>
 <li><strong>2.000 reseñas</strong> de películas.</li>
@@ -2306,7 +2285,7 @@ getDTthreads()          # Verifica cuántos núcleos están activos
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2407,7 +2386,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2500,7 +2479,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2559,7 +2538,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2644,7 +2623,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2736,7 +2715,7 @@ show_text <- function(x, height = "400px") {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3737,7 +3716,7 @@ show_text <- function(x, height = "400px") {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3808,7 +3787,7 @@ show_text <- function(x, height = "400px") {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3864,7 +3843,7 @@ show_text <- function(x, height = "400px") {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3968,7 +3947,7 @@ if you're in the mood for a good suspense film , though , stake out something el
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4057,7 +4036,7 @@ if you're in the mood for a good suspense film , though , stake out something el
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4072,13 +4051,13 @@ if you're in the mood for a good suspense film , though , stake out something el
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">movie_toks</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_moviereviews</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,)</span> <span class="o">%&gt;%</span>
-                     <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">movie_toks</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_moviereviews</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,)</span> <span class="o">|&gt;</span>
+                     <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">|&gt;</span>
                      <span class="nf">tokens_tolower</span><span class="p">()</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">movie_toks</span><span class="p">)</span>
 </pre></div>
-<div id="cell-15" class="clipboard-copy-txt">movie_toks <- tokens(data_corpus_moviereviews, remove_punct = TRUE,) %>%
-                     tokens_remove(pattern = stopwords("en")) %>%
+<div id="cell-15" class="clipboard-copy-txt">movie_toks <- tokens(data_corpus_moviereviews, remove_punct = TRUE,) |>
+                     tokens_remove(pattern = stopwords("en")) |>
                      tokens_tolower()
 print(movie_toks)
 </div>
@@ -4151,7 +4130,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4277,7 +4256,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4311,7 +4290,7 @@ neg_dfm <- dfm_subset(movie_dfm, sentiment == "neg")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4417,7 +4396,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4477,7 +4456,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4547,7 +4526,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4882,13 +4861,16 @@ docs              plot two teen couples go church party drink drive get
 <h3 id="para-que-sirve">&#129504; &#191;Para qu&#233; sirve?<a class="anchor-link" href="#para-que-sirve">&#182;</a></h3><ul>
 <li>Detectar vocabulario que distingue dos categorías (por ejemplo, reseñas positivas vs. negativas)</li>
 <li>Comparar el discurso de distintos autores, partidos, medios o períodos históricos</li>
-<li>Identificar términos ideológicamente cargados o representativos</li>
+<li>Identificar términos ideológicamente cargados o representativos.</li>
 </ul>
 <hr>
 <h4 id="mas-informacion">&#128279; M&#225;s informaci&#243;n<a class="anchor-link" href="#mas-informacion">&#182;</a></h4><p>Explicación introductoria aquí: <a href="https://alvinntnu.github.io/NTNU_ENC2036_LECTURES/keyword-analysis.html">Keyness - Alvin Leung, NTNU</a></p>
 <hr>
 <blockquote><p>✅ <code>textstat_keyness()</code> es una herramienta fundamental para ir más allá del conteo de palabras y entender <strong>qué palabras realmente diferencian grupos de documentos</strong> dentro de un corpus.</p>
 </blockquote>
+<hr>
+<h3 id="como-funciona-el-analisis-de-keyness">&#128444;&#65039; &#191;C&#243;mo funciona el an&#225;lisis de <em>Keyness</em>?<a class="anchor-link" href="#como-funciona-el-analisis-de-keyness">&#182;</a></h3><p>La siguiente figura resume el proceso completo del análisis de <strong>keyness</strong>, desde la comparación entre un corpus y un corpus de referencia hasta la identificación de las palabras más distintivas y su interpretación.</p>
+<p><img src="../images/Keyness.png" alt="Proceso de análisis de Keyness"></p>
 
 </div>
 </div>
@@ -4899,7 +4881,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5199,7 +5181,7 @@ $$<p>donde:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5277,7 +5259,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5347,7 +5329,7 @@ getwd()  # Confirma dónde quedó guardado el archivo</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5520,7 +5502,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5537,16 +5519,16 @@ _E_x_a_m_p_l_e_s:
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">corp_pos</span> <span class="o">&lt;-</span> <span class="nf">corpus_subset</span><span class="p">(</span><span class="n">data_corpus_moviereviews</span><span class="p">,</span> <span class="n">sentiment</span> <span class="o">==</span> <span class="s">&quot;pos&quot;</span><span class="p">)</span>
 <span class="n">corp_neg</span> <span class="o">&lt;-</span> <span class="nf">corpus_subset</span><span class="p">(</span><span class="n">data_corpus_moviereviews</span><span class="p">,</span> <span class="n">sentiment</span> <span class="o">==</span> <span class="s">&quot;neg&quot;</span><span class="p">)</span>
-<span class="n">toks_pos</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">corp_pos</span><span class="p">)</span> <span class="o">%&gt;%</span>
+<span class="n">toks_pos</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">corp_pos</span><span class="p">)</span> <span class="o">|&gt;</span>
             <span class="nf">tokens_tolower</span><span class="p">()</span>
-<span class="n">toks_neg</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">corp_neg</span><span class="p">)</span> <span class="o">%&gt;%</span>
+<span class="n">toks_neg</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">corp_neg</span><span class="p">)</span> <span class="o">|&gt;</span>
             <span class="nf">tokens_tolower</span><span class="p">()</span>
 </pre></div>
 <div id="cell-26" class="clipboard-copy-txt">corp_pos <- corpus_subset(data_corpus_moviereviews, sentiment == "pos")
 corp_neg <- corpus_subset(data_corpus_moviereviews, sentiment == "neg")
-toks_pos <- tokens(corp_pos) %>%
+toks_pos <- tokens(corp_pos) |>
             tokens_tolower()
-toks_neg <- tokens(corp_neg) %>%
+toks_neg <- tokens(corp_neg) |>
             tokens_tolower()</div>
     
         </div>
@@ -5562,7 +5544,7 @@ toks_neg <- tokens(corp_neg) %>%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5577,10 +5559,10 @@ toks_neg <- tokens(corp_neg) %>%
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">kwic_toks_pos</span> <span class="o">&lt;-</span><span class="n">toks_pos</span> <span class="o">%&gt;%</span> <span class="nf">kwic</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;great&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">kwic_toks_pos</span> <span class="o">&lt;-</span><span class="n">toks_pos</span> <span class="o">|&gt;</span> <span class="nf">kwic</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;great&quot;</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="nf">head</span><span class="p">(</span><span class="n">kwic_toks_pos</span><span class="p">,</span> <span class="m">15</span><span class="p">))</span>
 </pre></div>
-<div id="cell-27" class="clipboard-copy-txt">kwic_toks_pos <-toks_pos %>% kwic(pattern = "great")
+<div id="cell-27" class="clipboard-copy-txt">kwic_toks_pos <-toks_pos |> kwic(pattern = "great")
 print(head(kwic_toks_pos, 15))</div>
     
         </div>
@@ -5677,7 +5659,7 @@ print(head(kwic_toks_pos, 15))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6028,7 +6010,7 @@ features_dfm_movie |> show_table()
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6072,7 +6054,7 @@ features_dfm_movie |> show_table()
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6150,7 +6132,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6223,7 +6205,7 @@ head(features_dfm_movie)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6392,7 +6374,7 @@ $$<p>Para una palabra genérica como <em>movie</em>, que se usa a una tasa <stro
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6410,17 +6392,17 @@ $$<p>Para una palabra genérica como <em>movie</em>, que se usa a una tasa <stro
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">data_tokens_inaugural</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="nf">docvars</span><span class="p">(</span><span class="n">data_tokens_inaugural</span><span class="p">),</span><span class="n">n</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
 
-<span class="n">kw_god</span> <span class="o">&lt;-</span> <span class="nf">tokens_subset</span><span class="p">(</span><span class="n">data_tokens_inaugural</span><span class="p">,</span> <span class="n">Year</span> <span class="o">&gt;</span> <span class="m">1980</span><span class="p">)</span> <span class="o">%&gt;%</span>
+<span class="n">kw_god</span> <span class="o">&lt;-</span> <span class="nf">tokens_subset</span><span class="p">(</span><span class="n">data_tokens_inaugural</span><span class="p">,</span> <span class="n">Year</span> <span class="o">&gt;</span> <span class="m">1980</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">kwic</span><span class="p">(</span><span class="s">&quot;god&quot;</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
-<span class="nf">tail</span><span class="p">(</span><span class="n">kw_god</span><span class="p">)</span> <span class="o">%&gt;%</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">kw_god</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">print</span><span class="p">()</span>
 </pre></div>
 <div id="cell-33" class="clipboard-copy-txt">data_tokens_inaugural <- tokens(data_corpus_inaugural)
 head(docvars(data_tokens_inaugural),n=3)
 
-kw_god <- tokens_subset(data_tokens_inaugural, Year > 1980) %>%
+kw_god <- tokens_subset(data_tokens_inaugural, Year > 1980) |>
   kwic("god", window = 3)
-tail(kw_god) %>%
+tail(kw_god) |>
   print()</div>
     
         </div>
@@ -6491,7 +6473,7 @@ tail(kw_god) %>%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6506,14 +6488,14 @@ tail(kw_god) %>%
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">kw_god_bless</span> <span class="o">&lt;-</span> <span class="nf">tokens_subset</span><span class="p">(</span><span class="n">data_tokens_inaugural</span><span class="p">,</span> <span class="n">Year</span> <span class="o">&gt;</span> <span class="m">1970</span><span class="p">)</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">kw_god_bless</span> <span class="o">&lt;-</span> <span class="nf">tokens_subset</span><span class="p">(</span><span class="n">data_tokens_inaugural</span><span class="p">,</span> <span class="n">Year</span> <span class="o">&gt;</span> <span class="m">1970</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">kwic</span><span class="p">(</span><span class="nf">phrase</span><span class="p">(</span><span class="s">&quot;god bless&quot;</span><span class="p">),</span> <span class="n">window</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
-<span class="nf">tail</span><span class="p">(</span><span class="n">kw_god_bless</span><span class="p">)</span> <span class="o">%&gt;%</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">kw_god_bless</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">print</span><span class="p">()</span>
 </pre></div>
-<div id="cell-34" class="clipboard-copy-txt">kw_god_bless <- tokens_subset(data_tokens_inaugural, Year > 1970) %>%
+<div id="cell-34" class="clipboard-copy-txt">kw_god_bless <- tokens_subset(data_tokens_inaugural, Year > 1970) |>
   kwic(phrase("god bless"), window = 3)
-tail(kw_god_bless) %>%
+tail(kw_god_bless) |>
   print()</div>
     
         </div>
@@ -6571,7 +6553,7 @@ tail(kw_god_bless) %>%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6674,7 +6656,7 @@ kw_god_bless</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6729,18 +6711,6 @@ class="
 
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>¿Cómo podría comparar la importancia que le dan los Presidentes Republicanos versus los Demócratas a la utilizacón de "God"? ¡Intente generar el código!</p>
-
-</div>
-</div>
 </div>
 </div>
 </div>
