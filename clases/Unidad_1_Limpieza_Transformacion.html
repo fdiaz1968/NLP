@@ -1107,13 +1107,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#vi-ejercicio-de-aplicacion" class="md-nav__link">
-    VI. Ejercicio de Aplicación
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12952,31 +12945,6 @@ write_xlsx(kw_df, path = "kwic_output.xlsx")</div>
 <li>Explorar relaciones semánticas complejas.</li>
 </ul>
 <blockquote><p>📌 En la práctica, ambos enfoques son complementarios: <code>kwic()</code> permite recuperar evidencia textual de manera sistemática, mientras que los LLMs pueden ayudar a interpretar y sintetizar esa evidencia.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<hr>
-<h2 id="vi-ejercicio-de-aplicacion">VI. Ejercicio de Aplicaci&#243;n<a class="anchor-link" href="#vi-ejercicio-de-aplicacion">&#182;</a></h2><p>En este ejercicio aplicarás el flujo completo de limpieza y transformación de textos visto en esta unidad, sobre un subconjunto distinto de <code>data_corpus_inaugural</code>.</p>
-<p><strong>Pasos sugeridos:</strong></p>
-<ol>
-<li>Selecciona los <strong>últimos 10 discursos</strong> del corpus: <code>corpus_subset &lt;- tail(data_corpus_inaugural, 10)</code>.</li>
-<li>Tokeniza el corpus y calcula <code>ntoken()</code> y <code>ntype()</code> sobre la versión <strong>sin procesar</strong>.</li>
-<li>Aplica, en orden: minúsculas → eliminación de puntuación y símbolos → eliminación de stopwords → stemming.</li>
-<li>Vuelve a calcular <code>ntoken()</code> y <code>ntype()</code> sobre la versión procesada. ¿En qué porcentaje se redujo el vocabulario (<em>types</em>)?</li>
-<li>Usa <code>kwic()</code> para buscar una palabra de tu elección (ej. <code>"freedom"</code>, <code>"war"</code>, <code>"economy"</code>) en la versión sin procesar y en la procesada. ¿Cambia el resultado o su interpretabilidad?</li>
-<li><strong>Discusión</strong>: ¿en qué casos esta reducción de vocabulario podría hacer perder información relevante para un análisis posterior con un modelo LLM (ver Unidad 6)?</li>
-</ol>
-<blockquote><p>💡 Tip: reutiliza el código de las secciones anteriores como plantilla. El objetivo es practicar el pipeline completo <code>corpus → tokens → limpieza</code> y reflexionar sobre sus efectos.</p>
 </blockquote>
 
 </div>
