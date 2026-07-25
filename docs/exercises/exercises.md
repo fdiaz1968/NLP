@@ -11,3 +11,7 @@ Los ejercicios de aplicación se publican también aquí como notebooks independ
 ## Unidad 1
 
 [Ejercicio 1 Unidad 1: Limpieza y Transformación de Textos](Ejercicio_1_Unidad_1_Limpieza_Transformacion.ipynb)
+
+## Unidad 2
+
+[Ejercicio 1 Unidad 2: Selección de Features y su Efecto en la Sparsity](Ejercicio_1_Unidad_2_DFM.ipynb)
