@@ -19,3 +19,9 @@ Los ejercicios de aplicación se publican también aquí como notebooks independ
 ## Unidad 3: Estadística Descriptiva
 
 [Ejercicio 1 Unidad 3: Estadística Descriptiva del UN General Debate Corpus](Ejercicio_1_Unidad_3_Estadistica_Descriptiva.ipynb)
+
+## Unidad 4: Keyness y Dispersión Textual
+
+[Ejercicio 1 Unidad 4: Keyness y Dispersión por Género Implícito en Reseñas de Cine](Ejercicio_1_Unidad_4_Keyness_Dispersion.ipynb) <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/>
+
+[Ejercicio 2 Unidad 4: Keyness y su Interpretación con un LLM sobre el UN General Debate Corpus](Ejercicio_2_Unidad_4_Keyness_LLM_UNGDC.ipynb) <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/>
