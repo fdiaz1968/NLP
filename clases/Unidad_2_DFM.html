@@ -378,8 +378,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#por-que-la-maquina-puede-interpretar" class="md-nav__link">
-    ¿Por qué la máquina puede interpretar?
+  <a href="#como-puede-una-maquina-interpretar-un-texto" class="md-nav__link">
+    ¿Cómo puede una máquina "interpretar" un texto?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#del-texto-a-una-representacion-numerica" class="md-nav__link">
+    🖼️ Del Texto a una Representación Numérica
   </a>
   
 </li>
@@ -1816,7 +1823,22 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="del-texto-a-matrices">Del Texto a Matrices<a class="anchor-link" href="#del-texto-a-matrices">&#182;</a></h1><h3 id="por-que-la-maquina-puede-interpretar">&#191;Por qu&#233; la m&#225;quina puede interpretar?<a class="anchor-link" href="#por-que-la-maquina-puede-interpretar">&#182;</a></h3>
+<h1 id="del-texto-a-matrices">Del Texto a Matrices<a class="anchor-link" href="#del-texto-a-matrices">&#182;</a></h1><h3 id="como-puede-una-maquina-interpretar-un-texto">&#191;C&#243;mo puede una m&#225;quina "interpretar" un texto?<a class="anchor-link" href="#como-puede-una-maquina-interpretar-un-texto">&#182;</a></h3><p>Supongamos que queremos analizar miles de reseñas de películas para descubrir cuáles son positivas y cuáles son negativas.</p>
+<p>Para una persona, esta tarea parece sencilla. Basta con leer el texto e interpretar su significado.</p>
+<p>Por ejemplo:</p>
+<blockquote><p><em>"La película fue entretenida, con excelentes actuaciones y una historia emocionante."</em></p>
+</blockquote>
+<p>En pocos segundos entendemos que la opinión es claramente positiva.</p>
+<p>Sin embargo, para una computadora este texto no tiene ningún significado. En memoria, únicamente existe como una secuencia de caracteres. La computadora no sabe qué significa <em>película</em>, <em>excelentes</em> o <em>emocionante</em>. Tampoco comprende gramática, contexto o emociones.</p>
+<p>Para poder analizar el lenguaje, primero debemos transformar las palabras en una representación numérica. Ese es precisamente el objetivo del <strong>Procesamiento de Lenguaje Natural (NLP)</strong>.</p>
+<p>El primer paso consiste en convertir el texto en un conjunto de elementos más simples (<strong>tokens</strong>). Posteriormente, esos tokens se organizan en estructuras numéricas, como una <strong>Document Feature Matrix (DFM)</strong>, donde cada documento se representa mediante la frecuencia con la que aparecen sus palabras. Una vez que el texto ha sido convertido en números, la computadora puede aplicar métodos estadísticos, algoritmos de aprendizaje automático e incluso modelos de inteligencia artificial para descubrir patrones, clasificar documentos o identificar temas.</p>
+<p>En otras palabras,</p>
+<blockquote><p>📌 <strong>Las computadoras no entienden palabras; entienden representaciones numéricas de esas palabras.</strong></p>
+</blockquote>
+<hr>
+<h3 id="del-texto-a-una-representacion-numerica">&#128444;&#65039; Del Texto a una Representaci&#243;n Num&#233;rica<a class="anchor-link" href="#del-texto-a-una-representacion-numerica">&#182;</a></h3><p>La siguiente figura resume el proceso mediante el cual un texto escrito por una persona se transforma en una representación numérica que puede ser procesada por algoritmos de NLP y modelos de inteligencia artificial.</p>
+<p><img src="../images/Text_to_Matrix.png" alt="Del Texto a Matrices: ¿Cómo puede una computadora interpretar un texto?"></p>
+
 </div>
 </div>
 </div>
@@ -1947,7 +1969,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1992,8 +2014,8 @@ suppressPackageStartupMessages(library(quanteda))
 </ul>
 <p>Estas transformaciones permiten obtener una representación más limpia y consistente del corpus antes de construir la DFM.</p>
 <p>Por ejemplo, utilizando el corpus <code>data_corpus_inaugural</code>, podemos realizar este proceso mediante:</p>
-<div class="highlight"><pre><span></span><span class="n">toks_nopunct_stop_low</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+<div class="highlight"><pre><span></span><span class="n">toks_nopunct_stop_low</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">|&gt;</span>
+  <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">|&gt;</span>
   <span class="nf">tokens_tolower</span><span class="p">()</span>
 </pre></div>
 <blockquote><p>📌 En el NLP tradicional, la calidad de la DFM depende en gran medida de las decisiones tomadas durante el preprocesamiento del texto.</p>
@@ -2008,7 +2030,7 @@ suppressPackageStartupMessages(library(quanteda))
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2023,13 +2045,13 @@ suppressPackageStartupMessages(library(quanteda))
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">toks_nopunct_stop_low</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
-                         <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">toks_nopunct_stop_low</span> <span class="o">&lt;-</span> <span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">,</span> <span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">|&gt;</span>
+                         <span class="nf">tokens_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span> <span class="o">|&gt;</span>
                          <span class="nf">tokens_tolower</span><span class="p">()</span>
 <span class="n">toks_nopunct_stop_low</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">toks_nopunct_stop_low <- tokens(data_corpus_inaugural, remove_punct = TRUE) %>%
-                         tokens_remove(pattern = stopwords("en")) %>%
+<div id="cell-2" class="clipboard-copy-txt">toks_nopunct_stop_low <- tokens(data_corpus_inaugural, remove_punct = TRUE) |>
+                         tokens_remove(pattern = stopwords("en")) |>
                          tokens_tolower()
 toks_nopunct_stop_low</div>
     
@@ -2121,7 +2143,7 @@ toks_nopunct_stop_low</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2354,7 +2376,7 @@ docs              vicissitudes incident life event filled
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2525,7 +2547,7 @@ docs              event fill
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="topfeatures"><strong>topfeatures()</strong><a class="anchor-link" href="#topfeatures">&#182;</a></h3><p>La función <code>topfeatures()</code> permite identificar las características (palabras o términos) más frecuentes dentro de una matriz documento-característica (<em>dfm</em>). Este tipo de inspección es fundamental en etapas tempranas del análisis textual, ya que permite:</p>
+<h3 id="topfeatures"><code>topfeatures()</code><a class="anchor-link" href="#topfeatures">&#182;</a></h3><p>La función <code>topfeatures()</code> permite identificar las características (palabras o términos) más frecuentes dentro de una matriz documento-característica (<em>dfm</em>). Este tipo de inspección es fundamental en etapas tempranas del análisis textual, ya que permite:</p>
 <ul>
 <li>Observar qué términos dominan el corpus.</li>
 <li>Detectar posibles <em>stopwords</em> residuales.</li>
@@ -2543,7 +2565,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2601,7 +2623,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2681,7 +2703,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2753,7 +2775,7 @@ docs              event fill
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2834,7 +2856,7 @@ print(head(kw_nation, 10))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2966,7 +2988,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3037,7 +3059,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3115,7 +3137,7 @@ $Cleveland
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3193,7 +3215,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3349,7 +3371,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3406,7 +3428,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3476,7 +3498,7 @@ $Whig
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="dfm_select-dfm_remove-dfm_trim"><strong>dfm_select()</strong>, <strong>dfm_remove()</strong>, <strong>dfm_trim()</strong><a class="anchor-link" href="#dfm_select-dfm_remove-dfm_trim">&#182;</a></h3><p>Una vez creada la matriz de características (dfm), <code>quanteda</code> ofrece funciones clave para refinarla seleccionando o eliminando términos según diversos criterios:</p>
+<h3 id="dfm_select-dfm_remove-dfm_trim"><code>dfm_select()</code>, <code>dfm_remove()</code>, <code>dfm_trim()</code><a class="anchor-link" href="#dfm_select-dfm_remove-dfm_trim">&#182;</a></h3><p>Una vez creada la matriz de características (dfm), <code>quanteda</code> ofrece funciones clave para refinarla seleccionando o eliminando términos según diversos criterios:</p>
 <ul>
 <li><p><strong><code>dfm_select()</code></strong>: Permite <strong>seleccionar</strong> características específicas del <code>dfm</code>, utilizando patrones exactos, expresiones regulares o listas. Es útil para centrar el análisis en términos clave.</p>
 </li>
@@ -3496,7 +3518,7 @@ $Whig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3692,7 +3714,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3725,7 +3747,7 @@ _E_x_a_m_p_l_e_s:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3740,12 +3762,12 @@ _E_x_a_m_p_l_e_s:
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">dfm_inaugural_nostop</span> <span class="o">&lt;-</span> <span class="nf">dfm</span><span class="p">(</span><span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">dfm_inaugural_nostop</span> <span class="o">&lt;-</span> <span class="nf">dfm</span><span class="p">(</span><span class="nf">tokens</span><span class="p">(</span><span class="n">data_corpus_inaugural</span><span class="p">))</span> <span class="o">|&gt;</span>
              <span class="nf">dfm_remove</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="n">dfm_inaugural_nostop</span><span class="p">)</span>
 </pre></div>
-<div id="cell-18" class="clipboard-copy-txt">dfm_inaugural_nostop <- dfm(tokens(data_corpus_inaugural)) %>%
+<div id="cell-18" class="clipboard-copy-txt">dfm_inaugural_nostop <- dfm(tokens(data_corpus_inaugural)) |>
              dfm_remove(pattern = stopwords("en"))
 
 print(dfm_inaugural_nostop)</div>
@@ -3815,7 +3837,7 @@ docs              vicissitudes incident life event
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3894,7 +3916,7 @@ docs              fellow-citizens : among life greater order   , day present  .
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3988,7 +4010,7 @@ docs              interruptions
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4068,7 +4090,7 @@ docs              countri can time citizen nation may peopl govern great now
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
