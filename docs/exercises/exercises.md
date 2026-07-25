@@ -15,3 +15,7 @@ Los ejercicios de aplicación se publican también aquí como notebooks independ
 ## Unidad 2: Document Feature Matrix
 
 [Ejercicio 1 Unidad 2: Selección de Features y su Efecto en la Sparsity](Ejercicio_1_Unidad_2_DFM.ipynb)
+
+## Unidad 3: Estadística Descriptiva
+
+[Ejercicio 1 Unidad 3: Estadística Descriptiva del UN General Debate Corpus](Ejercicio_1_Unidad_3_Estadistica_Descriptiva.ipynb)
