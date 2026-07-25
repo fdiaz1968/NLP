@@ -1934,7 +1934,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1971,7 +1971,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1986,18 +1986,17 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">quanteda</span><span class="p">)</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">quanteda.textmodels</span><span class="p">)</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">topicmodels</span><span class="p">)</span>
-<span class="p">})</span>
+<span class="p">}))</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">suppressPackageStartupMessages({
+<div id="cell-2" class="clipboard-copy-txt">suppressWarnings(suppressPackageStartupMessages({
   library(quanteda)
   library(quanteda.textmodels)
   library(topicmodels)
-})
-</div>
+}))</div>
     
         </div>
     </div>
@@ -2025,7 +2024,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2164,7 +2163,7 @@ Palabras muy frecuentes como <em>the</em>, <em>is</em>, <em>and</em>, <em>of</em
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2179,13 +2178,13 @@ Palabras muy frecuentes como <em>the</em>, <em>is</em>, <em>and</em>, <em>of</em
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">toks</span> <span class="o">&lt;-</span> <span class="n">data_corpus_moviereviews</span> <span class="o">%&gt;%</span>
-  <span class="nf">tokens</span><span class="p">(</span><span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">remove_symbols</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">remove_numbers</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">toks</span> <span class="o">&lt;-</span> <span class="n">data_corpus_moviereviews</span> <span class="o">|&gt;</span>
+  <span class="nf">tokens</span><span class="p">(</span><span class="n">remove_punct</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">remove_symbols</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">remove_numbers</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">tokens_remove</span><span class="p">(</span><span class="nf">stopwords</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">))</span>
 <span class="n">toks</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">toks <- data_corpus_moviereviews %>%
-  tokens(remove_punct = TRUE, remove_symbols = TRUE, remove_numbers = TRUE) %>%
+<div id="cell-4" class="clipboard-copy-txt">toks <- data_corpus_moviereviews |>
+  tokens(remove_punct = TRUE, remove_symbols = TRUE, remove_numbers = TRUE) |>
   tokens_remove(stopwords("en"))
 toks
 
@@ -2310,7 +2309,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2342,7 +2341,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2413,7 +2412,7 @@ text1 :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2487,7 +2486,7 @@ text1 :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2603,7 +2602,7 @@ cv005_29357.txt :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2618,11 +2617,11 @@ cv005_29357.txt :
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">dfmat</span> <span class="o">&lt;-</span> <span class="nf">dfm</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">dfmat</span> <span class="o">&lt;-</span> <span class="nf">dfm</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="nf">dfm_trim</span><span class="p">(</span><span class="n">min_termfreq</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
 <span class="n">dfmat</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt">dfmat <- dfm(toks) %>%
+<div id="cell-9" class="clipboard-copy-txt">dfmat <- dfm(toks) |>
   dfm_trim(min_termfreq = 5)
 dfmat
 </div>
@@ -2706,7 +2705,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2738,7 +2737,7 @@ docs              plot two teen couples go church party drink drive get
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3107,7 +3106,7 @@ $$<p>Ambos representan exactamente el mismo concepto: el hiperparámetro que con
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3177,7 +3176,7 @@ tmod_20 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3257,7 +3256,7 @@ tmod_20 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3331,7 +3330,7 @@ tmod_20 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3476,7 +3475,7 @@ writeLines(
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3516,7 +3515,7 @@ tmod_12 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3595,7 +3594,7 @@ tmod_12 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3724,7 +3723,7 @@ cat("Archivo HTML guardado en:\n", normalizePath("terminos_tmod_12.html"))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3764,7 +3763,7 @@ tmod_25 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3843,7 +3842,7 @@ tmod_25 <- LDA(dfmat_tm,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4086,7 +4085,7 @@ cat("Archivo HTML guardado en:\n", normalizePath("terminos_tmod_25.html"))</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4131,13 +4130,13 @@ install.packages("reshape2")</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpNPMFds/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpTcho5p/downloaded_packages
 
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpNPMFds/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpTcho5p/downloaded_packages
 
 The downloaded binary packages are in
-	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpNPMFds/downloaded_packages
+	/var/folders/8q/0f19vqjs5hn942n9xdsj2lc80000gn/T//RtmpTcho5p/downloaded_packages
 </pre>
 </div>
 </div>
@@ -4153,7 +4152,7 @@ The downloaded binary packages are in
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4168,17 +4167,17 @@ The downloaded binary packages are in
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">suppressPackageStartupMessages</span><span class="p">({</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">tidytext</span><span class="p">)</span>
   <span class="nf">library</span><span class="p">(</span><span class="n">reshape2</span><span class="p">)</span>
-<span class="p">})</span>
+<span class="p">}))</span>
 </pre></div>
-<div id="cell-23" class="clipboard-copy-txt">suppressPackageStartupMessages({
+<div id="cell-23" class="clipboard-copy-txt">suppressWarnings(suppressPackageStartupMessages({
   library(tidyverse)
   library(tidytext)
   library(reshape2)
-})</div>
+}))</div>
     
         </div>
     </div>
@@ -4248,7 +4247,7 @@ The downloaded binary packages are in
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4324,10 +4323,10 @@ head(topics)</div>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="terminos-mas-representativos-por-topico">&#128285; T&#233;rminos M&#225;s Representativos por T&#243;pico<a class="anchor-link" href="#terminos-mas-representativos-por-topico">&#182;</a></h2><p>Para interpretar los temas generados por el modelo LDA, es útil identificar las palabras más representativas de cada tópico. Esto se logra seleccionando aquellas con mayor probabilidad ($\beta$) dentro de cada grupo temático.</p>
 <p>Utilizamos <code>top_n()</code> para extraer, por ejemplo, los 10 términos con mayor peso por tópico:</p>
-<div class="highlight"><pre><span></span><span class="n">topterms</span> <span class="o">&lt;-</span> <span class="n">topics</span> <span class="o">%&gt;%</span>
-  <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="nf">top_n</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span>
+<div class="highlight"><pre><span></span><span class="n">topterms</span> <span class="o">&lt;-</span> <span class="n">topics</span> <span class="o">|&gt;</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">|&gt;</span>
+  <span class="nf">top_n</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">|&gt;</span>
+  <span class="nf">ungroup</span><span class="p">()</span> <span class="o">|&gt;</span>
   <span class="nf">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">)</span>
 </pre></div>
 <p>Esta tabla ordenada contiene:</p>
@@ -4354,7 +4353,7 @@ head(topics)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4370,21 +4369,21 @@ head(topics)</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">&lt;-</span>
-  <span class="n">topics</span> <span class="o">%&gt;%</span>
-  <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="nf">top_n</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="n">topics</span> <span class="o">|&gt;</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">|&gt;</span>
+  <span class="nf">top_n</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">|&gt;</span>
   <span class="c1"># top_n selecciona las 10 primeras filas basándose en el valor &quot;beta&quot;.</span>
-  <span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span>
+  <span class="nf">ungroup</span><span class="p">()</span> <span class="o">|&gt;</span>
   <span class="nf">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">topterms</span><span class="p">)</span>
 </pre></div>
 <div id="cell-25" class="clipboard-copy-txt">topterms <-
-  topics %>%
-  group_by(topic) %>%
-  top_n(10, beta) %>%
+  topics |>
+  group_by(topic) |>
+  top_n(10, beta) |>
   # top_n selecciona las 10 primeras filas basándose en el valor "beta".
-  ungroup() %>%
+  ungroup() |>
   arrange(topic, -beta)
 
 head(topterms)</div>
@@ -4441,7 +4440,7 @@ head(topterms)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4456,8 +4455,8 @@ head(topterms)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">%&gt;%</span>
-  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span><span class="n">topic</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">|&gt;</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span><span class="n">topic</span><span class="p">))</span> <span class="o">|&gt;</span>
   <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">)))</span> <span class="o">+</span>
   <span class="nf">geom_col</span><span class="p">(</span><span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
   <span class="c1"># specifies bar charts, removes legend</span>
@@ -4466,8 +4465,8 @@ head(topterms)</div>
   <span class="nf">coord_flip</span><span class="p">()</span>
   <span class="c1"># flips x and y axes</span>
 </pre></div>
-<div id="cell-26" class="clipboard-copy-txt">topterms %>%
-  mutate(term = reorder_within(term, beta,topic)) %>%
+<div id="cell-26" class="clipboard-copy-txt">topterms |>
+  mutate(term = reorder_within(term, beta,topic)) |>
   ggplot(aes(term, beta, fill = factor(topic))) +
   geom_col(show.legend = FALSE) +
   # specifies bar charts, removes legend
@@ -4519,7 +4518,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4534,8 +4533,8 @@ class="
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">%&gt;%</span>
-  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">|&gt;</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">|&gt;</span>
   <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">beta</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">term</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">)))</span> <span class="o">+</span>
   <span class="nf">geom_col</span><span class="p">(</span><span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">topic</span><span class="p">,</span> <span class="n">scales</span> <span class="o">=</span> <span class="s">&quot;free_y&quot;</span><span class="p">)</span> <span class="o">+</span>
@@ -4543,8 +4542,8 @@ class="
   <span class="nf">theme_minimal</span><span class="p">()</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Probabilidad (beta)&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Términos&quot;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Términos más representativos por tópico&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-27" class="clipboard-copy-txt">topterms %>%
-  mutate(term = reorder_within(term, beta, topic)) %>%
+<div id="cell-27" class="clipboard-copy-txt">topterms |>
+  mutate(term = reorder_within(term, beta, topic)) |>
   ggplot(aes(x = beta, y = term, fill = factor(topic))) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~ topic, scales = "free_y") +
@@ -4596,7 +4595,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4611,8 +4610,8 @@ class="
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">%&gt;%</span>
-  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="n">tidytext</span><span class="o">::</span><span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">|&gt;</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="n">tidytext</span><span class="o">::</span><span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">|&gt;</span>
   <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">beta</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">term</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">)))</span> <span class="o">+</span>
   <span class="nf">geom_col</span><span class="p">(</span><span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">topic</span><span class="p">,</span> <span class="n">scales</span> <span class="o">=</span> <span class="s">&quot;free_y&quot;</span><span class="p">)</span> <span class="o">+</span>
@@ -4627,8 +4626,8 @@ class="
     <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="n">hjust</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>  <span class="c1"># 👈 etiquetas del eje X en vertical</span>
   <span class="p">)</span>
 </pre></div>
-<div id="cell-28" class="clipboard-copy-txt">topterms %>%
-  mutate(term = tidytext::reorder_within(term, beta, topic)) %>%
+<div id="cell-28" class="clipboard-copy-txt">topterms |>
+  mutate(term = tidytext::reorder_within(term, beta, topic)) |>
   ggplot(aes(x = beta, y = term, fill = factor(topic))) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~ topic, scales = "free_y") +
@@ -4686,7 +4685,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4701,8 +4700,8 @@ class="
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">%&gt;%</span>
-  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">%&gt;%</span>
+            <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">topterms</span> <span class="o">|&gt;</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">term</span> <span class="o">=</span> <span class="nf">reorder_within</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="o">|&gt;</span>
   <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">term</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">beta</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">topic</span><span class="p">)))</span> <span class="o">+</span>
   <span class="nf">geom_col</span><span class="p">(</span><span class="n">show.legend</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">topic</span><span class="p">,</span> <span class="n">scales</span> <span class="o">=</span> <span class="s">&quot;free&quot;</span><span class="p">)</span> <span class="o">+</span>
@@ -4714,8 +4713,8 @@ class="
   <span class="p">)</span> <span class="o">+</span>
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Términos&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Probabilidad (beta)&quot;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Términos más representativos por tópico&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-29" class="clipboard-copy-txt">topterms %>%
-  mutate(term = reorder_within(term, beta, topic)) %>%
+<div id="cell-29" class="clipboard-copy-txt">topterms |>
+  mutate(term = reorder_within(term, beta, topic)) |>
   ggplot(aes(x = term, y = beta, fill = factor(topic))) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~ topic, scales = "free") +
@@ -4771,7 +4770,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -4952,7 +4951,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5018,7 +5017,7 @@ levels(as.factor(docs$topic))
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5149,7 +5148,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5167,7 +5166,7 @@ class="
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">docs</span> <span class="o">&lt;-</span> <span class="n">tidytext</span><span class="o">::</span><span class="nf">tidy</span><span class="p">(</span><span class="n">tmod_20</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">=</span> <span class="s">&quot;gamma&quot;</span><span class="p">)</span>
 <span class="nf">levels</span><span class="p">(</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">docs</span><span class="o">$</span><span class="n">topic</span><span class="p">))</span>
 
-<span class="n">docs</span> <span class="o">&lt;-</span> <span class="n">docs</span>  <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">topic</span> <span class="o">!=</span><span class="m">17</span> <span class="o">&amp;</span> <span class="n">topic</span> <span class="o">!=</span><span class="m">18</span><span class="p">)</span>
+<span class="n">docs</span> <span class="o">&lt;-</span> <span class="n">docs</span>  <span class="o">|&gt;</span> <span class="nf">filter</span><span class="p">(</span><span class="n">topic</span> <span class="o">!=</span><span class="m">17</span> <span class="o">&amp;</span> <span class="n">topic</span> <span class="o">!=</span><span class="m">18</span><span class="p">)</span>
 <span class="nf">levels</span><span class="p">(</span><span class="nf">as.factor</span><span class="p">(</span><span class="n">docs</span><span class="o">$</span><span class="n">topic</span><span class="p">))</span>
 
 <span class="n">docs_topics</span> <span class="o">&lt;-</span>
@@ -5189,7 +5188,7 @@ class="
 <div id="cell-33" class="clipboard-copy-txt">docs <- tidytext::tidy(tmod_20, matrix = "gamma")
 levels(as.factor(docs$topic))
 
-docs <- docs  %>% filter(topic !=17 & topic !=18)
+docs <- docs  |> filter(topic !=17 & topic !=18)
 levels(as.factor(docs$topic))
 
 docs_topics <-
@@ -5364,7 +5363,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5425,7 +5424,7 @@ dtm <-dfmat_tm   #"Document Term Matrix" - Esta es nuesta dfm con el formato par
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5461,7 +5460,7 @@ dtm_test = dtm[!rownames(dtm) %in% train, ]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5493,7 +5492,7 @@ dtm_test = dtm[!rownames(dtm) %in% train, ]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5572,7 +5571,7 @@ dtm_test = dtm[!rownames(dtm) %in% train, ]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5697,7 +5696,7 @@ head(p)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5759,7 +5758,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5867,7 +5866,7 @@ str(p)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -5883,12 +5882,12 @@ str(p)
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span>
-  <span class="n">p</span>  <span class="o">%&gt;%</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">perplexity</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+  <span class="n">p</span>  <span class="o">|&gt;</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">perplexity</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
        <span class="nf">geom_segment</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">k</span><span class="p">[</span><span class="m">1</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">perplexity</span><span class="p">[</span><span class="m">1</span><span class="p">],</span> <span class="n">xend</span> <span class="o">=</span> <span class="n">k</span><span class="p">[</span><span class="m">12</span><span class="p">],</span> <span class="n">yend</span> <span class="o">=</span> <span class="n">perplexity</span><span class="p">[</span><span class="m">12</span><span class="p">]),</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
 <span class="p">))</span>
 </pre></div>
 <div id="cell-41" class="clipboard-copy-txt">suppressWarnings(print(
-  p  %>% ggplot(aes(x=k, y=perplexity)) + geom_line() + geom_point() +
+  p  |> ggplot(aes(x=k, y=perplexity)) + geom_line() + geom_point() +
        geom_segment(aes(x = k[1], y = perplexity[1], xend = k[12], yend = perplexity[12]), col="red")
 ))
 
@@ -5954,7 +5953,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6018,7 +6017,7 @@ dist_PL <- function(m,n,Px,Py) {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6088,7 +6087,7 @@ m</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6146,7 +6145,7 @@ n</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6216,7 +6215,7 @@ d</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6248,7 +6247,7 @@ d</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6284,7 +6283,7 @@ d</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6362,7 +6361,7 @@ d</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6442,7 +6441,7 @@ d</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[109]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6467,7 +6466,7 @@ d</div>
 <span class="n">p_dist</span><span class="o">$</span><span class="n">dist</span>   <span class="o">&lt;-</span> <span class="n">dist_vector</span><span class="o">$</span><span class="n">dist</span>
 
 <span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span>
-  <span class="n">p_dist</span> <span class="o">%&gt;%</span>
+  <span class="n">p_dist</span> <span class="o">|&gt;</span>
     <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">perplexity</span><span class="p">))</span> <span class="o">+</span>
     <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
     <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
@@ -6488,7 +6487,7 @@ p_dist$foot_y <- n + m * p_dist$foot_x
 p_dist$dist   <- dist_vector$dist
 
 suppressWarnings(print(
-  p_dist %>%
+  p_dist |>
     ggplot(aes(x = k, y = perplexity)) +
     geom_line() +
     geom_point() +
@@ -6616,7 +6615,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[106]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -6632,11 +6631,11 @@ class="
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-R"><pre><span></span><span class="n">export_topterms</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="m">15</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">tidytext</span><span class="o">::</span><span class="nf">tidy</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">=</span> <span class="s">&quot;beta&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
-    <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">%&gt;%</span>
-    <span class="nf">top_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
-    <span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span>
-    <span class="nf">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="n">tidytext</span><span class="o">::</span><span class="nf">tidy</span><span class="p">(</span><span class="n">modelo</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">=</span> <span class="s">&quot;beta&quot;</span><span class="p">)</span> <span class="o">|&gt;</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="o">|&gt;</span>
+    <span class="nf">top_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">|&gt;</span>
+    <span class="nf">ungroup</span><span class="p">()</span> <span class="o">|&gt;</span>
+    <span class="nf">arrange</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">)</span> <span class="o">|&gt;</span>
     <span class="nf">mutate</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="p">)</span>
 <span class="p">}</span>
 
@@ -6651,11 +6650,11 @@ class="
 <span class="nf">head</span><span class="p">(</span><span class="n">topterms_12</span><span class="p">)</span>
 </pre></div>
 <div id="cell-51" class="clipboard-copy-txt">export_topterms <- function(modelo, k, n = 15) {
-  tidytext::tidy(modelo, matrix = "beta") %>%
-    group_by(topic) %>%
-    top_n(n, beta) %>%
-    ungroup() %>%
-    arrange(topic, -beta) %>%
+  tidytext::tidy(modelo, matrix = "beta") |>
+    group_by(topic) |>
+    top_n(n, beta) |>
+    ungroup() |>
+    arrange(topic, -beta) |>
     mutate(k = k)
 }
 
