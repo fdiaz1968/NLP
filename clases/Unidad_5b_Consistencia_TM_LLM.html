@@ -385,8 +385,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
-    🎯 Objetivos de aprendizaje
+  <a href="#que-queremos-lograr" class="md-nav__link">
+    🎯 ¿Que queremos lograr?
   </a>
   
 </li>
@@ -394,6 +394,13 @@
         <li class="md-nav__item">
   <a href="#que-modelo-usamos" class="md-nav__link">
     🤖 ¿Qué modelo usamos?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-de-trabajo" class="md-nav__link">
+    🔄 Pipeline de Trabajo
   </a>
   
 </li>
@@ -426,23 +433,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cargar-el-modelo" class="md-nav__link">
-    🧠 Cargar el modelo
+  <a href="#-" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cargar-los-topicos-exportados-desde-r-unidad-5a" class="md-nav__link">
-    📂 Cargar los tópicos exportados desde R (Unidad 5a)
+  <a href="#i-cargar-el-modelo" class="md-nav__link">
+    🧠 I. Cargar el modelo
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 I. Cargar el modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definiendo-los-tokens-de-parada-stop_token_ids" class="md-nav__link">
+    🛑 Definiendo los tokens de parada (stop_token_ids)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funcion-query_llm" class="md-nav__link">
+    🤖 La función query_llm()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#ii-cargar-los-topicos-exportados-desde-r" class="md-nav__link">
+    📂 II. Cargar los tópicos exportados desde R
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 II. Cargar los tópicos exportados desde R">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#palabras-clave-por-topico" class="md-nav__link">
     ✂️ Palabras clave por tópico
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -451,29 +498,49 @@
     ✍️ Diseño del prompt
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extraer-la-etiqueta-el-puntaje-y-la-justificacion-de-la-respuesta" class="md-nav__link">
-    🔍 Extraer la etiqueta, el puntaje y la justificación de la respuesta
+    <nav class="md-nav" aria-label="✍️ Diseño del prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-decide-el-modelo-ese-numero-entre-1-y-5" class="md-nav__link">
+    🎲 ¿Cómo "decide" el modelo ese número entre 1 y 5?
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-explicita-con-la-unidad-5c-embeddings" class="md-nav__link">
+    ⚖️ Diferencia explícita con la Unidad 5c (Embeddings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_response-extrayendo-la-respuesta-estructurada-del-llm-el-puntaje-y-la-justificacion-de-la-respuesta" class="md-nav__link">
+    🔎 parse_response(): extrayendo la respuesta estructurada del LLM, el puntaje y la justificación de la respuesta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aplicar-el-llm-a-todos-los-topicos-de-un-modelo" class="md-nav__link">
-    🔁 Aplicar el LLM a todos los tópicos de un modelo
+  <a href="#iii-aplicar-el-llm-a-todos-los-topicos-de-un-modelo" class="md-nav__link">
+    🔁 III. Aplicar el LLM a todos los tópicos de un modelo
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="🔁 III. Aplicar el LLM a todos los tópicos de un modelo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#comparar-la-coherencia-semantica-promedio-por-valor-de-k" class="md-nav__link">
     📊 Comparar la coherencia semántica promedio por valor de $k$
   </a>
   
-    <nav class="md-nav" aria-label="📊 Comparar la coherencia semántica promedio por valor de $k$">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#una-limitacion-real-los-puntajes-se-concentran-en-5" class="md-nav__link">
@@ -495,8 +562,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cierre" class="md-nav__link">
-    ✅ Cierre
+  <a href="#que-concluimos" class="md-nav__link">
+    ✅ ¿Qué concluimos?
   </a>
   
 </li>
@@ -1590,7 +1657,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="objetivos-de-aprendizaje">&#127919; Objetivos de aprendizaje<a class="anchor-link" href="#objetivos-de-aprendizaje">&#182;</a></h2><ul>
+<h2 id="que-queremos-lograr">&#127919; &#191;Que queremos lograr?<a class="anchor-link" href="#que-queremos-lograr">&#182;</a></h2><ul>
 <li>Cargar un modelo instruccional open-source desde Hugging Face y ejecutarlo localmente o en Colab.</li>
 <li>Diseñar un <em>prompt</em> que le pida al LLM una salida en un formato específico y parseable.</li>
 <li>Aplicar el LLM sistemáticamente a los tópicos de los tres modelos ($k=12,20,25$).</li>
@@ -1618,6 +1685,21 @@ Licensed under the Apache License, Version 2.0.
 <blockquote><p>📌 El nombre del modelo está aislado en una sola variable (<code>MODEL_NAME</code>). Si prefieres más calidad a cambio de una carga más lenta, puedes cambiarla por <code>"Qwen/Qwen2.5-7B-Instruct"</code> o, si ya tienes acceso aprobado y un token de Hugging Face configurado, <code>"meta-llama/Meta-Llama-3-8B-Instruct"</code> — el resto del notebook funciona igual.</p>
 <p>⚠️ <strong>Sobre el hardware:</strong> ver la nota al inicio del notebook y la explicación en la sección "Cargar el modelo" — el código detecta automáticamente si usar CUDA, Apple Silicon (MPS) o CPU.</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="pipeline-de-trabajo">&#128260; Pipeline de Trabajo<a class="anchor-link" href="#pipeline-de-trabajo">&#182;</a></h2><p>En este notebook seguiremos un flujo de trabajo en dos etapas. Primero, utilizaremos <strong>Latent Dirichlet Allocation (LDA)</strong> en <strong>R</strong> para descubrir los temas latentes presentes en el corpus. A continuación, exportaremos las palabras más representativas de cada tema y las utilizaremos como entrada para un <strong>Large Language Model (LLM)</strong>, el cual evaluará la <strong>consistencia semántica</strong> e interpretará el significado de cada tema.</p>
+<p>El siguiente diagrama resume este proceso:</p>
+<p><img src="../images/pipeline_semantic_consistency_R_Python.png" alt="Pipeline de trabajo: de LDA en R a la evaluación de consistencia semántica con un LLM"></p>
 
 </div>
 </div>
@@ -1661,13 +1743,13 @@ Biblioteca para crear gráficos y visualizar los resultados obtenidos durante el
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1692,6 +1774,32 @@ Biblioteca para crear gráficos y visualizar los resultados obtenidos durante el
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -1699,7 +1807,7 @@ Biblioteca para crear gráficos y visualizar los resultados obtenidos durante el
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1763,7 +1871,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-el-modelo">&#129504; Cargar el modelo<a class="anchor-link" href="#cargar-el-modelo">&#182;</a></h2><p>Detectamos automáticamente el tipo de GPU disponible y cargamos el modelo de la forma más adecuada para cada caso: CUDA (con cuantización en 4 bits), Apple Silicon (MPS, sin cuantizar) o CPU como último recurso.</p>
+<hr>
+<hr>
+<h2 id="i-cargar-el-modelo">&#129504; I. Cargar el modelo<a class="anchor-link" href="#i-cargar-el-modelo">&#182;</a></h2><hr>
+<p>Detectamos automáticamente el tipo de GPU disponible y cargamos el modelo de la forma más adecuada para cada caso: CUDA (con cuantización en 4 bits), Apple Silicon (MPS, sin cuantizar) o CPU como último recurso.</p>
 <blockquote><p>⚠️ <strong><code>bitsandbytes</code> (cuantización en 4 bits) solo funciona con GPUs NVIDIA (CUDA)</strong> — por ejemplo, la GPU T4 gratuita de Google Colab. <strong>No funciona en Mac (Apple Silicon ni Intel)</strong>, y si el código intenta usarlo de todas formas, <code>device_map="auto"</code> puede terminar ejecutando el modelo silenciosamente en <strong>CPU</strong>, lo cual es extremadamente lento para un modelo de 3B (decenas de minutos para las 57 llamadas de las secciones siguientes) — sin ningún error o advertencia visible que lo indique.</p>
 <p>Por eso esta celda revisa explícitamente qué hardware hay disponible:</p>
 <ul>
@@ -1783,7 +1894,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1832,6 +1943,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
     <span class="c1"># demasiado, considera ejecutar el notebook en Google Colab (GPU T4 gratuita).</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u26a0\ufe0f</span><span class="s2"> No se detectó GPU (ni CUDA ni MPS). El modelo correrá en CPU y será mucho más lento.&quot;</span><span class="p">)</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">MODEL_NAME</span><span class="p">)</span>
+
+<span class="c1"># Limpiamos los parámetros de muestreo del generation_config por defecto del</span>
+<span class="c1"># modelo: como usamos do_sample=False (greedy) en generate(), esos parámetros</span>
+<span class="c1"># de sampling no aplican y generan una advertencia repetida en cada llamada.</span>
+<span class="n">model</span><span class="o">.</span><span class="n">generation_config</span><span class="o">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">model</span><span class="o">.</span><span class="n">generation_config</span><span class="o">.</span><span class="n">top_p</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">model</span><span class="o">.</span><span class="n">generation_config</span><span class="o">.</span><span class="n">top_k</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
 
@@ -1866,7 +1984,14 @@ else:
     # considerablemente más lento para un modelo de 3B. Si esta celda demora
     # demasiado, considera ejecutar el notebook en Google Colab (GPU T4 gratuita).
     print("\u26a0\ufe0f No se detectó GPU (ni CUDA ni MPS). El modelo correrá en CPU y será mucho más lento.")
-    model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)</div>
+    model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
+
+# Limpiamos los parámetros de muestreo del generation_config por defecto del
+# modelo: como usamos do_sample=False (greedy) en generate(), esos parámetros
+# de sampling no aplican y generan una advertencia repetida en cada llamada.
+model.generation_config.temperature = None
+model.generation_config.top_p = None
+model.generation_config.top_k = None</div>
     
         </div>
     </div>
@@ -1888,7 +2013,7 @@ else:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Loading checkpoint shards: 100%|██████████| 2/2 [00:12&lt;00:00,  6.46s/it]
+<pre>Loading checkpoint shards: 100%|██████████| 2/2 [00:03&lt;00:00,  1.76s/it]
 </pre>
 </div>
 </div>
@@ -1912,13 +2037,34 @@ else:
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="definiendo-los-tokens-de-parada-stop_token_ids">&#128721; Definiendo los tokens de parada (<code>stop_token_ids</code>)<a class="anchor-link" href="#definiendo-los-tokens-de-parada-stop_token_ids">&#182;</a></h3><p>Por defecto, <code>generate()</code> solo se detiene cuando produce el <code>eos_token_id</code> del modelo. El problema es que <strong>Qwen2.5-Instruct</strong> señala el fin de un turno de conversación con un token especial adicional, <code>&lt;|im_end|&gt;</code>, que no siempre coincide con el <code>eos_token_id</code> por defecto del tokenizer.</p>
+<p>Si no le indicamos explícitamente este token como una señal de parada válida, <code>generate()</code> puede no reconocer el final natural de la respuesta y seguir generando texto de relleno hasta agotar <code>max_new_tokens</code> — algo especialmente costoso aquí, ya que este proceso se repite en <strong>57 llamadas</strong> al modelo.</p>
+<p>El código:</p>
+<ol>
+<li>Obtiene el ID numérico del token <code>&lt;|im_end|&gt;</code> mediante <code>tokenizer.convert_tokens_to_ids()</code>.</li>
+<li>Construye <code>stop_token_ids</code>, comenzando con el <code>eos_token_id</code> por defecto del modelo.</li>
+<li>Si <code>&lt;|im_end|&gt;</code> existe en el vocabulario del tokenizer (es decir, no es un token desconocido, <code>unk_token_id</code>), lo agrega también a la lista.</li>
+</ol>
+<p>El resultado, <code>stop_token_ids</code>, se pasa luego a <code>model.generate()</code> como <code>eos_token_id</code>, permitiendo que la generación se detenga correctamente en <strong>cualquiera</strong> de los dos tokens de fin de turno.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1956,13 +2102,43 @@ if im_end_id is not None and im_end_id != tokenizer.unk_token_id:
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="la-funcion-query_llm">&#129302; La funci&#243;n <code>query_llm()</code><a class="anchor-link" href="#la-funcion-query_llm">&#182;</a></h3><p>Esta función encapsula todo el proceso de enviarle un <em>prompt</em> al modelo y recuperar únicamente el texto que generó como respuesta.</p>
+<ol>
+<li><p><strong>Construcción del mensaje.</strong> El <em>prompt</em> se envuelve en el formato de mensajes de chat (<code>{"role": "user", "content": prompt}</code>) que espera un modelo <em>instruct</em>.</p>
+</li>
+<li><p><strong>Aplicación de la plantilla de chat.</strong> <code>tokenizer.apply_chat_template()</code> convierte ese mensaje en la secuencia de tokens con el formato específico que Qwen2.5-Instruct espera (incluyendo marcadores especiales de rol y turno), y <code>add_generation_prompt=True</code> agrega además la señal que le indica al modelo que debe comenzar a generar su respuesta. El resultado se mueve al mismo dispositivo (<code>model.device</code>) donde vive el modelo — CPU o GPU.</p>
+</li>
+<li><p><strong>Generación.</strong> <code>model.generate()</code> produce la respuesta:</p>
+<ul>
+<li><code>max_new_tokens</code> limita cuántos tokens nuevos puede generar como máximo (por defecto, 80).</li>
+<li><code>do_sample=False</code> hace que la generación sea <strong>determinista</strong> (siempre elige el token más probable), en vez de introducir aleatoriedad.</li>
+<li><code>eos_token_id=stop_token_ids</code> usa la lista de tokens de parada definida en la celda anterior, para que el modelo se detenga correctamente al terminar su turno.</li>
+<li><code>pad_token_id</code> evita advertencias relacionadas con el token de relleno.</li>
+</ul>
+</li>
+<li><p><strong>Decodificación.</strong> <code>output[0][input_ids.shape[-1]:]</code> descarta los tokens del <em>prompt</em> original y conserva solo los tokens generados como respuesta. <code>tokenizer.decode(..., skip_special_tokens=True)</code> los convierte de vuelta a texto legible, eliminando tokens especiales como <code>&lt;|im_end|&gt;</code>. Finalmente, <code>.strip()</code> elimina espacios en blanco sobrantes al inicio o final.</p>
+</li>
+</ol>
+<p>El resultado es una función reutilizable: basta con llamar <code>query_llm("mi pregunta")</code> para obtener la respuesta del modelo como una cadena de texto lista para usar.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1980,37 +2156,37 @@ if im_end_id is not None and im_end_id != tokenizer.unk_token_id:
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">query_llm</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">80</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Envía un prompt al modelo usando su plantilla de chat y devuelve solo el texto generado.&quot;&quot;&quot;</span>
     <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
-    <span class="n">input_ids</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">apply_chat_template</span><span class="p">(</span>
-        <span class="n">messages</span><span class="p">,</span> <span class="n">add_generation_prompt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">apply_chat_template</span><span class="p">(</span>
+        <span class="n">messages</span><span class="p">,</span> <span class="n">add_generation_prompt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">True</span>
     <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
 
     <span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
-        <span class="n">input_ids</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">inputs</span><span class="p">,</span>
         <span class="n">max_new_tokens</span><span class="o">=</span><span class="n">max_new_tokens</span><span class="p">,</span>
         <span class="n">do_sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">eos_token_id</span><span class="o">=</span><span class="n">stop_token_ids</span><span class="p">,</span>
         <span class="n">pad_token_id</span><span class="o">=</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token_id</span><span class="p">,</span>
     <span class="p">)</span>
 
-    <span class="n">respuesta</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">input_ids</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:],</span> <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">respuesta</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;input_ids&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:],</span> <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">respuesta</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 </pre></div>
 <div id="cell-5" class="clipboard-copy-txt">def query_llm(prompt, max_new_tokens=80):
     """Envía un prompt al modelo usando su plantilla de chat y devuelve solo el texto generado."""
     messages = [{"role": "user", "content": prompt}]
-    input_ids = tokenizer.apply_chat_template(
-        messages, add_generation_prompt=True, return_tensors="pt"
+    inputs = tokenizer.apply_chat_template(
+        messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
     ).to(model.device)
 
     output = model.generate(
-        input_ids,
+        **inputs,
         max_new_tokens=max_new_tokens,
         do_sample=False,
         eos_token_id=stop_token_ids,
         pad_token_id=tokenizer.pad_token_id,
     )
 
-    respuesta = tokenizer.decode(output[0][input_ids.shape[-1]:], skip_special_tokens=True)
+    respuesta = tokenizer.decode(output[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
     return respuesta.strip()</div>
     
         </div>
@@ -2027,7 +2203,10 @@ if im_end_id is not None and im_end_id != tokenizer.unk_token_id:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-los-topicos-exportados-desde-r-unidad-5a">&#128194; Cargar los t&#243;picos exportados desde R (Unidad 5a)<a class="anchor-link" href="#cargar-los-topicos-exportados-desde-r-unidad-5a">&#182;</a></h2><p>Los tres archivos deben estar en el mismo directorio de trabajo que este notebook.</p>
+<hr>
+<hr>
+<h2 id="ii-cargar-los-topicos-exportados-desde-r">&#128194; II. Cargar los t&#243;picos exportados desde R<a class="anchor-link" href="#ii-cargar-los-topicos-exportados-desde-r">&#182;</a></h2><hr>
+<p>Los tres archivos exportados en la Unidad_5a deben estar en el mismo directorio de trabajo que este notebook.</p>
 <blockquote><p>📌 <strong>Si estás en Google Colab:</strong> el entorno de ejecución no tiene acceso directo a tus archivos locales — debes subirlos a la sesión antes de ejecutar la siguiente celda:</p>
 <ol>
 <li>Abre el panel de archivos (ícono de 📁 carpeta en la barra lateral izquierda).</li>
@@ -2046,7 +2225,7 @@ if im_end_id is not None and im_end_id != tokenizer.unk_token_id:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2089,7 +2268,7 @@ topterms_12.head()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
 
 
 
@@ -2173,7 +2352,9 @@ topterms_12.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="palabras-clave-por-topico">&#9986;&#65039; Palabras clave por t&#243;pico<a class="anchor-link" href="#palabras-clave-por-topico">&#182;</a></h2><p>Una función simple para obtener, para un modelo y un tópico dado, sus $n$ palabras con mayor probabilidad ($\beta$) — ya vienen ordenadas desde R, pero lo hacemos explícito aquí.</p>
+<hr>
+<h3 id="palabras-clave-por-topico">&#9986;&#65039; Palabras clave por t&#243;pico<a class="anchor-link" href="#palabras-clave-por-topico">&#182;</a></h3><p>A continuación, creamos una función simple para obtener, dado un tópico, sus $n$ palabras con mayor probabilidad ($\beta$). Recordemos: $\beta$ es la distribución <strong>tópico → palabra</strong> de LDA — para un tópico dado, qué tan probable es que aparezca cada palabra del vocabulario. Una $\beta$ alta para una palabra dentro de un tópico indica que esa palabra es muy característica de ese tópico (a diferencia de $\gamma$, que es la distribución <strong>documento → tópico</strong>, usada en la Unidad 5a para ver qué tópicos predominan en cada documento).</p>
+<p>El CSV exportado desde R ya viene ordenado por $\beta$ descendente dentro de cada tópico (por el <code>arrange(topic, -beta)</code> de la Unidad 5a), pero igual ordenamos explícitamente aquí en Python — así la función es correcta sin depender de que ese orden se mantenga (por ejemplo, si el CSV se regenera de otra forma, o el dataframe se filtra o combina con otros antes de llegar aquí).</p>
 
 </div>
 </div>
@@ -2184,7 +2365,7 @@ topterms_12.head()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2208,7 +2389,7 @@ topterms_12.head()</div>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">palabras</span>
 
-<span class="n">get_topic_words</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">topic_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">get_topic_words</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">topic_id</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 <div id="cell-7" class="clipboard-copy-txt">def get_topic_words(df, topic_id, n=15):
     palabras = (
@@ -2219,7 +2400,7 @@ topterms_12.head()</div>
     )
     return palabras
 
-get_topic_words(topterms_20, topic_id=1)</div>
+get_topic_words(topterms_20, topic_id=2)</div>
     
         </div>
     </div>
@@ -2237,27 +2418,27 @@ get_topic_words(topterms_20, topic_id=1)</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;action&#39;,
- &#39;jackie&#39;,
- &#39;chan&#39;,
- &#39;van&#39;,
- &#39;fight&#39;,
- &#39;plot&#39;,
- &#39;hong&#39;,
- &#39;kong&#39;,
- &#39;bond&#39;,
- &#39;chinese&#39;,
- &#39;martial&#39;,
- &#39;arts&#39;,
- &#39;films&#39;,
- &#39;damme&#39;,
- &#39;blade&#39;]</pre>
+<pre>[&#39;sex&#39;,
+ &#39;characters&#39;,
+ &#39;woman&#39;,
+ &#39;mr&#39;,
+ &#39;scene&#39;,
+ &#39;sexual&#39;,
+ &#39;women&#39;,
+ &#39;nights&#39;,
+ &#34;film&#39;s&#34;,
+ &#39;party&#39;,
+ &#39;wife&#39;,
+ &#39;love&#39;,
+ &#39;husband&#39;,
+ &#39;boogie&#39;,
+ &#39;drug&#39;]</pre>
 </div>
 
 </div>
@@ -2274,6 +2455,7 @@ get_topic_words(topterms_20, topic_id=1)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <h2 id="diseno-del-prompt">&#9997;&#65039; Dise&#241;o del prompt<a class="anchor-link" href="#diseno-del-prompt">&#182;</a></h2><p>Le pedimos al modelo una salida en un <strong>formato fijo y parseable</strong> (tres líneas con etiquetas conocidas), en lugar de una respuesta libre — esto hace posible extraer los resultados automáticamente con una expresión regular, sin depender de que el modelo "converse" de forma predecible.</p>
 
 </div>
@@ -2285,7 +2467,7 @@ get_topic_words(topterms_20, topic_id=1)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2317,7 +2499,7 @@ get_topic_words(topterms_20, topic_id=1)</div>
     <span class="k">return</span> <span class="n">PROMPT_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="n">words</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="n">build_prompt</span><span class="p">(</span><span class="n">get_topic_words</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">topic_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">build_prompt</span><span class="p">(</span><span class="n">get_topic_words</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">topic_id</span><span class="o">=</span><span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 <div id="cell-8" class="clipboard-copy-txt">PROMPT_TEMPLATE = """Estas son las {n} palabras más representativas de un tópico obtenido mediante \
 Latent Dirichlet Allocation (LDA), aplicado a un corpus de críticas de películas:
@@ -2336,7 +2518,7 @@ def build_prompt(words):
     return PROMPT_TEMPLATE.format(n=len(words), words=", ".join(words))
 
 
-print(build_prompt(get_topic_words(topterms_20, topic_id=1)))</div>
+print(build_prompt(get_topic_words(topterms_20, topic_id=2)))</div>
     
         </div>
     </div>
@@ -2360,7 +2542,7 @@ print(build_prompt(get_topic_words(topterms_20, topic_id=1)))</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Estas son las 15 palabras más representativas de un tópico obtenido mediante Latent Dirichlet Allocation (LDA), aplicado a un corpus de críticas de películas:
 
-action, jackie, chan, van, fight, plot, hong, kong, bond, chinese, martial, arts, films, damme, blade
+sex, characters, woman, mr, scene, sexual, women, nights, film&#39;s, party, wife, love, husband, boogie, drug
 
 Responde EXACTAMENTE en este formato, sin texto adicional ni explicaciones fuera de él:
 
@@ -2384,7 +2566,65 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="extraer-la-etiqueta-el-puntaje-y-la-justificacion-de-la-respuesta">&#128269; Extraer la etiqueta, el puntaje y la justificaci&#243;n de la respuesta<a class="anchor-link" href="#extraer-la-etiqueta-el-puntaje-y-la-justificacion-de-la-respuesta">&#182;</a></h2>
+<hr>
+<h3 id="como-decide-el-modelo-ese-numero-entre-1-y-5">&#127922; &#191;C&#243;mo "decide" el modelo ese n&#250;mero entre 1 y 5?<a class="anchor-link" href="#como-decide-el-modelo-ese-numero-entre-1-y-5">&#182;</a></h3><p>Un LLM genera texto <strong>token por token</strong>, prediciendo en cada paso "¿cuál es el siguiente token más probable?", dado todo el contexto anterior. Cuando llega al punto donde debe escribir el número después de "Coherencia (1-5): ", el modelo:</p>
+<ol>
+<li>Calcula una <strong>distribución de probabilidad</strong> sobre todos los tokens posibles de su vocabulario para esa posición.</li>
+<li>Dado ese contexto específico, tokens como <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code> tienen probabilidades mucho más altas que cualquier otra palabra — porque el modelo <strong>aprendió durante su entrenamiento</strong>, a partir de enormes cantidades de texto (incluyendo tareas de calificación y evaluación de similitud semántica), qué continuaciones son razonables en ese tipo de contexto.</li>
+<li>Cuál de esos candidatos elige depende de qué tan coherentes le "parecen" las palabras del prompt, según los patrones que absorbió durante el entrenamiento — no de un cálculo explícito sobre esas palabras.</li>
+<li>Como usamos <code>do_sample=False</code> en <code>model.generate()</code>, la generación es <strong>determinista (greedy)</strong>: en cada paso el modelo elige el token de mayor probabilidad, sin aleatoriedad. El mismo prompt siempre produce la misma respuesta.</li>
+</ol>
+<blockquote><p>📌 <strong>Idea clave:</strong> el número no es el resultado de un algoritmo que "compara" las palabras entre sí — es una predicción estadística aprendida, la misma mecánica con la que el modelo genera cualquier otra palabra del texto. Aquí simplemente el contexto (las instrucciones del prompt) empuja la probabilidad hacia los dígitos 1-5 en esa posición específica.</p>
+</blockquote>
+<hr>
+<h3 id="diferencia-explicita-con-la-unidad-5c-embeddings">&#9878;&#65039; Diferencia expl&#237;cita con la Unidad 5c (Embeddings)<a class="anchor-link" href="#diferencia-explicita-con-la-unidad-5c-embeddings">&#182;</a></h3><table>
+<thead><tr>
+<th></th>
+<th><strong>Este notebook (5b, LLM)</strong></th>
+<th><strong>Unidad 5c (Embeddings)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>¿Qué mide?</strong></td>
+<td>Le pide al LLM que <strong>opine</strong> un número 1-5</td>
+<td><strong>Calcula</strong> la similitud coseno promedio entre los vectores de las palabras</td>
+</tr>
+<tr>
+<td><strong>¿Hay una fórmula?</strong></td>
+<td>No — es texto generado, token por token</td>
+<td>Sí — un valor numérico derivado directamente de los embeddings</td>
+</tr>
+<tr>
+<td><strong>¿De dónde sale el resultado?</strong></td>
+<td>De qué token es más probable, según patrones aprendidos en el entrenamiento</td>
+<td>De una operación matemática (distancia/similitud) sobre vectores</td>
+</tr>
+<tr>
+<td><strong>¿Es reproducible con otro modelo?</strong></td>
+<td>Puede variar según el LLM usado</td>
+<td>El resultado depende del modelo de embeddings, pero el cálculo en sí es determinista y transparente</td>
+</tr>
+</tbody>
+</table>
+<p>Son dos formas fundamentalmente distintas de resolver el mismo problema: 5b delega el juicio de coherencia en el criterio (implícito, aprendido) de un LLM; 5c lo reemplaza por una medida matemática explícita y verificable.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="parse_response-extrayendo-la-respuesta-estructurada-del-llm-el-puntaje-y-la-justificacion-de-la-respuesta">&#128270; <code>parse_response()</code>: extrayendo la respuesta estructurada del LLM, el puntaje y la justificaci&#243;n de la respuesta<a class="anchor-link" href="#parse_response-extrayendo-la-respuesta-estructurada-del-llm-el-puntaje-y-la-justificacion-de-la-respuesta">&#182;</a></h3><p>Esta función usa expresiones regulares para extraer tres campos desde el texto libre que devuelve el LLM: la <strong>etiqueta</strong> del tópico, su <strong>coherencia</strong> (1-5) y la <strong>justificación</strong>.</p>
+<p>El detalle no trivial está en la <em>regex</em> de <code>coherencia</code>: se usa <code>[^:]*</code> (cualquier cosa que no sea <code>:</code>) entre la palabra "Coherencia" y los dos puntos, en vez de capturar el primer dígito que aparezca. Esto es necesario porque el propio <em>prompt</em> que le enviamos al modelo ya contiene un dígito dentro de un paréntesis — "Coherencia (1-5): ..." — y una <em>regex</em> más ingenua podría capturar por error el "1" de "(1-5)" en lugar del número real que el modelo respondió después de los dos puntos. Como "(1-5)" no contiene <code>:</code>, <code>[^:]*</code> lo deja pasar sin detenerse ahí, y solo el dígito que sigue al <code>:</code> real queda capturado.</p>
+<p>Además, cada <em>regex</em> usa <code>[Ee]</code>/<code>[Cc]</code>/<code>[Jj]</code> para tolerar mayúsculas o minúsculas en la etiqueta, y <code>\**</code> para ignorar posibles asteriscos de <strong>negrita</strong> en markdown que el modelo a veces agrega alrededor de la etiqueta o el número.</p>
+<p>Si algún campo no aparece en la respuesta (el <code>.search()</code> no encuentra coincidencia), se devuelve <code>None</code> en su lugar — así el resto del código puede detectar respuestas incompletas o mal formateadas sin que el programa falle.</p>
+
 </div>
 </div>
 </div>
@@ -2394,7 +2634,7 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2416,6 +2656,7 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
     <span class="c1"># detenerse ahí, ya que no contiene &quot;:&quot;, y solo captura el dígito real que</span>
     <span class="c1"># viene después del &quot;:&quot;. También toleramos mayúsculas/minúsculas y posible</span>
     <span class="c1"># **negrita** de markdown alrededor de la etiqueta o el número.</span>
+    
     <span class="n">etiqueta</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Ee]tiqueta:\s*\**\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
     <span class="n">coherencia</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Cc]oherencia[^:]*:\s*\**\s*(\d)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
     <span class="n">justificacion</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Jj]ustificaci[oó]n:\s*\**\s*(.+)&quot;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
@@ -2433,6 +2674,7 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
     # detenerse ahí, ya que no contiene ":", y solo captura el dígito real que
     # viene después del ":". También toleramos mayúsculas/minúsculas y posible
     # **negrita** de markdown alrededor de la etiqueta o el número.
+    
     etiqueta = re.search(r"[Ee]tiqueta:\s*\**\s*(.+)", response)
     coherencia = re.search(r"[Cc]oherencia[^:]*:\s*\**\s*(\d)", response)
     justificacion = re.search(r"[Jj]ustificaci[oó]n:\s*\**\s*(.+)", response)
@@ -2457,7 +2699,7 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="aplicar-el-llm-a-todos-los-topicos-de-un-modelo">&#128257; Aplicar el LLM a todos los t&#243;picos de un modelo<a class="anchor-link" href="#aplicar-el-llm-a-todos-los-topicos-de-un-modelo">&#182;</a></h2><p>Recorremos cada tópico del modelo, construimos su prompt, consultamos al LLM y guardamos el resultado parseado en un <code>DataFrame</code>.</p>
+<h2 id="iii-aplicar-el-llm-a-todos-los-topicos-de-un-modelo">&#128257; III. Aplicar el LLM a todos los t&#243;picos de un modelo<a class="anchor-link" href="#iii-aplicar-el-llm-a-todos-los-topicos-de-un-modelo">&#182;</a></h2><p>Recorremos cada tópico del modelo, construimos su prompt, consultamos al LLM y guardamos el resultado parseado en un <code>DataFrame</code>.</p>
 <blockquote><p>⏱️ Esta celda puede tardar varios minutos por modelo, ya que genera una respuesta por cada tópico (12, 20 o 25 llamadas al modelo).</p>
 </blockquote>
 
@@ -2470,7 +2712,7 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2485,7 +2727,10 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_model_topics</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">n_words</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm.auto</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+
+<span class="k">def</span> <span class="nf">evaluate_model_topics</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">n_words</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">pbar</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">resultados</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">topic_id</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;topic&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
         <span class="n">palabras</span> <span class="o">=</span> <span class="n">get_topic_words</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n_words</span><span class="p">)</span>
@@ -2494,10 +2739,15 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
         <span class="n">parsed</span> <span class="o">=</span> <span class="n">parse_response</span><span class="p">(</span><span class="n">respuesta</span><span class="p">)</span>
         <span class="n">parsed</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="n">k</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="n">topic_id</span><span class="p">,</span> <span class="s2">&quot;palabras&quot;</span><span class="p">:</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">palabras</span><span class="p">)})</span>
         <span class="n">resultados</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parsed</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resultados</span><span class="p">)</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">def evaluate_model_topics(df, k, n_words=15):
+<div id="cell-10" class="clipboard-copy-txt">from tqdm.auto import tqdm
+
+
+def evaluate_model_topics(df, k, n_words=15, pbar=None):
     resultados = []
     for topic_id in sorted(df["topic"].unique()):
         palabras = get_topic_words(df, topic_id, n=n_words)
@@ -2506,6 +2756,8 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
         parsed = parse_response(respuesta)
         parsed.update({"k": k, "topic": topic_id, "palabras": ", ".join(palabras)})
         resultados.append(parsed)
+        if pbar is not None:
+            pbar.update(1)
 
     return pd.DataFrame(resultados)</div>
     
@@ -2516,13 +2768,13 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
 </div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2537,19 +2789,83 @@ Justificación: &lt;una frase breve explicando tu evaluación de coherencia&gt;
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultados_12</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_12</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">resultados_20</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">resultados_25</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_25</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="c1"># Muestra la tabla completa (sin truncar filas) dentro de una ventana de</span>
+<span class="c1"># altura fija -- funciona igual en VS Code y en el sitio web, ya que el</span>
+<span class="c1"># scroll viene de un estilo inline, no de una hoja de estilos externa.</span>
+<span class="c1"># La altura por defecto (500px) deja ver ~20 filas antes de necesitar scroll.</span>
+<span class="k">def</span> <span class="nf">show_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;500px&quot;</span><span class="p">):</span>
+    <span class="n">tabla_html</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s1">&#39;&lt;div style=&quot;max-height:</span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s1">; overflow:auto; border:1px solid #ddd; padding:4px;&quot;&gt;&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">tabla_html</span><span class="si">}</span><span class="s1">&lt;/div&gt;&#39;</span>
+    <span class="p">)</span>
+</pre></div>
+<div id="cell-11" class="clipboard-copy-txt">from IPython.display import HTML
+
+# Muestra la tabla completa (sin truncar filas) dentro de una ventana de
+# altura fija -- funciona igual en VS Code y en el sitio web, ya que el
+# scroll viene de un estilo inline, no de una hoja de estilos externa.
+# La altura por defecto (500px) deja ver ~20 filas antes de necesitar scroll.
+def show_table(df, height="500px"):
+    tabla_html = df.to_html()
+    return HTML(
+        f'<div style="max-height:{height}; overflow:auto; border:1px solid #ddd; padding:4px;">'
+        f'{tabla_html}</div>'
+    )</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-12">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">total_topicos</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">topterms_12</span><span class="p">[</span><span class="s2">&quot;topic&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">+</span> <span class="n">topterms_20</span><span class="p">[</span><span class="s2">&quot;topic&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">+</span> <span class="n">topterms_25</span><span class="p">[</span><span class="s2">&quot;topic&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="n">total_topicos</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Evaluando tópicos&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">pbar</span><span class="p">:</span>
+    <span class="n">resultados_12</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_12</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">)</span>
+    <span class="n">resultados_20</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_20</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">)</span>
+    <span class="n">resultados_25</span> <span class="o">=</span> <span class="n">evaluate_model_topics</span><span class="p">(</span><span class="n">topterms_25</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">pbar</span><span class="o">=</span><span class="n">pbar</span><span class="p">)</span>
 
 <span class="n">resultados_todos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">resultados_12</span><span class="p">,</span> <span class="n">resultados_20</span><span class="p">,</span> <span class="n">resultados_25</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">resultados_todos</span>
+<span class="n">show_table</span><span class="p">(</span><span class="n">resultados_todos</span><span class="p">)</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">resultados_12 = evaluate_model_topics(topterms_12, k=12)
-resultados_20 = evaluate_model_topics(topterms_20, k=20)
-resultados_25 = evaluate_model_topics(topterms_25, k=25)
+<div id="cell-12" class="clipboard-copy-txt">total_topicos = (
+    topterms_12["topic"].nunique() + topterms_20["topic"].nunique() + topterms_25["topic"].nunique()
+)
+
+with tqdm(total=total_topicos, desc="Evaluando tópicos") as pbar:
+    resultados_12 = evaluate_model_topics(topterms_12, k=12, pbar=pbar)
+    resultados_20 = evaluate_model_topics(topterms_20, k=20, pbar=pbar)
+    resultados_25 = evaluate_model_topics(topterms_25, k=25, pbar=pbar)
 
 resultados_todos = pd.concat([resultados_12, resultados_20, resultados_25], ignore_index=True)
-resultados_todos</div>
+show_table(resultados_todos)</div>
     
         </div>
     </div>
@@ -2571,51 +2887,7 @@ resultados_todos</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input&#39;s `attention_mask` to obtain reliable results.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-The following generation flags are not valid and may be ignored: [&#39;temperature&#39;, &#39;top_p&#39;, &#39;top_k&#39;]. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+<pre>Evaluando tópicos: 100%|██████████| 57/57 [02:45&lt;00:00,  2.90s/it]
 </pre>
 </div>
 </div>
@@ -2623,214 +2895,541 @@ The following generation flags are not valid and may be ignored: [&#39;temperatu
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[13]</span><span class="ansi-green-fg">, line 3</span>
-<span class="ansi-green-fg">      1</span> resultados_12 = evaluate_model_topics(topterms_12, k=<span class="ansi-green-fg">12</span>)
-<span class="ansi-green-fg">      2</span> resultados_20 = evaluate_model_topics(topterms_20, k=<span class="ansi-green-fg">20</span>)
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> resultados_25 = <span class="ansi-yellow-bg">evaluate_model_topics</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">topterms_25</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">k</span><span class="ansi-yellow-bg">=</span><span class="ansi-green-fg ansi-yellow-bg">25</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">      5</span> resultados_todos = pd.concat([resultados_12, resultados_20, resultados_25], ignore_index=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-<span class="ansi-green-fg">      6</span> resultados_todos
 
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[12]</span><span class="ansi-green-fg">, line 6</span>, in <span class="ansi-cyan-fg">evaluate_model_topics</span><span class="ansi-blue-fg">(df, k, n_words)</span>
-<span class="ansi-green-fg">      4</span> palabras = get_topic_words(df, topic_id, n=n_words)
-<span class="ansi-green-fg">      5</span> prompt = build_prompt(palabras)
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">6</span> respuesta = <span class="ansi-yellow-bg">query_llm</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">prompt</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">      7</span> parsed = parse_response(respuesta)
-<span class="ansi-green-fg">      8</span> parsed.update({<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">k</span><span class="ansi-yellow-fg">&#34;</span>: k, <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">topic</span><span class="ansi-yellow-fg">&#34;</span>: topic_id, <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">palabras</span><span class="ansi-yellow-fg">&#34;</span>: <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">, </span><span class="ansi-yellow-fg">&#34;</span>.join(palabras)})
-
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 8</span>, in <span class="ansi-cyan-fg">query_llm</span><span class="ansi-blue-fg">(prompt, max_new_tokens)</span>
-<span class="ansi-green-fg">      3</span> messages = [{<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">role</span><span class="ansi-yellow-fg">&#34;</span>: <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">user</span><span class="ansi-yellow-fg">&#34;</span>, <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">content</span><span class="ansi-yellow-fg">&#34;</span>: prompt}]
-<span class="ansi-green-fg">      4</span> input_ids = tokenizer.apply_chat_template(
-<span class="ansi-green-fg">      5</span>     messages, add_generation_prompt=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, return_tensors=<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">pt</span><span class="ansi-yellow-fg">&#34;</span>
-<span class="ansi-green-fg">      6</span> ).to(model.device)
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">8</span> output = <span class="ansi-yellow-bg">model</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">generate</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">      9</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">input_ids</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">     10</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">max_new_tokens</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">max_new_tokens</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">     11</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">do_sample</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">     12</span> <span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">     14</span> respuesta = tokenizer.decode(output[<span class="ansi-green-fg">0</span>][input_ids.shape[-<span class="ansi-green-fg">1</span>]:], skip_special_tokens=<span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-<span class="ansi-green-fg">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> respuesta.strip()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/utils/_contextlib.py:116</span>, in <span class="ansi-cyan-fg">context_decorator.&lt;locals&gt;.decorate_context</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-fg">    113</span> <span style="color: rgb(175,0,255)">@functools</span>.wraps(func)
-<span class="ansi-green-fg">    114</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">decorate_context</span>(*args, **kwargs):
-<span class="ansi-green-fg">    115</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> ctx_factory():
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">116</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/generation/utils.py:2633</span>, in <span class="ansi-cyan-fg">GenerationMixin.generate</span><span class="ansi-blue-fg">(self, inputs, generation_config, logits_processor, stopping_criteria, prefix_allowed_tokens_fn, synced_gpus, assistant_model, streamer, negative_prompt_ids, negative_prompt_attention_mask, use_model_defaults, custom_generate, **kwargs)</span>
-<span class="ansi-green-fg">   2625</span>     input_ids, model_kwargs = <span style="color: rgb(0,135,0)">self</span>._expand_inputs_for_generation(
-<span class="ansi-green-fg">   2626</span>         input_ids=input_ids,
-<span class="ansi-green-fg">   2627</span>         expand_size=generation_config.num_return_sequences,
-<span class="ansi-green-fg">   2628</span>         is_encoder_decoder=<span style="color: rgb(0,135,0)">self</span>.config.is_encoder_decoder,
-<span class="ansi-green-fg">   2629</span>         **model_kwargs,
-<span class="ansi-green-fg">   2630</span>     )
-<span class="ansi-green-fg">   2632</span>     <span style="color: rgb(95,135,135)"># 12. run sample (it degenerates to greedy search when `generation_config.do_sample=False`)</span>
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">2633</span>     result = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_sample</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">   2634</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">input_ids</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2635</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">logits_processor</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">prepared_logits_processor</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2636</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">stopping_criteria</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">prepared_stopping_criteria</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2637</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">generation_config</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">generation_config</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2638</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">synced_gpus</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">synced_gpus</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2639</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">streamer</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">streamer</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2640</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">model_kwargs</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">   2641</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   2643</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> generation_mode <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> (GenerationMode.BEAM_SAMPLE, GenerationMode.BEAM_SEARCH):
-<span class="ansi-green-fg">   2644</span>     <span style="color: rgb(95,135,135)"># 11. interleave input_ids with `num_beams` additional sequences per batch</span>
-<span class="ansi-green-fg">   2645</span>     input_ids, model_kwargs = <span style="color: rgb(0,135,0)">self</span>._expand_inputs_for_generation(
-<span class="ansi-green-fg">   2646</span>         input_ids=input_ids,
-<span class="ansi-green-fg">   2647</span>         expand_size=generation_config.num_beams,
-<span class="ansi-green-fg">   2648</span>         is_encoder_decoder=<span style="color: rgb(0,135,0)">self</span>.config.is_encoder_decoder,
-<span class="ansi-green-fg">   2649</span>         **model_kwargs,
-<span class="ansi-green-fg">   2650</span>     )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/generation/utils.py:3617</span>, in <span class="ansi-cyan-fg">GenerationMixin._sample</span><span class="ansi-blue-fg">(self, input_ids, logits_processor, stopping_criteria, generation_config, synced_gpus, streamer, **model_kwargs)</span>
-<span class="ansi-green-fg">   3615</span>     is_prefill = <span class="ansi-bold" style="color: rgb(0,135,0)">False</span>
-<span class="ansi-green-fg">   3616</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">3617</span>     outputs = <span class="ansi-yellow-bg">model_forward</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">model_inputs</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">return_dict</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   3619</span> <span style="color: rgb(95,135,135)"># synced_gpus: don&#39;t waste resources running the code we don&#39;t need; kwargs must be updated before skipping</span>
-<span class="ansi-green-fg">   3620</span> model_kwargs = <span style="color: rgb(0,135,0)">self</span>._update_model_kwargs_for_generation(
-<span class="ansi-green-fg">   3621</span>     outputs,
-<span class="ansi-green-fg">   3622</span>     model_kwargs,
-<span class="ansi-green-fg">   3623</span>     is_encoder_decoder=<span style="color: rgb(0,135,0)">self</span>.config.is_encoder_decoder,
-<span class="ansi-green-fg">   3624</span> )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1751</span>, in <span class="ansi-cyan-fg">Module._wrapped_call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1749</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._compiled_call_impl(*args, **kwargs)  <span style="color: rgb(95,135,135)"># type: ignore[misc]</span>
-<span class="ansi-green-fg">   1750</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1751</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_call_impl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1762</span>, in <span class="ansi-cyan-fg">Module._call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1757</span> <span style="color: rgb(95,135,135)"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
-<span class="ansi-green-fg">   1758</span> <span style="color: rgb(95,135,135)"># this function, and just call forward.</span>
-<span class="ansi-green-fg">   1759</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (<span style="color: rgb(0,135,0)">self</span>._backward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_pre_hooks
-<span class="ansi-green-fg">   1760</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_hooks
-<span class="ansi-green-fg">   1761</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_pre_hooks):
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1762</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">forward_call</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1764</span> result = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">   1765</span> called_always_called_hooks = <span style="color: rgb(0,135,0)">set</span>()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/utils/generic.py:961</span>, in <span class="ansi-cyan-fg">can_return_tuple.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">    959</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> return_dict_passed <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">    960</span>     return_dict = return_dict_passed
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">961</span> output = <span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    962</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> return_dict <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span style="color: rgb(0,135,0)">isinstance</span>(output, <span style="color: rgb(0,135,0)">tuple</span>):
-<span class="ansi-green-fg">    963</span>     output = output.to_tuple()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py:450</span>, in <span class="ansi-cyan-fg">Qwen2ForCausalLM.forward</span><span class="ansi-blue-fg">(self, input_ids, attention_mask, position_ids, past_key_values, inputs_embeds, labels, use_cache, cache_position, logits_to_keep, **kwargs)</span>
-<span class="ansi-green-fg">    418</span> <span style="color: rgb(175,0,255)">@can_return_tuple</span>
-<span class="ansi-green-fg">    419</span> <span style="color: rgb(175,0,255)">@auto_docstring</span>
-<span class="ansi-green-fg">    420</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">forward</span>(
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    431</span>     **kwargs: Unpack[TransformersKwargs],
-<span class="ansi-green-fg">    432</span> ) -&gt; CausalLMOutputWithPast:
-<span class="ansi-green-fg">    433</span> <span style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-fg">r</span><span class="ansi-yellow-fg">&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">    434</span> <span class="ansi-yellow-fg">    Example:</span>
-<span class="ansi-green-fg">    435</span> 
-<span class="ansi-green-fg">   (...)</span><span class="ansi-green-fg">    448</span> <span class="ansi-yellow-fg">    &#34;Hey, are you conscious? Can you talk to me?\nI&#39;m not conscious, but I can talk to you.&#34;</span>
-<span class="ansi-green-fg">    449</span> <span class="ansi-yellow-fg">    ```&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">450</span>     outputs: BaseModelOutputWithPast = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">model</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">    451</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">input_ids</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">input_ids</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    452</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">attention_mask</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">attention_mask</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    453</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">position_ids</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">position_ids</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    454</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">past_key_values</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">past_key_values</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    455</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">inputs_embeds</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">inputs_embeds</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    456</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_cache</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_cache</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    457</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">cache_position</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">cache_position</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    458</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    459</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    461</span>     hidden_states = outputs.last_hidden_state
-<span class="ansi-green-fg">    462</span>     <span style="color: rgb(95,135,135)"># Only compute necessary logits, and do not upcast them to float if we are not computing the loss</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1751</span>, in <span class="ansi-cyan-fg">Module._wrapped_call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1749</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._compiled_call_impl(*args, **kwargs)  <span style="color: rgb(95,135,135)"># type: ignore[misc]</span>
-<span class="ansi-green-fg">   1750</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1751</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_call_impl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1762</span>, in <span class="ansi-cyan-fg">Module._call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1757</span> <span style="color: rgb(95,135,135)"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
-<span class="ansi-green-fg">   1758</span> <span style="color: rgb(95,135,135)"># this function, and just call forward.</span>
-<span class="ansi-green-fg">   1759</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (<span style="color: rgb(0,135,0)">self</span>._backward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_pre_hooks
-<span class="ansi-green-fg">   1760</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_hooks
-<span class="ansi-green-fg">   1761</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_pre_hooks):
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1762</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">forward_call</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1764</span> result = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">   1765</span> called_always_called_hooks = <span style="color: rgb(0,135,0)">set</span>()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/utils/generic.py:1069</span>, in <span class="ansi-cyan-fg">check_model_inputs.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1066</span>                 module.forward = make_capture_wrapper(module, original_forward, key, specs.index)
-<span class="ansi-green-fg">   1067</span>                 monkey_patched_layers.append((module, original_forward))
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1069</span> outputs = <span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1070</span> <span style="color: rgb(95,135,135)"># Restore original forward methods</span>
-<span class="ansi-green-fg">   1071</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> module, original_forward <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> monkey_patched_layers:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py:379</span>, in <span class="ansi-cyan-fg">Qwen2Model.forward</span><span class="ansi-blue-fg">(self, input_ids, attention_mask, position_ids, past_key_values, inputs_embeds, use_cache, cache_position, **kwargs)</span>
-<span class="ansi-green-fg">    376</span> position_embeddings = <span style="color: rgb(0,135,0)">self</span>.rotary_emb(hidden_states, position_ids)
-<span class="ansi-green-fg">    378</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> decoder_layer <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">self</span>.layers[: <span style="color: rgb(0,135,0)">self</span>.config.num_hidden_layers]:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">379</span>     hidden_states = <span class="ansi-yellow-bg">decoder_layer</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">    380</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">hidden_states</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    381</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">attention_mask</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">causal_mask_mapping</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">decoder_layer</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">attention_type</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    382</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">position_ids</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">position_ids</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    383</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">past_key_value</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">past_key_values</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    384</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_cache</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_cache</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    385</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">cache_position</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">cache_position</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    386</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">position_embeddings</span><span class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">position_embeddings</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    387</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-fg">    388</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    390</span> hidden_states = <span style="color: rgb(0,135,0)">self</span>.norm(hidden_states)
-<span class="ansi-green-fg">    391</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> BaseModelOutputWithPast(
-<span class="ansi-green-fg">    392</span>     last_hidden_state=hidden_states,
-<span class="ansi-green-fg">    393</span>     past_key_values=past_key_values <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> use_cache <span class="ansi-bold" style="color: rgb(0,135,0)">else</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>,
-<span class="ansi-green-fg">    394</span> )
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/modeling_layers.py:94</span>, in <span class="ansi-cyan-fg">GradientCheckpointingLayer.__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">     91</span>         logger.warning(message)
-<span class="ansi-green-fg">     93</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._gradient_checkpointing_func(partial(<span style="color: rgb(0,135,0)">super</span>().<span class="ansi-blue-fg">__call__</span>, **kwargs), *args)
-<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">94</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">.</span><span class="ansi-blue-fg ansi-yellow-bg">__call__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1751</span>, in <span class="ansi-cyan-fg">Module._wrapped_call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1749</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._compiled_call_impl(*args, **kwargs)  <span style="color: rgb(95,135,135)"># type: ignore[misc]</span>
-<span class="ansi-green-fg">   1750</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1751</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_call_impl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1762</span>, in <span class="ansi-cyan-fg">Module._call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1757</span> <span style="color: rgb(95,135,135)"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
-<span class="ansi-green-fg">   1758</span> <span style="color: rgb(95,135,135)"># this function, and just call forward.</span>
-<span class="ansi-green-fg">   1759</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (<span style="color: rgb(0,135,0)">self</span>._backward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_pre_hooks
-<span class="ansi-green-fg">   1760</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_hooks
-<span class="ansi-green-fg">   1761</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_pre_hooks):
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1762</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">forward_call</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1764</span> result = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">   1765</span> called_always_called_hooks = <span style="color: rgb(0,135,0)">set</span>()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py:245</span>, in <span class="ansi-cyan-fg">Qwen2DecoderLayer.forward</span><span class="ansi-blue-fg">(self, hidden_states, attention_mask, position_ids, past_key_value, use_cache, cache_position, position_embeddings, **kwargs)</span>
-<span class="ansi-green-fg">    243</span> <span style="color: rgb(95,135,135)"># Fully Connected</span>
-<span class="ansi-green-fg">    244</span> residual = hidden_states
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">245</span> hidden_states = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">post_attention_layernorm</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">hidden_states</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    246</span> hidden_states = <span style="color: rgb(0,135,0)">self</span>.mlp(hidden_states)
-<span class="ansi-green-fg">    247</span> hidden_states = residual + hidden_states
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1751</span>, in <span class="ansi-cyan-fg">Module._wrapped_call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1749</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span>._compiled_call_impl(*args, **kwargs)  <span style="color: rgb(95,135,135)"># type: ignore[misc]</span>
-<span class="ansi-green-fg">   1750</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1751</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_call_impl</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/dev-env/lib/python3.13/site-packages/torch/nn/modules/module.py:1762</span>, in <span class="ansi-cyan-fg">Module._call_impl</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg">   1757</span> <span style="color: rgb(95,135,135)"># If we don&#39;t have any hooks, we want to skip the rest of the logic in</span>
-<span class="ansi-green-fg">   1758</span> <span style="color: rgb(95,135,135)"># this function, and just call forward.</span>
-<span class="ansi-green-fg">   1759</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (<span style="color: rgb(0,135,0)">self</span>._backward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">self</span>._forward_pre_hooks
-<span class="ansi-green-fg">   1760</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_pre_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_backward_hooks
-<span class="ansi-green-fg">   1761</span>         <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_hooks <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _global_forward_pre_hooks):
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">1762</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">forward_call</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">   1764</span> result = <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
-<span class="ansi-green-fg">   1765</span> called_always_called_hooks = <span style="color: rgb(0,135,0)">set</span>()
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div style="max-height:500px; overflow:auto; border:1px solid #ddd; padding:4px;"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>etiqueta</th>
+      <th>coherencia</th>
+      <th>justificacion</th>
+      <th>k</th>
+      <th>topic</th>
+      <th>palabras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Crime &amp; Action Movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas de acción y crimen, incluyendo personajes como Jackie Chan y Tarantino, así como elementos como policías y agentes, sugiriendo una temática clara de películas de acción y crimen.</td>
+      <td>12</td>
+      <td>1</td>
+      <td>action, jackie, plot, crime, cop, chan, s, movies, films, police, plays, van, agent, role, tarantino</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Party &amp; Sex</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con eventos nocturnos, drogas y temas sexuales, lo que sugiere un tema claro y coherente sobre fiestas y actividades sexuales.</td>
+      <td>12</td>
+      <td>2</td>
+      <td>wild, sex, girls, party, scene, harry, drug, house, joe, nights, spice, things, west, sexual, boogie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Romance Familiar</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas románticos y familiares, como relaciones, matrimonio, amor y familia, lo que forma un tema claro y coherente.</td>
+      <td>12</td>
+      <td>3</td>
+      <td>love, life, family, romantic, comedy, woman, town, father, mother, relationship, man, husband, wedding, joe, home</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Sci-Fi Action</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con elementos de ciencia ficción y acción, como alienígenas, efectos especiales, misiones espaciales y películas conocidas de género similar.</td>
+      <td>12</td>
+      <td>4</td>
+      <td>alien, ship, aliens, effects, planet, action, mars, earth, crew, special, godzilla, mission, titanic, species, space</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Batman &amp; Villains</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con personajes y temas de la franquicia de Batman, lo que indica una alta coherencia temática.</td>
+      <td>12</td>
+      <td>5</td>
+      <td>batman, vampire, wife, robin, book, arnold, vampires, action, murder, comic, spawn, kill, evil, flynt, horror</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Horror Teen Movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con películas de terror dirigidas a adolescentes, desde referencias específicas como "slasher" hasta conceptos generales como "horror".</td>
+      <td>12</td>
+      <td>6</td>
+      <td>scream, horror, school, killer, high, summer, teen, characters, still, julie, last, slasher, movies, know, original</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Sci-Fi &amp; Fantasy Movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con películas de ciencia ficción y fantasía, incluyendo referencias a personajes, lugares y conceptos específicos del género.</td>
+      <td>12</td>
+      <td>7</td>
+      <td>effects, star_wars, special, movie, space, science, series, star_trek, computer, lucas, phantom, new, menace, jedi, many</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Disney Animation</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la animación de Disney, incluyendo personajes como Tarzan y Mulan, así como elementos como la historia, la familia y los musicales.</td>
+      <td>12</td>
+      <td>8</td>
+      <td>disney, story, animated, voice, animation, tarzan, original, king, family, musical, toy, songs, young, mulan, version</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>War &amp; Politics</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas militares, políticos y personajes históricos, formando un tema claro y coherente sobre la guerra y política.</td>
+      <td>12</td>
+      <td>9</td>
+      <td>war, movie, political, men, american, black, white, army, ryan, spielberg, battle, private, make, country, soldiers</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>film criticism</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica de películas, desde aspectos como el personaje hasta la trama y la duración del filme.</td>
+      <td>12</td>
+      <td>10</td>
+      <td>film, one, story, like, character, characters, also, life, can, much, two, time, even, man, first</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>movie critique</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica de una película, desde el título hasta aspectos como la trama y la calidad general.</td>
+      <td>12</td>
+      <td>11</td>
+      <td>movie, film, one, just, like, good, even, get, really, bad, time, see, well, can, plot</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Comedy Movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con comedias de cine, incluyendo términos como "jokes", "hilarious", "comedy", y nombres de actores, sugiriendo un tema claro y coherente de películas de comedia.</td>
+      <td>12</td>
+      <td>12</td>
+      <td>funny, comedy, jokes, movie, big, humor, laughs, comic, john, brothers, new, gags, hilarious, cast, eddie</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Action Films</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con películas de acción, destacando personajes como Jackie Chan y Van Damme, así como temas como lucha china y artes marciales, lo que forma un tema claro y coherente.</td>
+      <td>20</td>
+      <td>1</td>
+      <td>action, jackie, chan, van, fight, plot, hong, kong, bond, chinese, martial, arts, films, damme, blade</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Romance &amp; Película</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con aspectos de una película romántica, incluyendo personajes, relaciones amorosas y escenas específicas.</td>
+      <td>20</td>
+      <td>2</td>
+      <td>sex, characters, woman, mr, scene, sexual, women, nights, film's, party, wife, love, husband, boogie, drug</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Harry Potter</td>
+      <td>3</td>
+      <td>Mientras que algunas palabras como "harry", "williams", y "simon" sugieren un personaje específico, la mayoría de las palabras no están directamente relacionadas con Harry Potter, lo que indica una coherencia moderada.</td>
+      <td>20</td>
+      <td>3</td>
+      <td>harry, character, sam, williams, simon, max, good, things, patch, douglas, wild, kevin, hunting, gets, plays</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Godzilla movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la película "Godzilla", incluyendo personajes, lugares y eventos mencionados en críticas de la película.</td>
+      <td>20</td>
+      <td>4</td>
+      <td>new, joe, godzilla, tom, wild, york, west, island, smith, disaster, town, park, hanks, made, water</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Romance Familiar</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas familiares y románticos, como relaciones, familias, historias de amor y matrimonio, lo que sugiere un tema claro y coherente sobre la experiencia familiar y romántica.</td>
+      <td>20</td>
+      <td>5</td>
+      <td>love, family, story, romantic, life, father, mother, woman, wedding, comedy, young, julia, husband, relationship, together</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Sci-Fi Space Exploration</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con elementos de ciencia ficción espacial, incluyendo personajes, lugares y efectos visuales, lo que forma un tema claro y coherente.</td>
+      <td>20</td>
+      <td>6</td>
+      <td>alien, aliens, ship, effects, planet, space, science, mars, earth, crew, sci-fi, action, special, series, star_trek</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Crime Action Fiction</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas de crimen, acción y ficción, especialmente destacando a Tarantino y Willis, lo que sugiere un tema claro y coherente sobre crítica de películas de género similar.</td>
+      <td>20</td>
+      <td>7</td>
+      <td>crime, police, cop, plot, jackie, action, tarantino, de, robert, pulp, l, brown, fiction, willis, murder</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Disney Animation</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la animación producida por Disney, incluyendo nombres específicos de películas y personajes, lo que demuestra una alta coherencia temática.</td>
+      <td>20</td>
+      <td>8</td>
+      <td>disney, animated, animation, story, tarzan, voice, toy, kids, mulan, family, original, children, king, disney's, dog</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>school life</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas educativos y personales, destacando la vida escolar y familiar.</td>
+      <td>20</td>
+      <td>9</td>
+      <td>school, high, truman, life, town, show, jim, teacher, football, carrey, american, comedy, sweet, parents, father</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Horror Thriller</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con géneros de terror y suspenso, incluyendo elementos específicos como "scream", "killer", "vampire", "slasher" y "blair vampires".</td>
+      <td>20</td>
+      <td>10</td>
+      <td>horror, scream, killer, vampire, scary, original, summer, know, sequel, blair, vampires, slasher, julie, genre, witch</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Sci-Fi &amp; Space Warfare</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la saga Star Wars, su efectos especiales, y temas de guerra espacial, lo que forma un tema claro y coherente.</td>
+      <td>20</td>
+      <td>11</td>
+      <td>star_wars, effects, lucas, phantom, menace, special, jedi, impact, young, armageddon, deep, characters, williams, trilogy, jar</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Comedy Bros</td>
+      <td>5</td>
+      <td>Las palabras están relacionadas con la comedia, específicamente con los actores John Cusack y Billy Madison, y su personaje de Jeff Stiller en películas como "The Brothers Bros."</td>
+      <td>20</td>
+      <td>12</td>
+      <td>comedy, john, funny, brothers, jeff, big, crystal, dude, nbsp, money, stiller, cast, men, cusack, billy</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Action &amp; Comic</td>
+      <td>5</td>
+      <td>Las palabras incluyen referencias tanto a acción como a cómics, sugiriendo un tema centrado en películas de acción basadas en cómics.</td>
+      <td>20</td>
+      <td>13</td>
+      <td>batman, robin, arnold, action, kevin, mr, comic, spawn, tim, apes, devil, book, schwarzenegger, burton, series</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Political Hollywood Critiques</td>
+      <td>5</td>
+      <td>Las palabras relacionadas con personajes políticos como Flynt y God, así como temas legales y biográficos como Larry y Derek, sugieren una crítica centrada en películas hollywoodenses con temas políticos y personajes influyentes.</td>
+      <td>20</td>
+      <td>14</td>
+      <td>white, political, black, american, flynt, god, larry, look, derek, lawyer, life, people, history, bulworth, courtroom</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Matrix &amp; Sci-Fi</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la película "Matrix", incluyendo personajes como Keanu Reeves y Annie, así como conceptos como los Angels y los efectos visuales, lo que demuestra una alta coherencia temática.</td>
+      <td>20</td>
+      <td>15</td>
+      <td>world, city, dark, game, computer, reality, reeves, angels, matrix, human, death, keanu, annie, effects, joe</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>War &amp; Military</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas militares y guerras, lo que forma un tema claro y coherente.</td>
+      <td>20</td>
+      <td>16</td>
+      <td>war, men, action, army, battle, ryan, soldiers, jones, private, gibson, world, hero, violence, spielberg, american</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>film critique</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica de una película, desde el aspecto del filme en sí hasta los personajes y la narrativa.</td>
+      <td>20</td>
+      <td>17</td>
+      <td>film, one, like, story, movie, also, can, even, character, two, much, time, characters, just, way</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>movie critique</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica de una película, desde el título hasta aspectos como el guión y la calidad general.</td>
+      <td>20</td>
+      <td>18</td>
+      <td>movie, one, just, like, film, good, get, bad, even, really, time, see, well, know, plot</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>comedy</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con comedia, risas y humor, lo que demuestra una alta coherencia temática.</td>
+      <td>20</td>
+      <td>19</td>
+      <td>comedy, funny, jokes, humor, murphy, laughs, eddie, make, gags, laugh, hilarious, comic, work, dr, kevin</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Rock &amp; Roll Cinema</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con música rock, películas y cultura pop, creando un tema claro y coherente sobre crítica de películas con énfasis en elementos musicales rock.</td>
+      <td>20</td>
+      <td>20</td>
+      <td>film, music, original, girls, musical, spice, dvd, world, band, version, songs, rock, fans, vegas, video</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Action &amp; Martial Arts</td>
+      <td>4</td>
+      <td>Las palabras como "fight", "martial", "kong", "damme" sugieren acción y artes marciales, lo que proporciona una buena coherencia temática.</td>
+      <td>25</td>
+      <td>1</td>
+      <td>action, jackie, chan, van, fight, hong, bond, kong, chinese, martial, plot, arts, films, movies, damme</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Crime &amp; Action</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con el género de cine violento y de acción, incluyendo nombres de directores y personajes conocidos por sus trabajos en este estilo.</td>
+      <td>25</td>
+      <td>2</td>
+      <td>cop, crime, jackie, vampire, police, action, de, tarantino, jack, vampires, pulp, fiction, robert, l, brown</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Familia y relaciones</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas familiares y personales, creando un tema claro y coherente sobre relaciones familiares.</td>
+      <td>25</td>
+      <td>3</td>
+      <td>life, family, love, father, man, mother, town, woman, home, husband, wife, children, son, boy, relationship</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>War Movies</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con películas de guerra, lo que forma un tema claro y coherente.</td>
+      <td>25</td>
+      <td>4</td>
+      <td>war, men, battle, army, action, west, private, ryan, soldiers, wild, cage, spielberg, movie, kevin, line</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Godzilla películas</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la película "Godzilla", incluyendo nombres propios del filme y elementos como efectos visuales y actores.</td>
+      <td>25</td>
+      <td>5</td>
+      <td>godzilla, new, max, york, species, crystal, broderick, island, first, effects, henstridge, dr, giant, matthew, park</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Movies &amp; Literature</td>
+      <td>5</td>
+      <td>Las palabras incluyen referencias a películas (Ghost, Paltrow) y libros/novelas (book, novel), sugiriendo un tema sobre crítica cinematográfica y literatura.</td>
+      <td>25</td>
+      <td>6</td>
+      <td>joe, simon, dog, douglas, ghost, novel, book, playing, allen, helen, bobby, grace, old, steven, paltrow</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Titanic romance</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la película "Titanic", destacando elementos como el amor entre Jack y Rose, lo que indica una alta coherencia temática.</td>
+      <td>25</td>
+      <td>7</td>
+      <td>film, ship, titanic, girls, spice, video, dvd, home, version, story, special, love, jack, rose, well</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Sci-Fi Action</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con elementos de ciencia ficción y acción, como planetas, efectos especiales, alienígenas, misiones espaciales y tropas, lo que forma un tema claro y coherente.</td>
+      <td>25</td>
+      <td>8</td>
+      <td>planet, effects, alien, space, earth, special, mars, action, ship, crew, aliens, sci-fi, mission, deep, troopers</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>school_comedy_performance</td>
+      <td>3</td>
+      <td>Las palabras sugieren una combinación de temas educativos (school) y de comedia (comedy), con un posible hilo conductor sobre actuaciones o performances, aunque la coherencia es moderada debido a la variedad de temas presentes.</td>
+      <td>25</td>
+      <td>9</td>
+      <td>school, things, high, harry, wild, sam, bill, sex, campbell, henry, party, bacon, comedy, alice, performance</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>comedy</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con comedia, risas y personajes de comedia, formando un tema claro y coherente.</td>
+      <td>25</td>
+      <td>10</td>
+      <td>comedy, funny, jokes, humor, laughs, movie, bob, hilarious, smith, ben, comic, big, american, gags, kevin</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Politics &amp; History</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas políticos, históricos y nacionales de Estados Unidos, lo que forma un tema claro y coherente.</td>
+      <td>25</td>
+      <td>11</td>
+      <td>political, world, truman, american, show, black, war, life, white, america, president, country, people, government, history</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Romance Comedia</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas románticos y de comedia, incluyendo personajes como Julia Roberts y Tom Cruise, eventos como weddings y reuniones, y temas como amor y muerte, lo que sugiere un tema claro y coherente de crítica de una película rom</td>
+      <td>25</td>
+      <td>12</td>
+      <td>romantic, comedy, wedding, julia, love, school, ryan, high, roberts, death, gets, together, tom, meg, two</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Horror &amp; Sci-Fi</td>
+      <td>4</td>
+      <td>Las palabras incluyen elementos de terror, referencias a Star Wars (potencialmente ligada a ciencia ficción), y nombres propios relacionados con la industria cinematográfica, lo que sugiere un tema centrado en películas de terror y ciencia ficción.</td>
+      <td>25</td>
+      <td>13</td>
+      <td>horror, scream, star_wars, movie, original, lucas, movies, killer, sequel, effects, scary, still, first, films, blair</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Sci-Fi &amp; TV Shows</td>
+      <td>5</td>
+      <td>Todas las palabras excepto "nbsp" y "x-files" están relacionadas con series de televisión y la serie Star Trek, lo que indica un tema claro y coherente sobre contenido de ciencia ficción y televisión.</td>
+      <td>25</td>
+      <td>14</td>
+      <td>series, movie, star_trek, television, x-files, nbsp, murphy, first, fans, disaster, duchovny, volcano, show, betty, mulder</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Disney Animation</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la animación y producciones de Disney, lo que forma un tema claro y coherente.</td>
+      <td>25</td>
+      <td>15</td>
+      <td>disney, animated, story, animation, voice, family, tarzan, kids, toy, mulan, little, disney's, children, original, shrek</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pornografía y Cultura Pop</td>
+      <td>2</td>
+      <td>Las palabras sugieren contenido sexual explícito y referencias culturales populares, pero la mezcla de "porn" con "women", "characters", "party" indica una coherencia limitada entre los temas presentes.</td>
+      <td>25</td>
+      <td>16</td>
+      <td>sex, women, characters, drug, writer, porn, party, picture, sexual, sarah, lynch, director, girls, blonde, real</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Crime &amp; Law</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas legales y criminológicos, incluyendo personajes legales, escenarios legales y tipos de delitos.</td>
+      <td>25</td>
+      <td>17</td>
+      <td>case, murder, lawyer, flynt, performance, courtroom, carter, prison, mystery, kevin, washington, action, derek, white, character</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Big Lebowski</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la película "El lebowski", destacando personajes como Nick Jons, el protagonista Jeffery Lebowski, y su papel de Jackal.</td>
+      <td>25</td>
+      <td>18</td>
+      <td>good, jones, nick, movie, big, hunting, prison, dude, fugitive, lebowski, williams, killer, carry, jackal, role</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>film appreciation</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la valoración y la experiencia de ver una película, desde el título hasta los aspectos narrativos y personales.</td>
+      <td>25</td>
+      <td>19</td>
+      <td>film, one, like, movie, just, can, time, even, story, much, two, character, also, characters, way</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Love &amp; Music</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con temas musicales y amorosos, creando un tema claro y coherente sobre crítica de música romántica.</td>
+      <td>25</td>
+      <td>20</td>
+      <td>music, love, musical, mr, nights, king, song, shakespeare, rock, boogie, queen, band, english, performance, production</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Sci-Fi &amp; Tech</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con ciencia ficción y tecnología, destacando elementos como alienígenas, efectos visuales, la realidad y la ficción científica.</td>
+      <td>25</td>
+      <td>21</td>
+      <td>alien, science, world, dark, aliens, computer, city, effects, fiction, matrix, virus, human, reality, ripley, films</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>movie review</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica o opinión sobre una película, lo que demuestra una alta coherencia temática.</td>
+      <td>25</td>
+      <td>22</td>
+      <td>movie, film, just, good, like, one, really, get, bad, see, even, well, know, people, think</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Action_Comedy_Movies</td>
+      <td>4</td>
+      <td>Las palabras incluyen referencias a Batman y Robin, Arnold Schwarzenegger, carrey (presumiblemente Jim Carrey), Austin Powers, y flubber (de la película Flubber), sugiriendo una mezcla de acción y comedia que podría ser tí</td>
+      <td>25</td>
+      <td>23</td>
+      <td>batman, robin, mr, arnold, evil, dr, comic, series, carrey, austin, powers, schwarzenegger, action, flubber, funny</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>movie criticism</td>
+      <td>5</td>
+      <td>Todas las palabras están relacionadas con la crítica de películas, desde el uso de términos negativos hasta aspectos como acción, chica e incluso el término "video", lo que demuestra una clara coherencia temática.</td>
+      <td>25</td>
+      <td>24</td>
+      <td>movie, bad, like, one, even, get, around, kill, guy, action, girl, head, movies, night, video</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Sports &amp; Wrestling</td>
+      <td>5</td>
+      <td>Todas las palabras excepto "blues" y "king" están relacionadas con deportes o lucha libre, lo que indica un tema claro y coherente sobre estos temas.</td>
+      <td>25</td>
+      <td>25</td>
+      <td>house, spawn, football, wrestling, team, special, baseball, fight, league, blues, game, cast, king, john, rocky</td>
+    </tr>
+  </tbody>
+</table></div>
 </div>
+
 </div>
 
 </div>
@@ -2845,23 +3444,24 @@ The following generation flags are not valid and may be ignored: [&#39;temperatu
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="comparar-la-coherencia-semantica-promedio-por-valor-de-k">&#128202; Comparar la coherencia sem&#225;ntica promedio por valor de $k$<a class="anchor-link" href="#comparar-la-coherencia-semantica-promedio-por-valor-de-k">&#182;</a></h2><p>Promediamos el puntaje de coherencia asignado por el LLM dentro de cada modelo, para tener un resumen comparable con las métricas estadísticas (perplexity, método del codo) obtenidas en R.</p>
+<hr>
+<h3 id="comparar-la-coherencia-semantica-promedio-por-valor-de-k">&#128202; Comparar la coherencia sem&#225;ntica promedio por valor de $k$<a class="anchor-link" href="#comparar-la-coherencia-semantica-promedio-por-valor-de-k">&#182;</a></h3><p>Promediamos el puntaje de coherencia asignado por el LLM dentro de cada modelo, para tener un resumen comparable con las métricas estadísticas (perplexity, método del codo) obtenidas en R.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
+            <clipboard-copy for="cell-13">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2874,7 +3474,7 @@ The following generation flags are not valid and may be ignored: [&#39;temperatu
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">coherencia_promedio</span> <span class="o">=</span> <span class="n">resultados_todos</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">)[</span><span class="s2">&quot;coherencia&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">coherencia_promedio</span>
 </pre></div>
-<div id="cell-12" class="clipboard-copy-txt">coherencia_promedio = resultados_todos.groupby("k")["coherencia"].mean()
+<div id="cell-13" class="clipboard-copy-txt">coherencia_promedio = resultados_todos.groupby("k")["coherencia"].mean()
 coherencia_promedio</div>
     
         </div>
@@ -2883,19 +3483,48 @@ coherencia_promedio</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>k
+12    5.00
+20    4.90
+25    4.68
+Name: coherencia, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-13">
+            <clipboard-copy for="cell-14">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2915,7 +3544,7 @@ coherencia_promedio</div>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div id="cell-13" class="clipboard-copy-txt">plt.figure(figsize=(6, 4))
+<div id="cell-14" class="clipboard-copy-txt">plt.figure(figsize=(6, 4))
 coherencia_promedio.plot(kind="bar", color=["#175895", "#175895", "#175895"])
 plt.ylabel("Coherencia promedio (1-5, según el LLM)")
 plt.xlabel("Número de tópicos (k)")
@@ -2929,6 +3558,34 @@ plt.show()</div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk4AAAGGCAYAAACNCg6xAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjEsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvc2/+5QAAAAlwSFlzAAAPYQAAD2EBqD+naQAAQp9JREFUeJzt3Qe4E9X6/v0HBOlVuvQivUmvojRFKVYUpEmx0ARF4CAgNpBzVAQpCh4VBCkiqFhQ6aiAhyaIohQBBQSR3kve617/N/llZxeyIXHvZH8/1zWQPZnMrFmZTJ6smsrj8XgMAAAAl5X68psAAABACJwAAACCROAEAAAQJAInAACAIBE4AQAABInACQAAIEgETgAAAEEicAIAAAgSgRMAAECQCJwA2LZt2+yZZ56xX375JamTAgDJGoETrkjRokXtjjvusGjWuXNnd57R7uzZs3bvvffa9u3b7YYbbgj5/pcuXWqpUqVy/+Ofu1aV5wqGkXyvS70/SkOo9/fXX3+FbJ+IjcAphdCX4sMPP2zFixe39OnTW9asWa1evXr22muv2enTp5M6eUhC/fv3txw5cthbb711VfuZMGGCvfPOOyFLFwAkR2mSOgEIv08//dSVKKRLl846duxoFSpUsHPnztnKlSttwIAB9uOPP9qbb76Z1MlMdiZPnmyXLl2yaPb3339bvnz57MUXX7Rrr732qgOnXLlyudIPfw0bNnTB+dXuH4mjPE+Thls8EGp8qqLczp077f7777ciRYrY4sWLLX/+/L7nevbs6dq2KLBKji5cuOACl6T6wk2bNq1Fu5w5c9rQoUPDeozUqVO7Us5IcurUKcuYMaNFskjLczl58qRlypTJIlEkpx2JQ1VdlBs9erSdOHHCVcP4B01eJUuWtL59+8YIVp577jkrUaKEK6FSu4l//etfrh1MXFRqVbNmTXeTVjXg1KlTY21z5MgRe/zxx61QoUJunzrmSy+9FKM057fffnN18//5z39szJgxvuNv2bLFPf/zzz/bPffc477odazq1avbxx9/HOM4qibSPr755htX/ZQ7d253I7vzzjvt4MGDsdL1+eef20033WRZsmRxVZc1atSwGTNmJNhuROmrW7euXXfddZYhQwarVq2affDBBxaMX3/91e6++25XwqNzKFiwoAtqjx49GmO79957z+1X+9f5aps9e/bE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efPmtaJFi1ratGljPK9RwAEAAKJRogOnNm3ahCclAAAA0RY4DR8+PDwpAQAASOaSdMoVAACAqC5xSp06dYJjN8U1vxwAAECKCJymTJliNWrUsMqVK7u/582bF+P58+fP2/r16+3dd9+1ESNGhC+lAAAAyT1wKlmypLVs2dImT55szZs3t9atW8fa5p577rHy5cvbrFmzrGvXruFKKwAAQPJu49SoUSM3xYrGb0pI7dq13fx1AAAA0SqoxuHFihVLcA6506dP29ixY+36668PZdoAAAAis3F4mjRpfFOu+DcO93g8dvz4ccuYMaO999574UklAABAJPaqe/XVV2METupllzt3bqtVq5YLqgAAAKJVogOnzp07hyclAAAA0RY4/fDDD3GuVylU+vTprXDhwpYuXbpQpA0AACCyA6cqVar4qurUvkn8q+406W/btm3tjTfecIEUAABAip1yRQNglipVyt58803buHGjW/S4dOnSNmPGDHvrrbds8eLF9vTTT4cnxQAAAJFS4vTCCy/Ya6+95gbD9KpYsaIVLFjQhg4damvWrLFMmTLZE088Yf/5z39CnV4AAIDIKXHatGmTFSlSJNZ6rdNz3uq8ffv2hSaFAAAAkRo4lSlTxkaNGmXnzp2LMV+d1uk5+eOPPyxv3ryhTSkAAECkVdWNHz/eWrVq5armKlWq5NappOnixYu2YMEC9/eOHTvsscceC31qAQAAIilwqlu3ru3cudOmT59uv/zyi1t37733Wrt27SxLlizu7w4dOoQ+pQAAAJEWOIkCpEceeST0qQEAAIimNk4ybdo0q1+/vhUoUMB27drlm4rlo48+CnX6AAAAIjdwmjhxovXv399uu+02O3z4sGvbJJqnbsyYMeFIIwAAQGQGTuPGjbPJkyfbkCFDLE2a/6vpq169um84AgAAgGiU6MBJDcOrVq0aa73mpzt58mSo0gUAABD5gVOxYsVsw4YNsdZ/8cUXVrZs2VClCwAAIPJ71al9U8+ePe3MmTNukl9NsfL+++/byJEjbcqUKeFJJQAAQCQGTt26dbMMGTK4SXxPnTrlxm9S7zrNX3f//feHJ5UAAACROo5T+/bt3aLA6cSJE5YnT57QpwwAACDS2zidPn3aBUySMWNG97eGIfjyyy/DkT4AAIDIDZxat25tU6dOdY+PHDliNWvWtJdfftmt1xhPAAAA0SrRgdO6deusQYMG7vEHH3xg+fLlc6OHK5gaO3ZsONIIAAAQmYGTqum8k/mqeu6uu+6y1KlTW+3atX3TrwAAAESjRAdOJUuWtPnz59uePXts4cKF1qxZM7f+wIEDljVr1nCkEQAAIDIDp2HDhtmTTz5pRYsWtVq1almdOnV8pU9xjSgOAACQYocjuOeee6x+/fq2b98+q1y5sm9948aN7c477wx1+gAAACJ7HCc1CNfiT73rAAAAolmiq+oAAABSKgInAACAIBE4AQAABInACQAAICkCp+XLl9vRo0dDuUsAAIDoDJwaNWpkxYsXd3PXAQAARJuQBk47d+5089f9+eefodwtAABA5I7jFJ8iRYq45eabbw7lbgEAAKKjxOn8+fOhSQkAAEC0BE6zZ8+2c+fO+f5+/fXXXelS+vTpLVeuXPbss8+GK40AAACRFTg98MADduTIEff47bfftgEDBljnzp3tk08+sX79+tno0aNtypQpiTr4xIkTrVKlSpY1a1a3aMLgzz//PPFnAQAAkJzaOHk8Ht/jSZMmuRImBU/SokULy5kzp02YMMG6desW9MELFixoo0aNslKlSrn9v/vuu9a6dWtbv369lS9fPrHnAgAAkHzaOKVKlcr9v2PHDmvWrFmM5/T3tm3bEnXwli1buqBLgdMNN9xgL7zwgmXOnNlWrVqVqP0AAAAku151X3zxhWXLls21azp16lSM586cOeMLrK7ExYsXbc6cOXby5ElXZRefs2fPusXr2LFjV3xMAACAsAVOnTp18j1evHhxjABHpUQlSpSwxNq0aZPbjwIvlTbNmzfPypUrF+/2I0eOtBEjRiT6OAAAAP9Y4HTp0qUEn8+bN68LahKrdOnStmHDBjdViwbPVHC2bNmyeIOnwYMHW//+/WOUOBUqVCjRxwUAAEiyATDvuOOOK3rdtddeayVLlnSPq1WrZt9//7299tpr9sYbb8S5fbp06dwCAAAQUQNgVqxY0fbs2RO61Pz/JVv+bZgAAACiosTpt99+u6qRw1Xtdtttt1nhwoXt+PHjNmPGDFu6dKktXLjwapIFAACQ/OeqS6wDBw5Yx44dbd++fa63ngbDVNDUtGnTpEwWAABA6AOnBg0aWIYMGa749W+99dbVHB4AACByAqfPPvssdCkBAACI5sbh/g4fPmxTp04N1e4AAACiN3DavXu3denSJVS7AwAAiNyqustNbaJecQAAANEs6MApe/bsCc5F5/F4rmquOgAAgKgJnLJkyWJDhgyxWrVqxfn8r7/+ag8//HAo0wYAABCZgdONN97o/r/pppviLZFSqRMAAICl9Mbh7dq1s/Tp08f7fL58+Wz48OGhShcAAEDkljh17949wefz5s1L4AQAAKJayIYjAAAAiHZBBU4zZ84Meod79uyxb7755mrSBAAAELmB08SJE61s2bI2evRo++mnn2I9f/ToUTf9itpBqRH5oUOHwpFWAACA5N/GadmyZfbxxx/buHHjbPDgwZYpUybXpkmNxTXVyv79+y1XrlzWuXNn27x5s3sOAAAgxTYOb9WqlVv++usvW7lype3atctOnz7tAqaqVau6JXVqmkwBAIDoFXTg5KVAqU2bNuFJDQAAQDJGEREAAECQCJwAAACCROAEAAAQJAInAACAfyJw0qS+TOwLAABSiisKnKZOnWoVK1a0DBkyuKVSpUo2bdq00KcOAAAgkocjeOWVV2zo0KHWq1cvq1evnluncZ0eeeQRN8ZTv379wpFOAACAyAucNHq4pmDp2LGjb50Gxixfvrw988wzBE4AACBqJbqqbt++fVa3bt1Y67VOzwEAAESrRAdOJUuWtNmzZ8daP2vWLCtVqlSo0gUAABD5VXUjRoywtm3b2vLly31tnL755htbtGhRnAEVAABAii1xuvvuu2316tVuzrr58+e7RY/XrFljd955Z3hSCQAAEIklTlKtWjV77733Qp8aAACASA+cjh07ZlmzZvU9Toh3OwAAgBQZOOXIkcP1mMuTJ49lz57dUqVKFWsbjSCu9RcvXgxHOgEAACIjcFq8eLHlzJnTPV6yZEm40wQAABC5gdNNN90U52MAAICUJKjA6Ycffgh6h5q3DgAAIMUGTlWqVHHtl7ztmBJCGycAAJCix3HauXOn7dixw/0/d+5cK1asmE2YMMHWr1/vFj0uUaKEew4AACBFlzgVKVLE9/jee++1sWPHWosWLWJUzxUqVMiGDh1qbdq0CU9KAQAAIm3k8E2bNrkSp0Bat2XLllClCwAAIPIDp7Jly9rIkSPt3LlzvnV6rHV6DgAAIFolesqVSZMmWcuWLa1gwYK+HnTqdadG45988kk40ggAABCZgVPNmjVdQ/Hp06fbzz//7Na1bdvW2rVrZ5ky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Xj335SKamUDzYwYG+5qlQM8Byf0alnbt2lmRIkVcW9MffvjB3YvVdEJNKPDPIHBCougX+3333Weq4Z04cWJSJweIk9qJbN682VauXJnUSQFCeg336NHD91gddvLnz2+NGze27du3W4kSJZIgpSkPVXVIdNCkdk1quEhpE5KjXr162YIFC2zJkiVWsGBB3/p8+fLZuXPn7MiRIzG2V686PQck92s4LrVq1XL/b9u27R9KHQickKig6ddff7Wvv/7adecGkhOVguoLRx0bFi9ebMWKFYvxfLVq1Sxt2rS2aNEi3zpVcezevdvq1KmTBCkGEncNx2XDhg3uf5U84Z9BVR2cEydOxPjFsnPnTveBVKNEfSDVC0lDEehX0MWLF31tQvS82o0AyaFqQz3mPvroIzcOjvcazZYtm2XIkMH937VrV+vfv7+7blVi2rt3bxc00aMOkXANqzpOz7do0cL9eFUbJw2xoR53lSpVSurkpxwajgBYsmSJhqWItXTq1Mmzc+fOOJ/TotcByUF81+jbb7/t2+b06dOexx57zJMjRw5PxowZPXfeeadn3759SZpuINhrePfu3Z6GDRt6cubM6UmXLp2nZMmSngEDBniOHj2a1ElPURjHCQAAIEi0cQIAAAgSgRMAAECQCJwAAACCROAEAAAQJAInAACAIBE4AQAABInACQAAIEgETkAKoqkcZs+endTJiBgaTf/FF1+006dPJ3VSACQTBE5ACrFmzRp7/PHHo2J6kaVLl1qqVKliTdgbSmfOnHFTDRUoUMBNd5EYnTt3tjZt2lhSeuutt6xZs2ZBp2nSpEnWsmXLfyh1QOQicAIikL4EFTiMGjUqxvr58+e79YGOHj1q3bp1cyVOhQsX/gdTmnw988wzVqVKlXif1zx2CjSU14n12muv2TvvvGNJRUHf0KFDbfjw4UG/5qGHHnLzUa5YsSKsaQMiHZP8AhEqffr09tJLL9nDDz9sOXLkSHBbTRKqCUGT0rlz5yJqQujJkydf8WuV30npgw8+cJMY16tXL+jX6L1p166djR071ho0aBDW9AGRjBInIEI1adLE8uXLZyNHjkxUqcqYMWOsaNGisapw1JYnb968lj17dnv22WftwoULNmDAAMuZM6cVLFjQ3n777Rj72bNnj913331ue23TunVr++2332Lt94UXXnDVXaVLl3brN23aZLfccour/tIM7z169LATJ04keK6fffaZ3XDDDe41N998c4zjeK1cudJ94WubQoUKWZ8+fezkyZNx7k+lQSNGjLCNGze6Ejot3hKi3bt3u3PJnDmzCz50jn/++WesPH3jjTfccTJmzOi2Uale4Ll7Xbp0yUaPHm0lS5a0dOnSuVI/5YvX5fJEVZM1a9a0TJkyufxWQLRr165482vmzJmXrXb7/vvvLXfu3C749tJrPv74Y9p0AQkgcAIi1DXXXOOCnXHjxtnvv/9+VftavHix7d2715YvX26vvPKKq+K54447XEnW6tWr7ZFHHnElW97jnD9/3po3b25ZsmRxVTvffPONCzRuvfVWV7LktWjRItu6dat99dVXtmDBAhfI6HXar76458yZY19//bX16tUr3rQpQLvrrrvcl/qGDRtcleOgQYNibLN9+3Z37LvvvtuVrM2aNcsFUvHtt23btvbEE09Y+fLlbd++fW7ROgU4Cpr+/vtvW7ZsmUv3jh073HOBjcbVyP6TTz6xL774wtavX2+PPfZYvOcwePBgV62q6rMtW7bYjBkzXJAql8sTBbAKwm666SZ3bt99950LrOKqkvXSuVevXj3B97tp06YueBs4cKBvvV6j4+k9BxAPD4CI06lTJ0/r1q3d49q1a3seeugh93jevHke/4/18OHDPZUrV47x2ldffdVTpEiRGPvS3xcvXvStK126tKdBgwa+vy9cuODJlCmT5/3333d/T5s2zW1z6dIl3zZnz571ZMiQwbNw4ULffvPmzevWe7355pueHDlyeE6cOOFb9+mnn3pSp07t2b9/f5znOnjwYE+5cuVirBs4cKA7z8OHD7u/u3bt6unRo0eMbVasWOH2e/r06Tj3G1fefPnll55rrrnGs3v3bt+6H3/80R1rzZo1vtdpm99//923zeeff+6OtW/fvljvz7Fjxzzp0qXzTJ48Oc50XC5PDh065I6/dOlSTzCUJ9p++fLlMdZ70/Thhx96MmfO7Jk5c2acr1da3nnnnaCOBaRElDgBEU5VLe+++6799NNPV7wPlbykTv1/twOVhlSsWDFG6ZaqkA4cOOD+VhWXSl1U4qSSJi2qrlOjZJX+eGkf/u2alMbKlSu7KicvVTuppEclU3HRa2rVqhVjXZ06dWL8rfSoqs2bFi0qxdF+d+7cGXQ+6FiqftPiVa5cOVc95p+/qmq7/vrrY6QnvnPQ686ePWuNGzeO95gJ5YnyVVV/Oh+VuqnhuUrI4uOtZlMbuEAqSbr33ntt2rRpsUrRvFRdeOrUqXj3D6R0BE5AhGvYsKH7UlV1UCAFQx6PCiD+j6rZAqVNmzbG36oGimudvsxF7W+qVavmqs78l19++cU1MPbyDwbCSelRVaJ/WhRM/frrr1aiRAlLSokdyiAual+mKrq6deu6aki191q1alWc2yrA1Xt1+PDhWM8pL8qUKWP//e9/47wORNWUavsEIG4ETkAUUPsZtbfRl6s/fQHu378/RvCkoOJq3XjjjS4oyZMnj2vw7L8k1KOsbNmyLqDxb7St9lEK8LyNx+N6jcag8hcYNCg9ajsUmBYt8fXk0/qLFy/GOpbaVGnx0n41XpRKnrzUgFxtwvzTE985lCpVygVPau91NXlStWpVFxx/++23VqFCBddOKr7zUlqV7kC5cuVy7ZtUWqgG7YHBk0oLVWqoYwGIG4ETEAVUJda+fXvXldxfo0aN7ODBg65Hl74Ux48fb59//vlVH0/H0pewGlKrcbiqw9TzSz3ZEmqortepCqlTp062efNmW7JkiRsvqUOHDr7G0oHUMF1Bmnr4qepKAUPgGElq4KyAQg2qFRhq+48++ijBRufqWah0a/u//vrLVaepp6I3LzWmkQK2jh07uobZ/o2tveeggEfnr/NWIKJejoG0rdL31FNP2dSpU937oEBLA1QGkydKowImBcXqSffll1+681PAFR+VQKqBeFwU7Cp4+vnnn+2BBx5wjcG9dC7FixdP8lI6IDkjcAKihIYQ8FaleenLdcKECS5gUjsaBQJPPvnkVR9LXfDVA09tfdTjTcfp2rWrK61QF/6EXrdw4UJXHVSjRg03Mrfa/rz++uvxvkbHmDt3rhvcU+egEa7Vm9BfpUqVXC84VRVqSAKVmAwbNswNgxAf9cBTTzwNb6CSuffff99VcSngUg83VYEqkFIgoeoxfyrJ0nm3aNHCjc6t4yuf46PedOrFpzQpr9S+yNte7HJ5oucV5Ci9qqJTj7qePXu6qsn46L3QEA7+QyT4U4Cn4EnDIChw85a8KQ+6d+8e734BmKVSC/GkTgQARAqN46QgLhRVnuGkRuCqwoyr7VtcfvzxRzeWlILPpB7AE0jOKHECgCj073//2/UuDJZ66qkqkaAJSBhTrgBAFFIbLrWVCpaqJQFcHlV1AAAAQaKqDgAAIEgETgAAAEEicAIAAAgSgRMAAECQCJwAAACCROAEAAAQJAInAACAIBE4AQAABInACQAAwILz/wHhDA+gyZr/CgAAAABJRU5ErkJggg=="
+class="
+"
+>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -2960,18 +3617,18 @@ plt.show()</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-14">
+            <clipboard-copy for="cell-15">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2981,14 +3638,190 @@ plt.show()</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">resultados_20</span><span class="p">[[</span><span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="s2">&quot;etiqueta&quot;</span><span class="p">,</span> <span class="s2">&quot;coherencia&quot;</span><span class="p">,</span> <span class="s2">&quot;palabras&quot;</span><span class="p">]]</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">show_table</span><span class="p">(</span><span class="n">resultados_20</span><span class="p">[[</span><span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="s2">&quot;etiqueta&quot;</span><span class="p">,</span> <span class="s2">&quot;coherencia&quot;</span><span class="p">,</span> <span class="s2">&quot;palabras&quot;</span><span class="p">]])</span>
 </pre></div>
-<div id="cell-14" class="clipboard-copy-txt">resultados_20[["topic", "etiqueta", "coherencia", "palabras"]]</div>
+<div id="cell-15" class="clipboard-copy-txt">show_table(resultados_20[["topic", "etiqueta", "coherencia", "palabras"]])</div>
     
         </div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div style="max-height:500px; overflow:auto; border:1px solid #ddd; padding:4px;"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>topic</th>
+      <th>etiqueta</th>
+      <th>coherencia</th>
+      <th>palabras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Action Films</td>
+      <td>5</td>
+      <td>action, jackie, chan, van, fight, plot, hong, kong, bond, chinese, martial, arts, films, damme, blade</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Romance &amp; Película</td>
+      <td>5</td>
+      <td>sex, characters, woman, mr, scene, sexual, women, nights, film's, party, wife, love, husband, boogie, drug</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Harry Potter</td>
+      <td>3</td>
+      <td>harry, character, sam, williams, simon, max, good, things, patch, douglas, wild, kevin, hunting, gets, plays</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Godzilla movies</td>
+      <td>5</td>
+      <td>new, joe, godzilla, tom, wild, york, west, island, smith, disaster, town, park, hanks, made, water</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Romance Familiar</td>
+      <td>5</td>
+      <td>love, family, story, romantic, life, father, mother, woman, wedding, comedy, young, julia, husband, relationship, together</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Sci-Fi Space Exploration</td>
+      <td>5</td>
+      <td>alien, aliens, ship, effects, planet, space, science, mars, earth, crew, sci-fi, action, special, series, star_trek</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>Crime Action Fiction</td>
+      <td>5</td>
+      <td>crime, police, cop, plot, jackie, action, tarantino, de, robert, pulp, l, brown, fiction, willis, murder</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Disney Animation</td>
+      <td>5</td>
+      <td>disney, animated, animation, story, tarzan, voice, toy, kids, mulan, family, original, children, king, disney's, dog</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>school life</td>
+      <td>5</td>
+      <td>school, high, truman, life, town, show, jim, teacher, football, carrey, american, comedy, sweet, parents, father</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>Horror Thriller</td>
+      <td>5</td>
+      <td>horror, scream, killer, vampire, scary, original, summer, know, sequel, blair, vampires, slasher, julie, genre, witch</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>Sci-Fi &amp; Space Warfare</td>
+      <td>5</td>
+      <td>star_wars, effects, lucas, phantom, menace, special, jedi, impact, young, armageddon, deep, characters, williams, trilogy, jar</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>Comedy Bros</td>
+      <td>5</td>
+      <td>comedy, john, funny, brothers, jeff, big, crystal, dude, nbsp, money, stiller, cast, men, cusack, billy</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>Action &amp; Comic</td>
+      <td>5</td>
+      <td>batman, robin, arnold, action, kevin, mr, comic, spawn, tim, apes, devil, book, schwarzenegger, burton, series</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>Political Hollywood Critiques</td>
+      <td>5</td>
+      <td>white, political, black, american, flynt, god, larry, look, derek, lawyer, life, people, history, bulworth, courtroom</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>Matrix &amp; Sci-Fi</td>
+      <td>5</td>
+      <td>world, city, dark, game, computer, reality, reeves, angels, matrix, human, death, keanu, annie, effects, joe</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>War &amp; Military</td>
+      <td>5</td>
+      <td>war, men, action, army, battle, ryan, soldiers, jones, private, gibson, world, hero, violence, spielberg, american</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>film critique</td>
+      <td>5</td>
+      <td>film, one, like, story, movie, also, can, even, character, two, much, time, characters, just, way</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>movie critique</td>
+      <td>5</td>
+      <td>movie, one, just, like, film, good, get, bad, even, really, time, see, well, know, plot</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>comedy</td>
+      <td>5</td>
+      <td>comedy, funny, jokes, humor, murphy, laughs, eddie, make, gags, laugh, hilarious, comic, work, dr, kevin</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>Rock &amp; Roll Cinema</td>
+      <td>5</td>
+      <td>film, music, original, girls, musical, spice, dvd, world, band, version, songs, rock, fans, vegas, video</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -2999,7 +3832,8 @@ plt.show()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cierre">&#9989; Cierre<a class="anchor-link" href="#cierre">&#182;</a></h2><p>Este notebook agrega una evidencia <strong>cualitativa y semántica</strong> a la selección de $k$, complementando las métricas puramente estadísticas de la Unidad 5a:</p>
+<hr>
+<h2 id="que-concluimos">&#9989; &#191;Qu&#233; concluimos?<a class="anchor-link" href="#que-concluimos">&#182;</a></h2><p>Este notebook agrega una evidencia <strong>cualitativa y semántica</strong> a la selección de $k$, complementando las métricas puramente estadísticas de la Unidad 5a:</p>
 <ul>
 <li><strong>R / Quanteda + topicmodels</strong>: produce los tópicos y las métricas de ajuste (perplexity) de forma reproducible y computacionalmente eficiente.</li>
 <li><strong>Python + LLM</strong>: interpreta el <em>contenido</em> de esos tópicos — algo que ninguna métrica estadística puede hacer por sí sola — y propone etiquetas listas para presentar a una audiencia no técnica.</li>
