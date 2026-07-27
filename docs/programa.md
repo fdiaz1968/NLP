@@ -42,13 +42,12 @@ Al finalizar el curso, el estudiante será capaz de:
 
 | # | Unidad | Contenidos | Herramienta | Justificación metodológica |
 |---|---|---|---|---|
-| 1 | Limpieza y Transformación | Corpus, tokens, metadatos. Stopwords, stemming, lematización. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante. |
-| 2 | Document Feature Matrix | Construcción de la DFM. Frecuencias, trimming, agrupación por `docvars`. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora. |
-| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia. | <span style="background-color:#0850411a;color:#085041;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">R</span> | Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
-| 4 | Keyness y Dispersión | Chi-cuadrado, log-likelihood. `textplot_keyness()`, `textplot_xray()`. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados. |
-| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de k. Introducción a BERTopic. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente. |
-| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro. | <span style="background-color:#1758951a;color:#175895;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Python</span> | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
-| 7 | Similitud Semántica | Cosine/Jaccard/Euclídea sobre DFM. Embeddings con `sentence-transformers`. Clustering, MDS. | <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span> | Unidad puente del curso: primero similitud sobre TF-IDF (R), luego sobre embeddings densos (Python). El contraste hace tangible la diferencia entre similitud léxica y semántica. |
+| 1 | Limpieza y Transformación | Corpus, tokens, metadatos. Stopwords, stemming, lematización. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante. |
+| 2 | Document Feature Matrix | Construcción de la DFM. Frecuencias, trimming, agrupación por `docvars`. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora. |
+| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
+| 4 | Keyness y Dispersión | Chi-cuadrado, log-likelihood. `textplot_keyness()`, `textplot_xray()`. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados. |
+| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de k. Introducción a BERTopic. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente. |
+| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro. | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
 
 ## Cronograma — Semana Intensiva
 
@@ -60,7 +59,7 @@ Al finalizar el curso, el estudiante será capaz de:
 | Día 2 | Unidad 3 — Estadística Descriptiva · Unidad 4 — Keyness y Dispersión |
 | Día 3 | Unidad 5 — Modelamiento de Tópicos |
 | Día 4 | Unidad 6 — Análisis de Sentimiento Financiero |
-| Día 5 | Unidad 7 — Similitud Semántica · Cierre y Proyecto Integrador |
+| Día 5 | Cierre y Proyecto Integrador |
 
 ## Detalle de Unidades
 
@@ -145,20 +144,6 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 - Araci, D. (2019). FinBERT: Financial Sentiment Analysis with Pre-trained Language Models. arXiv:1908.10063.
 - Malo, P. et al. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. JASIST, 65(4), 782-796. *(Dataset: Financial PhraseBank)*
 - Loughran, T. & McDonald, B. (2011). When is a liability not a liability? Journal of Finance, 66(1), 35-65.
-
-### Unidad 7 — Similitud y Distancias Semánticas <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span>
-
-**Objetivos de aprendizaje:**
-
-- Calcular similitud coseno, Jaccard y euclidiana sobre una DFM TF-IDF (R).
-- Generar embeddings de oraciones con `sentence-transformers` y calcular similitud semántica (Python).
-- Contrastar ambos enfoques sobre el mismo corpus y articular sus diferencias conceptuales.
-- Visualizar agrupamientos de documentos con clustering jerárquico y MDS.
-
-**Lecturas sugeridas:**
-
-- Reimers, N. & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019. [sbert.net](https://www.sbert.net)
-- Salton, G. & McGill, M. J. (1983). *Introduction to Modern Information Retrieval*. McGraw-Hill.
 
 ## Ponderaciones
 
