@@ -22,4 +22,4 @@ Tablas de términos principales por tópico, exportadas por la Unidad 5a (`write
 
 ## Unidad 6: Análisis de Sentimiento Financiero
 
-[Sentences_AllAgree.txt](Unidad_6/Sentences_AllAgree.txt) — subconjunto *AllAgree* del **FinancialPhraseBank** (Malo et al., 2014), 2.264 frases financieras en inglés con etiqueta de sentimiento de acuerdo unánime entre anotadores. Licencia **CC BY-NC-SA 3.0** (uso no comercial, con atribución) — ver [ficha del dataset](https://huggingface.co/datasets/takala/financial_phrasebank).
+<a href="Unidad_6/Sentences_AllAgree.txt" download>Sentences_AllAgree.txt</a> — subconjunto *AllAgree* del **FinancialPhraseBank** (Malo et al., 2014), 2.264 frases financieras en inglés con etiqueta de sentimiento de acuerdo unánime entre anotadores. Licencia **CC BY-NC-SA 3.0** (uso no comercial, con atribución) — ver [ficha del dataset](https://huggingface.co/datasets/takala/financial_phrasebank).
