@@ -106,7 +106,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://fdiaz1968.github.io/NLP/exercises/Ejercicio_1_Unidad_5_LDA_UNGDC.html</loc>
+         <lastmod>2026-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://fdiaz1968.github.io/NLP/exercises/Ejercicio_2_Unidad_4_Keyness_LLM_UNGDC.html</loc>
+         <lastmod>2026-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/exercises/Ejercicio_2_Unidad_5_Coherencia_Embeddings_UNGDC.html</loc>
+         <lastmod>2026-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fdiaz1968.github.io/NLP/exercises/Ejercicio_3_Unidad_5_BERTopic_Reuters.html</loc>
          <lastmod>2026-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
