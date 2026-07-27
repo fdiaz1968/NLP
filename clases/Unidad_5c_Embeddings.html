@@ -19,7 +19,7 @@
     
     
       
-        <title>Consistencia Semántica de Tópicos con Embeddings - Procesamiento de Lenguaje Natural</title>
+        <title>Consistencia Semántica de Tópicos: Distancias Euclidianas - Procesamiento de Lenguaje Natural</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#consistencia-semantica-de-topicos-con-embeddings" class="md-skip">
+        <a href="#consistencia-semantica-de-topicos-distancias-euclidianas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Consistencia Semántica de Tópicos con Embeddings
+              Consistencia Semántica de Tópicos: Distancias Euclidianas
             
           </span>
         </div>
@@ -382,134 +382,187 @@
     Python + Sentence Embeddings
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Python + Sentence Embeddings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#objetivos-de-aprendizaje" class="md-nav__link">
     🎯 Objetivos de aprendizaje
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#que-son-los-embeddings" class="md-nav__link">
-    ¿Qué son los Embeddings?
+  <a href="#-" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-que-son-los-embeddings" class="md-nav__link">
+    🧠 I. ¿Qué son los Embeddings?
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 I. ¿Qué son los Embeddings?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#de-la-dfm-a-los-embeddings" class="md-nav__link">
     🔄 De la DFM a los Embeddings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#representaciones-sparse-y-dense" class="md-nav__link">
     📐 Representaciones Sparse y Dense
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#el-espacio-semantico" class="md-nav__link">
     🌍 El Espacio Semántico
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#el-vector-de-embeddings" class="md-nav__link">
-    🧮 El Vector de Embeddings
+  <a href="#-_1" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#ii-el-vector-de-embeddings" class="md-nav__link">
+    🧮 II. El Vector de Embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+    <nav class="md-nav" aria-label="">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#como-aprenden-los-modelos-estos-vectores" class="md-nav__link">
     🧠 ¿Cómo aprenden los modelos estos vectores?
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funcion-de-perdida-loss-function" class="md-nav__link">
+    📉 La Función de Pérdida (Loss Function)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embeddings-preentrenados" class="md-nav__link">
+    🤖 Embeddings Preentrenados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-modelo-de-embeddings-utilizaremos" class="md-nav__link">
+    🧮 ¿Qué modelo de embeddings utilizaremos?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#como-se-generan-los-embeddings" class="md-nav__link">
-    🤖 ¿Cómo se generan los embeddings?
+  <a href="#-_2" class="md-nav__link">
+    ---
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#que-modelo-de-embeddings-usamos" class="md-nav__link">
-    🧮 ¿Qué modelo de embeddings usamos?
+  <a href="#iii-python-embeddings-y-coherencia-semantica" class="md-nav__link">
+    🐍 III. Python, Embeddings y Coherencia Semántica
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-utilizaremos-mpnet" class="md-nav__link">
-    🧩 ¿Por qué utilizaremos MPNet?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="🐍 III. Python, Embeddings y Coherencia Semántica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#instalacion-de-las-librerias-necesarias" class="md-nav__link">
     📦 Instalación de las librerías necesarias
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cargar-el-modelo-de-embeddings" class="md-nav__link">
     🧠 Cargar el modelo de embeddings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cargar-los-topicos-exportados-desde-r-unidad-5a" class="md-nav__link">
     📂 Cargar los tópicos exportados desde R (Unidad 5a)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#palabras-clave-por-topico" class="md-nav__link">
     ✂️ Palabras clave por tópico
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#de-palabras-a-un-puntaje-de-coherencia" class="md-nav__link">
-    📐 De palabras a un puntaje de coherencia
+        
+          <li class="md-nav__item">
+  <a href="#calculando-la-coherencia-mediante-embeddings" class="md-nav__link">
+    📐 Calculando la coherencia mediante embeddings
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#aplicar-a-todos-los-topicos-de-un-modelo" class="md-nav__link">
     🔁 Aplicar a todos los tópicos de un modelo
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#comparar-la-coherencia-promedio-por-valor-de-k" class="md-nav__link">
     📊 Comparar la coherencia promedio por valor de $k$
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#comparacion-con-el-enfoque-llm-5b" class="md-nav__link">
     ⚖️ Comparación con el enfoque LLM (5b)
   </a>
   
-    <nav class="md-nav" aria-label="⚖️ Comparación con el enfoque LLM (5b)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#lo-que-muestran-los-resultados" class="md-nav__link">
@@ -524,8 +577,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cierre" class="md-nav__link">
-    ✅ Cierre
+  <a href="#conclusiones" class="md-nav__link">
+    ✅ Conclusiones
   </a>
   
 </li>
@@ -1581,7 +1634,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="consistencia-semantica-de-topicos-con-embeddings">Consistencia Sem&#225;ntica de T&#243;picos con Embeddings<a class="anchor-link" href="#consistencia-semantica-de-topicos-con-embeddings">&#182;</a></h1><h2 id="python-sentence-embeddings">Python + Sentence Embeddings<a class="anchor-link" href="#python-sentence-embeddings">&#182;</a></h2><hr>
+<h1 id="consistencia-semantica-de-topicos-distancias-euclidianas">Consistencia Sem&#225;ntica de T&#243;picos: Distancias Euclidianas<a class="anchor-link" href="#consistencia-semantica-de-topicos-distancias-euclidianas">&#182;</a></h1><h2 id="python-sentence-embeddings">Python + Sentence Embeddings<a class="anchor-link" href="#python-sentence-embeddings">&#182;</a></h2><hr>
 <p>En <strong>5b</strong> le pedimos a un LLM que <strong>leyera y calificara</strong> la coherencia de cada tópico en una escala de 1 a 5. Encontramos una limitación real: el modelo tiende a concentrar casi todos sus puntajes en 5, lo que deja poco margen para distinguir entre modelos con $k=12$, $k=20$ y $k=25$.</p>
 <p>En este notebook usamos un enfoque distinto y <strong>puramente matemático</strong>: en vez de pedirle a un LLM que <em>opine</em> sobre la coherencia, medimos la <strong>distancia real entre las palabras de un tópico en un espacio vectorial</strong> (<em>embeddings</em>).</p>
 <p>La idea central:</p>
@@ -1612,7 +1665,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="objetivos-de-aprendizaje">&#127919; Objetivos de aprendizaje<a class="anchor-link" href="#objetivos-de-aprendizaje">&#182;</a></h2><ul>
+<hr>
+<h3 id="objetivos-de-aprendizaje">&#127919; Objetivos de aprendizaje<a class="anchor-link" href="#objetivos-de-aprendizaje">&#182;</a></h3><ul>
 <li>Entender la diferencia entre pedirle a un LLM que <strong>evalúe</strong> coherencia (5b) y <strong>medirla matemáticamente</strong> con embeddings (este notebook).</li>
 <li>Generar embeddings de palabras con un modelo de Hugging Face (<code>sentence-transformers</code>).</li>
 <li>Calcular la similitud coseno promedio entre las palabras de un tópico como una métrica continua de coherencia.</li>
@@ -1629,10 +1683,13 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="que-son-los-embeddings">&#191;Qu&#233; son los Embeddings?<a class="anchor-link" href="#que-son-los-embeddings">&#182;</a></h2><p>Hasta este punto del curso hemos representado los documentos mediante una <strong>Document-Feature Matrix (DFM)</strong>, en la que cada documento se describe por las palabras que contiene y su frecuencia de aparición. Sobre esta representación hemos construido modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
-<p>Aunque este enfoque ha demostrado ser muy útil, presenta una limitación importante: <strong>no captura el significado de las palabras</strong>. Para estos modelos, dos palabras distintas son simplemente dos términos diferentes, incluso si tienen un significado muy similar.</p>
-<p>Los <strong>embeddings</strong> surgieron para resolver este problema. En lugar de representar una palabra mediante una columna de la DFM o una frecuencia de aparición, la representan mediante un <strong>vector numérico denso</strong> que captura información sobre su significado. Como consecuencia, palabras que aparecen en contextos similares tienden a tener representaciones numéricas similares.</p>
-<p>Este cambio permitió pasar de una representación basada en frecuencias de palabras a una representación basada en <strong>relaciones semánticas</strong>, constituyendo uno de los avances más importantes en el desarrollo del Procesamiento de Lenguaje Natural moderno.</p>
+<hr>
+<hr>
+<h2 id="i-que-son-los-embeddings">&#129504; I. &#191;Qu&#233; son los Embeddings?<a class="anchor-link" href="#i-que-son-los-embeddings">&#182;</a></h2><p>Hasta este punto del curso hemos representado los documentos mediante una <strong>Document-Feature Matrix (DFM)</strong>, en la que cada documento se describe por las palabras que contiene y la frecuencia con que aparecen. A partir de esta representación hemos construido modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>, los cuales han permitido analizar el contenido de un corpus desde distintas perspectivas.</p>
+<p>Sin embargo, todos estos modelos comparten una limitación importante: <strong>no capturan el significado de las palabras</strong>. Para ellos, dos palabras distintas son simplemente dos columnas diferentes de la matriz, aunque tengan un significado muy parecido. Por ejemplo, <em>car</em> y <em>automobile</em> se consideran completamente independientes, a pesar de referirse al mismo concepto.</p>
+<p>Los <strong>embeddings</strong> surgieron para superar esta limitación. En lugar de representar una palabra mediante una columna de la DFM o su frecuencia de aparición, la representan mediante un <strong>vector numérico denso</strong> que captura información sobre su significado. Como consecuencia, palabras que aparecen en contextos similares tienden a tener representaciones numéricas similares.</p>
+<p>Este cambio marcó un punto de inflexión en el desarrollo del Procesamiento de Lenguaje Natural moderno. En lugar de trabajar únicamente con frecuencias de palabras, los modelos comenzaron a representar <strong>relaciones semánticas</strong>, permitiendo comparar palabras, frases e incluso documentos según su significado y no solo según los términos que contienen.</p>
+<hr>
 
 </div>
 </div>
@@ -1644,7 +1701,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="de-la-dfm-a-los-embeddings">&#128260; De la DFM a los Embeddings<a class="anchor-link" href="#de-la-dfm-a-los-embeddings">&#182;</a></h2><p>📊 <strong>Representación clásica:</strong><br>
+<h3 id="de-la-dfm-a-los-embeddings">&#128260; De la DFM a los Embeddings<a class="anchor-link" href="#de-la-dfm-a-los-embeddings">&#182;</a></h3><p>📊 <strong>Representación clásica:</strong><br>
 La <strong>Document-Feature Matrix (DFM)</strong> representa cada documento mediante las palabras que contiene y la frecuencia con la que aparecen. Esta representación constituye la base de modelos como <strong>Bag of Words</strong>, <strong>TF-IDF</strong> y <strong>LDA</strong>.</p>
 <p>🧠 <strong>Representación semántica:</strong><br>
 Los <strong>embeddings</strong> adoptan un enfoque diferente. En lugar de representar el texto mediante frecuencias de palabras, representan palabras, oraciones o documentos mediante <strong>vectores densos</strong> que capturan información sobre su significado.</p>
@@ -1662,7 +1719,8 @@ La siguiente figura resume esta diferencia fundamental entre ambas formas de rep
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="representaciones-sparse-y-dense">&#128208; Representaciones <em>Sparse</em> y <em>Dense</em><a class="anchor-link" href="#representaciones-sparse-y-dense">&#182;</a></h2><p>La principal diferencia entre la <strong>Document-Feature Matrix (DFM)</strong> y los <strong>embeddings</strong> radica en la forma en que representan la información.</p>
+<hr>
+<h3 id="representaciones-sparse-y-dense">&#128208; Representaciones <em>Sparse</em> y <em>Dense</em><a class="anchor-link" href="#representaciones-sparse-y-dense">&#182;</a></h3><p>La principal diferencia entre la <strong>Document-Feature Matrix (DFM)</strong> y los <strong>embeddings</strong> radica en la forma en que representan la información.</p>
 <p>📊 <strong>Representación <em>Sparse</em> (dispersa):</strong><br>
 En una DFM, cada palabra del vocabulario corresponde a una columna distinta. Como cada documento contiene solo una pequeña fracción de todas las palabras posibles, la mayoría de los valores de la matriz son <strong>0</strong>. Por esta razón, este tipo de representación se denomina <em>sparse</em> (dispersa).</p>
 <p>🧠 <strong>Representación <em>Dense</em> (densa):</strong><br>
@@ -1681,7 +1739,8 @@ Mientras que una representación <em>sparse</em> describe <strong>qué palabras 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="el-espacio-semantico">&#127757; El Espacio Sem&#225;ntico<a class="anchor-link" href="#el-espacio-semantico">&#182;</a></h2><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores densos</strong>. Sin embargo, la verdadera utilidad de estos vectores radica en que pueden compararse entre sí.</p>
+<hr>
+<h3 id="el-espacio-semantico">&#127757; El Espacio Sem&#225;ntico<a class="anchor-link" href="#el-espacio-semantico">&#182;</a></h3><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores densos</strong>. Sin embargo, la verdadera utilidad de estos vectores radica en que pueden compararse entre sí.</p>
 <p>📍 <strong>Proximidad semántica:</strong><br>
 En el espacio de embeddings, elementos con significados similares tienden a ubicarse cerca unos de otros. Por ejemplo, palabras como <em>perro</em> y <em>cachorro</em> tendrán representaciones muy próximas, mientras que palabras sin relación, como <em>automóvil</em> y <em>plátano</em>, aparecerán mucho más alejadas.</p>
 <p>📏 <strong>Medida de similitud:</strong><br>
@@ -1700,14 +1759,16 @@ Los embeddings transforman el lenguaje en un espacio matemático donde la cercan
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="el-vector-de-embeddings">&#129518; El Vector de Embeddings<a class="anchor-link" href="#el-vector-de-embeddings">&#182;</a></h2><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores numéricos</strong>. Pero, ¿qué representan realmente esos números?</p>
+<hr>
+<hr>
+<h2 id="ii-el-vector-de-embeddings">&#129518; II. El Vector de Embeddings<a class="anchor-link" href="#ii-el-vector-de-embeddings">&#182;</a></h2><p>Hasta ahora hemos visto que los embeddings representan palabras, oraciones o documentos mediante <strong>vectores numéricos</strong>. Pero, ¿qué representan realmente esos números?</p>
 <p>📐 <strong>Cada embedding es un vector:</strong><br>
 Cada palabra, oración o documento se representa mediante un único vector compuesto por un conjunto de valores numéricos denominados <strong>dimensiones</strong>. Cada dimensión captura una pequeña parte de la información aprendida por el modelo durante el entrenamiento. Aunque, por sí sola, una dimensión no suele tener una interpretación directa, el conjunto de todas ellas permite representar el significado del texto.</p>
 <p>📊 <strong>Número de dimensiones:</strong><br>
 No todos los modelos utilizan vectores del mismo tamaño. Por ejemplo, algunos modelos generan embeddings de <strong>384 dimensiones</strong>, mientras que otros utilizan <strong>768</strong> o incluso <strong>1024 dimensiones</strong>. En general, un mayor número de dimensiones permite representar relaciones semánticas más complejas, aunque también aumenta el costo computacional.</p>
 <p>📌 <strong>Idea clave:</strong><br>
 El significado de una palabra no está contenido en un único número, sino en la combinación de <strong>todas las dimensiones</strong> de su vector de embedding.</p>
-<p><img src="../images/Embedding_Vector.png" alt="Embedding Vector"></p>
+<h2><img src="../images/Embedding_Vector.png" alt="Embedding Vector"></h2>
 
 </div>
 </div>
@@ -1719,7 +1780,8 @@ El significado de una palabra no está contenido en un único número, sino en l
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="como-aprenden-los-modelos-estos-vectores">&#129504; &#191;C&#243;mo aprenden los modelos estos vectores?<a class="anchor-link" href="#como-aprenden-los-modelos-estos-vectores">&#182;</a></h2><p>Hasta ahora hemos visto que cada palabra, oración o documento puede representarse mediante un vector numérico. Pero surge una pregunta fundamental:</p>
+<hr>
+<h3 id="como-aprenden-los-modelos-estos-vectores">&#129504; &#191;C&#243;mo aprenden los modelos estos vectores?<a class="anchor-link" href="#como-aprenden-los-modelos-estos-vectores">&#182;</a></h3><p>Hasta ahora hemos visto que cada palabra, oración o documento puede representarse mediante un vector numérico. Pero surge una pregunta fundamental:</p>
 <blockquote><p><strong>¿Cómo adquieren significado esos números?</strong></p>
 </blockquote>
 <p>🎲 <strong>Inicialización aleatoria:</strong><br>
@@ -1732,6 +1794,7 @@ A partir de este error, el algoritmo <strong>Gradient Descent</strong> ajusta li
 El proceso continúa hasta que la función de pérdida deja de mejorar significativamente, se alcanza un número máximo de iteraciones (<em>epochs</em>) o el rendimiento sobre un conjunto de validación deja de aumentar.</p>
 <p>📌 <strong>Idea clave:</strong><br>
 Los embeddings no contienen significado desde el inicio. Su capacidad para representar relaciones semánticas surge gradualmente mediante un proceso iterativo de aprendizaje.</p>
+<hr>
 
 </div>
 </div>
@@ -1743,10 +1806,10 @@ Los embeddings no contienen significado desde el inicio. Su capacidad para repre
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El objetivo del entrenamiento consiste en minimizar una función de pérdida,</p>
+<h3 id="la-funcion-de-perdida-loss-function">&#128201; La Funci&#243;n de P&#233;rdida (<em>Loss Function</em>)<a class="anchor-link" href="#la-funcion-de-perdida-loss-function">&#182;</a></h3><p>El objetivo del entrenamiento consiste en minimizar una función de pérdida,</p>
 $$
 L(\theta),
-$$<p>que mide el error cometido por el modelo.</p>
+$$<p>que mide el error cometido por el modelo.  $\theta$ representa <strong>todos los parámetros que el modelo debe aprender</strong> durante el entrenamiento. Entre ellos se encuentran los embeddings, así como los pesos de las distintas capas de la red neuronal.</p>
 <p>En cada iteración, los parámetros del modelo (incluyendo los embeddings) se actualizan mediante la regla</p>
 $$
 \theta_{t+1}
@@ -1761,6 +1824,7 @@ $$<p>donde:</p>
 <li>$\nabla_{\theta}L(\theta)$ es el gradiente de la pérdida.</li>
 <li>$\eta$ es la <strong>tasa de aprendizaje (<em>learning rate</em>)</strong>, que controla el tamaño de cada actualización.</li>
 </ul>
+<hr>
 
 </div>
 </div>
@@ -1772,17 +1836,15 @@ $$<p>donde:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="como-se-generan-los-embeddings">&#129302; &#191;C&#243;mo se generan los embeddings?<a class="anchor-link" href="#como-se-generan-los-embeddings">&#182;</a></h2><p>Hasta ahora hemos tratado los embeddings como si simplemente existieran. Sin embargo, surge una pregunta natural:</p>
-<blockquote><p><strong>¿Quién calcula estos vectores?</strong></p>
-</blockquote>
-<p>En la actualidad, la mayoría de los embeddings utilizados en Procesamiento de Lenguaje Natural son generados por <strong>modelos Transformer</strong> entrenados sobre enormes colecciones de texto. Durante el entrenamiento, estos modelos aprenden a representar palabras, oraciones e incluso documentos mediante vectores que preservan relaciones semánticas.</p>
-<p>📚 <strong>Modelos preentrenados:</strong><br>
-En lugar de entrenar un modelo desde cero, normalmente utilizamos modelos ya entrenados (<em>pre-trained models</em>), capaces de generar embeddings de alta calidad para nuevos textos.</p>
-<p>🚀 <strong>Sentence Transformers:</strong><br>
-Los <strong>Sentence Transformers</strong> constituyen una familia de modelos diseñada específicamente para producir embeddings de oraciones y documentos completos. Estos modelos generan representaciones que pueden compararse directamente mediante medidas de similitud, facilitando tareas como búsqueda semántica, clasificación de textos y modelamiento de temas.</p>
-<p>📌 <strong>En este notebook:</strong><br>
-Utilizaremos un modelo <strong>Sentence Transformer</strong> denominado <strong>MPNet</strong>, uno de los modelos más utilizados por su excelente equilibrio entre precisión y velocidad.</p>
-<p><img src="../images/Sentence_Transformers.png" alt="Sentence_Transformers"></p>
+<h3 id="embeddings-preentrenados">&#129302; Embeddings Preentrenados<a class="anchor-link" href="#embeddings-preentrenados">&#182;</a></h3><p>Como vimos en la sección anterior, los <strong>embeddings son uno de los parámetros que el modelo aprende durante el entrenamiento</strong>. A medida que el modelo minimiza la función de pérdida, estos vectores se ajustan iterativamente hasta representar relaciones semánticas entre palabras, oraciones y documentos.</p>
+<p>Sin embargo, entrenar un modelo de lenguaje desde cero requiere enormes colecciones de texto y una gran capacidad computacional. Por esta razón, en la práctica normalmente utilizamos <strong>modelos preentrenados (<em>pre-trained models</em>)</strong>, que ya han aprendido representaciones vectoriales de alta calidad.</p>
+<p>📚 <strong>Modelos preentrenados</strong></p>
+<p>Los modelos preentrenados son modelos que ya fueron entrenados sobre grandes corpus de texto. Esto nos permite generar embeddings para nuevos documentos sin necesidad de repetir todo el proceso de entrenamiento.</p>
+<p>🚀 <strong>Sentence Transformers</strong></p>
+<p>Los <strong>Sentence Transformers</strong> constituyen una familia de modelos basada en la arquitectura <strong>Transformer</strong>, diseñada específicamente para generar embeddings de oraciones y documentos completos. Estos modelos producen representaciones vectoriales que pueden compararse directamente mediante medidas de similitud, facilitando tareas como la búsqueda semántica, la clasificación de textos y el modelamiento de temas.</p>
+<p>📌 <strong>En este notebook</strong></p>
+<p>Utilizaremos un modelo <strong>Sentence Transformer</strong> denominado <strong>MPNet</strong>, uno de los modelos más utilizados por su excelente equilibrio entre precisión y velocidad para generar embeddings de alta calidad.</p>
+<p><img src="../images/Sentence_Transformers.png" alt="Sentence Transformers"></p>
 
 </div>
 </div>
@@ -1794,16 +1856,22 @@ Utilizaremos un modelo <strong>Sentence Transformer</strong> denominado <strong>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="que-modelo-de-embeddings-usamos">&#129518; &#191;Qu&#233; modelo de embeddings usamos?<a class="anchor-link" href="#que-modelo-de-embeddings-usamos">&#182;</a></h2><p>Usaremos <strong><code>sentence-transformers/all-mpnet-base-v2</code></strong> (MPNet).</p>
-<p>Es una alternativa a modelos más grandes como <code>BAAI/bge-large-en-v1.5</code> (BGE), con ventajas prácticas para este notebook:</p>
+<hr>
+<h3 id="que-modelo-de-embeddings-utilizaremos">&#129518; &#191;Qu&#233; modelo de embeddings utilizaremos?<a class="anchor-link" href="#que-modelo-de-embeddings-utilizaremos">&#182;</a></h3><p>En este notebook utilizaremos <strong><code>sentence-transformers/all-mpnet-base-v2</code> (MPNet)</strong> para generar los embeddings de nuestros documentos.</p>
+<p>Existen numerosos modelos capaces de producir embeddings, como <strong>BERT</strong>, <strong>RoBERTa</strong>, <strong>MiniLM</strong>, <strong>DistilBERT</strong>, <strong>E5</strong>, <strong>BGE</strong> y <strong>MPNet</strong>. Todos ellos se basan en la arquitectura <strong>Transformer</strong>, pero difieren en tamaño, velocidad de procesamiento y calidad de las representaciones que generan.</p>
+<p>⚖️ <strong>¿Por qué elegimos MPNet?</strong></p>
+<p>Para este curso, <strong>MPNet</strong> ofrece un excelente equilibrio entre precisión y eficiencia computacional:</p>
 <ul>
-<li><strong>Liviano (~420 MB, 110M parámetros)</strong> frente a BGE-large (~1.3 GB, 335M parámetros) — se descarga y carga notablemente más rápido, igual que preferimos un modelo más chico en 5b.</li>
-<li><strong>No requiere <em>prompts</em> especiales.</strong> BGE recomienda anteponer frases específicas como <code>"Represent this sentence for searching relevant passages: "</code> para obtener su mejor rendimiento en tareas de <em>búsqueda</em>; nuestra tarea (medir qué tan cerca están las palabras de un mismo tópico) no es una tarea de búsqueda, y MPNet está entrenado de forma general para similitud semántica sin necesitar ese tipo de ajuste.</li>
-<li><strong>Ampliamente probado</strong>: es uno de los modelos de <code>sentence-transformers</code> más usados y no tiene restricciones de acceso.</li>
+<li><strong>Embeddings de alta calidad</strong>, ampliamente utilizados en investigación y aplicaciones de Procesamiento de Lenguaje Natural.</li>
+<li><strong>Tamaño moderado</strong> (~420 MB y aproximadamente 110 millones de parámetros), por lo que se descarga y carga rápidamente.</li>
+<li><strong>No requiere instrucciones (<em>prompts</em>) especiales</strong> para producir embeddings de alta calidad. Otros modelos, como algunas versiones de <strong>BGE</strong>, recomiendan agregar textos específicos antes de cada consulta para obtener su mejor desempeño en tareas de búsqueda semántica.</li>
+<li><strong>Excelente soporte</strong> dentro de la biblioteca <strong>Sentence Transformers</strong>, por lo que puede utilizarse directamente desde Python con muy pocas líneas de código.</li>
 </ul>
-<p>BGE suele obtener puntajes ligeramente más altos en benchmarks de <em>retrieval</em> (búsqueda de documentos), pero para medir similitud semántica general entre palabras — que es justamente lo que necesitamos — la diferencia práctica es mínima.</p>
-<blockquote><p>📌 El nombre del modelo está aislado en una sola variable (<code>MODEL_NAME</code>). Si quieres comparar con BGE, cambia <code>MODEL_NAME</code> a <code>"BAAI/bge-large-en-v1.5"</code> — el resto del notebook funciona igual.</p>
+<p>📊 <strong>¿Por qué es importante?</strong></p>
+<p>Modelos como <strong>BERTopic</strong> construyen grupos de documentos comparando sus embeddings. Por ello, es fundamental utilizar un modelo que capture adecuadamente el significado del texto sin exigir recursos computacionales excesivos.</p>
+<blockquote><p>📌 El nombre del modelo se encuentra almacenado en una única variable (<code>MODEL_NAME</code>). Si posteriormente deseas experimentar con otro modelo compatible de <strong>Sentence Transformers</strong>, bastará con modificar esa variable; el resto del notebook funcionará sin cambios.</p>
 </blockquote>
+<hr>
 
 </div>
 </div>
@@ -1815,25 +1883,10 @@ Utilizaremos un modelo <strong>Sentence Transformer</strong> denominado <strong>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="por-que-utilizaremos-mpnet">&#129513; &#191;Por qu&#233; utilizaremos MPNet?<a class="anchor-link" href="#por-que-utilizaremos-mpnet">&#182;</a></h2><p>Existen numerosos modelos capaces de generar embeddings, como <strong>BERT</strong>, <strong>RoBERTa</strong>, <strong>MiniLM</strong>, <strong>DistilBERT</strong>, <strong>E5</strong> y <strong>MPNet</strong>. Todos ellos pertenecen a la familia de los <strong>Transformers</strong>, pero difieren en su arquitectura, tamaño, velocidad y calidad de las representaciones que producen.</p>
-<p>⚖️ <strong>Equilibrio entre precisión y eficiencia:</strong><br>
-Entre estos modelos, <strong>MPNet</strong> destaca por ofrecer un excelente equilibrio entre calidad de los embeddings y velocidad de procesamiento. Esto lo convierte en una de las opciones más utilizadas para tareas como búsqueda semántica, clasificación de textos y modelamiento de temas.</p>
-<p>📊 <strong>¿Por qué es importante?</strong><br>
-Modelos como <strong>BERTopic</strong> requieren comparar miles de documentos entre sí. Por ello, es fundamental utilizar embeddings que representen adecuadamente el significado del texto sin sacrificar demasiado rendimiento computacional.</p>
-<p>📌 <strong>En este notebook:</strong><br>
-Utilizaremos el modelo <strong>all-mpnet-base-v2</strong>, uno de los modelos más populares de la biblioteca <strong>Sentence Transformers</strong>, ampliamente empleado en investigación y aplicaciones de Procesamiento de Lenguaje Natural.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h2>
+<hr>
+<hr>
+<h2 id="iii-python-embeddings-y-coherencia-semantica">&#128013; III. Python, Embeddings y Coherencia Sem&#225;ntica<a class="anchor-link" href="#iii-python-embeddings-y-coherencia-semantica">&#182;</a></h2><hr>
+<h3 id="instalacion-de-las-librerias-necesarias">&#128230; Instalaci&#243;n de las librer&#237;as necesarias<a class="anchor-link" href="#instalacion-de-las-librerias-necesarias">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1843,7 +1896,7 @@ Utilizaremos el modelo <strong>all-mpnet-base-v2</strong>, uno de los modelos m�
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1901,7 +1954,7 @@ To disable this warning, you can either:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1944,7 +1997,8 @@ from sklearn.metrics.pairwise import cosine_similarity</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-el-modelo-de-embeddings">&#129504; Cargar el modelo de embeddings<a class="anchor-link" href="#cargar-el-modelo-de-embeddings">&#182;</a></h2><p>Igual que en 5b, detectamos automáticamente el hardware disponible. A diferencia del LLM de 5b, este modelo es lo suficientemente liviano como para que la diferencia entre GPU y CPU sea de segundos, no de minutos.</p>
+<hr>
+<h3 id="cargar-el-modelo-de-embeddings">&#129504; Cargar el modelo de embeddings<a class="anchor-link" href="#cargar-el-modelo-de-embeddings">&#182;</a></h3><p>Igual que en 5b, detectamos automáticamente el hardware disponible. A diferencia del LLM de 5b, este modelo es lo suficientemente liviano como para que la diferencia entre GPU y CPU sea de segundos, no de minutos.</p>
 
 </div>
 </div>
@@ -1955,7 +2009,7 @@ from sklearn.metrics.pairwise import cosine_similarity</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2031,7 +2085,8 @@ modelo_embeddings = SentenceTransformer(MODEL_NAME, device=device)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cargar-los-topicos-exportados-desde-r-unidad-5a">&#128194; Cargar los t&#243;picos exportados desde R (Unidad 5a)<a class="anchor-link" href="#cargar-los-topicos-exportados-desde-r-unidad-5a">&#182;</a></h2><p>Los tres archivos deben estar en el mismo directorio de trabajo que este notebook.</p>
+<hr>
+<h3 id="cargar-los-topicos-exportados-desde-r-unidad-5a">&#128194; Cargar los t&#243;picos exportados desde R (Unidad 5a)<a class="anchor-link" href="#cargar-los-topicos-exportados-desde-r-unidad-5a">&#182;</a></h3><p>Los tres archivos deben estar en el mismo directorio de trabajo que este notebook.</p>
 <blockquote><p>📌 <strong>Si estás en Google Colab:</strong> sube los tres archivos (<code>lda_topterms_k12.csv</code>, <code>lda_topterms_k20.csv</code>, <code>lda_topterms_k25.csv</code>) usando el panel de archivos (ícono de 📁 en la barra lateral izquierda) antes de ejecutar la siguiente celda — ver la nota detallada en 5b si no lo has hecho antes.</p>
 </blockquote>
 
@@ -2044,7 +2099,7 @@ modelo_embeddings = SentenceTransformer(MODEL_NAME, device=device)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2087,7 +2142,7 @@ topterms_12.head()</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 
 
 
@@ -2171,7 +2226,8 @@ topterms_12.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="palabras-clave-por-topico">&#9986;&#65039; Palabras clave por t&#243;pico<a class="anchor-link" href="#palabras-clave-por-topico">&#182;</a></h2><p>La misma función utilizada en 5b: obtiene las $n$ palabras con mayor probabilidad ($\beta$) de un tópico.</p>
+<hr>
+<h3 id="palabras-clave-por-topico">&#9986;&#65039; Palabras clave por t&#243;pico<a class="anchor-link" href="#palabras-clave-por-topico">&#182;</a></h3><p>La misma función utilizada en 5b: obtiene las $n$ palabras con mayor probabilidad ($\beta$) de un tópico.</p>
 
 </div>
 </div>
@@ -2182,7 +2238,7 @@ topterms_12.head()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2235,7 +2291,7 @@ get_topic_words(topterms_20, topic_id=1)</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -2272,14 +2328,18 @@ get_topic_words(topterms_20, topic_id=1)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="de-palabras-a-un-puntaje-de-coherencia">&#128208; De palabras a un puntaje de coherencia<a class="anchor-link" href="#de-palabras-a-un-puntaje-de-coherencia">&#182;</a></h2><p>Para un tópico con $n$ palabras, el procedimiento es:</p>
+<hr>
+<h3 id="calculando-la-coherencia-mediante-embeddings">&#128208; Calculando la coherencia mediante embeddings<a class="anchor-link" href="#calculando-la-coherencia-mediante-embeddings">&#182;</a></h3><p>Para medir la <strong>coherencia semántica</strong> de un tópico utilizaremos una función llamada <strong><code>coherencia_por_embeddings()</code></strong>.</p>
+<p>La función recibe como entrada la lista de palabras que representa un tópico y ejecuta el siguiente procedimiento:</p>
 <ol>
-<li>Generar un embedding (vector de 768 dimensiones) para cada una de las $n$ palabras.</li>
-<li>Calcular la <strong>similitud coseno</strong> entre cada par de palabras — esto produce una matriz de $n \times n$ similitudes.</li>
-<li>Promediar todas las similitudes, <strong>excluyendo la diagonal</strong> (la similitud de una palabra consigo misma siempre es 1, y no aporta información).</li>
+<li>Genera un <strong>embedding</strong> (un vector numérico; en el caso del modelo <strong>MPNet</strong>, de 768 dimensiones) para cada palabra del tópico.</li>
+<li>Calcula la <strong>similitud coseno</strong> entre todos los pares de embeddings, obteniendo una matriz de similitudes de tamaño $n \times n$, donde $n$ es el número de palabras del tópico.</li>
+<li>Excluye la diagonal principal de la matriz, ya que la similitud de una palabra consigo misma siempre es igual a 1 y no aporta información sobre la coherencia del tópico.</li>
+<li>Calcula el promedio de todas las similitudes <strong>fuera de la diagonal</strong> y devuelve ese valor como una medida de coherencia.</li>
 </ol>
-<p>El resultado es un número entre -1 y 1 (en la práctica, casi siempre entre 0 y 1 para palabras en inglés): mientras más alto, más cercanas están las palabras entre sí en el espacio semántico, y por lo tanto, más coherente es el tópico.</p>
-<blockquote><p>🧠 A diferencia del puntaje 1-5 de un LLM, este es un número <strong>continuo</strong> — dos tópicos pueden tener 0.31 y 0.34 de similitud promedio, una diferencia real que un LLM forzado a elegir un entero entre 1 y 5 probablemente redondearía al mismo puntaje.</p>
+<p>En general, <strong>cuanto mayor sea este promedio, mayor será la coherencia semántica del tópico</strong>, ya que las palabras estarán más próximas entre sí en el espacio de embeddings.</p>
+<p>El resultado es un número comprendido entre <strong>−1 y 1</strong> (aunque, en la práctica, para conjuntos de palabras relacionadas suele encontrarse entre <strong>0 y 1</strong>).</p>
+<blockquote><p>🧠 A diferencia del puntaje discreto (1–5) asignado por un LLM, esta medida es <strong>continua</strong>. Por ejemplo, dos tópicos pueden obtener coherencias de <strong>0.31</strong> y <strong>0.34</strong>, reflejando una diferencia semántica que un LLM obligado a asignar un entero probablemente evaluaría con la misma calificación.</p>
 </blockquote>
 
 </div>
@@ -2291,7 +2351,7 @@ get_topic_words(topterms_20, topic_id=1)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2354,7 +2414,7 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
@@ -2377,7 +2437,8 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="aplicar-a-todos-los-topicos-de-un-modelo">&#128257; Aplicar a todos los t&#243;picos de un modelo<a class="anchor-link" href="#aplicar-a-todos-los-topicos-de-un-modelo">&#182;</a></h2><p>A diferencia de 5b, aquí no hay llamadas a un LLM ni <em>prompts</em> que parsear — solo embeddings y álgebra lineal, por lo que esta celda debería ejecutarse en segundos para los 57 tópicos combinados.</p>
+<hr>
+<h3 id="aplicar-a-todos-los-topicos-de-un-modelo">&#128257; Aplicar a todos los t&#243;picos de un modelo<a class="anchor-link" href="#aplicar-a-todos-los-topicos-de-un-modelo">&#182;</a></h3><p>A diferencia de 5b, aquí no hay llamadas a un LLM ni <em>prompts</em> que parsear — solo embeddings y álgebra lineal, por lo que esta celda debería ejecutarse en segundos para los 57 tópicos combinados.</p>
 
 </div>
 </div>
@@ -2388,7 +2449,7 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2442,7 +2503,7 @@ coherencia_por_embeddings(palabras_ejemplo)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2487,7 +2548,7 @@ resultados_todos</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 
 
 
@@ -2935,7 +2996,8 @@ resultados_todos</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="comparar-la-coherencia-promedio-por-valor-de-k">&#128202; Comparar la coherencia promedio por valor de $k$<a class="anchor-link" href="#comparar-la-coherencia-promedio-por-valor-de-k">&#182;</a></h2>
+<hr>
+<h3 id="comparar-la-coherencia-promedio-por-valor-de-k">&#128202; Comparar la coherencia promedio por valor de $k$<a class="anchor-link" href="#comparar-la-coherencia-promedio-por-valor-de-k">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2945,7 +3007,7 @@ resultados_todos</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2982,7 +3044,7 @@ coherencia_promedio</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
 
 
 
@@ -3008,7 +3070,7 @@ Name: coherencia_embeddings, dtype: float32</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3023,21 +3085,71 @@ Name: coherencia_embeddings, dtype: float32</pre>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">coherencia_promedio</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#854f0b&quot;</span><span class="p">,</span> <span class="s2">&quot;#854f0b&quot;</span><span class="p">,</span> <span class="s2">&quot;#854f0b&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Similitud coseno promedio (embeddings)&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Boxplot por valor de k: muestra la distribucion completa de la</span>
+<span class="c1"># coherencia entre topicos individuales (incluyendo cada punto), no solo</span>
+<span class="c1"># el promedio. Superpone una curva polinomial (grado 2) a traves de los</span>
+<span class="c1"># promedios de cada grupo, en vez de segmentos de recta.</span>
+<span class="n">grupos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+<span class="n">datos_por_k</span> <span class="o">=</span> <span class="p">[</span><span class="n">resultados_todos</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">resultados_todos</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span><span class="p">,</span> <span class="s2">&quot;coherencia_embeddings&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">grupos</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">datos_por_k</span><span class="p">,</span> <span class="n">positions</span><span class="o">=</span><span class="n">grupos</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">boxprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">),</span>
+            <span class="n">medianprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">))</span>
+
+<span class="c1"># puntos individuales, con jitter horizontal para que no se superpongan</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">datos</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">grupos</span><span class="p">,</span> <span class="n">datos_por_k</span><span class="p">):</span>
+    <span class="n">jitter</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">datos</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datos</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">jitter</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># curva polinomial (grado 2) a traves de los promedios de cada grupo</span>
+<span class="n">medias</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datos_por_k</span><span class="p">]</span>
+<span class="n">coef</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">grupos</span><span class="p">,</span> <span class="n">medias</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x_suave</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">grupos</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">grupos</span><span class="p">),</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_suave</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">coef</span><span class="p">,</span> <span class="n">x_suave</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_suave</span><span class="p">,</span> <span class="n">y_suave</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Tendencia (curva polinomial)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">grupos</span><span class="p">,</span> <span class="n">medias</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Promedio&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Similitud coseno (embeddings)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Número de tópicos (k)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Coherencia semántica promedio por valor de k (embeddings)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de la coherencia semántica por valor de k (embeddings)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">grupos</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">plt.figure(figsize=(6, 4))
-coherencia_promedio.plot(kind="bar", color=["#854f0b", "#854f0b", "#854f0b"])
-plt.ylabel("Similitud coseno promedio (embeddings)")
+<div id="cell-10" class="clipboard-copy-txt"># Boxplot por valor de k: muestra la distribucion completa de la
+# coherencia entre topicos individuales (incluyendo cada punto), no solo
+# el promedio. Superpone una curva polinomial (grado 2) a traves de los
+# promedios de cada grupo, en vez de segmentos de recta.
+grupos = [12, 20, 25]
+datos_por_k = [resultados_todos.loc[resultados_todos["k"] == k, "coherencia_embeddings"] for k in grupos]
+
+plt.figure(figsize=(6, 4))
+plt.boxplot(datos_por_k, positions=grupos, widths=3, patch_artist=True,
+            boxprops=dict(facecolor="steelblue", alpha=0.4),
+            medianprops=dict(color="steelblue"))
+
+# puntos individuales, con jitter horizontal para que no se superpongan
+rng = np.random.default_rng(0)
+for x, datos in zip(grupos, datos_por_k):
+    jitter = rng.uniform(-0.8, 0.8, size=len(datos))
+    plt.scatter(np.full(len(datos), x) + jitter, datos, color="black", alpha=0.5, s=15, zorder=3)
+
+# curva polinomial (grado 2) a traves de los promedios de cada grupo
+medias = [d.mean() for d in datos_por_k]
+coef = np.polyfit(grupos, medias, deg=2)
+x_suave = np.linspace(min(grupos), max(grupos), 200)
+y_suave = np.polyval(coef, x_suave)
+plt.plot(x_suave, y_suave, color="red", linestyle="-", linewidth=2, label="Tendencia (curva polinomial)")
+plt.scatter(grupos, medias, color="red", zorder=4, label="Promedio")
+
+plt.ylabel("Similitud coseno (embeddings)")
 plt.xlabel("Número de tópicos (k)")
-plt.title("Coherencia semántica promedio por valor de k (embeddings)")
-plt.xticks(rotation=0)
+plt.title("Distribución de la coherencia semántica por valor de k (embeddings)")
+plt.xticks(grupos)
+plt.legend()
 plt.tight_layout()
 plt.show()</div>
     
@@ -3063,7 +3175,7 @@ plt.show()</div>
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk4AAAGGCAYAAACNCg6xAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjEsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvc2/+5QAAAAlwSFlzAAAPYQAAD2EBqD+naQAAUYNJREFUeJzt3QncTPX///8XspMlIi2IImUpShQSISXSIvpEEm1SKUTZSpGyJKKUqE8iJZUKkbVIlj6WyJJI2bKG7PO/Pd/f/5nfzFxzXWZcc7nMXI/77Xa45syZc97nzPuc85r3djL5fD6fAQAA4KQyn3wRAAAACIETAABAhAicAAAAIkTgBAAAECECJwAAgAgROAEAAESIwAkAACBCBE4AAAARInACAACIEIETkErr1q2zXr162Zo1a9I7KQCANEbglA5KlChht956qyWy+++/3+1nojt8+LDdddddtn79erv00ktjvv5Zs2ZZpkyZ3P84fXlVx1zBMM7cfKnvR2mI9fr+/vvvU15H//79rWzZsnbixAlLj3ycJ0+e07KtEiVKuO2dzOjRo90x/f333/3zbrjhBjeltxEjRthFF13kruHRInCKgG6KDz30kF188cWWI0cOO/vss+26666z119/3f7999/0Th7SUceOHa1AgQL27rvvpmo9b775prvIAIhP+/bts1deecW6dOlimTNzaz3TKfA7cuSIvfXWW1F/9qw0SVEC+eqrr1yJQvbs2a1ly5Z2xRVXuIM9b94869Spk61cudLefvvt9E7mGWfkyJHp8qvrdNq1a5cVLVrUXn75ZcuWLVuqA6dChQol+RVXs2ZNF5yndv2Ijo75WWdxeUTkRo0aZceOHbPmzZund1LOaNOmTbMzgQpBWrVqZQMHDrTHH388qtJLrgwp2LBhg91zzz1WvHhx++677+y8887zv/fYY4+5ti0KrM5EOoEVuKTXDTdr1qyW6AoWLGjdu3dP023ol6tO8Hhy8OBBy5Url8WzeDvmcuDAAcudO7fFo3hOu+e9996z2267LS7zzumU7Qz6EXj33Xe76tWZM2fajTfeGPHnKE9MgQ7o/v37XTVMYNDkKV26tD3xxBNBwcqLL75opUqVciVUqgfu1q1bsnWoKrW65ppr3ImmasD3338/yTJ79uyxJ5980i688EK3Tm1TxcGBpTmqP1a0/Nprr9ngwYP92//ll1/c+6tXr7Y777zT3ei1rSpVqtgXX3wRti76+++/d9VPhQsXdhey22+/3Xbs2JEkXd98843VqlXL8ubN66our776ahs7dmyK7UaUvurVq9s555xjOXPmtMqVK9snn3xikVi7dq3dcccdroRH+3DBBRe4oHbv3r1By/33v/9169X6tb9a5o8//ghaRvXrKjlctmyZ2wfd5HVcvbTMnj3bqlat6tZRpkwZmz59etDnN27caI8++qh7T8tof1QqGViPH80x1XFSyaW2q+U1eW0AkmtL8uOPP1rDhg1dNaHWWaFCBVd17NG+6Tvwqpd13B544AHbuXPnSY+1t83x48e7/KvPahu6KSR3LBcvXuxKx3Qs9RnZvn27tWnTxooUKeLSULFiRRszZkzQ5wPz7rBhw1x6tY569eq5bfl8PndO6fvWsW7cuLEr6QuXH2vUqOHSqTx5yy23uGMaatKkSS69So/+/+yzz8Ieg3BtnJYuXWo333yzy+9qS1KnTh1bsGDBSY9n4D4OGjTI/RDTvijvrVixIsny+pHm7Uv+/PndPq9atSpsexyd4y1atHD54Prrrw+7/UWLFrllQ4+9TJ061b03efLkqPJ2ciZMmOA//1SC+p///Mf+/PPPsG1x1ARCeVjf17333pvienWt1DVG35uubylVr0RyDYiUjoeuDcor27ZtS/FHts65unXrJnlP12pdly+//HKXfp0Pavqxe/fusG1fdf7pGq30ly9f3n/uT5w40b3WOrR/yo/h/Pbbb1a/fn2Xf4oVK2YvvPCCO49OJU36XJ8+fdz5p/Oydu3aYc8r0XwFH0q3ltfnwtU6hLZx8q43H3/8sb300kvus0qTzi8VToTyrhPaju6fc+fODdtu6o033nD7p3Tr/NAxDbxHiY6j8sjnn39uUfEhWeeff77v4osvjnj5Vq1aKXf67rzzTt+wYcN8LVu2dK+bNGkStFzx4sV9ZcqU8RUpUsTXrVs339ChQ31XXXWVL1OmTL4VK1b4lztw4ICvQoUKvnPOOcctN2LECLdOLffEE0/4l9uwYYPbTrly5Vx6+/Xr5xs0aJBv48aNbn358uVz773yyituWzVr1nTrmDhxon8d7733nlvHlVde6bvxxht9b7zxhu/pp5/2ZcmSxXf33XcHpV/L6vNXXHGF76WXXnL7+uCDD/ruu+++oGOh/Qx0wQUX+B599FGXhoEDB/quueYat83JkyeneFwPHz7sK1mypK9YsWK+Pn36+N555x1f7969fVdffbXv999/9y+n95SuZs2a+d588023TKFChXwlSpTw7d69279crVq13LouvPBCX6dOndy+6vhoX8eNG+crWrSor1evXr7Bgwe7PKDjt2/fPv/nJ0yY4L6XHj16+N5++21f165d3TLaX31n0R7Tzz77zB2bsmXL+j744AM3TZs2zb03c+ZMtw7979F72bJlc9vr2bOnb/jw4b4OHTr46tat61/mtdde89WoUcP3wgsvuDQqv+TMmdMd8xMnTqR4vL1tli9f3u2nvqtnn33WlyNHDt+ll17qO3jwYNCx1PEqXLiw7/HHH/e99dZbvkmTJrllLrvsMl/WrFl9Tz31lG/IkCEuPVqvjmto3q1UqZL7DrSt559/3u3ftdde6/J99erV3ee1j/p+W7duHZTe999/381v0KCBO8bK5/rO8+fP79bvmTp1qi9z5swu32o7zz33nPveLr/88iR5VWnSsfXoPMqdO7fvvPPO87344ovuHFOezJ49u2/BggUpHk9vH3U8lS6lT3mzYMGC7rht3brVv+y3337rO+uss9xx7t+/vz8PFyhQIGhflDbvnG/cuLHL7zoPk6PrQsOGDZPM17HUuo8cOeLP2xUrVvTnbR1/vR+at8PlSy+/67zU9Ud5Rnku9PzTtUHHrVSpUu5vXdf0HSZn2bJlbj0XXXSRr2/fvu7469qpvBl6C4v0GhCOd0x37NjhXq9bt85tU3nTm5ec//73v+6zSmsoXRv1nbZt29bta5cuXVxe0nHyjnvgfUF5TNcfHUNdf/LkyePWr7Qo32lSvi1durTv+PHjQcdV5+gll1zirsW6zt56660uXd27dz+lNOlc1OeVd7S+Bx54wF07dUy1Pc+WLVtcXlZeUdpfffVVlw7vOwrMu7pmaArNS7pOVq5c2e231pErVy53vQqk71TL6lqia0LHjh3deaS8FLhO5V3vXqxr0uuvv+5r06aNu4aE0nVT240GgVMy9u7d6w68LkqR+Pnnn93yypCBnnnmGTf/u+++CzpBNG/OnDn+edu3b3cXE91YPbpAKDOvWbMmaJ26IOnmu2nTpqAL89lnn+3WE6hOnTrugn3o0CH/PN04dTNSxg696CkTBd5YddPTtvbs2eNe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SSUAAEA8ljg99dRTdtttt9nIkSPtrLP+7+PHjh2zBx980J588kmbM2dOWqQTAAAg/gInlTgFBk1uJWedZZ07d3aPYwEAAEhUUVfVnX322bZp06Yk8//44w/LmzdvrNIFAAAQ/4FTs2bNrE2bNjZ+/HgXLGkaN26cq6rTc+wAAAASVdRVda+99pob6LJly5aubZNkzZrVHnnkETeqOAAAQKKKKnDSqOALFiywXr16Wd++fW39+vVuvnrU5cqVK63SCAAAEH+BU5YsWaxevXpu/KaSJUta+fLl0y5lAAAA8d7G6YorrrDffvstbVIDAACQSIFTnz597JlnnrHJkyfbli1bbN++fUETAABAooq6cXjDhg3d/xoEU43EPT6fz71WOygAAIBEFHXgNHPmzLRJCQAAQKIFTrVq1UqblAAAACRa4CS7d++2d9991/Wuk3Llylnr1q2tYMGCsU4fAABA/DYO10N8S5QoYUOGDHEBlCb9reEJeMAvAABIZFGXOD322GPusSvDhw934zqJGoQ/+uij7r3ly5enRToBAADir8Rp3bp19vTTT/uDJtHfHTt2dO8BAAAkqqgDp6uuusrftimQ5lWsWDFW6QIAAIj/qroOHTrYE0884UqXrr32WjdPz68bNmyYe8jvsmXL/MtWqFAhtqkFAACIp8CpefPm7v/OnTuHfU+DYDIYJgAASERRB04bNmxIm5QAAAAkWuBUvHjxtEkJAABAojUOBwAAyKgInAAAACJE4AQAABAhAicAAIC0fMivLF68OOghvxoYEwAAIJFFHTht377d7rnnHps1a5blz5/fzduzZ4/Vrl3bxo0bZ4ULF06LdAIAAMRfVd3jjz9u//zzj61cudJ27drlphUrVti+ffvcqOIAAACJKuoSpylTptj06dPtsssu889TVZ0euVKvXr1Ypw8AACB+S5xOnDhhWbNmTTJf8/QeAABAooo6cLrxxhvdQ37/+usv/7w///zTnnrqKatTp06s0wcAABC/gdPQoUNde6YSJUpYqVKl3FSyZEk374033kibVAIAAMRjG6cLL7zQlixZ4to5rV692s1Te6e6deumRfoAAADOGKc0jlOmTJnspptuchMAAEBGcUojh8+YMcO6detmDz74oD3wwANBU7TUG0/Vfjly5LCqVavawoULk11WQyDccccdbnkFb4MHD071OgEAANIscOrdu7cbdkDB099//227d+8OmqIxfvx469ixo/Xs2dNV/1WsWNHq16/vBtkM5+DBg3bxxRdbv379rGjRojFZJwAAQJpV1Y0YMcJGjx5t9913n6XWwIEDrW3btta6dWv/ur/66isbNWqUPfvss0mWv/rqq90k4d4/lXUCAACkWYnTkSNHrHr16tF+LOx69Ly7wEblmTNndq/nz59/Wtd5+PBh1yswcAIAAEh14KR2TWPHjrXUUjXf8ePHrUiRIkHz9Xrr1q2ndZ19+/a1fPny+Sf1HAQAAEh1Vd2hQ4fs7bffdsMRVKhQIcko4qoqizddu3Z17aI8KnEieAIAAKkOnJYtW2aVKlVyf+vhvoHU0y1ShQoVsixZsti2bduC5ut1cg2/02qd2bNndxMAAEBMA6eZM2daLGTLls0qV67seuc1adLEzdOz7vS6ffv2Z8w6AQAAUjUApqxbt87Wr19vNWvWtJw5c5rP54uqxElUPdaqVSurUqWKXXPNNW5cpgMHDvh7xLVs2dLOP/981wbJa/z9yy+/+P/WM/J+/vlny5Mnj5UuXTqidQIAAJy2wGnnzp129913u5InBUpr1651Yyu1adPGChQoYAMGDIh4Xc2aNbMdO3ZYjx49XONtVQFOmTLF37h706ZNrlecRw8WvvLKK/2vX3vtNTfVqlXLZs2aFdE6AQAATlvg9NRTT7kG4Qpq9Iw6jwIWlfZEEziJqtCSq0bzgiGPRgNXyVZq1gkAAHDaAqdp06bZ1KlT7YILLgiaf8kll9jGjRtPOSEAAAAJN46T2gvlypUryfxdu3bRMw0AACS0qAOnGjVq2Pvvv+9/rXZO6rnWv39/q127dqzTBwAAEL9VdQqQ6tSpY4sWLXI92zp37mwrV650JU7ff/992qQSAAAgHkucrrjiCluzZo1df/311rhxY1d117RpU1u6dKmVKlUqbVIJAAAQr+M46Xluzz33XOxTAwAAkEglThoTad68ef7Xw4YNc2MltWjRwnbv3h3r9AEAAMRv4NSpUyf3EFxZvny5G7upYcOGtmHDhqAH5QIAAFhGr6pTgFSuXDn396effmqNGjWyl19+2ZYsWeICKAAAgESV+VQepHvw4EH39/Tp061evXru74IFC/pLogAAABJR1CVO6k2nKrnrrrvOFi5caOPHj3fz1dMudDRxAACADF3iNHToUDvrrLPsk08+seHDh9v555/v5n/zzTfWoEGDtEgjAABAfJY4XXTRRTZ58uQk8wcNGhSrNAEAACTOOE7Hjx+3SZMm2apVq9zryy+/3G677TbLkiVLrNMHAAAQv4HTunXrXO+5P//808qUKePm9e3b1y688EL76quvGD0cAAAkrKjbOHXo0MEFR3/88YcbgkDTpk2brGTJku49AACARBV1idPs2bNtwYIFbvgBzznnnGP9+vVzPe0AAAASVdQlTtmzZ7d//vknyfz9+/e7MZ4AAAASVdSB06233mrt2rWzH3/80Xw+n5tUAvXwww+7BuIAAACJKurAaciQIa6NU7Vq1SxHjhxuUhVd6dKl7fXXX0+bVAIAAMRjG6f8+fPb559/7nrXecMRXHbZZS5wAgAASGSnNI6TKFAiWAIAABlJ1FV1d9xxh73yyitJ5vfv39/uuuuuWKULAAAg/gOnOXPmuAEwQ918883uPQAAgEQVdeCU3LADWbNmtX379sUqXQAAAPEfOJUvX97Gjx+fZP64ceOsXLlysUoXAABA/DcO7969uzVt2tTWr19vN954o5s3Y8YM++ijj2zChAlpkUYAAID4DJwaNWpkkyZNspdfftk++eQTy5kzp1WoUMGmT59utWrVSptUAgAAxOtwBLfccoubAAAAMpKo2zgBAABkVAROAAAAESJwAgAAiBCBEwAAQIQInAAAAGLZq65jx46Rrs8GDhwY8bIAAAAJFzgtXbo06PWSJUvs2LFjVqZMGfd6zZo1liVLFqtcuXLapBIAACBeAqeZM2cGlSjlzZvXxowZYwUKFHDzdu/eba1bt7YaNWqkXUoBAADirY3TgAEDrG/fvv6gSfR3nz593HsAAACJKurAad++fbZjx44k8zXvn3/+iVW6AAAA4j9wuv3221213MSJE23z5s1u+vTTT61Nmzbu4b8AAACJKupn1Y0YMcKeeeYZa9GihR09evT/VnLWWS5wevXVV9MijQAAAPEZOOXKlcvefPNNFyStX7/ezStVqpTlzp07LdIHAAAQv4GTR4FShQoVYpsaAACARGrjVLt2bbvxxhuTnU7FsGHDrESJEpYjRw6rWrWqLVy4MMXlJ0yYYGXLlnXLly9f3r7++uug9++//37LlClT0NSgQYNTShsAAMApB06VKlWyihUr+qdy5crZkSNH3KCYCmKiNX78eDcyec+ePd06tM769evb9u3bwy7/ww8/WPPmzV2bKg3M2aRJEzetWLEiaDkFSlu2bPFPH330UdRpAwAASFVV3aBBg8LO79Wrl+3fvz/a1bkBNdu2bet66nmNz7/66isbNWqUPfvss0mWf/31111Q1KlTJ/f6xRdftG+//daGDh3qPuvJnj27FS1aNOr0AAAApPlDfv/zn/+4YCcaKqlavHix1a1b9/8lKHNm93r+/PlhP6P5gcuLSqhCl581a5ade+657rEwjzzyiO3cuTOqtAEAAMSscXgoBS5qcxSNv//+244fP25FihQJmq/Xq1evDvuZrVu3hl1e8z0qkdKYUiVLlnQ9/7p162Y333yzS6OeqRfq8OHDbgoc5BMAACDVgVPoIJc+n8+1IVq0aJF1797dzgT33HOP/2+1u1LvPw2ZoFKoOnXqJFlej5Dp3bv3aU4lAABI+Kq6s88+2/Lly+efChYsaDfccIPr2aYG3tEoVKiQKwHatm1b0Hy9Tq59kuZHs7xcfPHFblvr1q0L+37Xrl1t7969/umPP/6Iaj8AAEDGEHWJ0+jRo2O28WzZslnlypVtxowZrmecnDhxwr1u37592M9Uq1bNvf/kk0/656lxuOYnR4+FURun8847L+z7akiuCQAAIKYlTiq9CdfQes+ePe69aGkogpEjR9qYMWNs1apVriH3gQMH/L3sWrZs6UqEPE888YRNmTLFBgwY4NpBqTefqgm9QEs9+9TjbsGCBfb777+7IKtx48ZWunRp14gcAADgtJU4KRhRg+5Qalz9559/Rp2AZs2a2Y4dO6xHjx6ugbfGiVJg5DUA37Rpk+tp56levbqNHTvWnn/+edfo+5JLLrFJkybZFVdc4d5X1d+yZctcIKZgrlixYlavXj03bAGlSgAA4LQETl988YX/76lTp7r2TR4FUirZ0ejfp0KlRclVzalBd6i77rrLTeHkzJnTpQ8AACDdAievDZIeX9KqVaug97JmzeqCJlWfAQAAWEYPnNRoWzQ20k8//eR6qQEAAGQkUbdx2rBhQ9qkBAAAIBECpyFDhli7du3cyOD6OyUdOnSIVdoAAADiL3DSg33vvfdeFzgl95Bfr/0TgRMAAMjQgVNg9RxVdQAAIKOKegBMAACAjOqsSEf3jtTAgQNTkx4AAID4DpyWLl0a0crUxgkAACBDB04zZ85M+5QAAACc4WjjBAAAEMsSp6ZNm9ro0aPt7LPPdn+nZOLEiZFuGwAAIPECJz3Q12u/FPhwXwAAgIwkosDpvffeC/s3AABARkIbJwAAgLR6yO/OnTutR48erqfd9u3b7cSJE0Hv79q1K9pVAgAAJGbgdN9999m6deusTZs2VqRIEcZuAgAAGUbUgdPcuXNt3rx5VrFixbRJEQAAQKK0cSpbtqz9+++/aZMaAACARAqc3nzzTXvuueds9uzZrr3Tvn37giYAAIBEFXVVXf78+V2AdOONNwbN9/l8rr3T8ePHY5k+AACA+A2c7r33XsuaNauNHTuWxuEAACBDiTpwWrFihS1dutTKlCmTNikCAABIlDZOVapUsT/++CNtUgMAAJBIJU6PP/64PfHEE9apUycrX768q7YLVKFChVimDwAAIH4Dp2bNmrn/H3jgAf88tXOicTgAAEh0UQdOGzZsSJuUAAAAJFrgVLx48bRJCQAAQCIETl988YXdfPPNrj2T/k7JbbfdFqu0AQAAxF/g1KRJE9u6daude+657u/k0MYJAABYRg+cTpw4EfZvAACAjCTqcZwAAAAyqogDp/nz59vkyZOD5r3//vtWsmRJV4XXrl07O3z4cFqkEQAAIL4CpxdeeMFWrlzpf718+XJr06aN1a1b15599ln78ssvrW/fvmmVTgAAgPgJnH7++WerU6eO//W4ceOsatWqNnLkSOvYsaMNGTLEPv7447RKJwAAQPwETrt377YiRYr4X8+ePdsNUeC5+uqreYYdAABIaBEHTgqavFHDjxw5YkuWLLFrr73W//4///yT5Ll1AAAAGTJwatiwoWvLNHfuXOvatavlypXLatSo4X9/2bJlVqpUqbRKJwAAQPw8cuXFF1+0pk2bWq1atSxPnjw2ZswYy5Ytm//9UaNGWb169dIqnQAAAPETOBUqVMjmzJlje/fudYFTlixZgt6fMGGCmw8AAJCoon7Ib758+cLOL1iwYCzSAwAAcMZi5HAAAIAIETgBAABEiMAJAAAgngKnYcOGWYkSJSxHjhxuNPKFCxemuLwaopctW9YtX758efv666+D3vf5fNajRw8777zzLGfOnO6xMGvXrk3jvQAAAIku3QOn8ePHu0e29OzZ0w2qWbFiRatfv75t37497PI//PCDNW/e3D0nb+nSpdakSRM3rVixwr9M//79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+us2evRoSy8K+rp37249e/aM+DMPPPCAe+bk3Llz0zRtwJmIh/wCGUCOHDnslVdesYceesgKFCiQ4rJ6iKgeGJqejhw5ElcPfR45cuQpf1bHOz198skn7kHG1113XcSf0XfTokULGzJkiNWoUSNN0wecaShxAjKAunXrWtGiRa1v375RlaoMHjzYSpQokaQKR215ihQpYvnz57cXXnjBjh07Zp06dbKCBQvaBRdcYO+9917Qev744w+7++673fJapnHjxvb7778nWe9LL73kqrvKlCnj5i9fvtxuvPFGV/2lJ8C3a9fO9u/fn+K+fv3113bppZe6z9SuXTtoO5558+a5G76WufDCC61Dhw524MCBsOtTaVDv3r3tf//7nyuh0+SVEG3atMntS548eVzwoX3ctm1bkmP61ltvue3kypXLLaNSvdB995w4ccL69+9vpUuXtuzZs7tSPx0Xz8mOiaomr7nmGsudO7c73gqINm7cmOzxGjdu3Emr3X766ScrXLiwC749+swXX3xBmy5kOAROQAaQJUsWF+y88cYbtnnz5lSt67vvvrO//vrL5syZYwMHDnRVPLfeeqsryfrxxx/t4YcfdiVb3naOHj1q9evXt7x587qqne+//94FGg0aNHAlS54ZM2bYr7/+at9++61NnjzZBTL6nNarG/eECRNs+vTp1r59+2TTpgCtadOm7qb+888/uyrHZ599NmiZ9evXu23fcccdrmRt/PjxLpBKbr3NmjWzp59+2i6//HLbsmWLmzRPAY6Cpl27dtns2bNdun/77Tf3XmijcTWy//LLL23KlCm2dOlSe/TRR5Pdh65du7pqVVWf/fLLLzZ27FgXpMrJjokCWAVhtWrVcvs2f/58F1iFq5L1aN+rVKmS4vd90003ueCtS5cu/vn6jLan7xzIUHwAElqrVq18jRs3dn9fe+21vgceeMD9/dlnn/kCLwE9e/b0VaxYMeizgwYN8hUvXjxoXXp9/Phx/7wyZcr4atSo4X997NgxX+7cuX0fffSRe/3BBx+4ZU6cOOFf5vDhw76cOXP6pk6d6l9vkSJF3HzP22+/7StQoIBv//79/nlfffWVL3PmzL6tW7eG3deuXbv6ypUrFzSvS5cubj93797tXrdp08bXrl27oGXmzp3r1vvvv/+GXW+4YzNt2jRflixZfJs2bfLPW7lypdvWwoUL/Z/TMps3b/Yv880337htbdmyJcn3s2/fPl/27Nl9I0eODJuOkx2TnTt3uu3PmjXLFwkdEy0/Z86coPlemiZOnOjLkyePb9y4cWE/r7SMHj06om0BiYISJyADUVXLmDFjbNWqVae8DpW8ZM78/y4dKg0pX758UOmWqpC2b9/uXquKS6UuKnFSSZMmVdepUbJKfzxaR2C7JqWxYsWKrsrJo2onlfSoZCocfaZq1apB86pVqxb0WulRVZuXFk0qxdF6N2zYEPFx0LZU/abJU65cOVc9Fnh8VdV2/vnnB6UnuX3Q5w4fPmx16tRJdpspHRMdV1X9aX9U6qaG5yohS45XzaY2cKFUknTXXXfZBx98kKQUzaPqwoMHDya7fiARETgBGUjNmjXdTVXVQaEUDPl8KoD4f1TNFipr1qxBr1UNFG6ebuai9jeVK1d2VWeB05o1a1wDY09gMJCWlB5VJQamRcHU2rVrrVSpUpaeoh3KIBy1L1MVXfXq1V01pNp7LViwIOyyCnD1Xe3evTvJezoWZcuWtVGjRoXNB6JqSrV9AjISAicgg1H7GbW30c01kG6AW7duDQqeFFSk1lVXXeWCknPPPdc1eA6cUupRdtlll7mAJrDRttpHKcDzGo+H+4zGoAoUGjQoPWo7FJoWTcn15NP848ePJ9mW2lRp8mi9Gi9KJU8eNSBXm7DA9CS3D5dccokLntTeKzXH5Morr3TB8Q8//GBXXHGFayeV3H4prUp3qEKFCrn2TSotVIP20OBJpYUqNdS2gIyEwAnIYFQldu+997qu5IFuuOEG27Fjh+vRpZvisGHD7Jtvvkn19rQt3YTVkFqNw1Udpp5f6smWUkN1fU5VSK1atbIVK1bYzJkz3XhJ9913n7+xdCg1TFeQph5+qrpSwBA6RpIaOCugUINqBYZa/vPPP0+x0bl6FirdWv7vv/921WnqqegdS41ppICtZcuWrmF2YGNrbx8U8Gj/td8KRNTLMZSWVfo6d+5s77//vvseFGhpgMpIjonSqIBJQbF60k2bNs3tnwKu5KgEUg3Ew1Gwq+Bp9erV1rx5c9cY3KN9ufjii9O9lA443QicgAxIQwh4VWke3VzffPNNFzCpHY0CgWeeeSbV21IXfPXAU1sf9XjTdtq0aeNKK9SFP6XPTZ061VUHXX311W5kbrX9GTp0aLKf0TY+/fRTN7in9kEjXKs3YaAKFSq4XnCqKtSQBCox6dGjhxsGITnqgaeeeBreQCVzH330kaviUsClHm6qAlUgpUBC1WOBVJKl/W7YsKEbnVvb13FOjnrTqRef0qRjpfZFXnuxkx0Tva8gR+lVFZ161D322GOuajI5+i40hEPgEAmBFOApeNIwCArcvJI3HYO2bdsmu14gUWVSC/H0TgQAJCKN46QgLhZVnmlJjcBVhRmu7Vs4K1eudGNJKfhM7wE8gdONEicAyOBeffVV17swUuqpp6pEgiZkRDxyBQAyOLXhUlupSKlaEsioqKoDAACIEFV1AAAAESJwAgAAiBCBEwAAQIQInAAAACJE4AQAABAhAicAAIAIETgBAABEiMAJAAAgQgROAAAAFpn/D1Kow5ilihB5AAAAAElFTkSuQmCC"
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAm4AAAGGCAYAAADCVw1hAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjEsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvc2/+5QAAAAlwSFlzAAAPYQAAD2EBqD+naQAAe8xJREFUeJztnQmcTfX7xx+GWWxj39coW5YiQsgSJSIpSVIp/xIpJfmVpVUpomylUMpSoqRClixlK2Tfd2aMdcaYYRjn//o8Orczd+6duXfmztzt8369ztw55557zvfsn/Ns3xyGYRhCCCGEEEJ8npzebgAhhBBCCHENCjdCCCGEED+Bwo0QQgghxE+gcCOEEEII8RMo3AghhBBC/AQKN0IIIYQQP4HCjRBCCCHET6BwI4QQQgjxEyjcCCGEEEL8BAq3IOHy5cvy7rvvyqJFi7zdFEJ8ns8//1w+++wzbzeDEEICX7gNHz5ccuTIkS3ruvPOO3Uw+f3333Xdc+bMkewG68W2O2PAgAHyzTffSMOGDbOlPY8//rhUrFjRL4+ru0ybNk3b9tdff0mgcujQId1GbGugM3v2bHnxxRfltttuy5b7BskYuL/gPhMo14S5vA8//DDDyzh69KiEh4fLH3/8IdlNdj7/hrvxPLB/Npr3a+xvb3LmzBnJmzev/PLLL4El3MwdbA44IUuXLi1t27aVjz/+WC5cuOCR9Zw4cUIP7ObNmyUQ+fbbb+WHH36QX3/9VQoWLOjt5hDis+zfv1/69Okj3333ndxyyy0ZXs6OHTv0nuLthwMJLt588019OW/SpIm3m0LSoUiRIvLUU0/JkCFDxF1yiZ+cjJUqVZIrV65IdHS0KvsXXnhBRo8eLfPnz5fatWvb5n399dfl1VdfdVu4vfHGG/oGV7duXZd/t3jxYvEVEhMTJVeu1IfTMAw5duyYirby5ct7pW3E/6lQoYKeY7lz55ZA5p9//pGpU6fK3XffnanlQLjhngLLmr3l2ZfuGyRwOHXqlHz55Zc6EOf06NFDHn74YQkLCxNv88wzz6gRatmyZdKyZcvAEm733HOP1K9f3zY+ePBg3dD27dvLfffdJzt37pSIiAj9DuLFkYDxJAkJCZInTx4JDQ0VXwHWSEfAUgk3KfF/Ll68qKZ1b2BavAOdzp07Z/k6fOm+4UmuXr0q165d88vtu3TpkrY7Z06fdkKlyddff63Pvg4dOni7KT5NSEiIDr5A9erV5eabb1bvojvCzW/PUmwkTIyHDx/WEzYt3/dvv/0md9xxh7oJ8+XLJ1WrVpX//e9/+h2sd2YsyxNPPGFzy5pxC3hjxo79+++/pVmzZirYzN86i1VJTk7WeUqWLKkPWohLxB64Ep/haJm4qWC7brrpJn14lipVSh8wcOukFeO2adMmFb0FChTQ7W7VqpWsXbvWoTsaMREQeMWKFdM233///foG5wpww2IfoW34nDdvnsP5cFMfM2aM1KxZU+ctUaKE/N///Z+cO3dOMgIsIzgPihcvrm9PNWrUkIkTJ7r8+127dslDDz2k2wzhj/Pitddec3sfWhNAXNmHsH42bdpU58mfP7/ce++9sn379hTz4NzA+nCM27Vrp/N1797drf2IcwwvN6tXr5YGDRrovDfccIN89dVXqdp0/vx5jevCb7Avy5YtK4899picPn3aaTzPli1btJ1YJpaN8/3JJ5/U2A1X+OSTT3QbcE0VKlRIX85mzJiRYp7jx4/rMrGNaBfmnzJlisPYGoQEwMpVpkwZ3V9dunSR2NhYPS6w0OM8wT7FdY5pGTmXXNmn2EcPPvig/t+iRQvbPQXtzMw1jtinxo0bq4sF52u9evVcjiey3sewDPweXoxJkyalmjcmJkZ69eql+xxtqVOnTiorjjUeC+di5cqVdb/B0ugIrBv7wh6cyzheOFae2M4DBw7ovi9cuLCeV7fffrv8/PPPDs+XWbNmqYcG68e8cXFxTpeL6wPnemRkpD5HevbsqdOc3VewPWgD9h/Oa3iGMgI8Jr1791ZROXfu3HTvw3CT4hy3Z926dWpFRvuxrc2bN08VB2c+O/fs2SOPPvqozot7GZ6zaAeeYR07dtR7Ia71UaNGOWyHK88/V9sEcK3hGY19ifPs008/dbheXNO4h6HNuP6xXnib7HEU4+bOvRL3PbQV5ybuk2+//bbeP+yXiZhnhHUVLVrUdr3hXmbPXXfdJT/99JPuY5cxfJipU6diS4wNGzY4/P7o0aP6fZcuXWzThg0bptNMtm3bZoSGhhr169c3xo4da0yaNMl4+eWXjWbNmun30dHRxptvvqm/6d27tzF9+nQd9u/fr983b97cKFmypFGsWDGjX79+xqeffmr88MMPtu8wmCxfvlyXU6tWLaN27drG6NGjjVdffdUIDw83brrpJiMhIcE2b4UKFYyePXum2ib7ZV69etVo1aqVLvfhhx82xo0bZ4wYMcJo2bKlrR0A32PbrdudN29eo1SpUsZbb71lvPfee0alSpWMsLAwY+3atan28S233KLL/OSTT4yXXnrJCAkJMR566KF0j9GiRYuMnDlzGjfffLNu72uvvWZERkYaNWvW1G208tRTTxm5cuUynn76aT0OgwYN0jbedtttRlJSUprrsT+uAL97/PHHjY8++kjb3aZNG50H+yg9/vnnH6NAgQJGkSJFjMGDB+txfeWVV/TYZeU+/Oqrr4wcOXIYd999t873/vvvGxUrVjQKFixoHDx40DYfzg2sp3Llyvo/9hd+685+xP6vWrWqUaJECeN///uf7pdbb71V149tM7lw4YIeP7QXy5w4caJuL5a3adMmnQdtwzZiW00+/PBDo2nTpnr9fPbZZ0b//v2NiIgIo0GDBsa1a9fS3P+Y37x2se9xbfbq1ct4/vnnbfPg2ixbtqxRrlw5XQfadd999+nvcMztr7u6desajRo1Mj7++GNdDrYT18wjjzxi3HPPPcb48eONHj166LxvvPFGivbg/mA9l1q3bu3wXHJln+LegfXj95jHvKdgezJzjWNf9OnTR7/HtYb9jN8sWLAgzX1trrN06dJG8eLFjb59++o+uuOOO/T3X3zxhW0+3KOqV69u5M6d23jxxRd1PhxjzDdmzBjbfOb5UKNGDeOGG27QawP77vDhww7Xj+OH+0RUVFSK6StWrNDlfPfdd25vp/09FPsXxyV//vx6H8Jv69Spo+udO3duqvMFbcc5g/mwvy9evOiw7TiX8bzActAunB84NrjH218TOAdw/8OycW1jG/BbnB/WNjjC3KcffPCB7bx47LHH9D6Q3jHGdY9rb8CAAam+W7p0qT4DcW2MGjVKjxPajmnr1q1LdY/FPunWrZsxYcIE495779Vp2Ec475999lmd3qRJE52O45eR55+rbdqyZYtuV/ny5fUY4b5UokQJ27638uijj+o0XO/Y7507d7bNZ302mvdr6/3W1XvlsWPHjMKFC+tzA/cQ3AOrVaum55l1mSdPnjQKFSqk243jOXnyZD0ncW3Z8/XXX+tvt27dariKXws3gIsED0xnD3icEBg/deqU02Vg+fYXoPWGh+/wgHT0nSPhVqZMGSMuLs42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"
 class="
 "
 >
@@ -3083,7 +3195,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="comparacion-con-el-enfoque-llm-5b">&#9878;&#65039; Comparaci&#243;n con el enfoque LLM (5b)<a class="anchor-link" href="#comparacion-con-el-enfoque-llm-5b">&#182;</a></h2><p>En 5b encontramos que el LLM concentraba casi todos sus puntajes en 5, dejando poco margen para distinguir entre modelos. Vale la pena revisar si este método de embeddings <strong>sí</strong> logra distinguirlos.</p>
+<hr>
+<h3 id="comparacion-con-el-enfoque-llm-5b">&#9878;&#65039; Comparaci&#243;n con el enfoque LLM (5b)<a class="anchor-link" href="#comparacion-con-el-enfoque-llm-5b">&#182;</a></h3><p>En 5b encontramos que el LLM concentraba casi todos sus puntajes en 5, dejando poco margen para distinguir entre modelos. Vale la pena revisar si este método de embeddings <strong>sí</strong> logra distinguirlos.</p>
 <p>Ejecuta esta celda y observa:</p>
 <ul>
 <li>¿La <code>coherencia_embeddings</code> varía más entre tópicos que el puntaje 1-5 del LLM en 5b?</li>
@@ -3099,7 +3212,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3134,7 +3247,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
 
 
 
@@ -3231,6 +3344,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <h3 id="lo-que-muestran-los-resultados">&#128269; Lo que muestran los resultados<a class="anchor-link" href="#lo-que-muestran-los-resultados">&#182;</a></h3><p>En una ejecución real, el promedio de <code>coherencia_embeddings</code> por valor de $k$ fue:</p>
 <table>
 <thead><tr>
@@ -3272,7 +3386,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="cierre">&#9989; Cierre<a class="anchor-link" href="#cierre">&#182;</a></h2><p>Este notebook ofrece una <strong>tercera perspectiva</strong> sobre la calidad de los modelos de tópicos, complementando las dos anteriores:</p>
+<hr>
+<h2 id="conclusiones">&#9989; Conclusiones<a class="anchor-link" href="#conclusiones">&#182;</a></h2><p>Este notebook ofrece una <strong>tercera perspectiva</strong> sobre la calidad de los modelos de tópicos, complementando las dos anteriores:</p>
 <ul>
 <li><strong>R / Quanteda + topicmodels (5a)</strong>: métricas estadísticas del ajuste del modelo (perplexity, elbow method) — objetivas, pero no dicen nada sobre si un tópico "tiene sentido" para un humano.</li>
 <li><strong>Python + LLM (5b)</strong>: un LLM lee las palabras y opina sobre su coherencia — captura matices semánticos que una métrica puramente numérica no puede, pero su escala 1-5 resultó poco discriminante.</li>
