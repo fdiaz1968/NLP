@@ -59,7 +59,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="brown">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
   
     
     
@@ -114,7 +114,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="brown"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -123,7 +123,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="brown"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -305,9 +305,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Datasets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="datasets.html" class="md-nav__link md-nav__link--active">
         Datasets
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-4b-keyness-e-interpretacion-con-llm" class="md-nav__link">
+    Unidad 4b: Keyness e Interpretación con LLM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-5-modelamiento-de-topicos" class="md-nav__link">
+    Unidad 5: Modelamiento de Tópicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-6-analisis-de-sentimiento-financiero" class="md-nav__link">
+    Unidad 6: Análisis de Sentimiento Financiero
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -381,6 +426,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-4b-keyness-e-interpretacion-con-llm" class="md-nav__link">
+    Unidad 4b: Keyness e Interpretación con LLM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-5-modelamiento-de-topicos" class="md-nav__link">
+    Unidad 5: Modelamiento de Tópicos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidad-6-analisis-de-sentimiento-financiero" class="md-nav__link">
+    Unidad 6: Análisis de Sentimiento Financiero
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -394,8 +468,19 @@
 
 
 <h1 id="datasets-disponibles">Datasets disponibles</h1>
-<p>Los notebooks de las unidades 1-5 utilizan corpus incorporados en <code>quanteda</code> (por ejemplo, <code>data_corpus_inaugural</code>) y ejemplos de texto autocontenidos, por lo que no requieren datasets externos.</p>
-<p>Los datasets para el proyecto integrador y las unidades de análisis de sentimiento (6) y similitud semántica (7) se publicarán aquí a medida que estén disponibles.</p>
+<p>La mayoría de los notebooks usan corpus incorporados en <code>quanteda</code> (por ejemplo, <code>data_corpus_inaugural</code>, <code>data_corpus_moviereviews</code>) o corpus descargados directamente en el notebook (NLTK, Kaggle), por lo que no requieren archivos externos.</p>
+<p>Algunas unidades sí generan o consumen archivos de datos intermedios entre notebooks. Estos archivos ya están incluidos junto a cada notebook en <a href="../clases/clases.html">Clases</a> — se listan aquí, organizados por unidad, solo como referencia rápida.</p>
+<h2 id="unidad-4b-keyness-e-interpretacion-con-llm">Unidad 4b: Keyness e Interpretación con LLM</h2>
+<p><a href="Unidad_4b/tstat_key_movies.csv">tstat_key_movies.csv</a> — tabla de keyness (chi-cuadrado) exportada por la Unidad 4a (<code>write_csv</code>) y leída por la Unidad 4b para la interpretación con un LLM.</p>
+<h2 id="unidad-5-modelamiento-de-topicos">Unidad 5: Modelamiento de Tópicos</h2>
+<p>Tablas de términos principales por tópico, exportadas por la Unidad 5a (<code>write_csv</code>) para los tres modelos LDA (<span class="arithmatex">\(k=12\)</span>, <span class="arithmatex">\(20\)</span>, <span class="arithmatex">\(25\)</span>) y reutilizadas en las Unidades 5b, 5c y 5d:</p>
+<ul>
+<li><a href="Unidad_5/lda_topterms_k12.csv">lda_topterms_k12.csv</a></li>
+<li><a href="Unidad_5/lda_topterms_k20.csv">lda_topterms_k20.csv</a></li>
+<li><a href="Unidad_5/lda_topterms_k25.csv">lda_topterms_k25.csv</a></li>
+</ul>
+<h2 id="unidad-6-analisis-de-sentimiento-financiero">Unidad 6: Análisis de Sentimiento Financiero</h2>
+<p><a href="Unidad_6/Sentences_AllAgree.txt">Sentences_AllAgree.txt</a> — subconjunto <em>AllAgree</em> del <strong>FinancialPhraseBank</strong> (Malo et al., 2014), 2.264 frases financieras en inglés con etiqueta de sentimiento de acuerdo unánime entre anotadores. Licencia <strong>CC BY-NC-SA 3.0</strong> (uso no comercial, con atribución) — ver <a href="https://huggingface.co/datasets/takala/financial_phrasebank">ficha del dataset</a>.</p>
 
               
             </article>
