@@ -44,22 +44,20 @@ Al finalizar el curso, el estudiante será capaz de:
 |---|---|---|---|---|
 | 1 | Limpieza y Transformación | Corpus, tokens, metadatos. Stopwords, stemming, lematización. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Quanteda ofrece el flujo corpus → tokens → DFM más completo y pedagógico. Los LLM no requieren preprocesamiento explícito, lo que oculta conceptos fundamentales al estudiante. |
 | 2 | Document Feature Matrix | Construcción de la DFM. Frecuencias, trimming, agrupación por `docvars`. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | La DFM es la representación matricial base del PLN clásico. Comprenderla es prerequisito para entender por qué los embeddings densos de los LLM son una mejora. |
-| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Las métricas lingüísticas descriptivas (TTR, ley de Zipf) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
+| 3 | Estadística Descriptiva | Tokens, types, TTR. Wordclouds, gráficos de frecuencia, ley de Zipf y TF-IDF. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Las métricas lingüísticas descriptivas (TTR, ley de Zipf, TF-IDF) son agnósticas al modelo. R/Quanteda las calcula eficientemente sobre corpus de cualquier tamaño. |
 | 4 | Keyness y Dispersión | Chi-cuadrado, log-likelihood. `textplot_keyness()`, `textplot_xray()`. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Keyness estadístico se mantiene en R por su transparencia e interpretabilidad. Se incorpora un LLM para narrar y contextualizar automáticamente los términos clave detectados. |
-| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de k. Introducción a BERTopic. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | LDA se enseña para transmitir el modelo generativo subyacente. Se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática, y un LLM para etiquetar tópicos automáticamente. |
-| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DeBERTa, modelos en español. Evaluación con F1 macro. | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
+| 5 | Topic Modeling | LDA (Gibbs/VEM), selección de $k$ (perplexity, codo). Consistencia semántica con LLM y *embeddings*. BERTopic. | <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | LDA se enseña para transmitir el modelo generativo subyacente. Se evalúa su consistencia con un LLM y con *embeddings*, y se agrega BERTopic (Python) para mostrar cómo los embeddings mejoran la coherencia temática. |
+| 6 | Análisis de Sentimiento | FinBERT, RoBERTa, DistilRoBERTa, DeBERTa, modelo en español. Evaluación con F1 macro y matrices de confusión. | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1.2em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/> | Los diccionarios financieros (Loughran-McDonald) tienen cobertura limitada ante jerga nueva e ironía. Los modelos transformer superan consistentemente el baseline léxico: DeBERTa F1 = 1.00 vs. FinEspañol F1 = 0.41 en inglés. |
 
-## Cronograma — Semana Intensiva
-
-*(fechas por confirmar según la sede/edición del curso)*
+## Cronograma Tentativo
 
 | Día | Unidad(es) |
 |---|---|
 | Día 1 | Unidad 1 — Limpieza y Transformación · Unidad 2 — Document Feature Matrix |
 | Día 2 | Unidad 3 — Estadística Descriptiva · Unidad 4 — Keyness y Dispersión |
 | Día 3 | Unidad 5 — Modelamiento de Tópicos |
-| Día 4 | Unidad 6 — Análisis de Sentimiento Financiero |
-| Día 5 | Cierre y Proyecto Integrador |
+| Día 4 | Unidad 5 — Modelamiento de Tópicos |
+| Día 5 | Unidad 6 — Análisis de Sentimiento Financiero |
 
 ## Detalle de Unidades
 
@@ -98,11 +96,13 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 - Calcular métricas de diversidad léxica: tokens, types, TTR y moving-average TTR.
 - Visualizar distribuciones de frecuencia e interpretar la ley de Zipf en corpus reales.
 - Producir wordclouds comparativos entre grupos de documentos.
+- Aplicar TF-IDF (`bind_tf_idf()` de `tidytext`) para identificar términos distintivos por documento, replicando el capítulo correspondiente de *Text Mining with R*.
 
 **Lecturas sugeridas:**
 
 - Manning, C. D. & Schütze, H. (1999). *Foundations of Statistical NLP*. MIT Press. Cap. 1-2.
 - Zipf, G. K. (1949). *Human Behavior and the Principle of Least Effort*. Addison-Wesley.
+- Silge, J. & Robinson, D. (2017). *Text Mining with R*, Cap. 3: "Analyzing word and document frequency: tf-idf". [tidytextmining.com/tfidf](https://www.tidytextmining.com/tfidf)
 
 ### Unidad 4 — Keyness y Dispersión Textual <span style="background-color:#854f0b1a;color:#854f0b;padding:1px 7px;border-radius:4px;font-weight:700;font-size:0.85em;">Híbrido</span>
 
@@ -121,9 +121,10 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 
 **Objetivos de aprendizaje:**
 
-- Estimar un modelo LDA con el paquete `topicmodels` y seleccionar k óptimo.
-- Comparar LDA con BERTopic en términos de coherencia y legibilidad de tópicos.
-- Aplicar un LLM para asignar etiquetas interpretables a los tópicos descubiertos.
+- Estimar modelos LDA (`topicmodels`, Gibbs Sampling) sobre distintos valores de $k$, y seleccionarlos con perplexity y el método del codo (5a).
+- Usar un LLM para etiquetar y evaluar la interpretabilidad de los tópicos de LDA (5b).
+- Medir la coherencia semántica de los tópicos con *embeddings* y similitud coseno, y contrastarla con la evaluación de un LLM (5c).
+- Ajustar BERTopic (*embeddings* + UMAP + HDBSCAN) y compararlo formalmente contra LDA (5d).
 
 **Lecturas sugeridas:**
 
@@ -134,10 +135,10 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 
 **Objetivos de aprendizaje:**
 
-- Cargar y aplicar modelos transformer especializados (FinBERT, RoBERTa, DeBERTa) desde HuggingFace.
-- Evaluar modelos con métricas de clasificación: F1 macro, precisión, recall y matriz de confusión.
+- Cargar y aplicar cinco modelos transformer especializados en sentimiento financiero (FinRoberta, FinBERT, DistilRoBERTa, DeBERTa, y un modelo en español) desde HuggingFace.
+- Evaluar los modelos con métricas de clasificación: F1 macro y matrices de confusión.
 - Comparar el rendimiento entre modelos de distinto tamaño, arquitectura e idioma.
-- Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros.
+- Reflexionar sobre las limitaciones del enfoque basado en diccionarios léxicos financieros (Loughran-McDonald) frente a los modelos transformer.
 
 **Lecturas sugeridas:**
 
@@ -149,8 +150,8 @@ Los notebooks de cada unidad están disponibles en la sección [Clases](clases/c
 
 | Componente | Ponderación |
 |---|---:|
-| Participación y ejercicios en clase | **40%** |
-| Proyecto integrador final | **60%** |
+| Participación y ejercicios en clase | **60%** |
+| Proyecto integrador final | **40%** |
 
 Ver el detalle del proyecto integrador en la sección [Evaluaciones](assessments/proyecto_integrador.md).
 

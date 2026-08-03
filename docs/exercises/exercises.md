@@ -33,3 +33,7 @@ Los ejercicios de aplicación se publican también aquí como notebooks independ
 [Ejercicio 2 Unidad 5: Evaluando la Coherencia de Tópicos del UN General Debate Corpus con Embeddings](Ejercicio_2_Unidad_5_Coherencia_Embeddings_UNGDC.ipynb) <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/>
 
 [Ejercicio 3 Unidad 5: BERTopic sobre el Corpus de Noticias Reuters-21578](Ejercicio_3_Unidad_5_BERTopic_Reuters.ipynb) <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/>
+
+## Unidad 6: Análisis de Sentimiento Financiero
+
+[Ejercicio 1 Unidad 6: ¿Generalizan los Modelos de Sentimiento Financiero a Tweets?](Ejercicio_1_Unidad_6_Twitter_Sentiment.ipynb) <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" style="height: 1em !important; width: auto !important; max-width: none !important; vertical-align: middle;"/>
